@@ -16,7 +16,7 @@ GameState::~GameState()
 }
 
 void GameState::addPlayer(std::string name) {
-	AIplayers.push_back(Player(name));
+	AIPlayers.push_back(Player(name));
 }
 
 void GameState::changeGamePhase(Phase newPhase) {

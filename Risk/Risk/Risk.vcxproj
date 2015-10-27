@@ -84,6 +84,8 @@
     <ClInclude Include="Country.h" />
     <ClInclude Include="Deck.h" />
     <ClInclude Include="Engine.h" />
+    <ClInclude Include="GameState.h" />
+    <ClInclude Include="InputProcedure.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="MapManager.h" />
     <ClInclude Include="Player.h" />
@@ -97,6 +99,8 @@
     <ClCompile Include="Country.cpp" />
     <ClCompile Include="Deck.cpp" />
     <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="GameState.cpp" />
+    <ClCompile Include="InputProcedure.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="MapManager.cpp" />
     <ClCompile Include="Player.cpp" />
