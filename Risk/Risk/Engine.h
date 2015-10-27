@@ -1,13 +1,13 @@
+#pragma once
 #include <vector>
 #include "Map.h"
-#pragma once
 #include "GameState.h"
 
 using namespace std;
 class Engine
 {
 private:
-	GameState gameState;
+	//GameState gameState;
 	bool victory, defeat;
 	void startPhase();
 	void reinforcementPhase();

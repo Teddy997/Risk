@@ -1,11 +1,8 @@
-#include <iostream>
-#include <string>
-#include <vector>
-#include <algorithm>
-
+#pragma once
+#include "InputProcedure.h"
 #include "stdafx.h"
 #include "CardCashing.h"
-#include "InputProcedure.h"
+
 
 /*
 CARDCASHING NAMESPACE

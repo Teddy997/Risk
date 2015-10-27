@@ -4,6 +4,7 @@
 #include "Player.h"
 #include "Map.h"
 using std::vector;
+using std::string;
 enum Phase {
 	GETTING,
 	ATTACKING,

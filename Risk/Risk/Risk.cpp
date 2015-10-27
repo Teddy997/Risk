@@ -1,5 +1,6 @@
 // Risk.cpp : Defines the entry point for the console application.
 //
+#pragma once
 #include <iostream>
 #include <string>
 
@@ -14,25 +15,25 @@ void player_testing() {
 void country_testing() {
 	Player p1("Eric");
 	std::cout << p1.get_player_name() + " currently owns: " + p1.print_countries_owned() << std::endl;
-	
+
 	Country c1("Canada");
 	Country c2("USA");
 	Country c3("Mexico");
-	
+
 	p1.assign_country(c1);
 	p1.assign_country(c2);
 	p1.assign_country(c3);
 	std::cout << p1.get_player_name() + " currently owns: " + p1.print_countries_owned() << std::endl;
-	
+
 	Player p2("Amanda");
 	p2.assign_country(c1);
 	std::cout << p1.get_player_name() + " currently owns: " + p1.print_countries_owned() << std::endl;
 	std::cout << p2.get_player_name() + " currently owns: " + p2.print_countries_owned() << std::endl;
-	
+
 	p2.remove_country(c1);
 	std::cout << p1.get_player_name() + " currently owns: " + p1.print_countries_owned() << std::endl;
 	std::cout << p2.get_player_name() + " currently owns: " + p2.print_countries_owned() << std::endl;
-	
+
 	p1.remove_country(c1);
 	p2.assign_country(c1);
 	std::cout << p1.get_player_name() + " currently owns: " + p1.print_countries_owned() << std::endl;
@@ -56,7 +57,7 @@ void deck_testing() {
 void card_cashing_testing() {
 	Player p1("Kyle");
 	Deck deck;
-	for(int i=0; i<10; i++) {
+	for (int i = 0; i<10; i++) {
 		p1.add_to_hand(deck.draw_card());
 	}
 	p1.view_hand();
@@ -65,7 +66,7 @@ void card_cashing_testing() {
 }
 
 void combat_testing() {
-	std::srand(unsigned (std::time(0)));
+	std::srand(unsigned(std::time(0)));
 	Player p1("Andrew");
 	Player p2("Meghan");
 	Country c1("Canada");
@@ -99,4 +100,3 @@ int _tmain(int argc, _TCHAR* argv[])
 	combat_testing();
 	return 0;
 }
-
