@@ -26,3 +26,8 @@ Player* GameState::getCurrentPlayer() {
 	// TODO : Create actual method, this is just to prevent error when compiling
 	return new Player();
 }
+
+//template<class Archive>
+//void GameState::serialize(Archive & archive) {
+//	archive(currentPlayerTurn);
+//}

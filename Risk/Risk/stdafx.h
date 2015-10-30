@@ -16,6 +16,7 @@
 #include "CardCashing.h"
 #include "Combat.h"
 #include "InputProcedure.h"
+#include "SaveLoadManager.h"
 
 #include <ctime>
 #include <sstream>

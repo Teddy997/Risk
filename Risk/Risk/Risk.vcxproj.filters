@@ -33,9 +33,6 @@
     <ClInclude Include="MapManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Region.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Country.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -49,6 +46,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Deck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SaveLoadManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputProcedure.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -68,9 +74,6 @@
     <ClCompile Include="MapManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Region.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Country.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -84,6 +87,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CardCashing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SaveLoadManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputProcedure.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

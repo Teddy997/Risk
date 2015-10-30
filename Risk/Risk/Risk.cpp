@@ -81,22 +81,31 @@ void combat_testing() {
 	std::cout << c2.get_country_name() + " currently has " << c2.get_number_of_armies() << " armies." << std::endl;
 }
 
+void saveLoad_testing() {
+	SaveLoadManager slm;
+	slm.SaveGame();
+}
+
+
 int _tmain(int argc, _TCHAR* argv[])
 {
-	std::cout << "PLAYER TESTING" << std::endl;
-	player_testing();
+	//TODO: uncomment
+	//std::cout << "PLAYER TESTING" << std::endl;
+	//player_testing();
 
-	std::cout << "\nCOUNTRY TESTING" << std::endl;
-	country_testing();
+	//std::cout << "\nCOUNTRY TESTING" << std::endl;
+	//country_testing();
 
-	std::cout << "\nDECK TESTING" << std::endl;
-	deck_testing();
+	//std::cout << "\nDECK TESTING" << std::endl;
+	//deck_testing();
 
-	std::cout << "\nCARD CASHING TESTING" << std::endl;
-	card_cashing_testing();
+	//std::cout << "\nCARD CASHING TESTING" << std::endl;
+	//card_cashing_testing();
 
-	std::cout << "\nCOMBAT TESTING" << std::endl;
-	combat_testing();
+	//std::cout << "\nCOMBAT TESTING" << std::endl;
+	//combat_testing();
+
+	saveLoad_testing();
 	return 0;
 }
 

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cereal>
+	<gameState>
+		<currentPlayerTurn>72</currentPlayerTurn>
+	</gameState>
+	<value0>5</value0>
+	<value1>s</value1>
+</cereal>
+
