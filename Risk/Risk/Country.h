@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <cereal/archives/xml.hpp>
 
 class Player;
 
@@ -16,6 +17,7 @@ private:
 	
 	int number_of_armies;
 public:
+	Country();
 	Country(std::string name);
 	~Country();
 	std::string get_country_name();
@@ -28,6 +30,13 @@ public:
 	void increment_armies(int amt);
 	void decrement_armies(int amt);
 	int get_number_of_armies();
+
+	template<class Archive>
+	void serialize(Archive & archive) {
+		archive(
+			CEREAL_NVP(country_name),
+			CEREAL_NVP(is_owned));
+	};
 };
 
 #endif

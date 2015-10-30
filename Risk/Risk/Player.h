@@ -5,8 +5,11 @@
 #include <string>
 #include <vector>
 
+#include <cereal/archives/xml.hpp>
+#include <cereal/types/vector.hpp>
 #include "Country.h"
 #include "Deck.h"
+
 
 class Player {
 private:
@@ -31,6 +34,12 @@ public:
 	void add_to_hand(Deck::Card);
 	void cash_cards(Deck& deck);
 	void view_hand();
+
+	template<class Archive>
+	void serialize(Archive & archive) {archive(
+		CEREAL_NVP(player_name));
+	};
+
 };
 
 #endif

@@ -1,4 +1,9 @@
 #pragma once
+#include <cereal/archives/xml.hpp>
+#include <cereal/types/vector.hpp>
+#include <vector>
+#include "Country.h"
+
 class Map
 {
 public:
@@ -7,5 +12,13 @@ public:
 	// one that returns me a random country that cannot be returned more than once
 	Map();
 	~Map();
+	template<class Archive>
+	void serialize(Archive & archive) {
+		archive(
+			CEREAL_NVP(countries));
+	};
+
+private:
+	std::vector<Country> countries;
 };
 
