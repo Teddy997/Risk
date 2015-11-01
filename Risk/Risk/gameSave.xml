@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <cereal>
 	<gameState>
-		<currentPlayerTurn>72</currentPlayerTurn>
+		<currentPlayerTurn>0</currentPlayerTurn>
+		<player>
+			<player_name>Default player</player_name>
+		</player>
+		<AIPlayers size="dynamic"/>
+		<currentPhase>0</currentPhase>
+		<map>
+			<countries size="dynamic"/>
+		</map>
 	</gameState>
 	<value0>5</value0>
 	<value1>s</value1>

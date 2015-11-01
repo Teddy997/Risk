@@ -11,6 +11,8 @@
 #include "Deck.h"
 #include "Strategy.h"
 
+class Strategy; // forward declaration
+
 class Player {
 private:
 	/*Member variables*/
@@ -19,6 +21,7 @@ private:
 	
 	std::vector<Country*> countries_owned;
 	Strategy* strategy;
+
 	/*May possible have to refactor the hand logic to be a vector of pointers, similar to Country*/
 	std::vector<Deck::Card> hand;
 public:
