@@ -16,7 +16,15 @@ GameState::~GameState()
 }
 
 void GameState::addPlayer(std::string name) {
-	AIPlayers.push_back(Player(name));
+	Player p = Player(name);
+	int random = rand() % 3;
+	if (random == 0)
+		p.setStrategy(new AgressiveStrategy());
+	else if (random == 1)
+		p.setStrategy(new DefensiveStrategy());
+	else
+		p.setStrategy(new RandomStrategy());
+	AIPlayers.push_back(p);
 }
 
 void GameState::changeGamePhase(Phase newPhase) {

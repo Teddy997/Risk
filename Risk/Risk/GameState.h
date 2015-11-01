@@ -4,7 +4,9 @@
 #include "Player.h"
 #include "Map.h"
 #include <cereal/archives/xml.hpp>
-
+#include "AgressiveStrategy.h"
+#include "DefensiveStrategy.h"
+#include "RandomStrategy.h"
 using std::vector;
 using std::string;
 

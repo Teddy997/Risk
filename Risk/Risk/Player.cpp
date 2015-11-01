@@ -41,7 +41,12 @@ Player::Player(std::string name) {
 Player::~Player() {
 	std::cout << get_player_name() + " Player object destroyed." << std::endl;
 }
-
+void Player::setStrategy(Strategy* str) {
+	this->strategy = str;
+}
+void Player::executeStrategy(Player* p) {
+	this->strategy->attack(p);
+}
 std::string Player::get_player_name() {
 	return player_name;	
 }

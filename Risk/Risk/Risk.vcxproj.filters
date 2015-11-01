@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\AIStrategy">
+      <UniqueIdentifier>{ccbfd3c9-e714-472e-b1e6-c2e1663e5ef2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AIStrategy">
+      <UniqueIdentifier>{2e2d829a-eb84-4525-a24d-d1d4bf7b67c6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -57,6 +63,18 @@
     <ClInclude Include="InputProcedure.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Strategy.h">
+      <Filter>Header Files\AIStrategy</Filter>
+    </ClInclude>
+    <ClInclude Include="AgressiveStrategy.h">
+      <Filter>Header Files\AIStrategy</Filter>
+    </ClInclude>
+    <ClInclude Include="DefensiveStrategy.h">
+      <Filter>Header Files\AIStrategy</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomStrategy.h">
+      <Filter>Header Files\AIStrategy</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -97,6 +115,18 @@
     </ClCompile>
     <ClCompile Include="InputProcedure.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AgressiveStrategy.cpp">
+      <Filter>Source Files\AIStrategy</Filter>
+    </ClCompile>
+    <ClCompile Include="Strategy.cpp">
+      <Filter>Source Files\AIStrategy</Filter>
+    </ClCompile>
+    <ClCompile Include="DefensiveStrategy.cpp">
+      <Filter>Source Files\AIStrategy</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomStrategy.cpp">
+      <Filter>Source Files\AIStrategy</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

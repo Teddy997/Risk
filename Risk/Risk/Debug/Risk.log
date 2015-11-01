@@ -1,25 +1,11 @@
-﻿Build started 2015-10-27 4:27:48 PM.
+﻿Build started 2015-11-01 2:29:24 PM.
      1>Project "C:\Users\Radu\Desktop\Risk\Risk\Risk\Risk.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt GameState.cpp
-         GameState.cpp
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Radu\Desktop\Risk\Risk\Debug\Risk.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Radu\Desktop\Risk\Risk\Debug\Risk.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Radu\Desktop\Risk\Risk\Debug\Risk.lib" /MACHINE:X86 Debug\CardCashing.obj
-         Debug\Combat.obj
-         Debug\Country.obj
-         Debug\Deck.obj
-         Debug\Engine.obj
-         Debug\GameState.obj
-         Debug\InputProcedure.obj
-         Debug\Map.obj
-         Debug\MapManager.obj
-         Debug\Player.obj
-         Debug\Region.obj
-         Debug\Risk.obj
-         Debug\stdafx.obj
-         Risk.vcxproj -> C:\Users\Radu\Desktop\Risk\Risk\Debug\Risk.exe
-     1>Done Building Project "C:\Users\Radu\Desktop\Risk\Risk\Risk\Risk.vcxproj" (Build target(s)).
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h" /Fp"Debug\Risk.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+     1>c:\users\radu\desktop\risk\risk\risk\player.h(8): fatal error C1083: Cannot open include file: 'cereal/archives/xml.hpp': No such file or directory
+     1>Done Building Project "C:\Users\Radu\Desktop\Risk\Risk\Risk\Risk.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:03.00
+Time Elapsed 00:00:00.54

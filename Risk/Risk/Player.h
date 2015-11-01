@@ -9,15 +9,16 @@
 #include <cereal/types/vector.hpp>
 #include "Country.h"
 #include "Deck.h"
-
+#include "Strategy.h"
 
 class Player {
 private:
 	/*Member variables*/
+	
 	std::string player_name;
 	
 	std::vector<Country*> countries_owned;
-	
+	Strategy* strategy;
 	/*May possible have to refactor the hand logic to be a vector of pointers, similar to Country*/
 	std::vector<Deck::Card> hand;
 public:
@@ -25,7 +26,8 @@ public:
 	Player(std::string name);
 	~Player();
 	std::string get_player_name();
-	
+	void setStrategy(Strategy* str);
+	void executeStrategy(Player* p);
 	void assign_country(Country& country);
 	void remove_country(Country& country);
 	std::string print_countries_owned();
