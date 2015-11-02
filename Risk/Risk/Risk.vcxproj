@@ -86,6 +86,7 @@
   <ItemGroup>
     <ClInclude Include="CardCashing.h" />
     <ClInclude Include="Combat.h" />
+    <ClInclude Include="Continent.h" />
     <ClInclude Include="Country.h" />
     <ClInclude Include="Deck.h" />
     <ClInclude Include="Engine.h" />
@@ -101,6 +102,7 @@
   <ItemGroup>
     <ClCompile Include="CardCashing.cpp" />
     <ClCompile Include="Combat.cpp" />
+    <ClCompile Include="Continent.cpp" />
     <ClCompile Include="Country.cpp" />
     <ClCompile Include="Deck.cpp" />
     <ClCompile Include="Engine.cpp" />

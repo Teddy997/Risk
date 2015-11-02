@@ -1,0 +1,42 @@
+Alaska,1,1,2,3,37
+Northwest Territory,2,1,1,3,5,4
+Alberta,3,1,1,2,5,7
+Greenland,4,1,2,5,6,20
+Ontario,5,1,2,3,4,6,7,8
+Quebec,6,1,4,5,8
+Western United States,7,1,3,5,8,9
+Eastern United States,8,1,5,6,7,9
+Central America,9,1,7,8,10
+Venezuala,10,5,9,11,13
+Peru,11,5,10,13,12
+Argentina,12,5,11,13
+Brazil,13,5,10,11,12,14
+North Africa,14,3,13,22,25,19,18,15
+Congo,15,3,14,18,16
+South Africa,16,3,15,18,17
+Madagascar,17,3,18,16
+East Africa,18,3,19,27,15,14,16,17
+Egypt,19,3,25,14,27,18
+Iceland,20,2,4,21,23
+Great Britain,21,2,20,23,22,24
+Western Europe,22,2,21,24,25,14
+Scandinavia,23,2,20,21,24,26
+Northern Europe,24,2,21,23,26,25,22
+Southern Europe,25,2,24,26,27,19,14,22
+Ukraine,26,2,28,29,27,25,24,23
+Middle East,27,0,26,29,30,25,19,18
+Ural,28,0,31,32,29,26
+Afghanistan,29,0,28,32,30,27,26
+India,30,0,32,33,29,27
+Siberia,31,0,36,35,34,32,28
+China,32,0,28,31,34,33,30,29
+Siam,33,0,32,30,39
+Mongolia,34,0,31,35,38,32,37
+Irkutsk,35,0,31,36,37,34
+Yatusk,36,0,31,35,37
+Kamchatka,37,0,36,35,38,1,34
+Japan,38,0,37,34
+Indonesia,39,4,33,40,41
+New Guinea,40,4,39,41,42
+Western Australia,41,4,39,40,42
+Eastern Australia,42,4,41,40

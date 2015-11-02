@@ -1,0 +1,6 @@
+Asia,0
+North America,1
+Europe,2
+Africa,3
+Australia,4
+South America,5

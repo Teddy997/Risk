@@ -4,6 +4,9 @@
 #include <vector>
 #include "Country.h"
 
+using std::vector;
+using std::string;
+
 class Map
 {
 public:
@@ -20,5 +23,9 @@ public:
 
 private:
 	std::vector<Country> countries;
+
+	//private methods
+	void createCountries();
+	void split(const string& fullString, char cSplitter, vector<string>& splitStrings);
 };
 
