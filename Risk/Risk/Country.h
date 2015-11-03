@@ -4,23 +4,28 @@
 #include <iostream>
 #include <string>
 #include <cereal/archives/xml.hpp>
+#include "Player.h"
+#include "Country.h"
 
+//Why is this here? I included Player.h instead
+//   - Cynthia
 class Player;
 
 class Country {
 private:
 	/*Member variables*/
 	std::string country_name;
-	
 	Player* owner;
 	bool is_owned;
-	
 	int number_of_armies;
+	std::vector<Country*> connectedCountries;
+
 public:
 	Country();
 	Country(std::string name);
 	~Country();
 	std::string get_country_name();
+	void setConnectedCountries(std::vector<Country*> connected);
 	
 	void set_owned(bool value, Player& player);
 	Player* get_owner();

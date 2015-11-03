@@ -66,6 +66,9 @@
     <ClInclude Include="Strategy.h">
       <Filter>Header Files\AIStrategy</Filter>
     </ClInclude>
+    <ClInclude Include="Continent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="AgressiveStrategy.h">
       <Filter>Header Files\AIStrategy</Filter>
     </ClInclude>
@@ -114,6 +117,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="InputProcedure.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Continent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="AgressiveStrategy.cpp">
