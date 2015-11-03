@@ -1,11 +1,12 @@
 #pragma once
-#include "Player.h"
 #include <iostream>
 using namespace std;
+
+class Player;
+
 class Strategy
 {
 protected:
-
 	Player* p;
 public:
 	Strategy();

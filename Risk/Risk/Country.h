@@ -4,12 +4,9 @@
 #include <iostream>
 #include <string>
 #include <cereal/archives/xml.hpp>
-#include "Player.h"
-#include "Country.h"
 
-//Why is this here? I included Player.h instead
-//   - Cynthia
 class Player;
+class Country;
 
 class Country {
 private:
