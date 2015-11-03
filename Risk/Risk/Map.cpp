@@ -6,11 +6,38 @@
 Map::Map()
 {
 	createCountries();
+	createContinents();
 }
 //String country Name, countryID,ContinentID,
 
 Map::~Map()
 {
+}
+
+void Map::createContinents()
+{
+	std::ifstream inputFile;
+	inputFile.open("continents.txt");
+
+	vector<string> continentName;
+	vector<int> continentID;
+	string   line;
+
+	while (std::getline(inputFile, line))
+	{
+		vector<string> splittedLine;
+		split(line, ',', splittedLine);
+
+		continentName.push_back(splittedLine[0]);
+		continentID.push_back(atoi(splittedLine[1].c_str()));
+	}
+
+	inputFile.close();
+
+	for (int j = 0; j < continentName.size(); j++)
+	{
+		continents.push_back(Continent(continentName[j],continentID[j]));
+	}
 }
 
 void Map::createCountries()
@@ -53,7 +80,18 @@ void Map::createCountries()
 	{
 		countries.push_back(Country(countryName[j]));
 	}
-	
+
+	vector<Country*> connected;
+	connected.push_back(&countries[connectedCountryID[0][1]]);
+
+
+
+
+
+
+
+
+
 
 }
 

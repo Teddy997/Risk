@@ -3,6 +3,7 @@
 #include <cereal/types/vector.hpp>
 #include <vector>
 #include "Country.h"
+#include "Continent.h"
 
 using std::vector;
 using std::string;
@@ -23,9 +24,11 @@ public:
 
 private:
 	std::vector<Country> countries;
+	std::vector<Continent> continents;
 
 	//private methods
 	void createCountries();
+	void createContinents();
 	void split(const string& fullString, char cSplitter, vector<string>& splitStrings);
 };
 
