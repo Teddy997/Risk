@@ -1,5 +1,5 @@
 # COMP345_risk 
-<strong>CHECKLIST FOR PD1 (NOV 10 OR NOV 11)</strong>
+<strong>CHECKLIST FOR PD1 (NOV 11 OR NOV 12)</strong>
 <table>
 <tr>
 <td>User-driven creation of map elements, such as country, continent, and connectivity between countries.</td><td></td>
