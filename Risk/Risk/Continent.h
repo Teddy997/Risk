@@ -1,7 +1,8 @@
 #pragma once
 #include <string>
 #include <vector>
-#include "Country.h"
+
+class Country;
 
 class Continent
 {
@@ -9,11 +10,12 @@ public:
 	Continent();
 	Continent(std::string name, int ID);
 	~Continent();
+	void setContainedCountries(std::vector<Country*> contained);
 
 private:
 	std::string continent_name;
 	int ID;
-	std::vector<Country*> countriesContained;
+	std::vector<Country*> containedCountries;
 
 };
 

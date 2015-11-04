@@ -14,3 +14,7 @@ Continent::Continent(std::string name, int ID)
 Continent::~Continent()
 {
 }
+
+void Continent::setContainedCountries(std::vector<Country*> contained) {
+	containedCountries = contained;
+}
