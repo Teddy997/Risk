@@ -17,6 +17,7 @@
 #include "Combat.h"
 #include "InputProcedure.h"
 #include "SaveLoadManager.h"
+#include "GameState.h"
 
 #include <ctime>
 #include <sstream>

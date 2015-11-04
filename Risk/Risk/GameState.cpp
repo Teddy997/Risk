@@ -28,7 +28,51 @@ void GameState::addPlayer(std::string name) {
 }
 
 void GameState::changeGamePhase(Phase newPhase) {
+	if (newPhase == REINFORCING) {
+		//reinforcingPhase(currentPlayer);
+	}
+}
 
+void GameState::reinforcingPhase(Player &currentPlayer) {
+	int armiesAwarded = currentPlayer.numberOfCountriesOwned() / 3;
+	if (armiesAwarded < 3) { armiesAwarded = 3; }
+
+	std::cout << "\n**********CURRENT COUNTRIES**********" << std::endl;
+	std::cout << currentPlayer.print_countries_owned() << std::endl;
+
+	while (armiesAwarded > 0) {
+		std::cout << currentPlayer.get_player_name() << " has " << armiesAwarded << " armies to place." << std::endl;
+		std::cout << "Enter the number of the country you'd like to reinforce." << std::endl;
+		int index;
+		bool valid_country = false;
+		while (valid_country == false) {
+			index = InputProcedure::get_choice();
+			if (index - 1 < 0 || index - 1 > currentPlayer.numberOfCountriesOwned() - 1) {
+				std::cout << "Not a valid choice." << std::endl;
+			}
+			else {
+				valid_country = true;
+			}
+		}
+		std::cout << "Enter the number of armies you'd like to reinforce with." << std::endl;
+		bool valid_amount = false;
+		while (valid_amount == false) {
+			int armiesDeducted = 0;
+			armiesDeducted = InputProcedure::get_choice();
+			if (armiesDeducted > armiesAwarded || armiesDeducted < 0) {
+				std::cout << "Not a valid amount" << std::endl;
+			}
+			else {
+				currentPlayer.get_country(index-1)->increment_armies(armiesDeducted);
+				
+				std::cout << "\n**********CURRENT COUNTRIES**********" << std::endl;
+				std::cout << currentPlayer.print_countries_owned() << std::endl;
+
+				armiesAwarded -= armiesDeducted;
+				valid_amount = true;
+			}
+		}
+	}
 }
 
 void GameState::updatePlayerTurn() {

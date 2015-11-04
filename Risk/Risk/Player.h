@@ -34,6 +34,7 @@ public:
 	void assign_country(Country& country);
 	void remove_country(Country& country);
 	std::string print_countries_owned();
+	Country* get_country(int index);
 	int numberOfCountriesOwned();
 	
 	void add_to_hand(Deck::Card);

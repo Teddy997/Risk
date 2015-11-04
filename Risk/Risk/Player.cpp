@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <iomanip>
 #include <vector>
 #include <string>
 #include <algorithm>
@@ -22,6 +23,7 @@ get_player_name(), a simple function returning a string containing the name of t
 assign_country(country), pushes the address of a country to the countries_owned vector, representing the acquisition of a country.
 remove_country(country), erases the address of a country from the countries_owned vector, representing the loss of an acquired country.
 print_countries_owned(), a simple function returning a string containing the names of the countries the player currently owns.
+get_country(index), a simple function returning a pointer to a country listed within the countries_owned vector at the index passed.
 add_to_hand(Card), pushes the value of a card to the hand vector, representing the acquisiton of a card.
 cash_cards(deck), returns a certain number of cards from the player's hand to the deck, following the logic defined in the CardCashing namespace.
 view_hand(), a simple function returning a string containing the values of the Card IDs currently stored in the player's hand.
@@ -86,6 +88,8 @@ void Player::remove_country(Country& country) {
 	}
 }
 
+//I really need to refactor this to be a void function that prints the countries with cout
+//That way I can format cout to align all the armies after some spaces - Eric
 std::string Player::print_countries_owned() {
 	std::string countries = "";
 	int size = countries_owned.size();
@@ -96,15 +100,16 @@ std::string Player::print_countries_owned() {
 	//Else, for each country the player owns, store the name of that country into the countries string.
 	else {
 		for(int i=0; i<size; i++) {
-			if(i != size-1) { //Formatting
-				countries += countries_owned.at(i)->get_country_name() + ", "; 
-			}
-			else { //Formatting
-				countries += countries_owned.at(i)->get_country_name(); 
-			}
+			countries += to_string(i+1) + ". Country: " + countries_owned.at(i)->get_country_name() + 
+				", Armies: " + to_string(countries_owned.at(i)->get_number_of_armies()) + "\n";
 		}
 	}
 	return countries;
+}
+
+Country* Player::get_country(int index) {
+	//It's up to the user of get_country to assure that the index is within the valid range ( > -1 && < countries_owned.size()-1 )
+	return countries_owned.at(index);
 }
 
 int Player::numberOfCountriesOwned() {
@@ -120,7 +125,6 @@ void Player::add_to_hand(Deck::Card card) {
 	std::sort(hand.begin(), hand.end(), comparison_function);
 }
 
-//TODO
 void Player::cash_cards(Deck& deck) {
 	std::vector<int> amt_ids = CardCashing::count_ids(hand);
 	std::vector<bool> true_ids = CardCashing::assess_where_true(hand);

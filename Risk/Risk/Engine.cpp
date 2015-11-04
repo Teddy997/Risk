@@ -36,7 +36,7 @@ void Engine::gamePlayPhase(){
 
 void Engine::reinforcementPhase() {
 	cout << "Assignment: Reinforcing..." << endl;
-	gameState.changeGamePhase(Phase(GETTING));
+	gameState.changeGamePhase(Phase(REINFORCING));
 
 
 }

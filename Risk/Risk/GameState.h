@@ -13,7 +13,8 @@ using std::string;
 
 
 enum Phase {
-	GETTING,
+	//Changed GETTING to REINFORCING - Eric
+	REINFORCING, 
 	ATTACKING,
 	FORTIFYING
 };
@@ -26,6 +27,7 @@ public:
 	~GameState();
 	void addPlayer(std::string name);
 	void changeGamePhase(Phase newPhase);
+	void reinforcingPhase(Player &currentPlayer); //TODO: remove this and put in private when we implement changeGamePhase
 	void updatePlayerTurn();
 	Player getMainPlayer();
 	Player* getCurrentPlayer();
@@ -49,6 +51,9 @@ private:
 	vector<Player> AIPlayers;
 	Map map;
 	Phase currentPhase;
+	//This is probably better off private and have it called by changeGamePhase.
+	//I've made it public for the time being to do testing - Eric
+	//void reinforcingPhase(Player &currentPlayer);
 	// TODO: Not sure which data type here yet, I'll find out soon - C
 	int currentPlayerTurn;
 };
