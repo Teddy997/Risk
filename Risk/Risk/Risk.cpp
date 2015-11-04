@@ -93,6 +93,22 @@ void map_testing() {
 }
 
 
+void game_state_testing() {
+	Player p1("Michonne");
+	Country c1("Germany");
+	Country c2("France");
+	Country c3("South Africa");
+	p1.assign_country(c1);
+	p1.assign_country(c2);
+	p1.assign_country(c3);
+	c1.increment_armies(7);
+	c2.increment_armies(5);
+	c3.increment_armies(3);
+	GameState g;
+	g.reinforcingPhase(p1);
+}
+
+
 int _tmain(int argc, _TCHAR* argv[])
 {
 	//TODO: uncomment
@@ -113,7 +129,9 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	//saveLoad_testing();
 
-	map_testing();
+	//map_testing();
+	
+	game_state_testing();
 
 	return 0;
 }

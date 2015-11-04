@@ -23,7 +23,7 @@
 <td>User chooses the number of players, all countries are randomly assigned to players.</td><td></td>
 </tr>
 <tr>
-<td>Calculation of correct number of reinforcement armies.</td><td></td>
+<td>Calculation of correct number of reinforcement armies.</td><td><strong>X</strong></td>
 </tr>
 <tr>
 <td>User-driven placement of reinforcement armies on the map.</td><td></td>

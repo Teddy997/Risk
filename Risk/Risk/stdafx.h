@@ -18,6 +18,7 @@
 #include "InputProcedure.h"
 #include "SaveLoadManager.h"
 #include "MapTester.h"
+#include "GameState.h"
 
 #include <ctime>
 #include <sstream>
