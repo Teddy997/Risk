@@ -78,6 +78,9 @@
     <ClInclude Include="RandomStrategy.h">
       <Filter>Header Files\AIStrategy</Filter>
     </ClInclude>
+    <ClInclude Include="MapTester.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -133,6 +136,9 @@
     </ClCompile>
     <ClCompile Include="RandomStrategy.cpp">
       <Filter>Source Files\AIStrategy</Filter>
+    </ClCompile>
+    <ClCompile Include="MapTester.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

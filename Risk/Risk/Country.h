@@ -22,7 +22,7 @@ public:
 	Country(std::string name);
 	~Country();
 	std::string get_country_name();
-	void setConnectedCountries(std::vector<Country*> connected);
+	void setConnectedCountries(std::vector<Country*> connected) { connectedCountries = connected; }
 	
 	void set_owned(bool value, Player& player);
 	Player* get_owner();

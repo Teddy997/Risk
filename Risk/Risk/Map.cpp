@@ -27,6 +27,24 @@ Map::~Map()
 {
 }
 
+void Map::PrintAllCountryNames()
+{
+	for (int i = 0; i < nOfCountries; i++)
+	{
+		std::cout << countries[i].get_country_name() << endl;
+	}
+}
+
+void Map::PrintAllContinentNames()
+{
+	for (int i = 0; i < nOfContinents; i++)
+	{
+		std::cout << "--------------------------------------------------" << endl;
+		std::cout << "\t\t" << continents[i].get_continent_name() << endl;
+		std::cout << "////////////////////////////////" << endl;
+		continents[i].PrintContainedCountries();
+	}
+}
 ////////////////////////Private Methods//////////////////////////
 
 //Must be in the form:

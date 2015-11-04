@@ -87,6 +87,11 @@ void saveLoad_testing() {
 	slm.SaveGame();
 }
 
+void map_testing() {
+	MapTester mt;
+	mt.TestMapCreation();
+}
+
 
 int _tmain(int argc, _TCHAR* argv[])
 {
@@ -106,6 +111,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	//std::cout << "\nCOMBAT TESTING" << std::endl;
 	//combat_testing();
 
-	saveLoad_testing();
+	//saveLoad_testing();
+
+	map_testing();
+
 	return 0;
 }

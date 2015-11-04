@@ -95,6 +95,3 @@ int Country::get_number_of_armies() {
 	return number_of_armies;
 }
 
-void Country::setConnectedCountries(std::vector<Country*> connected) {
-	connectedCountries = connected;
-}

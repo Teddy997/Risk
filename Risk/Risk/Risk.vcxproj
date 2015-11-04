@@ -96,6 +96,7 @@
     <ClInclude Include="InputProcedure.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="MapManager.h" />
+    <ClInclude Include="MapTester.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="RandomStrategy.h" />
     <ClInclude Include="SaveLoadManager.h" />
@@ -116,6 +117,7 @@
     <ClCompile Include="InputProcedure.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="MapManager.cpp" />
+    <ClCompile Include="MapTester.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="RandomStrategy.cpp" />
     <ClCompile Include="Risk.cpp" />

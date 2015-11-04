@@ -48,7 +48,7 @@ vector<Player> GameState::getAIPlayers() {
 
 }
 void GameState::setMap(string name) {
-	map = Map(); // TODO use the name
+	map = Map(); // TODO use the file names to load
 }
 
 void GameState::generateCountries() {

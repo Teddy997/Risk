@@ -19,6 +19,9 @@ public:
 	void set_nOfCountries(int numberOfCountries) { nOfCountries = numberOfCountries; }
 	void set_nOfContinents(int numberOfContinents) { nOfContinents = numberOfContinents; }
 
+	void PrintAllCountryNames();
+	void PrintAllContinentNames();
+
 	template<class Archive>
 	void serialize(Archive & archive) {
 		archive(
