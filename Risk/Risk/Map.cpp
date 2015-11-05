@@ -9,14 +9,15 @@ Map::Map()
 	string countriesFile = "countries.txt";
 	vector<string> continentName;
 	vector<int> continentID;
+	vector<int> continentBonusValue;
 
 	vector<string> countryName;
 	vector<int> countryID;
 	vector<int> containingContinentID;
 	vector < vector <int> > connectedCountryID;
 
-	ReadContinents(continentFile, continentName, continentID);
-	CreateContinents(continentName, continentID);
+	ReadContinents(continentFile, continentName, continentID,continentBonusValue);
+	CreateContinents(continentName, continentID, continentBonusValue);
 	ReadCountries(countriesFile, countryName, countryID, containingContinentID, connectedCountryID);
 	CreateCountries(countryName);
 	AssignConnectedCountries(connectedCountryID);
@@ -49,7 +50,7 @@ void Map::PrintAllContinentNames()
 
 //Must be in the form:
 //	String continent Name,int continentID
-void Map::ReadContinents(string fileName, vector<string>& continentName, vector<int>& continentID)
+void Map::ReadContinents(string fileName, vector<string>& continentName, vector<int>& continentID, vector<int>& continentBonusValue)
 {
 	std::ifstream inputFile;
 	inputFile.open(fileName);
@@ -62,15 +63,16 @@ void Map::ReadContinents(string fileName, vector<string>& continentName, vector<
 
 		continentName.push_back(splittedLine[0]);
 		continentID.push_back(atoi(splittedLine[1].c_str()));
+		continentBonusValue.push_back(atoi(splittedLine[2].c_str()));
 	}
 	inputFile.close();
 }
 
-void Map::CreateContinents(vector<string>& continentName, vector<int>& continentID)
+void Map::CreateContinents(vector<string>& continentName, vector<int>& continentID, vector<int>& continentBonusValue)
 {
 	for (int j = 0; j < continentName.size(); j++)
 	{
-		continents.push_back(Continent(continentName[j],continentID[j]));
+		continents.push_back(Continent(continentName[j],continentID[j],continentBonusValue[j]));
 	}
 	set_nOfContinents(continents.size());
 }

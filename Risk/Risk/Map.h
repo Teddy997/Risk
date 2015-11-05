@@ -35,8 +35,8 @@ private:
 	int nOfContinents;
 
 	//private methods
-	void ReadContinents(string fileName, vector<string>& continentName, vector<int>& continentID);
-	void CreateContinents(vector<string>& continentName, vector<int>& continentID);
+	void ReadContinents(string fileName, vector<string>& continentName, vector<int>& continentID, vector<int>& continentBonusValue);
+	void CreateContinents(vector<string>& continentName, vector<int>& continentID, vector<int>& continentBonusValue);
 	void ReadCountries(string fileName, vector<string>& countryName, vector<int>& countryID, vector<int>& containingContinentID,
 	vector < vector <int> >& connectedCountryID);
 	void CreateCountries(vector<string>& countryName);

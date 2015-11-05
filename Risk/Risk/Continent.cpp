@@ -5,10 +5,11 @@ Continent::Continent()
 {
 }
 
-Continent::Continent(std::string name, int ID)
+Continent::Continent(std::string name, int ID, int bonus)
 {
 	continent_name = name;
 	Continent::ID = ID;
+	bonusValue = bonus;
 }
 
 Continent::~Continent()

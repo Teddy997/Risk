@@ -9,7 +9,7 @@ class Continent
 {
 public:
 	Continent();
-	Continent(std::string name, int ID);
+	Continent(std::string name, int ID, int bonus);
 	~Continent();
 	std::string get_continent_name(){ return continent_name; }
 	void setContainedCountries(std::vector<Country*>& contained) {containedCountries = contained;}
@@ -17,8 +17,9 @@ public:
 	
 
 private:
-	std::string continent_name;
 	int ID;
+	int bonusValue;
+	std::string continent_name;
 	std::vector<Country*> containedCountries;
 
 };
