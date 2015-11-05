@@ -15,6 +15,6 @@ void MapTester::TestMapCreation()
 	int wait;
 	map.PrintAllCountryNames();
 	map.PrintAllContinentNames();
-	map.CheckContinentBonus();
+	//map.CheckContinentBonus();
 	std::cin >> wait;
 }

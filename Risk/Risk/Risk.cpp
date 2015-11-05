@@ -129,9 +129,9 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	//saveLoad_testing();
 
-	//map_testing();
+	map_testing();
 	
-	game_state_testing();
+	//game_state_testing();
 
 	return 0;
 }

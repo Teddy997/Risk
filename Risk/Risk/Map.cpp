@@ -41,10 +41,11 @@ void Map::CheckContinentBonus()
 		for (int j = 1; j < tempCountries.size(); j++)
 		{
 			//TODO: make sure this comparison can work with these pointers
+			//I'm pretty sure this is crashing because there are no players assigned to any countries - Eric
 			if (tempCountries[j]->get_owner() != tempPlayer)
 			{
-				break;
 				deserveBonus = false;
+				break;
 			}
 		}
 		if (deserveBonus)
