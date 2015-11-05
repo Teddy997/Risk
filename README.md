@@ -33,44 +33,44 @@
 </tr>
 </table>
 
-Demo Sequence:
-1. Run program
-2. Display options: load map, edit map
+Demo Sequence:</br>
+1. Run program</br>
+2. Display options: load map, edit map</br>
 
-Load Map:
-1. Play default
-2. Display others
+Load Map:</br>
+1. Play default</br>
+2. Display others</br>
 
-Display Others:
-1. Show list of maps
-2. User chooses map to load
+Display Others:</br>
+1. Show list of maps</br>
+2. User chooses map to load</br>
 
-Edit map:
-1. Choose a new map or choose a map to edit
+Edit map:</br>
+1. Choose a new map or choose a map to edit</br>
 
-New edit map:
-1. Type name of map
-2. Load default map
-3. Ask for new country name
-4. Create country with name
-5. Ask for continent that it's contained in OR create new continent
-6. Ask for adjacencies
-7. Check for proper map: (1. continent has at least one country. 2. country has at least 1 adjacency. 3. country belongs to one and only one continent)
+New edit map:</br>
+1. Type name of map</br>
+2. Load default map</br>
+3. Ask for new country name</br>
+4. Create country with name</br>
+5. Ask for continent that it's contained in OR create new continent</br>
+6. Ask for adjacencies</br>
+7. Check for proper map: (1. continent has at least one country. 2. country has at least 1 adjacency. 3. country belongs to one and only one continent)</br>
 
-Edit existing map:
-1. List map files
-2. Choose map
-3. Proceed to new edit map sequence
+Edit existing map:</br>
+1. List map files</br>
+2. Choose map</br>
+3. Proceed to new edit map sequence</br>
 
-Play
-1. Ask number of players (2-4)
-2. Assign countries randomly to players
-3. Put 1 army in each country automagically. Then randomly assign rest. Display message: "for demo purposes we have assigned all armies randomly"
-4. Start main game sequence
+Play</br>
+1. Ask number of players (2-4)</br>
+2. Assign countries randomly to players</br>
+3. Put 1 army in each country automagically. Then randomly assign rest. Display message: "for demo purposes we have assigned all armies randomly"</br>
+4. Start main game sequence</br>
 
-Main game sequence:
-1. Player plays first
-2. Reinforcement phase (calculates number of countries/3 and then you can distribute it to your countries)
-3. Skip battle phase cause lame
-4. Fortification phase - only once (player can choose a country they own and move armies to another country they own through a path of adjacent countries they own)
-5. Repeat
+Main game sequence:</br>
+1. Player plays first</br>
+2. Reinforcement phase (calculates number of countries/3 and then you can distribute it to your countries)</br>
+3. Skip battle phase cause lame</br>
+4. Fortification phase - only once (player can choose a country they own and move armies to another country they own through a path of adjacent countries they own)</br>
+5. Repeat</br>
