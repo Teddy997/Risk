@@ -21,6 +21,7 @@ public:
 
 	void PrintAllCountryNames();
 	void PrintAllContinentNames();
+	void CheckContinentBonus();
 
 	template<class Archive>
 	void serialize(Archive & archive) {

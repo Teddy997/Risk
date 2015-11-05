@@ -28,6 +28,30 @@ Map::~Map()
 {
 }
 
+void Map::CheckContinentBonus()
+{
+	//TODO: need to reset bonus first
+
+	Player* tempPlayer;
+	for (int i = 0; i < continents.size(); i++)
+	{
+		vector<Country*> tempCountries = continents[i].getContainedCountries();
+		tempPlayer = tempCountries[0]->get_owner();
+		bool deserveBonus = true;
+		for (int j = 1; j < tempCountries.size(); j++)
+		{
+			//TODO: make sure this comparison can work with these pointers
+			if (tempCountries[j]->get_owner() != tempPlayer)
+			{
+				break;
+				deserveBonus = false;
+			}
+		}
+		if (deserveBonus)
+			tempPlayer->addBonus(continents[i].get_bonus());
+	}
+}
+
 void Map::PrintAllCountryNames()
 {
 	for (int i = 0; i < nOfCountries; i++)

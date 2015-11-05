@@ -21,6 +21,7 @@ private:
 	
 	std::vector<Country*> countries_owned;
 	Strategy* strategy;
+	int continent_bonus;
 
 	/*May possible have to refactor the hand logic to be a vector of pointers, similar to Country*/
 	std::vector<Deck::Card> hand;
@@ -35,6 +36,7 @@ public:
 	void remove_country(Country& country);
 	std::string print_countries_owned();
 	Country* get_country(int index);
+	void addBonus(int bonus) { continent_bonus += bonus; }
 	int numberOfCountriesOwned();
 	
 	void add_to_hand(Deck::Card);
