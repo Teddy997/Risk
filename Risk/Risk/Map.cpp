@@ -5,8 +5,8 @@
 
 Map::Map()
 {
-	string continentFile = "continents.txt";
-	string countriesFile = "countries.txt";
+	string continentFile = "Maps//default//continents.txt";
+	string countriesFile = "Maps//default//countries.txt";
 	vector<string> continentName;
 	vector<int> continentID;
 	vector<int> continentBonusValue;
@@ -108,7 +108,7 @@ void Map::ReadCountries(string fileName, vector<string>& countryName, vector<int
 						vector < vector <int> >& connectedCountryID)
 {
 	std::ifstream inputFile;
-	inputFile.open("countries.txt");
+	inputFile.open("Maps//default//countries.txt");
 
 	std::string   line;
 	int i = 0;

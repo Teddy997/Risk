@@ -31,6 +31,7 @@ public:
 	Player getCurrentPlayer();
 	vector<Player> getAIPlayers();
 	void setMap(string str);
+	void displayMapDirectoryContents();
 	void generateCountries();
 	// This method lets cereal know which data members to serialize
 	template<class Archive>

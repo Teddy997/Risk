@@ -1,6 +1,7 @@
 #pragma once
 #include "stdafx.h"
 #include "GameState.h"
+#include "tinydir.h"
 
 GameState::GameState() {
 
@@ -122,6 +123,41 @@ vector<Player> GameState::getAIPlayers() {
 }
 void GameState::setMap(string name) {
 	map = Map(); // TODO use the file names to load
+}
+
+void GameState::displayMapDirectoryContents() {
+	string display = "";
+	tinydir_dir dir;
+	tinydir_open(&dir, "Maps");
+
+	while (dir.has_next)
+	{
+		tinydir_file file;
+		tinydir_readfile(&dir, &file);
+		string filename = file.name;
+		if (filename.compare("Thumbs.db") == 0 || filename.compare(".") == 0 || filename.compare("..") == 0) {
+			display += "";
+		}
+		else {
+			if (file.is_dir && (filename.compare("default") != 0))
+			{
+				display += filename;
+				display += "\n";
+			}
+			else {
+				display += "";
+			}
+		}
+		tinydir_next(&dir);
+	}
+
+	tinydir_close(&dir);
+	if (display.length() == 0) {
+		cout << "There are currently no user created maps!" << endl;
+	}
+	else {
+		cout << display << endl;
+	}
 }
 
 void GameState::generateCountries() {
