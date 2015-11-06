@@ -19,6 +19,9 @@
     <Filter Include="Source Files\AIStrategy">
       <UniqueIdentifier>{2e2d829a-eb84-4525-a24d-d1d4bf7b67c6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\MapDirectoryDisplay">
+      <UniqueIdentifier>{1d91dc21-318b-48fc-b960-75b95d5b9168}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -80,6 +83,9 @@
     </ClInclude>
     <ClInclude Include="MapTester.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tinydir.h">
+      <Filter>Header Files\MapDirectoryDisplay</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

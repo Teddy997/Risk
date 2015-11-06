@@ -103,6 +103,7 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Strategy.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="tinydir.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AgressiveStrategy.cpp" />
