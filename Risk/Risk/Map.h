@@ -28,7 +28,8 @@ public:
 		archive(
 			CEREAL_NVP(countries));
 	};
-
+	int nbOfCountries();
+	std::vector<Country> getCountries();
 private:
 	std::vector<Country> countries;
 	std::vector<Continent> continents;

@@ -160,10 +160,42 @@ void GameState::displayMapDirectoryContents() {
 	}
 }
 
-void GameState::generateCountries() {
-	/*
-	Assign a number of countries for the player and then for the AI players
-	*/
+void GameState::assignCountries() { 
+	vector<Country> countries = map.getCountries();
+	int totalNbCountries = countries.size();
+	int numberOfPlayers = 1 + AIPlayers.size();
+	int numCountriesPerPlayer = totalNbCountries / numberOfPlayers;
+	// if we don't have a perfect division, give the rest of the countries to the human player
+	int extraCountries = totalNbCountries % numberOfPlayers;
+	int numberOfArmiesPerPlayer = 0;
+	if (numberOfPlayers == 2)
+		numberOfArmiesPerPlayer = 40;
+	else if (numberOfPlayers == 3)
+		numberOfArmiesPerPlayer = 35;
+	else if (numberOfPlayers == 4)
+		numberOfArmiesPerPlayer = 30;
+	
+
+	// assign countries to players
+	for (Country c : countries) {
+		int toPlayer = rand() % numberOfPlayers; 
+		if (toPlayer == 0) {
+			player.assign_country(c);
+		}
+		else {
+			--toPlayer;
+			AIPlayers[toPlayer].assign_country(c);
+		}
+	}
+	player.assignArmies(numberOfArmiesPerPlayer);
+	// assign number of armies to each country 
+	for (Player p : AIPlayers) {
+		p.assignArmies(numberOfArmiesPerPlayer);
+
+		
+	}
+	
+
 }
 
 //template<class Archive>

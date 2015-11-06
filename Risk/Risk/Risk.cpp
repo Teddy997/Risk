@@ -106,6 +106,9 @@ void game_state_testing() {
 	c3.increment_armies(3);
 	//GameState g;
 	//g.reinforcingPhase();
+	GameState g;
+	g.displayMapDirectoryContents();
+	//g.reinforcingPhase(p1);
 }
 
 
@@ -129,9 +132,9 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	//saveLoad_testing();
 
-	map_testing();
+	//map_testing();
 	
-	//game_state_testing();
+	game_state_testing();
 
 	return 0;
 }

@@ -165,3 +165,28 @@ void Player::view_hand() {
 		}
 	}
 }
+
+void Player::assignArmies(int x) {
+	int armiesAvaiable = x;
+	// first put an army in each country.
+	for (Country* c : countries_owned) {
+		c->increment_armies(1);
+		--armiesAvaiable;
+	}
+	// now assign a random number of armies(between 1 and 3) to each country until there are no more armies avaialble
+	while (armiesAvaiable > 0) {
+		for (Country* c : countries_owned) {
+			int random = 1;
+			if (armiesAvaiable >= 3)
+				random = rand() % 3 + 1;
+			else
+				random = armiesAvaiable;
+			c->increment_armies(random);
+			armiesAvaiable -= random;
+		}
+
+	}
+
+
+
+}

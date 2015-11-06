@@ -32,7 +32,7 @@ public:
 	vector<Player> getAIPlayers();
 	void setMap(string str);
 	void displayMapDirectoryContents();
-	void generateCountries();
+	void assignCountries();
 	// This method lets cereal know which data members to serialize
 	template<class Archive>
 	//Keep it inline for now, it causes a linker problem otherwise
@@ -51,7 +51,6 @@ private:
 	Map map;
 	Phase currentPhase;
 	void reinforcingPhase();
-	void updateGameState();
 	Player currentPlayer;
 	void doAIReinforcement(int armies);
 };

@@ -18,7 +18,6 @@ private:
 	/*Member variables*/
 	
 	std::string player_name;
-	
 	std::vector<Country*> countries_owned;
 	Strategy* strategy;
 	int continent_bonus;
@@ -38,7 +37,7 @@ public:
 	Country* get_country(int index);
 	void addBonus(int bonus) { continent_bonus += bonus; }
 	int numberOfCountriesOwned();
-	
+	void assignArmies(int x);
 	void add_to_hand(Deck::Card);
 	void cash_cards(Deck& deck);
 	void view_hand();

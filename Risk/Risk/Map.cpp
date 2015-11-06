@@ -197,3 +197,11 @@ void Map::Split(const string& fullString, char cSplitter, vector<string>& SplitS
 		}
 	}
 }
+
+int Map::nbOfCountries() {
+	return nOfCountries;
+}
+
+vector<Country> Map::getCountries() {
+	return countries;
+}

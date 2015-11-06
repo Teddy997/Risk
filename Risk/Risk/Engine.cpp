@@ -94,13 +94,29 @@ bool Engine::victoryConditions() {
 }
 void Engine::generateAIPlayers() {
 	cout << "Assignment: Generating AI players..." << endl;
-	//TODO **********************************************************************************************************************
-	// ask here the user for number of players
-	
-	gameState.addPlayer("AI Mister Swag");
-	gameState.addPlayer("AI Mister Yolo");
-	gameState.addPlayer("AI Miss Swag");
-	gameState.addPlayer("AI Miss Yolo");
+	vector<string> names = { "AI Michonne", "AI Jon Snow", "AI Heisenberg" };
+	// asking playa for number of players.
+	int opponents = 0;
+	cout << "Choose the number of opponents to play against. For the sake of simplicity and coherence, please only"
+		<< " choose a number between 1 and " << names.size() << endl;
+	bool valid = false;
+
+	while (valid == false) {
+		opponents = InputProcedure::get_choice();
+		if (opponents < 1 || opponents > names.size()) {
+			cout << "Not a valid choice." << endl;
+		}
+		else {
+			valid = true;
+		}
+	}
+
+	if (valid) {
+		for (unsigned int i = 0; i < names.size(); ++i) {
+			gameState.addPlayer(names[i]);
+		}
+	}
+
 	
 }
 
@@ -116,7 +132,7 @@ void Engine::chooseMap() {
 
 void Engine::assignCountries() {
 	cout << "Assignment: assigning countries to players... " << endl;
-	gameState.generateCountries();
+	gameState.assignCountries();
 }
 
 
