@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Engine.h"
 
-
+using namespace std;
 Engine::Engine()
 {
 	cout << "Assignment: creating engine and game state" << endl;
@@ -25,9 +25,15 @@ void Engine::startPhase() {
 void Engine::gamePlayPhase(){
 	cout << "Assignment: playing the game!" << endl;
 	while (victoryConditions()) {
+		cout << "current player's turn: " << gameState.getCurrentPlayer().get_player_name();
+		unsigned int turn = 0;
 		reinforcementPhase();
 		attackPhase();
 		fortificationPhase();
+		if (turn > gameState.getAIPlayers().size())
+			turn = 0;
+		gameState.updatePlayerTurn(++turn);
+		
 	}
 
 }
@@ -60,7 +66,7 @@ void Engine::fortificationPhase() {
 bool Engine::victoryConditions() {
 	
 	cout << "Assignment: Checking to see if anybody won " << endl;
-	if (gameState.getCurrentPlayer()->numberOfCountriesOwned() < 1)
+	if (gameState.getCurrentPlayer().numberOfCountriesOwned() < 1)
 		defeat = true;
 	else {
 		bool d = false;

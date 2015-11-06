@@ -3,7 +3,7 @@
 #include "Map.h"
 #include "GameState.h"
 
-using namespace std;
+
 class Engine
 {
 private:
@@ -17,6 +17,7 @@ private:
 	void chooseMap();
 	void assignCountries();
 	bool victoryConditions();
+
 public:
 	Engine();
 	~Engine();

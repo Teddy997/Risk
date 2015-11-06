@@ -7,9 +7,7 @@
 #include "AgressiveStrategy.h"
 #include "DefensiveStrategy.h"
 #include "RandomStrategy.h"
-using std::vector;
-using std::string;
-
+using namespace std;
 
 
 enum Phase {
@@ -27,10 +25,10 @@ public:
 	~GameState();
 	void addPlayer(std::string name);
 	void changeGamePhase(Phase newPhase);
-	void reinforcingPhase(Player &currentPlayer); //TODO: remove this and put in private when we implement changeGamePhase
-	void updatePlayerTurn();
+	
+	void updatePlayerTurn(int turn);
 	Player getMainPlayer();
-	Player* getCurrentPlayer();
+	Player getCurrentPlayer();
 	vector<Player> getAIPlayers();
 	void setMap(string str);
 	void generateCountries();
@@ -38,23 +36,22 @@ public:
 	template<class Archive>
 	//Keep it inline for now, it causes a linker problem otherwise
 	void serialize(Archive & archive) { archive(
-		CEREAL_NVP(currentPlayerTurn),
+		CEREAL_NVP(currentPlayer),
 		CEREAL_NVP(player),
 		CEREAL_NVP(AIPlayers),
 		CEREAL_NVP(currentPhase),
 		CEREAL_NVP(map));
 	};
 
-
+	void setPlayerTurn(Player p);
 private:
 	Player player;
 	vector<Player> AIPlayers;
 	Map map;
 	Phase currentPhase;
-	//This is probably better off private and have it called by changeGamePhase.
-	//I've made it public for the time being to do testing - Eric
-	//void reinforcingPhase(Player &currentPlayer);
-	// TODO: Not sure which data type here yet, I'll find out soon - C
-	int currentPlayerTurn;
+	void reinforcingPhase();
+	void updateGameState();
+	Player currentPlayer;
+	void doAIReinforcement(int armies);
 };
 

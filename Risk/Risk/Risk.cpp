@@ -104,8 +104,8 @@ void game_state_testing() {
 	c1.increment_armies(7);
 	c2.increment_armies(5);
 	c3.increment_armies(3);
-	GameState g;
-	g.reinforcingPhase(p1);
+	//GameState g;
+	//g.reinforcingPhase();
 }
 
 
