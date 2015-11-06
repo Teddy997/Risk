@@ -41,7 +41,7 @@ private:
 	void CreateContinents(vector<string>& continentName, vector<int>& continentID, vector<int>& continentBonusValue);
 	void ReadCountries(string fileName, vector<string>& countryName, vector<int>& countryID, vector<int>& containingContinentID,
 	vector < vector <int> >& connectedCountryID);
-	void CreateCountries(vector<string>& countryName);
+	void CreateCountries(vector<string>& countryName, vector<int>& containingContinentID);
 	void AssignConnectedCountries(vector < vector <int> >& connectedCountryID);
 	void AssignContainedCountries(vector<int>& containingContinentID);
 	void Split(const string& fullString, char cSplitter, vector<string>& splitStrings);

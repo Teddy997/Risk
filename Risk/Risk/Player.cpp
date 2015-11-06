@@ -59,6 +59,25 @@ void Player::assign_country(Country& country) {
 		countries_owned.push_back(&country);
 		//Set the country to being owned by this player.
 		country.set_owned(true, *this);
+
+		//Check if the player should now own a continent
+		Continent* tempContinent = country.get_containing_continent();
+		//Normally this should not happen, but just in case
+		if (tempContinent != NULL) {
+			int nOfCountriesInContinent = tempContinent->getContainedCountries().size();
+			bool shouldOwn = true;
+			for (int i = 0; i < nOfCountriesInContinent; i++) {
+				//If one of the owner is not this player, the player should not own the continent
+				if (tempContinent->getContainedCountries().at(i)->get_owner() != this) {
+					shouldOwn = false;
+					break;
+				}
+			}
+			if (shouldOwn) {
+				continents_owned.push_back(tempContinent);
+			}
+			update_bonus();
+		}
 	}
 	//Else, inform the system that the acquisition cannot be completed as the country is still owned.
 	else {
@@ -85,6 +104,17 @@ void Player::remove_country(Country& country) {
 		countries_owned.erase(countries_owned.begin()+index);
 		//Set the country to no longer being owned by this player.
 		country.set_owned(false, *this);
+
+		//Check if the user was owner the associated continent
+		//If so, remove it
+		int nOfContinentOwned = continents_owned.size();
+		for (int i = 0; i < nOfContinentOwned; i++) {
+			if (continents_owned.at(i) == country.get_containing_continent()) {
+				continents_owned.erase(continents_owned.begin() + i);
+				break;	//No need to search anymore
+			}
+		}
+		update_bonus();
 	}
 }
 
@@ -184,9 +214,15 @@ void Player::assignArmies(int x) {
 			c->increment_armies(random);
 			armiesAvaiable -= random;
 		}
-
 	}
+}
 
-
-
+void Player::update_bonus() {
+	int newBonus = 0;
+	if (!continents_owned.empty()) {
+		for (int i = 0; i < continents_owned.size(); i++) {
+			newBonus += continents_owned.at(i)->get_bonus();
+		}
+	}
+	set_total_bonus(newBonus);
 }

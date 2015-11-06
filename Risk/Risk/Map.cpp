@@ -19,7 +19,7 @@ Map::Map()
 	ReadContinents(continentFile, continentName, continentID,continentBonusValue);
 	CreateContinents(continentName, continentID, continentBonusValue);
 	ReadCountries(countriesFile, countryName, countryID, containingContinentID, connectedCountryID);
-	CreateCountries(countryName);
+	CreateCountries(countryName, containingContinentID);
 	AssignConnectedCountries(connectedCountryID);
 	AssignContainedCountries(containingContinentID);
 }
@@ -28,30 +28,30 @@ Map::~Map()
 {
 }
 
-void Map::CheckContinentBonus()
-{
-	//TODO: need to reset bonus first
-
-	Player* tempPlayer;
-	for (int i = 0; i < continents.size(); i++)
-	{
-		vector<Country*> tempCountries = continents[i].getContainedCountries();
-		tempPlayer = tempCountries[0]->get_owner();
-		bool deserveBonus = true;
-		for (int j = 1; j < tempCountries.size(); j++)
-		{
-			//TODO: make sure this comparison can work with these pointers
-			//I'm pretty sure this is crashing because there are no players assigned to any countries - Eric
-			if (tempCountries[j]->get_owner() != tempPlayer)
-			{
-				deserveBonus = false;
-				break;
-			}
-		}
-		if (deserveBonus)
-			tempPlayer->addBonus(continents[i].get_bonus());
-	}
-}
+//void Map::CheckContinentBonus()
+//{
+//	//TODO: need to reset bonus first
+//
+//	Player* tempPlayer;
+//	for (int i = 0; i < continents.size(); i++)
+//	{
+//		vector<Country*> tempCountries = continents[i].getContainedCountries();
+//		tempPlayer = tempCountries[0]->get_owner();
+//		bool deserveBonus = true;
+//		for (int j = 1; j < tempCountries.size(); j++)
+//		{
+//			//TODO: make sure this comparison can work with these pointers
+//			//I'm pretty sure this is crashing because there are no players assigned to any countries - Eric
+//			if (tempCountries[j]->get_owner() != tempPlayer)
+//			{
+//				deserveBonus = false;
+//				break;
+//			}
+//		}
+//		if (deserveBonus)
+//			tempPlayer->addBonus(continents[i].get_bonus());
+//	}
+//}
 
 void Map::PrintAllCountryNames()
 {
@@ -137,11 +137,14 @@ void Map::ReadCountries(string fileName, vector<string>& countryName, vector<int
 	inputFile.close();
 }
 
-void Map::CreateCountries(vector<string>& countryName)
+//Create the whole list  of countries
+//NOTE: The continent list must be created before which is 
+//		why the method is private
+void Map::CreateCountries(vector<string>& countryName, vector<int>& containingContinentID)
 {
 	for (int j = 0; j < countryName.size(); j++)
 	{
-		countries.push_back(Country(countryName[j]));
+		countries.push_back(Country(countryName[j], continents[containingContinentID[j]]));
 	}
 	set_nOfCountries(countries.size());
 }

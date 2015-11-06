@@ -30,6 +30,7 @@ Country::Country(std::string name) {
 	country_name = name;
 	//Initialized to NULL as when the country is created, it does not have an owner.
 	owner = NULL;
+	containing_continent = NULL;
 	//Initialized to false as when the country is created, it does not have an owner.
 	is_owned = false;
 	number_of_armies = 0;

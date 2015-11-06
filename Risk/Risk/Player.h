@@ -19,8 +19,11 @@ private:
 	
 	std::string player_name;
 	std::vector<Country*> countries_owned;
+	std::vector<Continent*> continents_owned;
+	int total_continent_bonus;
 	Strategy* strategy;
-	int continent_bonus;
+
+	void update_bonus();
 
 	/*May possible have to refactor the hand logic to be a vector of pointers, similar to Country*/
 	std::vector<Deck::Card> hand;
@@ -35,7 +38,7 @@ public:
 	void remove_country(Country& country);
 	std::string print_countries_owned();
 	Country* get_country(int index);
-	void addBonus(int bonus) { continent_bonus += bonus; }
+	void set_total_bonus(int bonus) { total_continent_bonus += bonus; }
 	int numberOfCountriesOwned();
 	void assignArmies(int x);
 	void add_to_hand(Deck::Card);
