@@ -71,6 +71,67 @@ void Map::PrintAllContinentNames()
 		continents[i].PrintContainedCountries();
 	}
 }
+
+int Map::test_map_components()
+{
+	int returnValue = 0;
+	//TODO: using bit Flags for error code! -Cynthia
+
+	if (countries.empty() || continents.empty())
+	{
+		returnValue = -1;
+		if (countries.empty())
+			std::cout << "There is no country in the map" << std::endl;
+		if (continents.empty())
+			std::cout << "There is no continent in the map" << std::endl;
+	}
+	else
+	{
+		////////////////REQ : Every country is in a continent, but only one///////////////////////////
+
+		//for every countries
+		for (int i = 0; i < countries.size(); i++)
+		{
+			Country* tempCountry = &countries.at(i);
+			Continent* tempContinent = tempCountry->get_containing_continent();
+			if (tempContinent == NULL) {
+				returnValue = -1;
+				std::cout << tempCountry->get_country_name() << " doesn't have a containing continent" << std::endl;
+			}
+			for (int j = 0; j < continents.size(); j++)
+			{
+				//For all the other continents that contain countries
+				if (&continents.at(j) != tempContinent && !continents.at(j).getContainedCountries().empty()) {
+					for (int k = 0; k < continents.at(j).getContainedCountries().size(); k++)
+					{
+						//If another reference to the same country is found in another continent
+						if (continents.at(j).getContainedCountries().at(k) == tempCountry) {
+							returnValue = -1;
+							std::cout << tempCountry->get_country_name() << " have been found more than 1 continent: " << continents.at(j).get_continent_name() << std::endl;
+						}
+					}
+				}
+			}
+			////////////////REQ : Every country has at least 1 adjacency ///////////////////////////
+			if (tempCountry->getConnectedCountries().empty())
+			{
+				returnValue = -1;
+				std::cout << tempCountry->get_country_name() << " does not have any adjacency " << std::endl;
+			}
+		}
+		////////////////REQ : Every continent has at least 1 country ///////////////////////////
+		for (int i = 0; i < continents.size(); i++)
+		{
+			if (continents.at(i).getContainedCountries().empty())
+			{
+				returnValue = -1;
+				std::cout << continents.at(i).get_continent_name() << " does not contain any country " << std::endl;
+			}
+		}
+	}
+	return returnValue;
+}
+
 ////////////////////////Private Methods//////////////////////////
 
 //Must be in the form:

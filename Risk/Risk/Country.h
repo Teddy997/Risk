@@ -27,6 +27,7 @@ public:
 	~Country();
 	std::string get_country_name();
 	void setConnectedCountries(std::vector<Country*> connected) { connectedCountries = connected; }
+	std::vector<Country*> getConnectedCountries() { return connectedCountries; }
 	Continent* get_containing_continent() { return containing_continent; };
 	
 	void set_owned(bool value, Player& player);

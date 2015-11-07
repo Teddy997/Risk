@@ -22,6 +22,7 @@ public:
 	void PrintAllCountryNames();
 	void PrintAllContinentNames();
 	void CheckContinentBonus();
+	int test_map_components();
 
 	template<class Archive>
 	void serialize(Archive & archive) {
