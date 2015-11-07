@@ -109,6 +109,7 @@ void game_state_testing() {
 	GameState g;
 	g.displayMapDirectoryContents();
 	//g.reinforcingPhase(p1);
+	
 }
 
 
