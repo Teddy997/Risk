@@ -50,6 +50,7 @@ void Country::set_owned(bool value, Player& player) {
 	if(value == true) {
 		is_owned = value;
 		owner = &player;
+	
 	}
 	//Else, set the Player pointer, owner back to NULL.
 	else {

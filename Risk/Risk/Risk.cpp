@@ -80,6 +80,7 @@ void combat_testing() {
 	std::cout << p2.get_player_name() + " currently owns: " + p2.print_countries_owned() << std::endl;
 	std::cout << c1.get_country_name() + " currently has " << c1.get_number_of_armies() << " armies." << std::endl;
 	std::cout << c2.get_country_name() + " currently has " << c2.get_number_of_armies() << " armies." << std::endl;
+	system("pause");
 }
 
 void saveLoad_testing() {
@@ -119,8 +120,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	//std::cout << "PLAYER TESTING" << std::endl;
 	//player_testing();
 
-	//std::cout << "\nCOUNTRY TESTING" << std::endl;
-	//country_testing();
+	std::cout << "\nCOUNTRY TESTING" << std::endl;
+	country_testing();
+	system("pause");
 
 	//std::cout << "\nDECK TESTING" << std::endl;
 	//deck_testing();
@@ -135,7 +137,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	//map_testing();
 	
-	game_state_testing();
+	//game_state_testing();
 
 	return 0;
 }

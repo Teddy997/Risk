@@ -51,6 +51,7 @@ public:
 	int numberOfReinforcements();
 	int total_number_of_armies_owned();
 	void incrementBattlesWon();
+	int getBattlesWon();
 	template<class Archive>
 	void serialize(Archive & archive) {archive(
 		CEREAL_NVP(player_name));

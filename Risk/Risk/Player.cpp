@@ -33,6 +33,7 @@ numberOfCountriesOwned(), a simple function returning an int containing the size
 Player::Player() {
 	player_name = "Default player";
 	std::cout << get_player_name() + " Player object created." << std::endl;
+
 }
 
 Player::Player(std::string name) {
@@ -59,7 +60,7 @@ void Player::assign_country(Country& country) {
 		countries_owned.push_back(&country);
 		//Set the country to being owned by this player.
 		country.set_owned(true, *this);
-
+		Notify();
 		//Check if the player should now own a continent
 		Continent* tempContinent = country.get_containing_continent();
 		//Normally this should not happen, but just in case
@@ -281,4 +282,7 @@ int Player::total_number_of_armies_owned() {
 // increments number of battles won by 1.
 void Player::incrementBattlesWon() {
 	numberBattlesWon++;
+}
+int Player::getBattlesWon() {
+	return numberBattlesWon;
 }
