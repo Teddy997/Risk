@@ -10,10 +10,11 @@
 #include "Country.h"
 #include "Deck.h"
 #include "Strategy.h"
+#include "subject.h"
 
 class Strategy; // forward declaration
 
-class Player {
+class Player : public Subject {
 private:
 	/*Member variables*/
 	
