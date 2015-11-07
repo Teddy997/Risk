@@ -258,7 +258,7 @@ std::string Player::print_ContinentList() {
 	}
 	return continents;
 }
-void Player::numberOfReinforcements() {
+int Player::numberOfReinforcements() {
 	int number_reinforcements = countries_owned.size() / 3;
 	// number of reinforcements from countries
 		if (number_reinforcements < 3)
@@ -269,6 +269,16 @@ void Player::numberOfReinforcements() {
 		for (unsigned int i = 0; i < continents_owned.size(); i++) {
 			number_reinforcements += continents_owned.at(i)->get_bonus();
 		}
-		cout << "Current number of reinforcements: " << number_reinforcements << endl;
-
+		return number_reinforcements;
+}
+int Player::total_number_of_armies_owned() {
+	int numberOfArmiesOwned = 0;
+	for (unsigned int i = 0; i < countries_owned.size(); i++) {
+		numberOfArmiesOwned += countries_owned.at(i)->get_number_of_armies();
+	}
+	return numberOfArmiesOwned;
+}
+// increments number of battles won by 1.
+void Player::incrementBattlesWon() {
+	numberBattlesWon++;
 }

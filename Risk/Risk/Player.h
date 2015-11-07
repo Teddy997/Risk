@@ -22,6 +22,7 @@ private:
 	std::vector<Country*> countries_owned;
 	std::vector<Continent*> continents_owned;
 	int total_continent_bonus;
+	int numberBattlesWon;
 	Strategy* strategy;
 
 	void update_bonus();
@@ -47,7 +48,9 @@ public:
 	void view_hand();
 	std::string print_CountryList();
 	std::string print_ContinentList();
-	void numberOfReinforcements();
+	int numberOfReinforcements();
+	int total_number_of_armies_owned();
+	void incrementBattlesWon();
 	template<class Archive>
 	void serialize(Archive & archive) {archive(
 		CEREAL_NVP(player_name));
