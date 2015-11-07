@@ -258,3 +258,17 @@ std::string Player::print_ContinentList() {
 	}
 	return continents;
 }
+void Player::numberOfReinforcements() {
+	int number_reinforcements = countries_owned.size() / 3;
+	// number of reinforcements from countries
+		if (number_reinforcements < 3)
+		{
+			number_reinforcements = 3;
+		};
+	// number of bonus reinforcements for owning a whole continent is added to number of reinforcements
+		for (unsigned int i = 0; i < continents_owned.size(); i++) {
+			number_reinforcements += continents_owned.at(i)->get_bonus();
+		}
+		cout << "Current number of reinforcements: " << number_reinforcements << endl;
+
+}

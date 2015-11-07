@@ -47,7 +47,7 @@ public:
 	void view_hand();
 	std::string print_CountryList();
 	std::string print_ContinentList();
-
+	void numberOfReinforcements();
 	template<class Archive>
 	void serialize(Archive & archive) {archive(
 		CEREAL_NVP(player_name));
