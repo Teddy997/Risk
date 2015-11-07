@@ -226,3 +226,35 @@ void Player::update_bonus() {
 	}
 	set_total_bonus(newBonus);
 }
+// print only the list of countries owned by the player
+std::string Player::print_CountryList() {
+	std::string countries = "";
+	int size = countries_owned.size();
+	//If the size of the countries_owned vector is 0, then the player owns no countries.
+	if (size == 0) {
+		countries = "no countries found";
+	}
+	//Else, for each country the player owns, store the name of that country into the countries string.
+	else {
+		for (int i = 0; i<size; i++) {
+			countries += to_string(i + 1) + ". Country: " + countries_owned.at(i)->get_country_name() + "\n";
+		}
+	}
+	return countries;
+}
+// print only the list of countries owned by the player
+std::string Player::print_ContinentList() {
+	std::string continents = "";
+	int size = continents_owned.size();
+	//If the size of the continents_owned vector is 0, then the player owns no continents.
+	if (size == 0) {
+		continents = "no continents found";
+	}
+	//Else, for each country the player owns, store the name of that country into the continents string.
+	else {
+		for (int i = 0; i<size; i++) {
+			continents += to_string(i + 1) + ". Country: " + continents_owned.at(i)->get_continent_name() + "\n";
+		}
+	}
+	return continents;
+}

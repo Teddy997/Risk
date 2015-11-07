@@ -45,6 +45,8 @@ public:
 	void add_to_hand(Deck::Card);
 	void cash_cards(Deck& deck);
 	void view_hand();
+	std::string print_CountryList();
+	std::string print_ContinentList();
 
 	template<class Archive>
 	void serialize(Archive & archive) {archive(
