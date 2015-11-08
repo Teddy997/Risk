@@ -33,6 +33,7 @@ public:
 	Player();
 	Player(std::string name);
 	~Player();
+	vector<Country*> getCountries() { return countries_owned; }
 	std::string get_player_name();
 	void setStrategy(Strategy* str);
 	void executeStrategy(Player* p1, Player* p2);

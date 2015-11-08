@@ -3,7 +3,7 @@
 #pragma once
 #include <iostream>
 #include <string>
-
+#include "Engine.h"
 #include "stdafx.h"
 
 void player_testing() {
@@ -122,6 +122,10 @@ void mapObserverTesting() {
 	c.set_continent_name("North America");
 }
 
+void GameLifeTest() {
+	
+}
+
 int _tmain(int argc, _TCHAR* argv[])
 {
 	//TODO: uncomment
@@ -147,7 +151,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	
 	//game_state_testing();
 	
-	mapObserverTesting();
+	//mapObserverTesting();
+
+	GameLifeTest();
 
 	return 0;
 }

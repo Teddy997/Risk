@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="AgressiveStrategy.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="CardCashing.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -28,9 +25,6 @@
     <ClCompile Include="InputProcedure.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DefensiveStrategy.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Map.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -52,9 +46,6 @@
     <ClCompile Include="playerView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RandomStrategy.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Risk.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -64,11 +55,20 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Strategy.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="subject.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AgressiveStrategy.cpp">
+      <Filter>Source Files\AI Strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="DefensiveStrategy.cpp">
+      <Filter>Source Files\AI Strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomStrategy.cpp">
+      <Filter>Source Files\AI Strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="Strategy.cpp">
+      <Filter>Source Files\AI Strategy</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -120,9 +120,6 @@
     <ClInclude Include="stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Strategy.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -150,6 +147,9 @@
     <ClInclude Include="MapSubjectPattern.h">
       <Filter>Header Files\Observer Pattern</Filter>
     </ClInclude>
+    <ClInclude Include="Strategy.h">
+      <Filter>Header Files\AIStrategy</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -169,6 +169,9 @@
     </Filter>
     <Filter Include="Header Files\Observer Pattern">
       <UniqueIdentifier>{f31b1171-a9cc-4241-b2db-a6a73bc0fdbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AI Strategy">
+      <UniqueIdentifier>{4ad6a2c9-efba-4f6a-9fae-1929ec9f7342}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

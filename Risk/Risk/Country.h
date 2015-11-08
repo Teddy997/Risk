@@ -33,6 +33,7 @@ public:
 	Country(std::string name);
 	~Country();
 	std::string get_country_name();
+	Player* getOwner() { return owner; }
 	void set_continent_name(std::string c_name);
 	std::string get_continent_name();
 	void setConnectedCountries(std::vector<Country*> connected) { connectedCountries = connected; }
