@@ -143,6 +143,7 @@ void playerObserverTesting() {
 	meg->assign_country(c2);
 	bob->assign_country(c3);
 	// increment armies in countries of a player
+	cout << endl<< "incrementation of armies";
 	bob->get_country(0)->increment_armies(5);
 	bob->get_country(1)->increment_armies(7);
 	meg->get_country(0)->increment_armies(3);
@@ -154,6 +155,11 @@ void playerObserverTesting() {
 	// add one more country to meg and assign armies
 	c4.increment_armies(3);
 	meg->assign_country(c4);
+
+	// increment battles won
+	cout << endl << "increment battles won" << endl;
+	meg->incrementBattlesWon();
+
 
 	
 
@@ -190,9 +196,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	
 	//mapObserverTesting();
 
-	GameLifeTest();
+	//GameLifeTest();
 
 	playerObserverTesting();
-	
+	system("pause");
 	return 0;
 }
