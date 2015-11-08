@@ -4,10 +4,12 @@
 #include <iostream>
 #include <string>
 #include <cereal/archives/xml.hpp>
+//#include "Continent.h"
 
 #include "Subject.h"
 
 class Player;
+class Continent;
 class Country;
 
 class Country : public Subject {
@@ -15,6 +17,7 @@ private:
 	/*Member variables*/
 	std::string country_name;
 	std::string continent_name;
+	Continent* containing_continent;
 	Player* owner;
 	bool is_owned;
 	int number_of_armies;
@@ -26,6 +29,7 @@ private:
 
 public:
 	Country();
+	Country(std::string name, Continent& continent) : Country(name) { containing_continent = &continent; };
 	Country(std::string name);
 	~Country();
 	std::string get_country_name();
@@ -33,6 +37,7 @@ public:
 	std::string get_continent_name();
 	void setConnectedCountries(std::vector<Country*> connected) { connectedCountries = connected; }
 	std::vector<Country*> getConnectedCountries() { return connectedCountries; }
+	Continent* get_containing_continent() { return containing_continent; };
 	
 	void set_owned(bool value, Player& player);
 	Player* get_owner();

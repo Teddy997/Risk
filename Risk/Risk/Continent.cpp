@@ -3,6 +3,7 @@
 
 Continent::Continent()
 {
+
 }
 
 Continent::Continent(std::string name, int ID, int bonus)

@@ -19,13 +19,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -98,13 +98,22 @@
     <ClInclude Include="MapManager.h" />
     <ClInclude Include="MapObserver.h" />
     <ClInclude Include="MapTester.h" />
+<<<<<<< HEAD
     <ClInclude Include="Observer.h" />
+=======
+    <ClInclude Include="observer.h" />
+>>>>>>> 9a6d97e62a2f146c3896385316f9600ee3ba06e3
     <ClInclude Include="Player.h" />
+    <ClInclude Include="playerView.h" />
     <ClInclude Include="RandomStrategy.h" />
     <ClInclude Include="SaveLoadManager.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Strategy.h" />
+<<<<<<< HEAD
     <ClInclude Include="Subject.h" />
+=======
+    <ClInclude Include="subject.h" />
+>>>>>>> 9a6d97e62a2f146c3896385316f9600ee3ba06e3
     <ClInclude Include="targetver.h" />
     <ClInclude Include="tinydir.h" />
   </ItemGroup>
@@ -123,7 +132,9 @@
     <ClCompile Include="MapManager.cpp" />
     <ClCompile Include="MapObserver.cpp" />
     <ClCompile Include="MapTester.cpp" />
+    <ClCompile Include="observercpp.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="playerView.cpp" />
     <ClCompile Include="RandomStrategy.cpp" />
     <ClCompile Include="Risk.cpp" />
     <ClCompile Include="SaveLoadManager.cpp" />
@@ -132,6 +143,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Strategy.cpp" />
+    <ClCompile Include="subject.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

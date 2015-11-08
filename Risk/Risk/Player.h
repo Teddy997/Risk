@@ -10,18 +10,22 @@
 #include "Country.h"
 #include "Deck.h"
 #include "Strategy.h"
+#include "subject.h"
 
 class Strategy; // forward declaration
 
-class Player {
+class Player : public Subject {
 private:
 	/*Member variables*/
 	
 	std::string player_name;
-	
 	std::vector<Country*> countries_owned;
+	std::vector<Continent*> continents_owned;
+	int total_continent_bonus;
+	int numberBattlesWon;
 	Strategy* strategy;
-	int continent_bonus;
+
+	void update_bonus();
 
 	/*May possible have to refactor the hand logic to be a vector of pointers, similar to Country*/
 	std::vector<Deck::Card> hand;
@@ -36,13 +40,18 @@ public:
 	void remove_country(Country& country);
 	std::string print_countries_owned();
 	Country* get_country(int index);
-	void addBonus(int bonus) { continent_bonus += bonus; }
+	void set_total_bonus(int bonus) { total_continent_bonus += bonus; }
 	int numberOfCountriesOwned();
-	
+	void assignArmies(int x);
 	void add_to_hand(Deck::Card);
 	void cash_cards(Deck& deck);
 	void view_hand();
-
+	std::string print_CountryList();
+	std::string print_ContinentList();
+	int numberOfReinforcements();
+	int total_number_of_armies_owned();
+	void incrementBattlesWon();
+	int getBattlesWon();
 	template<class Archive>
 	void serialize(Archive & archive) {archive(
 		CEREAL_NVP(player_name));

@@ -93,6 +93,7 @@
     <ClInclude Include="tinydir.h">
       <Filter>Header Files\MapDirectoryDisplay</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="Subject.h">
       <Filter>Header Files\ObserverPatternInterface</Filter>
     </ClInclude>
@@ -101,6 +102,16 @@
     </ClInclude>
     <ClInclude Include="MapObserver.h">
       <Filter>Header Files\ObserverPatternInterface</Filter>
+=======
+    <ClInclude Include="observer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playerView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="subject.h">
+      <Filter>Header Files</Filter>
+>>>>>>> 9a6d97e62a2f146c3896385316f9600ee3ba06e3
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -161,8 +172,19 @@
     <ClCompile Include="MapTester.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="MapObserver.cpp">
       <Filter>Source Files\ObserverPattern</Filter>
+=======
+    <ClCompile Include="observercpp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="playerView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subject.cpp">
+      <Filter>Source Files</Filter>
+>>>>>>> 9a6d97e62a2f146c3896385316f9600ee3ba06e3
     </ClCompile>
   </ItemGroup>
 </Project>

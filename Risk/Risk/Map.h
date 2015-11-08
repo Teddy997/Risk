@@ -27,13 +27,15 @@ public:
 	void PrintAllCountryNames();
 	void PrintAllContinentNames();
 	void CheckContinentBonus();
+	int test_map_components();
 
 	template<class Archive>
 	void serialize(Archive & archive) {
 		archive(
 			CEREAL_NVP(countries));
 	};
-
+	int nbOfCountries();
+	std::vector<Country> getCountries();
 private:
 	std::vector<Country> countries;
 	std::vector<Continent> continents;
@@ -45,7 +47,7 @@ private:
 	void CreateContinents(vector<string>& continentName, vector<int>& continentID, vector<int>& continentBonusValue);
 	void ReadCountries(string fileName, vector<string>& countryName, vector<int>& countryID, vector<int>& containingContinentID,
 	vector < vector <int> >& connectedCountryID);
-	void CreateCountries(vector<string>& countryName);
+	void CreateCountries(vector<string>& countryName, vector<int>& containingContinentID);
 	void AssignConnectedCountries(vector < vector <int> >& connectedCountryID);
 	void AssignContainedCountries(vector<int>& containingContinentID);
 	void Split(const string& fullString, char cSplitter, vector<string>& splitStrings);

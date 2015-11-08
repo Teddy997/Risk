@@ -19,7 +19,7 @@ Map::Map()
 	ReadContinents(continentFile, continentName, continentID,continentBonusValue);
 	CreateContinents(continentName, continentID, continentBonusValue);
 	ReadCountries(countriesFile, countryName, countryID, containingContinentID, connectedCountryID);
-	CreateCountries(countryName);
+	CreateCountries(countryName, containingContinentID);
 	AssignConnectedCountries(connectedCountryID);
 	AssignContainedCountries(containingContinentID);
 }
@@ -28,30 +28,30 @@ Map::~Map()
 {
 }
 
-void Map::CheckContinentBonus()
-{
-	//TODO: need to reset bonus first
-
-	Player* tempPlayer;
-	for (int i = 0; i < continents.size(); i++)
-	{
-		vector<Country*> tempCountries = continents[i].getContainedCountries();
-		tempPlayer = tempCountries[0]->get_owner();
-		bool deserveBonus = true;
-		for (int j = 1; j < tempCountries.size(); j++)
-		{
-			//TODO: make sure this comparison can work with these pointers
-			//I'm pretty sure this is crashing because there are no players assigned to any countries - Eric
-			if (tempCountries[j]->get_owner() != tempPlayer)
-			{
-				deserveBonus = false;
-				break;
-			}
-		}
-		if (deserveBonus)
-			tempPlayer->addBonus(continents[i].get_bonus());
-	}
-}
+//void Map::CheckContinentBonus()
+//{
+//	//TODO: need to reset bonus first
+//
+//	Player* tempPlayer;
+//	for (int i = 0; i < continents.size(); i++)
+//	{
+//		vector<Country*> tempCountries = continents[i].getContainedCountries();
+//		tempPlayer = tempCountries[0]->get_owner();
+//		bool deserveBonus = true;
+//		for (int j = 1; j < tempCountries.size(); j++)
+//		{
+//			//TODO: make sure this comparison can work with these pointers
+//			//I'm pretty sure this is crashing because there are no players assigned to any countries - Eric
+//			if (tempCountries[j]->get_owner() != tempPlayer)
+//			{
+//				deserveBonus = false;
+//				break;
+//			}
+//		}
+//		if (deserveBonus)
+//			tempPlayer->addBonus(continents[i].get_bonus());
+//	}
+//}
 
 void Map::PrintAllCountryNames()
 {
@@ -71,6 +71,67 @@ void Map::PrintAllContinentNames()
 		continents[i].PrintContainedCountries();
 	}
 }
+
+int Map::test_map_components()
+{
+	int returnValue = 0;
+	//TODO: using bit Flags for error code! -Cynthia
+
+	if (countries.empty() || continents.empty())
+	{
+		returnValue = -1;
+		if (countries.empty())
+			std::cout << "There is no country in the map" << std::endl;
+		if (continents.empty())
+			std::cout << "There is no continent in the map" << std::endl;
+	}
+	else
+	{
+		////////////////REQ : Every country is in a continent, but only one///////////////////////////
+
+		//for every countries
+		for (int i = 0; i < countries.size(); i++)
+		{
+			Country* tempCountry = &countries.at(i);
+			Continent* tempContinent = tempCountry->get_containing_continent();
+			if (tempContinent == NULL) {
+				returnValue = -1;
+				std::cout << tempCountry->get_country_name() << " doesn't have a containing continent" << std::endl;
+			}
+			for (int j = 0; j < continents.size(); j++)
+			{
+				//For all the other continents that contain countries
+				if (&continents.at(j) != tempContinent && !continents.at(j).getContainedCountries().empty()) {
+					for (int k = 0; k < continents.at(j).getContainedCountries().size(); k++)
+					{
+						//If another reference to the same country is found in another continent
+						if (continents.at(j).getContainedCountries().at(k) == tempCountry) {
+							returnValue = -1;
+							std::cout << tempCountry->get_country_name() << " have been found more than 1 continent: " << continents.at(j).get_continent_name() << std::endl;
+						}
+					}
+				}
+			}
+			////////////////REQ : Every country has at least 1 adjacency ///////////////////////////
+			if (tempCountry->getConnectedCountries().empty())
+			{
+				returnValue = -1;
+				std::cout << tempCountry->get_country_name() << " does not have any adjacency " << std::endl;
+			}
+		}
+		////////////////REQ : Every continent has at least 1 country ///////////////////////////
+		for (int i = 0; i < continents.size(); i++)
+		{
+			if (continents.at(i).getContainedCountries().empty())
+			{
+				returnValue = -1;
+				std::cout << continents.at(i).get_continent_name() << " does not contain any country " << std::endl;
+			}
+		}
+	}
+	return returnValue;
+}
+
 ////////////////////////Private Methods//////////////////////////
 
 //Must be in the form:
@@ -137,11 +198,14 @@ void Map::ReadCountries(string fileName, vector<string>& countryName, vector<int
 	inputFile.close();
 }
 
-void Map::CreateCountries(vector<string>& countryName)
+//Create the whole list  of countries
+//NOTE: The continent list must be created before which is 
+//		why the method is private
+void Map::CreateCountries(vector<string>& countryName, vector<int>& containingContinentID)
 {
 	for (int j = 0; j < countryName.size(); j++)
 	{
-		countries.push_back(Country(countryName[j]));
+		countries.push_back(Country(countryName[j], continents[containingContinentID[j]]));
 	}
 	set_nOfCountries(countries.size());
 }
@@ -196,4 +260,12 @@ void Map::Split(const string& fullString, char cSplitter, vector<string>& SplitS
 			SplitStrings.push_back(fullString.substr(i, fullString.length()));
 		}
 	}
+}
+
+int Map::nbOfCountries() {
+	return nOfCountries;
+}
+
+vector<Country> Map::getCountries() {
+	return countries;
 }
