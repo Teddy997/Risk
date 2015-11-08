@@ -26,6 +26,6 @@ void playerView::display() {
 	cout << "List of continents Owned: " << endl << _player->print_ContinentList() << endl;
 	cout << "Number of Reinforcements: " << _player->numberOfReinforcements() << endl;
 	cout << "Number of Armies: " << _player->total_number_of_armies_owned() << endl;
-	cout << "Number of Battles Won: " << _player->getBattlesWon()<<endl;
+	cout << "Number of Battles Won: " << _player->getBattlesWon()<< endl<<endl;
 
 };
