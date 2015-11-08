@@ -10,6 +10,7 @@ public:
 	MapTester();
 	~MapTester();
 	void TestMapCreation();
+	Map getMap() { return map; }
 
 private:
 	Map map;

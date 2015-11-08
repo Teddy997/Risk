@@ -12,9 +12,9 @@ MapTester::~MapTester()
 
 void MapTester::TestMapCreation()
 {
-	int wait;
+	//int wait;
 	map.PrintAllCountryNames();
 	map.PrintAllContinentNames();
 	//map.CheckContinentBonus();
-	std::cin >> wait;
+	//std::cin >> wait;
 }

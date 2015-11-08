@@ -109,6 +109,14 @@ void game_state_testing() {
 	g.reinforcingPhase(p1);
 }
 
+void mapObserverTesting() {
+	MapObserver mo;
+	Country c("Canada");
+	c.registerObserver(&mo);
+	c.increment_armies(5);
+	c.decrement_armies(3);
+	c.set_continent_name("North America");
+}
 
 int _tmain(int argc, _TCHAR* argv[])
 {
@@ -132,7 +140,9 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	//map_testing();
 	
-	game_state_testing();
+	//game_state_testing();
+
+	mapObserverTesting();
 
 	return 0;
 }

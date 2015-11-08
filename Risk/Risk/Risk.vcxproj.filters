@@ -22,6 +22,12 @@
     <Filter Include="Header Files\MapDirectoryDisplay">
       <UniqueIdentifier>{1d91dc21-318b-48fc-b960-75b95d5b9168}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\ObserverPatternInterface">
+      <UniqueIdentifier>{e026684a-30da-4bdf-8e01-08e2b45ec306}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ObserverPattern">
+      <UniqueIdentifier>{c1bc7ad1-0352-4bba-95e1-f513b8ded8be}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -87,6 +93,15 @@
     <ClInclude Include="tinydir.h">
       <Filter>Header Files\MapDirectoryDisplay</Filter>
     </ClInclude>
+    <ClInclude Include="Subject.h">
+      <Filter>Header Files\ObserverPatternInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="Observer.h">
+      <Filter>Header Files\ObserverPatternInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="MapObserver.h">
+      <Filter>Header Files\ObserverPatternInterface</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -145,6 +160,9 @@
     </ClCompile>
     <ClCompile Include="MapTester.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MapObserver.cpp">
+      <Filter>Source Files\ObserverPattern</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
