@@ -19,6 +19,7 @@
 #include "SaveLoadManager.h"
 #include "MapTester.h"
 #include "GameState.h"
+#include "MapObserver.h"
 
 #include <ctime>
 #include <sstream>

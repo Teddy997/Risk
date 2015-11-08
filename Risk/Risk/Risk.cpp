@@ -113,6 +113,14 @@ void game_state_testing() {
 	
 }
 
+void mapObserverTesting() {
+	MapObserver mo;
+	Country c("Canada");
+	c.registerObserver(&mo);
+	c.increment_armies(5);
+	c.decrement_armies(3);
+	c.set_continent_name("North America");
+}
 
 int _tmain(int argc, _TCHAR* argv[])
 {
@@ -120,9 +128,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	//std::cout << "PLAYER TESTING" << std::endl;
 	//player_testing();
 
-	std::cout << "\nCOUNTRY TESTING" << std::endl;
-	country_testing();
-	system("pause");
+	//std::cout << "\nCOUNTRY TESTING" << std::endl;
+	//country_testing();
+	//system("pause");
 
 	//std::cout << "\nDECK TESTING" << std::endl;
 	//deck_testing();
@@ -138,6 +146,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	//map_testing();
 	
 	//game_state_testing();
+	
+	mapObserverTesting();
 
 	return 0;
 }
