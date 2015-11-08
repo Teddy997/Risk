@@ -63,14 +63,14 @@ Edit existing map:</br>
 3. Proceed to new edit map sequence</br>
 
 Play</br>
-1. Ask number of players (2-4)</br>
-2. Assign countries randomly to players</br>
-3. Put 1 army in each country automagically. Then randomly assign rest. Display message: "for demo purposes we have assigned all armies randomly"</br>
-4. Start main game sequence</br>
+1. Ask number of players (2-4) XXX </br>
+2. Assign countries randomly to players XXX </br>
+3. Put 1 army in each country automagically. Then randomly assign rest. Display message: "for demo purposes we have assigned all armies randomly" XXX </br>
+4. Start main game sequence XXX </br>
 
 Main game sequence:</br>
-1. Player plays first</br>
-2. Reinforcement phase (calculates number of countries/3 and then you can distribute it to your countries)</br>
-3. Skip battle phase cause lame</br>
+1. Player plays first XXX </br>
+2. Reinforcement phase (calculates number of countries/3 and then you can distribute it to your countries) XXX </br>
+3. Skip battle phase cause lame XXX </br>
 4. Fortification phase - only once (player can choose a country they own and move armies to another country they own through a path of adjacent countries they own)</br>
-5. Repeat</br>
+5. Repeat XXX </br>
