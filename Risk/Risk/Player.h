@@ -10,10 +10,11 @@
 #include "Country.h"
 #include "Deck.h"
 #include "Strategy.h"
+#include "subject.h"
 
 class Strategy; // forward declaration
 
-class Player {
+class Player : public Subject {
 private:
 	/*Member variables*/
 	
@@ -21,6 +22,7 @@ private:
 	std::vector<Country*> countries_owned;
 	std::vector<Continent*> continents_owned;
 	int total_continent_bonus;
+	int numberBattlesWon;
 	Strategy* strategy;
 
 	void update_bonus();
@@ -31,9 +33,10 @@ public:
 	Player();
 	Player(std::string name);
 	~Player();
+	vector<Country*> getCountries() { return countries_owned; }
 	std::string get_player_name();
 	void setStrategy(Strategy* str);
-	void executeStrategy(Player* p);
+	void executeStrategy(Player* p1, Player* p2);
 	void assign_country(Country& country);
 	void remove_country(Country& country);
 	std::string print_countries_owned();
@@ -44,7 +47,12 @@ public:
 	void add_to_hand(Deck::Card);
 	void cash_cards(Deck& deck);
 	void view_hand();
-
+	std::string print_CountryList();
+	std::string print_ContinentList();
+	int numberOfReinforcements();
+	int total_number_of_armies_owned();
+	void incrementBattlesWon();
+	int getBattlesWon();
 	template<class Archive>
 	void serialize(Archive & archive) {archive(
 		CEREAL_NVP(player_name));

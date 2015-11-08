@@ -4,6 +4,8 @@
 #include <vector>
 #include "Country.h"
 #include "Continent.h"
+#include "Subject.h"
+#include "Observer.h"
 
 using std::vector;
 using std::string;
@@ -16,6 +18,9 @@ public:
 	// one that returns me a random country that cannot be returned more than once
 	Map();
 	~Map();
+
+	vector<Country> getAllCountries() { return countries; }
+
 	void set_nOfCountries(int numberOfCountries) { nOfCountries = numberOfCountries; }
 	void set_nOfContinents(int numberOfContinents) { nOfContinents = numberOfContinents; }
 

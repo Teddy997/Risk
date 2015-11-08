@@ -33,6 +33,7 @@ numberOfCountriesOwned(), a simple function returning an int containing the size
 Player::Player() {
 	player_name = "Default player";
 	std::cout << get_player_name() + " Player object created." << std::endl;
+
 }
 
 Player::Player(std::string name) {
@@ -46,8 +47,8 @@ Player::~Player() {
 void Player::setStrategy(Strategy* str) {
 	this->strategy = str;
 }
-void Player::executeStrategy(Player* p) {
-	this->strategy->attack(p);
+void Player::executeStrategy(Player* p1, Player* p2) {
+	this->strategy->attack(this, p2);
 }
 std::string Player::get_player_name() {
 	return player_name;	
@@ -59,7 +60,7 @@ void Player::assign_country(Country& country) {
 		countries_owned.push_back(&country);
 		//Set the country to being owned by this player.
 		country.set_owned(true, *this);
-
+		Notify();
 		//Check if the player should now own a continent
 		Continent* tempContinent = country.get_containing_continent();
 		//Normally this should not happen, but just in case
@@ -140,6 +141,7 @@ std::string Player::print_countries_owned() {
 Country* Player::get_country(int index) {
 	//It's up to the user of get_country to assure that the index is within the valid range ( > -1 && < countries_owned.size()-1 )
 	return countries_owned.at(index);
+	
 }
 
 int Player::numberOfCountriesOwned() {
@@ -215,6 +217,7 @@ void Player::assignArmies(int x) {
 			armiesAvaiable -= random;
 		}
 	}
+	Notify();
 }
 
 void Player::update_bonus() {
@@ -225,4 +228,64 @@ void Player::update_bonus() {
 		}
 	}
 	set_total_bonus(newBonus);
+}
+// print only the list of countries owned by the player
+std::string Player::print_CountryList() {
+	std::string countries = "";
+	int size = countries_owned.size();
+	//If the size of the countries_owned vector is 0, then the player owns no countries.
+	if (size == 0) {
+		countries = "no countries found";
+	}
+	//Else, for each country the player owns, store the name of that country into the countries string.
+	else {
+		for (int i = 0; i<size; i++) {
+			countries += to_string(i + 1) + ". Country: " + countries_owned.at(i)->get_country_name() + "\n";
+		}
+	}
+	return countries;
+}
+// print only the list of countries owned by the player
+std::string Player::print_ContinentList() {
+	std::string continents = "";
+	int size = continents_owned.size();
+	//If the size of the continents_owned vector is 0, then the player owns no continents.
+	if (size == 0) {
+		continents = "no continents found";
+	}
+	//Else, for each country the player owns, store the name of that country into the continents string.
+	else {
+		for (int i = 0; i<size; i++) {
+			continents += to_string(i + 1) + ". Country: " + continents_owned.at(i)->get_continent_name() + "\n";
+		}
+	}
+	return continents;
+}
+int Player::numberOfReinforcements() {
+	int number_reinforcements = countries_owned.size() / 3;
+	// number of reinforcements from countries
+		if (number_reinforcements < 3)
+		{
+			number_reinforcements = 3;
+		};
+	// number of bonus reinforcements for owning a whole continent is added to number of reinforcements
+		for (unsigned int i = 0; i < continents_owned.size(); i++) {
+			number_reinforcements += continents_owned.at(i)->get_bonus();
+		}
+		return number_reinforcements;
+}
+int Player::total_number_of_armies_owned() {
+	int numberOfArmiesOwned = 0;
+	for (unsigned int i = 0; i < countries_owned.size(); i++) {
+		numberOfArmiesOwned += countries_owned.at(i)->get_number_of_armies();
+	}
+	return numberOfArmiesOwned;
+}
+// increments number of battles won by 1.
+void Player::incrementBattlesWon() {
+	numberBattlesWon++;
+	Notify();
+}
+int Player::getBattlesWon() {
+	return numberBattlesWon;
 }

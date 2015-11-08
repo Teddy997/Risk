@@ -28,21 +28,31 @@ get_number_of_armies, a simple function returning an int containing the number o
 
 Country::Country(std::string name) {
 	country_name = name;
+	continent_name = "";
 	//Initialized to NULL as when the country is created, it does not have an owner.
 	owner = NULL;
 	containing_continent = NULL;
 	//Initialized to false as when the country is created, it does not have an owner.
 	is_owned = false;
 	number_of_armies = 0;
-	std::cout << get_country_name() + " Country object created." << std::endl;
+	//std::cout << get_country_name() + " Country object created." << std::endl;
 }
 
 Country::~Country() {
-	std::cout << get_country_name() + " Country object destroyed." << std::endl;
+	//std::cout << get_country_name() + " Country object destroyed." << std::endl;
+}
+
+void Country::set_continent_name(std::string c_name) {
+	continent_name = c_name;
+	notifyObservers();
 }
 
 std::string Country::get_country_name() {
 	return country_name;
+}
+
+std::string Country::get_continent_name() {
+	return continent_name;
 }
 
 void Country::set_owned(bool value, Player& player) {
@@ -50,6 +60,8 @@ void Country::set_owned(bool value, Player& player) {
 	if(value == true) {
 		is_owned = value;
 		owner = &player;
+		notifyObservers();
+		
 	}
 	//Else, set the Player pointer, owner back to NULL.
 	else {
@@ -79,6 +91,9 @@ bool Country::owned() {
 
 void Country::increment_armies(int amt) {
 	number_of_armies += amt;
+	notifyObservers();
+	
+	
 }
 
 void Country::decrement_armies(int amt) {
@@ -89,6 +104,8 @@ void Country::decrement_armies(int amt) {
 	//Else, decrement the number of armies by amt.
 	else {
 		number_of_armies -= amt;
+		notifyObservers();
+		
 	}
 }
 
@@ -96,3 +113,16 @@ int Country::get_number_of_armies() {
 	return number_of_armies;
 }
 
+void Country::registerObserver(MapObserverPattern* o) {
+	observers.push_back(o);
+}
+
+void Country::unregisterObserver(MapObserverPattern* o) {
+
+}
+
+void Country::notifyObservers() {
+	for (int i = 0; i < observers.size(); i++) {
+		observers.at(i)->update(this);
+	}
+}

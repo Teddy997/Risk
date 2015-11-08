@@ -6,8 +6,23 @@ AgressiveStrategy::AgressiveStrategy()
 {
 }
 
-void AgressiveStrategy::attack(Player* p) {
+void AgressiveStrategy::attack(Player* p1,Player* p2) {
 	cout << "agressively owning" << endl;
+	
+	for (Country* c1 : p1->getCountries()) {
+		bool usedC1 = false;
+		vector<Country*> connectedCountries = c1->getConnectedCountries();
+		for (Country* c2 : connectedCountries) {
+			
+			bool superiority = c1->get_number_of_armies() > c2->get_number_of_armies();
+			if (c1->getOwner() != c2->getOwner() && superiority) {
+				usedC1 = true;
+				Combat::combat(*c1, *c2);
+			}
+			if (usedC1)
+				break;
+		}
+	}
 }
 
 AgressiveStrategy::~AgressiveStrategy()
