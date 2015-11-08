@@ -14,6 +14,7 @@ void Subject::Attach(Observer* o) {
 void Subject::Detach(Observer* o) {
 	_observers->remove(o);
 };
+
 void Subject::Notify() {
 	list<Observer*>::iterator i = _observers->begin();
 	for (; i != _observers->end(); i++)
