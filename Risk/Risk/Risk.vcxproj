@@ -19,13 +19,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -97,23 +97,17 @@
     <ClInclude Include="Map.h" />
     <ClInclude Include="MapManager.h" />
     <ClInclude Include="MapObserver.h" />
+    <ClInclude Include="MapObserverPattern.h" />
+    <ClInclude Include="MapSubjectPattern.h" />
     <ClInclude Include="MapTester.h" />
-<<<<<<< HEAD
     <ClInclude Include="Observer.h" />
-=======
-    <ClInclude Include="observer.h" />
->>>>>>> 9a6d97e62a2f146c3896385316f9600ee3ba06e3
     <ClInclude Include="Player.h" />
     <ClInclude Include="playerView.h" />
     <ClInclude Include="RandomStrategy.h" />
     <ClInclude Include="SaveLoadManager.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Strategy.h" />
-<<<<<<< HEAD
     <ClInclude Include="Subject.h" />
-=======
-    <ClInclude Include="subject.h" />
->>>>>>> 9a6d97e62a2f146c3896385316f9600ee3ba06e3
     <ClInclude Include="targetver.h" />
     <ClInclude Include="tinydir.h" />
   </ItemGroup>

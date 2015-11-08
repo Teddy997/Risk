@@ -1,57 +1,78 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Header Files\AIStrategy">
-      <UniqueIdentifier>{ccbfd3c9-e714-472e-b1e6-c2e1663e5ef2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\AIStrategy">
-      <UniqueIdentifier>{2e2d829a-eb84-4525-a24d-d1d4bf7b67c6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\MapDirectoryDisplay">
-      <UniqueIdentifier>{1d91dc21-318b-48fc-b960-75b95d5b9168}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\ObserverPatternInterface">
-      <UniqueIdentifier>{e026684a-30da-4bdf-8e01-08e2b45ec306}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\ObserverPattern">
-      <UniqueIdentifier>{c1bc7ad1-0352-4bba-95e1-f513b8ded8be}</UniqueIdentifier>
-    </Filter>
+    <ClCompile Include="AgressiveStrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CardCashing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Combat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Continent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Country.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Deck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputProcedure.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DefensiveStrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MapManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MapObserver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MapTester.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="observercpp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="playerView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomStrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Risk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SaveLoadManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Strategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Map.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MapManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Country.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CardCashing.h">
@@ -60,22 +81,52 @@
     <ClInclude Include="Combat.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Continent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Deck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GameState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SaveLoadManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="InputProcedure.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Strategy.h">
-      <Filter>Header Files\AIStrategy</Filter>
+    <ClInclude Include="Map.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Continent.h">
+    <ClInclude Include="MapManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MapObserver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MapTester.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="playerView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SaveLoadManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Strategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tinydir.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AgressiveStrategy.h">
@@ -87,104 +138,37 @@
     <ClInclude Include="RandomStrategy.h">
       <Filter>Header Files\AIStrategy</Filter>
     </ClInclude>
-    <ClInclude Include="MapTester.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tinydir.h">
-      <Filter>Header Files\MapDirectoryDisplay</Filter>
-    </ClInclude>
-<<<<<<< HEAD
     <ClInclude Include="Subject.h">
-      <Filter>Header Files\ObserverPatternInterface</Filter>
+      <Filter>Header Files\Observer Pattern</Filter>
     </ClInclude>
     <ClInclude Include="Observer.h">
-      <Filter>Header Files\ObserverPatternInterface</Filter>
+      <Filter>Header Files\Observer Pattern</Filter>
     </ClInclude>
-    <ClInclude Include="MapObserver.h">
-      <Filter>Header Files\ObserverPatternInterface</Filter>
-=======
-    <ClInclude Include="observer.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="MapObserverPattern.h">
+      <Filter>Header Files\Observer Pattern</Filter>
     </ClInclude>
-    <ClInclude Include="playerView.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="subject.h">
-      <Filter>Header Files</Filter>
->>>>>>> 9a6d97e62a2f146c3896385316f9600ee3ba06e3
+    <ClInclude Include="MapSubjectPattern.h">
+      <Filter>Header Files\Observer Pattern</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Risk.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Map.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MapManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Country.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Combat.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Deck.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CardCashing.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GameState.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SaveLoadManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="InputProcedure.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Continent.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AgressiveStrategy.cpp">
-      <Filter>Source Files\AIStrategy</Filter>
-    </ClCompile>
-    <ClCompile Include="Strategy.cpp">
-      <Filter>Source Files\AIStrategy</Filter>
-    </ClCompile>
-    <ClCompile Include="DefensiveStrategy.cpp">
-      <Filter>Source Files\AIStrategy</Filter>
-    </ClCompile>
-    <ClCompile Include="RandomStrategy.cpp">
-      <Filter>Source Files\AIStrategy</Filter>
-    </ClCompile>
-    <ClCompile Include="MapTester.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-<<<<<<< HEAD
-    <ClCompile Include="MapObserver.cpp">
-      <Filter>Source Files\ObserverPattern</Filter>
-=======
-    <ClCompile Include="observercpp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="playerView.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="subject.cpp">
-      <Filter>Source Files</Filter>
->>>>>>> 9a6d97e62a2f146c3896385316f9600ee3ba06e3
-    </ClCompile>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5014b069-54f5-45f4-b886-660e59ba956a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{8f57cdd6-2d68-4fd5-9db4-7230e3e13f55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource FIles">
+      <UniqueIdentifier>{925ec7f0-5bee-4938-9d17-a9708d4e291a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AIStrategy">
+      <UniqueIdentifier>{eb35b486-2f86-473b-9887-70146a643faa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Observer Pattern">
+      <UniqueIdentifier>{f31b1171-a9cc-4241-b2db-a6a73bc0fdbe}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

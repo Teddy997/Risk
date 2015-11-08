@@ -128,9 +128,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	//std::cout << "PLAYER TESTING" << std::endl;
 	//player_testing();
 
-	std::cout << "\nCOUNTRY TESTING" << std::endl;
-	country_testing();
-	system("pause");
+	//std::cout << "\nCOUNTRY TESTING" << std::endl;
+	//country_testing();
+	//system("pause");
 
 	//std::cout << "\nDECK TESTING" << std::endl;
 	//deck_testing();

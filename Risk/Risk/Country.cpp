@@ -109,11 +109,11 @@ int Country::get_number_of_armies() {
 	return number_of_armies;
 }
 
-void Country::registerObserver(Observer* o) {
+void Country::registerObserver(MapObserverPattern* o) {
 	observers.push_back(o);
 }
 
-void Country::unregisterObserver(Observer* o) {
+void Country::unregisterObserver(MapObserverPattern* o) {
 
 }
 

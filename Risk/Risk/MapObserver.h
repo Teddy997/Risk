@@ -3,11 +3,11 @@
 
 #include <vector>
 
-#include "Observer.h"
+#include "MapObserverPattern.h"
 #include "Country.h"
-#include "Subject.h"
+#include "MapSubjectPattern.h"
 
-class MapObserver : public Observer {
+class MapObserver : public MapObserverPattern {
 private:
 	//Map* map;
 	//std::vector<Country> countries;
@@ -22,7 +22,7 @@ private:
 	//void print(int i);
 public:
 	//MapObserver(Map m);
-	void update(Subject* s);
+	void update(MapSubjectPattern* s);
 };
 
 #endif

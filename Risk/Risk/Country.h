@@ -6,13 +6,13 @@
 #include <cereal/archives/xml.hpp>
 //#include "Continent.h"
 
-#include "Subject.h"
+#include "MapSubjectPattern.h"
 
 class Player;
 class Continent;
 class Country;
 
-class Country : public Subject {
+class Country : public MapSubjectPattern {
 private:
 	/*Member variables*/
 	std::string country_name;
@@ -23,7 +23,7 @@ private:
 	int number_of_armies;
 	std::vector<Country*> connectedCountries;
 	
-	std::vector<Observer*> observers;
+	std::vector<MapObserverPattern*> observers;
 
 	void notifyObservers();
 
@@ -55,8 +55,8 @@ public:
 			CEREAL_NVP(is_owned));
 	};
 
-	void registerObserver(Observer* o);
-	void unregisterObserver(Observer* o);
+	void registerObserver(MapObserverPattern* o);
+	void unregisterObserver(MapObserverPattern* o);
 };
 
 #endif
