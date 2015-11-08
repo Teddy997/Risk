@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <cereal>
 	<gameState>
-		<currentPlayerTurn>0</currentPlayerTurn>
+		<currentPlayer>
+			<player_name>Default player</player_name>
+		</currentPlayer>
 		<player>
 			<player_name>Default player</player_name>
 		</player>

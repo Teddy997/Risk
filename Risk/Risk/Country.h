@@ -4,25 +4,40 @@
 #include <iostream>
 #include <string>
 #include <cereal/archives/xml.hpp>
+//#include "Continent.h"
+
+#include "MapSubjectPattern.h"
 
 class Player;
+class Continent;
 class Country;
 
-class Country {
+class Country : public MapSubjectPattern {
 private:
 	/*Member variables*/
 	std::string country_name;
+	std::string continent_name;
+	Continent* containing_continent;
 	Player* owner;
 	bool is_owned;
 	int number_of_armies;
 	std::vector<Country*> connectedCountries;
+	
+	std::vector<MapObserverPattern*> observers;
+
+	void notifyObservers();
 
 public:
 	Country();
+	Country(std::string name, Continent& continent) : Country(name) { containing_continent = &continent; };
 	Country(std::string name);
 	~Country();
 	std::string get_country_name();
+	void set_continent_name(std::string c_name);
+	std::string get_continent_name();
 	void setConnectedCountries(std::vector<Country*> connected) { connectedCountries = connected; }
+	std::vector<Country*> getConnectedCountries() { return connectedCountries; }
+	Continent* get_containing_continent() { return containing_continent; };
 	
 	void set_owned(bool value, Player& player);
 	Player* get_owner();
@@ -39,6 +54,9 @@ public:
 			CEREAL_NVP(country_name),
 			CEREAL_NVP(is_owned));
 	};
+
+	void registerObserver(MapObserverPattern* o);
+	void unregisterObserver(MapObserverPattern* o);
 };
 
 #endif
