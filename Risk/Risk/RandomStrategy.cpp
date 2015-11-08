@@ -6,7 +6,7 @@ RandomStrategy::RandomStrategy()
 {
 }
 
-void RandomStrategy::attack(Player* p) {
+void RandomStrategy::attack(Player* p1, Player* p2) {
 	cout << "random attacking" << endl;
 
 }
