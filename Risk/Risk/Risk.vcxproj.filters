@@ -87,6 +87,9 @@
     <ClInclude Include="tinydir.h">
       <Filter>Header Files\MapDirectoryDisplay</Filter>
     </ClInclude>
+    <ClInclude Include="MapCreator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -144,6 +147,9 @@
       <Filter>Source Files\AIStrategy</Filter>
     </ClCompile>
     <ClCompile Include="MapTester.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MapCreator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
