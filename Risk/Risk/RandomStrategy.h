@@ -6,6 +6,6 @@ public:
 	RandomStrategy();
 	~RandomStrategy();
 
-	void attack(Player* p2);
+	void attack(Player* p1,Player* p2);
 };
 

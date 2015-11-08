@@ -46,8 +46,8 @@ Player::~Player() {
 void Player::setStrategy(Strategy* str) {
 	this->strategy = str;
 }
-void Player::executeStrategy(Player* p) {
-	this->strategy->attack(p);
+void Player::executeStrategy(Player* p1, Player* p2) {
+	this->strategy->attack(this, p2);
 }
 std::string Player::get_player_name() {
 	return player_name;	
