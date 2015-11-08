@@ -120,6 +120,43 @@ void mapObserverTesting() {
 	c.increment_armies(5);
 	c.decrement_armies(3);
 	c.set_continent_name("North America");
+	
+}
+void playerObserverTesting() {
+	
+	// create a players to be observed
+	Player *bob= new Player("bob");
+	Player *meg = new Player("megan");
+	//create a playerview that is connected to the player
+	playerView * pvb = new playerView(bob);
+	playerView * pvm = new playerView(meg);
+	// attach playerviews to each other
+	bob->Attach(pvm);
+	meg->Attach(pvb);
+	// create countries to be added to players
+	Country c1("Germany");
+	Country c2("France");
+	Country c3("South Africa");
+	Country c4("Canada");
+	// assign countries to players
+	bob->assign_country(c1);
+	meg->assign_country(c2);
+	bob->assign_country(c3);
+	// increment armies in countries of a player
+	bob->get_country(0)->increment_armies(5);
+	bob->get_country(1)->increment_armies(7);
+	meg->get_country(0)->increment_armies(3);
+
+	// decrement armies in countries of player
+	bob->get_country(1)->decrement_armies(1);
+	meg->get_country(0)->decrement_armies(2);
+	
+	// add one more country to meg and assign armies
+	c4.increment_armies(3);
+	meg->assign_country(c4);
+
+	
+
 }
 
 int _tmain(int argc, _TCHAR* argv[])
@@ -147,7 +184,10 @@ int _tmain(int argc, _TCHAR* argv[])
 	
 	//game_state_testing();
 	
-	mapObserverTesting();
-
+	//mapObserverTesting();
+	
+	playerObserverTesting();
+	
+	system("pause");
 	return 0;
 }
