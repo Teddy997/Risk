@@ -190,6 +190,24 @@ void GameLifeTest() {
 	Engine* e = new Engine();
 	//cout << "wtf is going on" << endl;
 }
+void loadMap() {
+	cout << "load map chosen \n";
+}
+void editMap() {
+	cout << "edit map chosen \n";
+}
+void playDefault() {
+	cout << "play default chosen \n";
+}
+void displayOthers() {
+	cout << "display others chosen \n";
+}
+void showListOfMaps() {
+	cout << "show list of maps \n";
+}
+void newMap() {
+	cout << "create new map chosen \n";
+}
 void Demo() {
 	cout << "Welcome to the game of risk. Please choose what youd like to do (input number youd like to do): " << endl << endl << "1. Load pre-existing map \n" << "2. Edit pre-existing map \n";
 	int userInput = 0;
