@@ -190,6 +190,42 @@ void GameLifeTest() {
 	Engine* e = new Engine();
 	//cout << "wtf is going on" << endl;
 }
+void Demo() {
+	cout << "Welcome to the game of risk. Please choose what youd like to do (input number youd like to do): " << endl << endl << "1. Load pre-existing map \n" << "2. Edit pre-existing map \n";
+	int userInput = 0;
+	cin >> userInput;
+	while (cin.fail()) {
+		cin.clear();
+		cin.ignore(256, '\n');
+		cout << "\n value inputed not of type int. please try again. \n";
+		cin >> userInput;
+	};
+	if (userInput == 1) {
+		cout << "user entered 1 \n";
+	}
+	else if(userInput==2){
+		cout << "user entered 2 \n";
+	}
+	else {
+		while (userInput != 1 && userInput != 2) {
+			cout << "integer entered not equal to one of teh selections please try again. \n";
+			cin >> userInput;
+			while (cin.fail()) {
+				cin.clear();
+				cin.ignore(256, '\n');
+				cout << "\n value inputed not of type int. please try again. \n";
+				cin >> userInput;
+			}
+			if (userInput == 1) {
+				cout << "user entered 1 \n";
+			}
+			else if (userInput == 2) {
+				cout << "user entered 2 \n";
+			}
+		}
+	}
+	
+}
 
 int _tmain(int argc, _TCHAR* argv[])
 {
@@ -219,11 +255,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	//mapObserverTesting();
 
 	//GameLifeTest();
-
-
-	
-
-	playerObserverTesting();
+	//playerObserverTesting();
+	Demo();
 	system("pause");
 
 	return 0;
