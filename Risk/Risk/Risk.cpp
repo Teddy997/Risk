@@ -299,12 +299,8 @@ void editMap() {
 		}
 	}
 }
-
-
-
-
-void Demo() {
-	cout << "Welcome to the game of risk. Please choose what youd like to do (input number youd like to do): " << endl << endl << "1. Load pre-existing map \n" << "2. Edit pre-existing map \n";
+void mapCreationPhase() {
+	cout << "Please choose what youd like to do (input number youd like to do): " << endl << endl << "1. Load pre-existing map \n" << "2. Edit pre-existing map \n";
 	int userInput = 0;
 	cin >> userInput;
 	while (cin.fail()) {
@@ -317,7 +313,7 @@ void Demo() {
 		cout << "user entered 1 \n";
 		loadMap();
 	}
-	else if(userInput==2){
+	else if (userInput == 2) {
 		cout << "user entered 2 \n";
 		editMap();
 	}
@@ -341,6 +337,15 @@ void Demo() {
 			}
 		}
 	}
+
+
+}
+
+
+void Demo() {
+	cout << "Welcome to the game of risk. " << endl << endl;
+	mapCreationPhase();
+	
 	
 }
 
