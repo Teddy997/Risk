@@ -190,26 +190,119 @@ void GameLifeTest() {
 	Engine* e = new Engine();
 	//cout << "wtf is going on" << endl;
 }
-void loadMap() {
-	cout << "load map chosen \n";
-}
-void editMap() {
-	cout << "edit map chosen \n";
-}
-void playDefault() {
-	cout << "play default chosen \n";
-}
-void displayOthers() {
-	cout << "display others chosen \n";
-}
-void showListOfMaps() {
-	cout << "show list of maps \n";
-}
+// fuctions used in Demo
+// almost all if not all the returns are going to have to be changed to either return a map or a list of maps 
+//ive done it this way for testing as i go.
 void newMap() {
 	cout << "create new map chosen \n";
 }
-void Demo() {
-	cout << "Welcome to the game of risk. Please choose what youd like to do (input number youd like to do): " << endl << endl << "1. Load pre-existing map \n" << "2. Edit pre-existing map \n";
+void showListOfMaps() {
+	cout << "show list of maps \n";
+	//display
+
+}
+void displayOthers() {
+	cout << "display others to choose \n";
+	//show list of maps
+	showListOfMaps();
+	// map is chosen to load
+	int userInput = 0;
+	cout << "please choose map from list above (if your input doesn't match one of the possible integers default map will be loaded) : \n";
+	cin >> userInput;
+	while (cin.fail()) {
+		cin.clear();
+		cin.ignore(256, '\n');
+		cout << "\n value inputed not of type int. please try again. \n";
+		cin >> userInput;
+	};
+
+}
+void playDefault() {
+	cout << "play default chosen \n";
+	//load default map
+}
+void loadMap() {
+	cout << "load map chosen \n";
+	int userInput=0;
+	cout << "Please choose one of these options : \n 1. Play Default Map \n 2. Display Other Maps \n";
+	cin >> userInput;
+	while (cin.fail()) {
+		cin.clear();
+		cin.ignore(256, '\n');
+		cout << "\n value inputed not of type int. please try again. \n";
+		cin >> userInput;
+	};
+	if (userInput == 1) {
+		cout << "user entered 1 \n";
+		playDefault();
+	}
+	else if (userInput == 2) {
+		cout << "user entered 2 \n";
+		displayOthers();
+	}
+	else {
+		while (userInput != 1 && userInput != 2) {
+			cout << "integer entered not equal to one of the selections please try again. \n";
+			cin >> userInput;
+			while (cin.fail()) {
+				cin.clear();
+				cin.ignore(256, '\n');
+				cout << "\n value inputed not of type int. please try again. \n";
+				cin >> userInput;
+			}
+			if (userInput == 1) {
+				cout << "user entered 1 \n";
+				playDefault();
+			}
+			else if (userInput == 2) {
+				cout << "user entered 2 \n";
+				displayOthers();
+			}
+		}
+	}
+}
+void editMap() {
+	cout << "edit map chosen \n";
+	int userInput = 0;
+	cout << "Please choose one of these options : \n 1. New Map \n 2. Choose Other Map to edit \n";
+	cin >> userInput;
+	while (cin.fail()) {
+		cin.clear();
+		cin.ignore(256, '\n');
+		cout << "\n value inputed not of type int. please try again. \n";
+		cin >> userInput;
+	};
+	if (userInput == 1) {
+		cout << "user entered 1 \n";
+		newMap();
+	}
+	else if (userInput == 2) {
+		cout << "user entered 2 \n";
+		displayOthers();
+	}
+	else {
+		while (userInput != 1 && userInput != 2) {
+			cout << "integer entered not equal to one of the selections please try again. \n";
+			cin >> userInput;
+			while (cin.fail()) {
+				cin.clear();
+				cin.ignore(256, '\n');
+				cout << "\n value inputed not of type int. please try again. \n";
+				cin >> userInput;
+			}
+			if (userInput == 1) {
+				cout << "user entered 1 \n";
+				newMap();
+			}
+			else if (userInput == 2) {
+				cout << "user entered 2 \n";
+				displayOthers();
+			}
+		}
+	}
+}
+void mapCreationPhase() {
+	cout << "Please choose what youd like to do (input number youd like to do): " << endl << endl << "1. Load pre-existing map \n" << "2. Edit pre-existing map \n";
 	int userInput = 0;
 	cin >> userInput;
 	while (cin.fail()) {
@@ -220,13 +313,15 @@ void Demo() {
 	};
 	if (userInput == 1) {
 		cout << "user entered 1 \n";
+		loadMap();
 	}
-	else if(userInput==2){
+	else if (userInput == 2) {
 		cout << "user entered 2 \n";
+		editMap();
 	}
 	else {
 		while (userInput != 1 && userInput != 2) {
-			cout << "integer entered not equal to one of teh selections please try again. \n";
+			cout << "integer entered not equal to one of the selections please try again. \n";
 			cin >> userInput;
 			while (cin.fail()) {
 				cin.clear();
@@ -236,12 +331,23 @@ void Demo() {
 			}
 			if (userInput == 1) {
 				cout << "user entered 1 \n";
+				loadMap();
 			}
 			else if (userInput == 2) {
 				cout << "user entered 2 \n";
+				editMap();
 			}
 		}
 	}
+
+
+}
+
+
+void Demo() {
+	cout << "Welcome to the game of risk. " << endl << endl;
+	mapCreationPhase();
+	
 	
 }
 
@@ -272,9 +378,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	
 	//mapObserverTesting();
 
-	GameLifeTest();
+	//GameLifeTest();
 	//playerObserverTesting();
-	//Demo();
+	Demo();
 	system("pause");
 
 	return 0;
