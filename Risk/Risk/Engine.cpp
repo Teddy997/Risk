@@ -29,9 +29,10 @@ void Engine::startPhase() {
 
 void Engine::gamePlayPhase(){
 	cout << "Assignment: playing the game!" << endl;
+	unsigned int turn = 1;
 	while (victoryConditions()) {
 		cout << "current player's turn: " << gameState.getCurrentPlayer()->get_player_name() << endl;
-		unsigned int turn = 0;
+		
 		reinforcementPhase();
 		attackPhase();
 		fortificationPhase();

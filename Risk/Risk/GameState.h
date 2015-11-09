@@ -51,12 +51,12 @@ public:
 	
 	void setPlayerTurn(Player* p);
 private:
-	Player player;
-	vector<Player> AIPlayers;
-	Map map;
+	Player* player;
+	vector<Player*> AIPlayers;
+	Map* map;
 	Phase currentPhase;
 	void reinforcingPhase();
-	Player currentPlayer;
+	Player* currentPlayer;
 	void doAIReinforcement(int armies);
 };
 

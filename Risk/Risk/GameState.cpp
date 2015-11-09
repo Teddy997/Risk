@@ -4,14 +4,12 @@
 #include "tinydir.h"
 
 GameState::GameState() {
-	cout << "WHY IS THE DEFAULT GAME STATE BEING CALLED" << endl;
-	player = Player();
+	player = new Player();
 	currentPlayer = player;
 }
 
 GameState::GameState(string name) {
-	cout << "HOW COME SOME RANDOM DEFAULT PLAYER IS CREATED TWICE BEFORE THE GAMESTATE CONSTRUCTOR IS ACTUALLY CALLED" << endl;
-	player = Player(name);
+	player = new Player(name);
 	currentPlayer = player;
 }
 
@@ -21,14 +19,14 @@ GameState::~GameState()
 }
 
 void GameState::addPlayer(string name) {
-	Player p = Player(name);
+	Player* p = new Player(name);
 	int random = rand() % 3;
 	if (random == 0)
-		p.setStrategy(new AgressiveStrategy());
+		p->setStrategy(new AgressiveStrategy());
 	else if (random == 1)
-		p.setStrategy(new DefensiveStrategy());
+		p->setStrategy(new DefensiveStrategy());
 	else
-		p.setStrategy(new RandomStrategy());
+		p->setStrategy(new RandomStrategy());
 	AIPlayers.push_back(p);
 }
 
@@ -39,53 +37,54 @@ void GameState::changeGamePhase(Phase newPhase) {
 	}
 }
 void GameState::setPlayerTurn(Player* p) {
-	currentPlayer = *p;
+	currentPlayer = p;
 }
 void GameState::reinforcingPhase() {
-	int armiesAwarded = currentPlayer.numberOfCountriesOwned() / 3;
+	int armiesAwarded = currentPlayer->numberOfCountriesOwned() / 3;
 	if (armiesAwarded < 3) { armiesAwarded = 3; }
+	cout << endl;
+	cout << currentPlayer->get_player_name() << " has " << armiesAwarded << " armies to place." << endl;
+	cout << "\n**********CURRENT COUNTRIES OF " << currentPlayer->get_player_name() << " **********" << endl;
+	cout << currentPlayer->print_countries_owned() << endl;
+	if (currentPlayer == player) { // will do the human player first, else will do the AI reinforcement
+		while (armiesAwarded > 0) {
+			
+		
+				cout << "Enter the number of the country you'd like to reinforce." << endl;
+				int index;
+				bool valid_country = false;
 
-	cout << "\n**********CURRENT COUNTRIES OF " << currentPlayer.get_player_name() << " **********" << endl;
-	cout << currentPlayer.print_countries_owned() << endl;
-	while (armiesAwarded > 0) {
-		cout << currentPlayer.get_player_name() << " has " << armiesAwarded << " armies to place." << endl;
-		if (&currentPlayer == &player) { // will do the human player first, else will do the AI reinforcement
-			cout << "Enter the number of the country you'd like to reinforce." << endl;
-			int index;
-			bool valid_country = false;
-
-			while (valid_country == false) {
-				index = InputProcedure::get_choice();
-				if (index - 1 < 0 || index - 1 > currentPlayer.numberOfCountriesOwned() - 1) {
-					cout << "Not a valid choice." << endl;
+				while (valid_country == false) {
+					index = InputProcedure::get_choice();
+					if (index - 1 < 0 || index - 1 > currentPlayer->numberOfCountriesOwned() - 1) {
+						cout << "Not a valid choice." << endl;
+					}
+					else {
+						valid_country = true;
+					}
 				}
-				else {
-					valid_country = true;
+				cout << "Enter the number of armies you'd like to reinforce with." << endl;
+				bool valid_amount = false;
+				while (valid_amount == false) {
+					int armiesDeducted = 0;
+					armiesDeducted = InputProcedure::get_choice();
+					if (armiesDeducted > armiesAwarded || armiesDeducted < 0) {
+						cout << "Not a valid amount" << endl;
+					}
+					else {
+						currentPlayer->get_country(index - 1)->increment_armies(armiesDeducted);
+
+						armiesAwarded -= armiesDeducted;
+						valid_amount = true;
+					}
 				}
 			}
-			cout << "Enter the number of armies you'd like to reinforce with." << endl;
-			bool valid_amount = false;
-			while (valid_amount == false) {
-				int armiesDeducted = 0;
-				armiesDeducted = InputProcedure::get_choice();
-				if (armiesDeducted > armiesAwarded || armiesDeducted < 0) {
-					cout << "Not a valid amount" << endl;
-				}
-				else {
-					currentPlayer.get_country(index - 1)->increment_armies(armiesDeducted);
+		}	else {
+		doAIReinforcement(armiesAwarded);
 
-					cout << "\n**********CURRENT COUNTRIES**********" << endl;
-					cout << currentPlayer.print_countries_owned() << endl;
-
-					armiesAwarded -= armiesDeducted;
-					valid_amount = true;
-				}
-			}
-		}
-		else {
-			doAIReinforcement(armiesAwarded);
-		}
 	}
+	cout << "\n**********CURRENT COUNTRIES OF " << currentPlayer->get_player_name() << " **********" << endl;
+	cout << currentPlayer->print_countries_owned() << endl;
 }
 void GameState::doAIReinforcement(int armies) {
 	while (armies != 0) {
@@ -94,8 +93,11 @@ void GameState::doAIReinforcement(int armies) {
 		int armiesDeducted = rand() % armies + 1;
 		armies -= armiesDeducted;
 		// choose a random country to reinforce
-		int index = rand() % currentPlayer.numberOfCountriesOwned();
-		currentPlayer.get_country(index)->increment_armies(armiesDeducted);
+		int index = rand() % currentPlayer->numberOfCountriesOwned();
+		currentPlayer->get_country(index)->increment_armies(armiesDeducted);
+		cout << "******* " << currentPlayer->get_player_name() << " has chosen to reinforce "
+			<< currentPlayer->get_country(index)->get_country_name()
+			<< " with " << armiesDeducted << " armies.******" << endl;
 	}
 }
 
@@ -112,23 +114,23 @@ void GameState::updatePlayerTurn(int turn) {
 	}
 }
 Player* GameState::getCurrentPlayer() {
-	return &currentPlayer;
+	return currentPlayer;
 }
 Player* GameState::getMainPlayer() {
-	return &player;
+	return player;
 }
 vector<Player*> GameState::getAIPlayers() {
 	
 	vector<Player*> copy;
 	for (int i = 0; i < AIPlayers.size(); ++i) {
-		Player* p = &AIPlayers.at(i);
+		Player* p = AIPlayers.at(i);
 		copy.push_back(p);
 	}
 	return copy;
 
 }
 void GameState::setMap(string name) {
-	map = Map(); // TODO use the file names to load
+	map = new Map(); // TODO use the file names to load
 }
 
 void GameState::displayMapDirectoryContents() {
@@ -167,7 +169,7 @@ void GameState::displayMapDirectoryContents() {
 }
 
 void GameState::assignCountries() { 
-	vector<Country*> countries = map.getCountries();
+	vector<Country*> countries = map->getCountries();
 	int totalNbCountries = countries.size();
 	int numberOfPlayers = 1 + AIPlayers.size();
 	int numCountriesPerPlayer = totalNbCountries / numberOfPlayers;
@@ -186,17 +188,17 @@ void GameState::assignCountries() {
 	for (Country* c : countries) {
 		int toPlayer = rand() % numberOfPlayers; 
 		if (toPlayer == 0) {
-			player.assign_country(*c);
+			player->assign_country(*c);
 		}
 		else {
 			--toPlayer;
-			AIPlayers[toPlayer].assign_country(*c);
+			AIPlayers[toPlayer]->assign_country(*c);
 		}
 	}
-	player.assignArmies(numberOfArmiesPerPlayer);
+	player->assignArmies(numberOfArmiesPerPlayer);
 	// assign number of armies to each country 
-	for (Player p : AIPlayers) {
-		p.assignArmies(numberOfArmiesPerPlayer);
+	for (Player* p : AIPlayers) {
+		p->assignArmies(numberOfArmiesPerPlayer);
 
 		
 	}
