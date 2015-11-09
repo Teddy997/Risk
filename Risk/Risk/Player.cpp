@@ -256,7 +256,7 @@ std::string Player::print_ContinentList() {
 	//Else, for each country the player owns, store the name of that country into the continents string.
 	else {
 		for (int i = 0; i<size; i++) {
-			continents += to_string(i + 1) + ". Country: " + continents_owned.at(i)->get_continent_name() + "\n";
+			continents += to_string(i + 1) + ". Continent: " + continents_owned.at(i)->get_continent_name() + "\n";
 		}
 	}
 	return continents;

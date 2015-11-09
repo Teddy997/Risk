@@ -38,6 +38,7 @@ Country::Country(std::string name) {
 	//std::cout << get_country_name() + " Country object created." << std::endl;
 }
 
+
 Country::~Country() {
 	//std::cout << get_country_name() + " Country object destroyed." << std::endl;
 }

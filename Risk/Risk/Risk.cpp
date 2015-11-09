@@ -140,10 +140,11 @@ void playerObserverTesting() {
 	
 
 	// create countries to be added to players
-	Country c1("Germany");
-	Country c2("France");
-	Country c3("USA");
-	Country c4("Canada");
+	
+	Country c1( "germany" ,Europe);
+	Country c2("France",Europe);
+	Country c3("USA",NorthAmerica);
+	Country c4("Canada",NorthAmerica);
 	//add countries to countrie
 	vector<Country*> NA;
 	NA.push_back(&c3);
