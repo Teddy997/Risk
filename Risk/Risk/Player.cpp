@@ -128,10 +128,12 @@ std::string Player::print_countries_owned() {
 	if(size == 0) {
 		countries = "no countries found";
 	}
+	
 	//Else, for each country the player owns, store the name of that country into the countries string.
 	else {
 		for(int i=0; i<size; i++) {
-			countries += to_string(i+1) + ". Country: " + countries_owned.at(i)->get_country_name() + 
+			cout << countries_owned[i]->get_country_name() << endl;
+			countries += to_string(i + 1) + ". Country: " + countries_owned.at(i)->get_country_name() + 
 				", Armies: " + to_string(countries_owned.at(i)->get_number_of_armies()) + "\n";
 		}
 	}

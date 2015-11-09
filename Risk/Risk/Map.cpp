@@ -222,6 +222,7 @@ void Map::AssignConnectedCountries(vector < vector <int> >& connectedCountryID)
 			//ID start at 1 while index start at 0
 			int index = connectedCountryID[j][k] - 1;
 			connected.push_back(&countries[index]);
+
 		}
 		countries[j].setConnectedCountries(connected);
 	}
@@ -266,6 +267,12 @@ int Map::nbOfCountries() {
 	return nOfCountries;
 }
 
-vector<Country> Map::getCountries() {
-	return countries;
+vector<Country*> Map::getCountries() {
+	vector<Country*> cs;
+	for (int i = 0; i < countries.size(); ++i) {
+		Country* t = &countries.at(i);
+		cs.push_back(t);
+	}
+	return cs;
+
 }

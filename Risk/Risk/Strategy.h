@@ -8,8 +8,7 @@ class Player;
 
 class Strategy
 {
-protected:
-	Player* p;
+
 public:
 	Strategy();
 	virtual ~Strategy();

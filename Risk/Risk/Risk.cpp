@@ -107,8 +107,8 @@ void game_state_testing() {
 	c3.increment_armies(3);
 	//GameState g;
 	//g.reinforcingPhase();
-	GameState g;
-	g.displayMapDirectoryContents();
+	//GameState g;
+	//g.displayMapDirectoryContents();
 	//g.reinforcingPhase(p1);
 	
 }
@@ -160,7 +160,8 @@ void playerObserverTesting() {
 }
 
 void GameLifeTest() {
-	
+	Engine* e = new Engine();
+	//cout << "wtf is going on" << endl;
 }
 
 int _tmain(int argc, _TCHAR* argv[])
@@ -192,7 +193,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	GameLifeTest();
 
-	playerObserverTesting();
+	//playerObserverTesting();
 	
 	return 0;
 }
