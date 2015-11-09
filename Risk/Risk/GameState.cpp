@@ -4,10 +4,13 @@
 #include "tinydir.h"
 
 GameState::GameState() {
-
+	cout << "WHY IS THE DEFAULT GAME STATE BEING CALLED" << endl;
+	player = Player();
+	currentPlayer = player;
 }
-GameState::GameState(string name)
-{
+
+GameState::GameState(string name) {
+	cout << "HOW COME SOME RANDOM DEFAULT PLAYER IS CREATED TWICE BEFORE THE GAMESTATE CONSTRUCTOR IS ACTUALLY CALLED" << endl;
 	player = Player(name);
 	currentPlayer = player;
 }
@@ -35,16 +38,15 @@ void GameState::changeGamePhase(Phase newPhase) {
 		reinforcingPhase();
 	}
 }
-void GameState::setPlayerTurn(Player p) {
-	currentPlayer = p;
+void GameState::setPlayerTurn(Player* p) {
+	currentPlayer = *p;
 }
 void GameState::reinforcingPhase() {
 	int armiesAwarded = currentPlayer.numberOfCountriesOwned() / 3;
 	if (armiesAwarded < 3) { armiesAwarded = 3; }
 
-	cout << "\n**********CURRENT COUNTRIES**********" << endl;
+	cout << "\n**********CURRENT COUNTRIES OF " << currentPlayer.get_player_name() << " **********" << endl;
 	cout << currentPlayer.print_countries_owned() << endl;
-
 	while (armiesAwarded > 0) {
 		cout << currentPlayer.get_player_name() << " has " << armiesAwarded << " armies to place." << endl;
 		if (&currentPlayer == &player) { // will do the human player first, else will do the AI reinforcement
@@ -109,15 +111,19 @@ void GameState::updatePlayerTurn(int turn) {
 		}
 	}
 }
-Player GameState::getCurrentPlayer() {
-	return currentPlayer;
+Player* GameState::getCurrentPlayer() {
+	return &currentPlayer;
 }
-Player GameState::getMainPlayer() {
-	return player;
+Player* GameState::getMainPlayer() {
+	return &player;
 }
-vector<Player> GameState::getAIPlayers() {
+vector<Player*> GameState::getAIPlayers() {
 	
-	vector<Player> copy = AIPlayers;
+	vector<Player*> copy;
+	for (int i = 0; i < AIPlayers.size(); ++i) {
+		Player* p = &AIPlayers.at(i);
+		copy.push_back(p);
+	}
 	return copy;
 
 }
@@ -161,7 +167,7 @@ void GameState::displayMapDirectoryContents() {
 }
 
 void GameState::assignCountries() { 
-	vector<Country> countries = map.getCountries();
+	vector<Country*> countries = map.getCountries();
 	int totalNbCountries = countries.size();
 	int numberOfPlayers = 1 + AIPlayers.size();
 	int numCountriesPerPlayer = totalNbCountries / numberOfPlayers;
@@ -177,14 +183,14 @@ void GameState::assignCountries() {
 	
 
 	// assign countries to players
-	for (Country c : countries) {
+	for (Country* c : countries) {
 		int toPlayer = rand() % numberOfPlayers; 
 		if (toPlayer == 0) {
-			player.assign_country(c);
+			player.assign_country(*c);
 		}
 		else {
 			--toPlayer;
-			AIPlayers[toPlayer].assign_country(c);
+			AIPlayers[toPlayer].assign_country(*c);
 		}
 	}
 	player.assignArmies(numberOfArmiesPerPlayer);

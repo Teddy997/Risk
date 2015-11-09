@@ -4,9 +4,14 @@
 using namespace std;
 Engine::Engine()
 {
-	cout << "Assignment: creating engine and game state" << endl;
-	gameState = GameState("Person"); // maybe ask the user for his name?
+	
+	cout << "Please enter your name" << endl;
+
+	string name = "";
+	cin >> name;
+	gameState = GameState(name);
 	startPhase();
+	
 }
 
 
@@ -25,7 +30,7 @@ void Engine::startPhase() {
 void Engine::gamePlayPhase(){
 	cout << "Assignment: playing the game!" << endl;
 	while (victoryConditions()) {
-		cout << "current player's turn: " << gameState.getCurrentPlayer().get_player_name();
+		cout << "current player's turn: " << gameState.getCurrentPlayer()->get_player_name() << endl;
 		unsigned int turn = 0;
 		reinforcementPhase();
 		attackPhase();
@@ -66,15 +71,15 @@ void Engine::fortificationPhase() {
 bool Engine::victoryConditions() {
 	
 	cout << "Assignment: Checking to see if anybody won " << endl;
-	if (gameState.getCurrentPlayer().numberOfCountriesOwned() < 1)
+	if (gameState.getCurrentPlayer()->numberOfCountriesOwned() < 1)
 		defeat = true;
 	else {
 		bool d = false;
-		vector<Player> v = gameState.getAIPlayers();
+		vector<Player*> v = gameState.getAIPlayers();
 		for (unsigned int i = 0; i < v.size(); ++i) {
+			
 
-
-			if (v[i].numberOfCountriesOwned() < 1)
+			if (v[i]->numberOfCountriesOwned() < 1)
 				victory = true;
 			else {
 				victory = false;
@@ -113,7 +118,10 @@ void Engine::generateAIPlayers() {
 
 	if (valid) {
 		for (unsigned int i = 0; i < names.size(); ++i) {
-			gameState.addPlayer(names[i]);
+			if (opponents > 0) {
+				gameState.addPlayer(names[i]);
+				--opponents;
+			}
 		}
 	}
 
