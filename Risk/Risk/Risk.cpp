@@ -191,6 +191,8 @@ void GameLifeTest() {
 	//cout << "wtf is going on" << endl;
 }
 // fuctions used in Demo
+// almost all if not all the returns are going to have to be changed to either return a map or a list of maps 
+//ive done it this way for testing as i go.
 void newMap() {
 	cout << "create new map chosen \n";
 }
