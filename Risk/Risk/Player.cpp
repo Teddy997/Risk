@@ -143,6 +143,7 @@ std::string Player::print_countries_owned() {
 Country* Player::get_country(int index) {
 	//It's up to the user of get_country to assure that the index is within the valid range ( > -1 && < countries_owned.size()-1 )
 	return countries_owned.at(index);
+	
 }
 
 int Player::numberOfCountriesOwned() {
@@ -218,6 +219,7 @@ void Player::assignArmies(int x) {
 			armiesAvaiable -= random;
 		}
 	}
+	Notify();
 }
 
 void Player::update_bonus() {
@@ -284,6 +286,7 @@ int Player::total_number_of_armies_owned() {
 // increments number of battles won by 1.
 void Player::incrementBattlesWon() {
 	numberBattlesWon++;
+	Notify();
 }
 int Player::getBattlesWon() {
 	return numberBattlesWon;

@@ -133,16 +133,37 @@ void playerObserverTesting() {
 	// attach playerviews to each other
 	bob->Attach(pvm);
 	meg->Attach(pvb);
+	
+	// Create continents
+	Continent NorthAmerica("North America", 1, 5);
+	Continent Europe("Europe", 2, 6);
+	
+
 	// create countries to be added to players
 	Country c1("Germany");
 	Country c2("France");
-	Country c3("South Africa");
+	Country c3("USA");
 	Country c4("Canada");
+	//add countries to countrie
+	vector<Country*> NA;
+	NA.push_back(&c3);
+	NA.push_back(&c4);
+	vector<Country*> EU;
+	EU.push_back(&c2);
+	EU.push_back(&c1);
+
+	// assign countries to continents
+	NorthAmerica.setContainedCountries(NA);
+	Europe.setContainedCountries(EU);
 	// assign countries to players
-	bob->assign_country(c1);
+	bob->assign_country(c4);
 	meg->assign_country(c2);
+
+	cout << endl << " NA will be completed" << endl;
+
 	bob->assign_country(c3);
 	// increment armies in countries of a player
+	cout << endl<< "incrementation of armies";
 	bob->get_country(0)->increment_armies(5);
 	bob->get_country(1)->increment_armies(7);
 	meg->get_country(0)->increment_armies(3);
@@ -153,7 +174,12 @@ void playerObserverTesting() {
 	
 	// add one more country to meg and assign armies
 	c4.increment_armies(3);
-	meg->assign_country(c4);
+	meg->assign_country(c1);
+
+	// increment battles won
+	cout << endl << "increment battles won" << endl;
+	meg->incrementBattlesWon();
+
 
 	
 
@@ -191,9 +217,14 @@ int _tmain(int argc, _TCHAR* argv[])
 	
 	//mapObserverTesting();
 
-	GameLifeTest();
+	//GameLifeTest();
 
+<<<<<<< HEAD
 	//playerObserverTesting();
 	
+=======
+	playerObserverTesting();
+	system("pause");
+>>>>>>> 7b9bad8f917ffb7be23046c483208c88555e0fff
 	return 0;
 }

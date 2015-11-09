@@ -95,6 +95,7 @@
     <ClInclude Include="GameState.h" />
     <ClInclude Include="InputProcedure.h" />
     <ClInclude Include="Map.h" />
+    <ClInclude Include="MapCreator.h" />
     <ClInclude Include="MapManager.h" />
     <ClInclude Include="MapObserver.h" />
     <ClInclude Include="MapObserverPattern.h" />
@@ -123,6 +124,7 @@
     <ClCompile Include="GameState.cpp" />
     <ClCompile Include="InputProcedure.cpp" />
     <ClCompile Include="Map.cpp" />
+    <ClCompile Include="MapCreator.cpp" />
     <ClCompile Include="MapManager.cpp" />
     <ClCompile Include="MapObserver.cpp" />
     <ClCompile Include="MapTester.cpp" />

@@ -7,12 +7,13 @@
 //#include "Continent.h"
 
 #include "MapSubjectPattern.h"
+#include "subject.h"
 
 class Player;
 class Continent;
 class Country;
 
-class Country : public MapSubjectPattern {
+class Country : public MapSubjectPattern,public Subject {
 private:
 	/*Member variables*/
 	std::string country_name;

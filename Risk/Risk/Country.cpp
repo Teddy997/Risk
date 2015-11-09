@@ -61,6 +61,7 @@ void Country::set_owned(bool value, Player& player) {
 		is_owned = value;
 		owner = &player;
 		notifyObservers();
+		
 	}
 	//Else, set the Player pointer, owner back to NULL.
 	else {
@@ -92,6 +93,7 @@ void Country::increment_armies(int amt) {
 	number_of_armies += amt;
 	notifyObservers();
 	
+	
 }
 
 void Country::decrement_armies(int amt) {
@@ -103,6 +105,7 @@ void Country::decrement_armies(int amt) {
 	else {
 		number_of_armies -= amt;
 		notifyObservers();
+		
 	}
 }
 
