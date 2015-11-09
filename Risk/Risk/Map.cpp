@@ -57,7 +57,7 @@ void Map::PrintAllCountryNames()
 {
 	for (int i = 0; i < nOfCountries; i++)
 	{
-		std::cout << countries[i].get_country_name() << endl;
+		std::cout << countries[i]->get_country_name() << endl;
 	}
 }
 
@@ -92,7 +92,7 @@ int Map::test_map_components()
 		//for every countries
 		for (int i = 0; i < countries.size(); i++)
 		{
-			Country* tempCountry = &countries.at(i);
+			Country* tempCountry = countries.at(i);
 			Continent* tempContinent = tempCountry->get_containing_continent();
 			if (tempContinent == NULL) {
 				returnValue = -1;
@@ -205,7 +205,7 @@ void Map::CreateCountries(vector<string>& countryName, vector<int>& containingCo
 {
 	for (int j = 0; j < countryName.size(); j++)
 	{
-		countries.push_back(Country(countryName[j], continents[containingContinentID[j]]));
+		countries.push_back(new Country(countryName[j], continents[containingContinentID[j]]));
 	}
 	set_nOfCountries(countries.size());
 }
@@ -221,10 +221,10 @@ void Map::AssignConnectedCountries(vector < vector <int> >& connectedCountryID)
 		{
 			//ID start at 1 while index start at 0
 			int index = connectedCountryID[j][k] - 1;
-			connected.push_back(&countries[index]);
+			connected.push_back(countries[index]);
 
 		}
-		countries[j].setConnectedCountries(connected);
+		countries[j]->setConnectedCountries(connected);
 	}
 }
 
@@ -240,7 +240,7 @@ void Map::AssignContainedCountries(vector<int>& containingContinentID)
 	vector < vector <Country*> > countriesContainedInContinent(nOfContinents, vector<Country*>());
 	for (int j = 0; j < countries.size(); j++)
 	{
-		countriesContainedInContinent[containingContinentID[j]].push_back(&countries[j]);
+		countriesContainedInContinent[containingContinentID[j]].push_back(countries[j]);
 	}
 	for (int j = 0; j < nOfContinents; j++)
 	{
@@ -268,11 +268,11 @@ int Map::nbOfCountries() {
 }
 
 vector<Country*> Map::getCountries() {
-	vector<Country*> cs;
+	/*vector<Country*> cs;
 	for (int i = 0; i < countries.size(); ++i) {
 		Country* t = &countries.at(i);
 		cs.push_back(t);
-	}
-	return cs;
+	}*/
+	return countries;
 
 }

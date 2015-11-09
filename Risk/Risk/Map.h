@@ -17,7 +17,7 @@ public:
 	Map();
 	~Map();
 
-	vector<Country> getAllCountries() { return countries; }
+	vector<Country*> getAllCountries() { return countries; }
 
 	void set_nOfCountries(int numberOfCountries) { nOfCountries = numberOfCountries; }
 	void set_nOfContinents(int numberOfContinents) { nOfContinents = numberOfContinents; }
@@ -35,7 +35,7 @@ public:
 	int nbOfCountries();
 	std::vector<Country*> getCountries();
 private:
-	std::vector<Country> countries;
+	std::vector<Country*> countries;
 	std::vector<Continent> continents;
 	int nOfCountries;
 	int nOfContinents;

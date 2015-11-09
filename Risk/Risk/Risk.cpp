@@ -332,9 +332,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	
 	//mapObserverTesting();
 
-	//GameLifeTest();
+	GameLifeTest();
 	//playerObserverTesting();
-	Demo();
+	//Demo();
 	system("pause");
 
 	return 0;
