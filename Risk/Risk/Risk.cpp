@@ -191,6 +191,34 @@ void GameLifeTest() {
 	//cout << "wtf is going on" << endl;
 }
 // fuctions used in Demo
+void newMap() {
+	cout << "create new map chosen \n";
+}
+void showListOfMaps() {
+	cout << "show list of maps \n";
+	//display
+
+}
+void displayOthers() {
+	cout << "display others chosen \n";
+	//show list of maps
+	showListOfMaps();
+	// map is chosen to load
+	int userInput = 0;
+	cout << "please choose map from list above (if your input doesn't match one of the possible integers default map will be loaded) : \n";
+	cin >> userInput;
+	while (cin.fail()) {
+		cin.clear();
+		cin.ignore(256, '\n');
+		cout << "\n value inputed not of type int. please try again. \n";
+		cin >> userInput;
+	};
+
+}
+void playDefault() {
+	cout << "play default chosen \n";
+	//load default map
+}
 void loadMap() {
 	cout << "load map chosen \n";
 	int userInput=0;
@@ -234,36 +262,10 @@ void loadMap() {
 void editMap() {
 	cout << "edit map chosen \n";
 }
-void playDefault() {
-	cout << "play default chosen \n";
-	//load default map
-}
-void displayOthers() {
-	cout << "display others chosen \n";
-	//show list of maps
-	showListOfMaps();
-	// map is chosen to load
-	int userInput=0;
-	cout << "please choose map from list above (if your input doesn't match one of the possible integers default map will be loaded) : \n";
-	cin >> userInput;
-	cout << "Please choose one of these options : \n 1. Play Default Map \n 2. Display Other Maps \n";
-	cin >> userInput;
-	while (cin.fail()) {
-		cin.clear();
-		cin.ignore(256, '\n');
-		cout << "\n value inputed not of type int. please try again. \n";
-		cin >> userInput;
-	};
-	
-}
-void showListOfMaps() {
-	cout << "show list of maps \n";
-	//display
 
-}
-void newMap() {
-	cout << "create new map chosen \n";
-}
+
+
+
 void Demo() {
 	cout << "Welcome to the game of risk. Please choose what youd like to do (input number youd like to do): " << endl << endl << "1. Load pre-existing map \n" << "2. Edit pre-existing map \n";
 	int userInput = 0;
@@ -332,9 +334,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	
 	//mapObserverTesting();
 
-	GameLifeTest();
+	//GameLifeTest();
 	//playerObserverTesting();
-	//Demo();
+	Demo();
 	system("pause");
 
 	return 0;
