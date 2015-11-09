@@ -42,6 +42,7 @@ void GameState::changeGamePhase(Phase newPhase) {
 void GameState::fortifyingPhase() {
 
 	cout << "**********FORTIFYING PHASE*************" << endl;
+	cout << currentPlayer->get_player_name() << " is currently fortifying..." << endl;
 	//updateView();
 	if (currentPlayer == player) {
 		cout << "Here are the countries that you own and their connections( which you also own) :" << endl;
@@ -113,7 +114,33 @@ void GameState::fortifyingPhase() {
 	updateView();
 }
 void GameState::doAIFortification() {
-
+	cout << "The AI algorithm will fortify countries randomly" << endl;
+	bool done = false;
+	int numberOfTries = 0; // to make sure that this while loop exits after number of tries in case the AI has nowhere to fortify
+	while (!done && numberOfTries < 200 ) {
+		++numberOfTries;
+		// choose random country from where to fortify
+		int index = rand() % currentPlayer->numberOfCountriesOwned();
+		Country* c1 = currentPlayer->get_country(index);
+		int armiestoMove = rand() % c1->get_number_of_armies() + 1;
+		// choose random country to which to move
+		if (c1->getConnectedCountries()[0] != NULL) {
+			int index2 = rand() % c1->getConnectedCountries().size();
+			Country* c2 = c1->getConnectedCountries()[index2];
+			if (c2->getOwner() == currentPlayer) {
+				c1->decrement_armies(armiestoMove);
+				c2->increment_armies(armiestoMove);
+				cout << currentPlayer->get_player_name() << " has chosen to fortify "
+					<< c2->get_country_name() << " from " << c1->get_country_name()
+					<< " with " << armiestoMove << "." << endl;
+				done = true;
+			} else {
+				done = false;
+			}
+		}
+		else
+			done = false;
+	}
 }
 void GameState::setPlayerTurn(Player* p) {
 	currentPlayer = p;
