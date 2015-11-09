@@ -200,7 +200,7 @@ void showListOfMaps() {
 
 }
 void displayOthers() {
-	cout << "display others chosen \n";
+	cout << "display others to choose \n";
 	//show list of maps
 	showListOfMaps();
 	// map is chosen to load
@@ -261,6 +261,43 @@ void loadMap() {
 }
 void editMap() {
 	cout << "edit map chosen \n";
+	int userInput = 0;
+	cout << "Please choose one of these options : \n 1. New Map \n 2. Choose Other Map to edit \n";
+	cin >> userInput;
+	while (cin.fail()) {
+		cin.clear();
+		cin.ignore(256, '\n');
+		cout << "\n value inputed not of type int. please try again. \n";
+		cin >> userInput;
+	};
+	if (userInput == 1) {
+		cout << "user entered 1 \n";
+		newMap();
+	}
+	else if (userInput == 2) {
+		cout << "user entered 2 \n";
+		displayOthers();
+	}
+	else {
+		while (userInput != 1 && userInput != 2) {
+			cout << "integer entered not equal to one of the selections please try again. \n";
+			cin >> userInput;
+			while (cin.fail()) {
+				cin.clear();
+				cin.ignore(256, '\n');
+				cout << "\n value inputed not of type int. please try again. \n";
+				cin >> userInput;
+			}
+			if (userInput == 1) {
+				cout << "user entered 1 \n";
+				newMap();
+			}
+			else if (userInput == 2) {
+				cout << "user entered 2 \n";
+				displayOthers();
+			}
+		}
+	}
 }
 
 
