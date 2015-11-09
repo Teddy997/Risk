@@ -49,7 +49,7 @@ public:
 	void increment_armies(int amt);
 	void decrement_armies(int amt);
 	int get_number_of_armies();
-
+	void printConnectedCountries();
 	template<class Archive>
 	void serialize(Archive & archive) {
 		archive(

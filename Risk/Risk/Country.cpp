@@ -127,3 +127,9 @@ void Country::notifyObservers() {
 		observers.at(i)->update(this);
 	}
 }
+
+void Country::printConnectedCountries() {
+	for (Country* c : connectedCountries) {
+		cout << c->get_country_name() << endl;
+	}
+}

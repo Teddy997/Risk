@@ -56,7 +56,12 @@ private:
 	Map* map;
 	Phase currentPhase;
 	void reinforcingPhase();
+	void fortifyingPhase();
+	void updateView();
+	int getIndexOfCountry();
+	int getArmies(int max);
 	Player* currentPlayer;
 	void doAIReinforcement(int armies);
+	void doAIFortification();
 };
 

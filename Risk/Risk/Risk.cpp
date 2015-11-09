@@ -264,7 +264,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//std::cout << "\nCOMBAT TESTING" << std::endl;
 	//combat_testing();
 
-	//saveLoad_testing();
+	saveLoad_testing();
 
 	//map_testing();
 	
