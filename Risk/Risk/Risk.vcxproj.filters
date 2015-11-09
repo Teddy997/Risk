@@ -70,6 +70,9 @@
     <ClCompile Include="Strategy.cpp">
       <Filter>Source Files\AI Strategy</Filter>
     </ClCompile>
+    <ClCompile Include="MapCreator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Country.h">
@@ -149,6 +152,9 @@
     </ClInclude>
     <ClInclude Include="Strategy.h">
       <Filter>Header Files\AIStrategy</Filter>
+    </ClInclude>
+    <ClInclude Include="MapCreator.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
