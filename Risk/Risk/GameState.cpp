@@ -10,13 +10,39 @@ GameState::GameState() {
 GameState::GameState(string name) {
 	player = new Player(name);
 	currentPlayer = player;
+
+	manageMap();
 }
 
 
 GameState::~GameState()
 {
 }
+void GameState::manageMap() {
 
+	cout << "Do you want to jump straight in the game by playing the default map or do you want to proceed to the map creator? "
+		<< "Select the index of choice you want" << endl;
+	cout << "1. I want to jump straight in the game by playing the default map.\t\t2. I want to go to the map editor" << endl;
+	int index = 1;
+	bool valid = false;
+
+	while (valid == false) {
+
+		index = InputProcedure::get_choice();
+		
+		if (index < 1 || index > 2) {
+			cout << "Not a valid choice." << endl;
+		}
+		else {
+			valid = true;
+		}
+
+	}
+	if (index == 2) {
+		MapCreator mapCreator = MapCreator();
+		mapCreator.Create_map();
+	}
+}
 void GameState::addPlayer(string name) {
 	Player* p = new Player(name);
 	int random = rand() % 3;
@@ -68,11 +94,14 @@ void GameState::fortifyingPhase() {
 		}
 
 
-		cout << "\n****Enter the number of the country you'd like to move armies from." << endl;
+		cout << "\n****Enter the number of the country you'd like to move armies from. If you do not want to fortify"
+			<< ", please enter -1 to stop fortifying." << endl;
 		bool valid = false;
 		while (valid == false) {
 			int index = getIndexOfCountry()-1;
-
+			cout << "DEBUG: user entered " << index + 1 << endl;
+			if (index + 1 == -1) 
+				break;
 			Country* c = currentPlayer->get_country(index);
 			vector<Country*> countriesConnected = c->getConnectedCountries();
 			for (Country* c2 : countriesConnected) {
@@ -216,7 +245,7 @@ vector<Player*> GameState::getAIPlayers() {
 
 }
 void GameState::setMap(string name) {
-	map = new Map(); // TODO use the file names to load
+	map = new Map(name); // TODO use the file names to load
 }
 
 void GameState::displayMapDirectoryContents() {
@@ -318,13 +347,18 @@ int GameState::getIndexOfCountry() {
 	bool valid_country = false;
 
 	while (valid_country == false) {
+		
 		index = InputProcedure::get_choice();
-		if (index - 1 < 0 || index - 1 > currentPlayer->numberOfCountriesOwned() - 1) {
+		if (index == -1)
+			break;
+		
+		else if (index - 1 < 0 || index - 1 > currentPlayer->numberOfCountriesOwned() - 1) {
 			cout << "Not a valid choice." << endl;
 		}
 		else {
 			valid_country = true;
 		}
+		
 	}
 	return index;
 }

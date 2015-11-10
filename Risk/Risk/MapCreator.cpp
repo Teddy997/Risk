@@ -70,7 +70,7 @@ void MapCreator::Save_map(string name)
 
 	outputFileContinent.open(continent_file, std::ofstream::out);
 
-	for (int i = 0; i < continent_names.size(); i++) {
+	for (unsigned int i = 0; i < continent_names.size(); i++) {
 		outputFileContinent << continent_names.at(i) << "," << i << "," << continent_bonus.at(i) << endl;
 	}
 
@@ -83,9 +83,9 @@ void MapCreator::Save_map(string name)
 
 	outputFileCountry.open(country_file, std::ofstream::out);	//Append
 
-	for (int i = 0; i < country_names.size(); i++) {
+	for (unsigned int i = 0; i < country_names.size(); i++) {
 		outputFileCountry << country_names.at(i) << "," << i << "," << continent_of_country.at(i);
-		for (int j = 0; j < countries_adjacencies.at(i).size(); j++) {
+		for (unsigned int j = 0; j < countries_adjacencies.at(i).size(); j++) {
 			outputFileCountry << "," << countries_adjacencies.at(i).at(j);
 		}
 		outputFileCountry << endl;
@@ -162,8 +162,8 @@ string MapCreator::Ask_name(string target)
 	string name;
 	cout << "Please enter a name for your " << target << endl;
 	cin.sync();
-	getline(cin, name);
-	//cin >> name;
+	//getline(cin, name);
+	cin >> name;
 	return name;
 }
 
@@ -173,7 +173,7 @@ int MapCreator::Search_for_duplicate(T1 item, vector<T1> list)
 	int return_value = 0;
 	if (!list.empty())
 	{
-		for (int i = 0; i < list.size(); i++)
+		for (unsigned int i = 0; i < list.size(); i++)
 		{
 			if (list.at(i) == item) {
 				return_value = 1;
@@ -186,7 +186,7 @@ int MapCreator::Search_for_duplicate(T1 item, vector<T1> list)
 
 int MapCreator::Choose_continent()
 {
-	int chosen_one;
+	unsigned int chosen_one;
 	display_formatted(continent_names);
 	do
 	{
@@ -243,9 +243,9 @@ void MapCreator::display_formatted(vector<string> to_display)
 	//to get the ceiling
 	rows += (size % n_of_columns == 0) ? 0 : 1;
 
-	for (int i = 0; i < rows; i++)
+	for (unsigned int i = 0; i < rows; i++)
 	{
-		for (int j = 0; j < n_of_columns; j++)
+		for (unsigned int j = 0; j < n_of_columns; j++)
 		{
 			current_id = (i * n_of_columns) + j;
 			if (current_id >= size)
@@ -261,7 +261,7 @@ void MapCreator::Update_other_adjacencies(vector<int> to_check)
 {
 	int current_country = (country_names.size() - 1);
 	if (!to_check.empty()) {
-		for (int i = 0; i < to_check.size(); i++)
+		for (unsigned int i = 0; i < to_check.size(); i++)
 		{
 			int temp_country_id = to_check.at(i);
 			if (!Search_for_duplicate(current_country, countries_adjacencies.at(temp_country_id)))
@@ -303,7 +303,7 @@ void MapCreator::Load_existing_map(string mapName)
 		continent_of_country.push_back(atoi(splittedLine[2].c_str()));
 
 		vector <int> newRow;
-		for (int j = 3; j < splittedLine.size(); j++)
+		for (unsigned int j = 3; j < splittedLine.size(); j++)
 		{
 			newRow.push_back(atoi(splittedLine[j].c_str()));
 		}
@@ -383,7 +383,8 @@ void MapCreator::Choose_existing_map()
 	cout << "PLease type the name of the map you want" << endl;
 	string name;
 	cin.sync();
-	getline(cin, name);
+	//getline(cin, name);
+	cin >> name;
 	Load_existing_map(name);
 }
 

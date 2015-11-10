@@ -3,10 +3,11 @@
 #include <fstream>
 #include <sstream>
 
-Map::Map()
+Map::Map(string name)
 {
-	string continentFile = "Maps//default//continents.txt";
-	string countriesFile = "Maps//default//countries.txt";
+	cout << "Trying to load map with name " << name << endl;
+	string continentFile = "Maps//" + name + "//continents.txt";
+	string countriesFile = "Maps//" + name + "//countries.txt";
 	vector<string> continentName;
 	vector<int> continentID;
 	vector<int> continentBonusValue;
@@ -23,7 +24,9 @@ Map::Map()
 	AssignConnectedCountries(connectedCountryID);
 	AssignContainedCountries(containingContinentID);
 }
-
+Map::Map() {
+	Map("default");
+}
 Map::~Map()
 {
 }

@@ -8,7 +8,7 @@
 #include "DefensiveStrategy.h"
 #include "RandomStrategy.h"
 #include "InputProcedure.h"
-
+#include "MapCreator.h"
 using namespace std;
 
 
@@ -77,5 +77,6 @@ private:
 	void doAIReinforcement(int armies);
 	void doAIFortification();
 	void setPlayerTurn(Player* p);
+	void manageMap();
 };
 

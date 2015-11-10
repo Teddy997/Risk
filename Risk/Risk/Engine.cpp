@@ -23,8 +23,8 @@ Engine::~Engine()
 }
 
 void Engine::startPhase() {
-	generateAIPlayers();
 	chooseMap();
+	generateAIPlayers();
 	assignCountries();
 	gamePlayPhase();
 }
@@ -137,7 +137,13 @@ void Engine::chooseMap() {
 	//TODO **********************************************************************************************************************
 	// choose the map to play on
 	// countries will be generated inside the map class
-	string s = "Default_Map";
+	string s = "default";
+	gameState.displayMapDirectoryContents();
+	cout << "Please type the name of the map you want to play." << endl;
+	cin >> s;
+	if (s == "user_test_map") {
+		s = "default";
+	}
 	gameState.setMap(s);
 	cout << "done.\n" << endl;
 }

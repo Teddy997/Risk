@@ -16,7 +16,7 @@ public:
 
 	Map();
 	~Map();
-
+	Map(string name);
 	vector<Country*> getAllCountries() { return countries; }
 
 	void set_nOfCountries(int numberOfCountries) { nOfCountries = numberOfCountries; }
