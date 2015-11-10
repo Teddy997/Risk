@@ -111,7 +111,7 @@ namespace Combat {
 		else {
 			result = "ATTACKER: The results of " + int_to_string(att.size()) + " dice rolls are: "; //Formatting
 		}
-		for(int i = 0; i < att.size(); i++) {
+		for(unsigned int i = 0; i < att.size(); i++) {
 			//Store the results of the attacker's dice to be returned.
 			result += int_to_string(att.at(i)) + " ";
 		}
@@ -128,7 +128,7 @@ namespace Combat {
 		else {
 			result = "DEFENDER: The results of " + int_to_string(def.size()) + " dice rolls are: "; //Formatting
 		}
-		for(int i = 0; i < def.size(); i++) {
+		for(unsigned int i = 0; i < def.size(); i++) {
 			//Store the results of the defender's dice to be returned.
 			result += int_to_string(def.at(i)) + " ";
 		}
@@ -149,7 +149,7 @@ namespace Combat {
 		int results = 0;
 		//If the number of dice rolled by attacker is larger than that of defender, we'll only go to the end of the defender's rolls.
 		if(att.size() > def.size()) {
-			for(int i=0; i<def.size(); i++) {
+			for(unsigned int i=0; i<def.size(); i++) {
 				//If the roll for attacker is larger than defender, then increment results.
 				if(att.at(i) > def.at(i)) { results++;}
 				//Else, the roll of attacker must be smaller or equal, therefore decrement results.
@@ -158,7 +158,7 @@ namespace Combat {
 		}
 		//Else if, the number of dice rolled by attacker is smaller than that of defender, we'll only go to the end of the attacker's rolls.
 		else if(att.size() < def.size()) {
-			for(int i=0; i<att.size(); i++) {
+			for(unsigned int i=0; i<att.size(); i++) {
 				//If the roll for attacker is larger than defender, then increment results.
 				if(att.at(i) > def.at(i)) { results++;}
 				//Else, the roll of attacker must be smaller or equal, therefore decrement results.
@@ -167,7 +167,7 @@ namespace Combat {
 		}
 		//Else, the number of dice rolled by attacker is the same as that of the defender, so we can go to the end of either attacker or defender's rolls.
 		else {
-			for(int i=0; i<att.size(); i++) {
+			for(unsigned int i=0; i<att.size(); i++) {
 				//If the roll for attacker is larger than defender, then increment results.
 				if(att.at(i) > def.at(i)) { results++;}
 				//Else, the roll of attacker must be smaller or equal, therefore decrement results.

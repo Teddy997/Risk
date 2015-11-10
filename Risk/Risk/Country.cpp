@@ -123,7 +123,7 @@ void Country::unregisterObserver(MapObserverPattern* o) {
 }
 
 void Country::notifyObservers() {
-	for (int i = 0; i < observers.size(); i++) {
+	for (unsigned int i = 0; i < observers.size(); i++) {
 		observers.at(i)->update(this);
 	}
 }

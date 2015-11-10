@@ -48,13 +48,13 @@ void GameState::fortifyingPhase() {
 	if (currentPlayer == player) {
 		cout << "Here are the countries that you own and their connections( which you also own) :" << endl;
 		vector<Country*> countriesOwned = currentPlayer->getCountries();
-		for (int i = 0; i < countriesOwned.size(); ++i) {
+		for (unsigned int i = 0; i < countriesOwned.size(); ++i) {
 			bool hasAtLeastOne = false;
 			cout << i + 1 << ". Country: " << countriesOwned[i]->get_country_name()
 				<< ", Armies: " << countriesOwned[i]->get_number_of_armies()
 				<< ", friendly connected countries: ";
 			vector<Country*> countriesConnected = countriesOwned[i]->getConnectedCountries();
-			for (int j = 0; j < countriesConnected.size(); ++j) {
+			for (unsigned int j = 0; j < countriesConnected.size(); ++j) {
 
 				if (countriesConnected[j]->getOwner() == player) {
 					cout << " \"" << countriesConnected[j]->get_country_name() << "\"";
@@ -208,7 +208,7 @@ Player* GameState::getMainPlayer() {
 vector<Player*> GameState::getAIPlayers() {
 	
 	vector<Player*> copy;
-	for (int i = 0; i < AIPlayers.size(); ++i) {
+	for (unsigned int i = 0; i < AIPlayers.size(); ++i) {
 		Player* p = AIPlayers.at(i);
 		copy.push_back(p);
 	}

@@ -33,12 +33,12 @@ Map::~Map()
 //	//TODO: need to reset bonus first
 //
 //	Player* tempPlayer;
-//	for (int i = 0; i < continents.size(); i++)
+//	for(unsigned int i = 0; i < continents.size(); i++)
 //	{
 //		vector<Country*> tempCountries = continents[i].getContainedCountries();
 //		tempPlayer = tempCountries[0]->get_owner();
 //		bool deserveBonus = true;
-//		for (int j = 1; j < tempCountries.size(); j++)
+//		for(unsigned int j = 1; j < tempCountries.size(); j++)
 //		{
 //			//TODO: make sure this comparison can work with these pointers
 //			//I'm pretty sure this is crashing because there are no players assigned to any countries - Eric
@@ -55,7 +55,7 @@ Map::~Map()
 
 void Map::PrintAllCountryNames()
 {
-	for (int i = 0; i < nOfCountries; i++)
+	for (unsigned int i = 0; i < nOfCountries; i++)
 	{
 		std::cout << countries[i]->get_country_name() << endl;
 	}
@@ -63,7 +63,7 @@ void Map::PrintAllCountryNames()
 
 void Map::PrintAllContinentNames()
 {
-	for (int i = 0; i < nOfContinents; i++)
+	for(unsigned int i = 0; i < nOfContinents; i++)
 	{
 		std::cout << "--------------------------------------------------" << endl;
 		std::cout << "\t\t" << continents[i].get_continent_name() << endl;
@@ -90,7 +90,7 @@ int Map::test_map_components()
 		////////////////REQ : Every country is in a continent, but only one///////////////////////////
 
 		//for every countries
-		for (int i = 0; i < countries.size(); i++)
+		for(unsigned int i = 0; i < countries.size(); i++)
 		{
 			Country* tempCountry = countries.at(i);
 			Continent* tempContinent = tempCountry->get_containing_continent();
@@ -98,11 +98,11 @@ int Map::test_map_components()
 				returnValue = -1;
 				std::cout << tempCountry->get_country_name() << " doesn't have a containing continent" << std::endl;
 			}
-			for (int j = 0; j < continents.size(); j++)
+			for(unsigned int j = 0; j < continents.size(); j++)
 			{
 				//For all the other continents that contain countries
 				if (&continents.at(j) != tempContinent && !continents.at(j).getContainedCountries().empty()) {
-					for (int k = 0; k < continents.at(j).getContainedCountries().size(); k++)
+					for(unsigned int k = 0; k < continents.at(j).getContainedCountries().size(); k++)
 					{
 						//If another reference to the same country is found in another continent
 						if (continents.at(j).getContainedCountries().at(k) == tempCountry) {
@@ -120,7 +120,7 @@ int Map::test_map_components()
 			}
 		}
 		////////////////REQ : Every continent has at least 1 country ///////////////////////////
-		for (int i = 0; i < continents.size(); i++)
+		for(unsigned int i = 0; i < continents.size(); i++)
 		{
 			if (continents.at(i).getContainedCountries().empty())
 			{
@@ -156,7 +156,7 @@ void Map::ReadContinents(string fileName, vector<string>& continentName, vector<
 
 void Map::CreateContinents(vector<string>& continentName, vector<int>& continentID, vector<int>& continentBonusValue)
 {
-	for (int j = 0; j < continentName.size(); j++)
+	for(unsigned int j = 0; j < continentName.size(); j++)
 	{
 		continents.push_back(Continent(continentName[j],continentID[j],continentBonusValue[j]));
 	}
@@ -188,7 +188,7 @@ void Map::ReadCountries(string fileName, vector<string>& countryName, vector<int
 		vector <int> newRow;
 		connectedCountryID.push_back(newRow);
 
-		for (int j = 3; j < splittedLine.size(); j++)
+		for(unsigned int j = 3; j < splittedLine.size(); j++)
 		{
 			connectedCountryID.at(i).push_back(atoi(splittedLine[j].c_str()));
 		}
@@ -203,7 +203,7 @@ void Map::ReadCountries(string fileName, vector<string>& countryName, vector<int
 //		why the method is private
 void Map::CreateCountries(vector<string>& countryName, vector<int>& containingContinentID)
 {
-	for (int j = 0; j < countryName.size(); j++)
+	for(unsigned int j = 0; j < countryName.size(); j++)
 	{
 		countries.push_back(new Country(countryName[j], continents[containingContinentID[j]]));
 	}
@@ -214,10 +214,10 @@ void Map::CreateCountries(vector<string>& countryName, vector<int>& containingCo
 void Map::AssignConnectedCountries(vector < vector <int> >& connectedCountryID)
 {
 	//Fetches a list of pointers to connected countries
-	for (int j = 0; j < nOfCountries; j++)
+	for(unsigned int j = 0; j < nOfCountries; j++)
 	{
 		vector<Country*> connected;
-		for (int k = 0; k < connectedCountryID[j].size(); k++)
+		for(unsigned int k = 0; k < connectedCountryID[j].size(); k++)
 		{
 			//ID start at 1 while index start at 0
 			int index = connectedCountryID[j][k] - 1;
@@ -238,11 +238,11 @@ void Map::AssignContainedCountries(vector<int>& containingContinentID)
 	//For every country, add a reference in the row corresponding to 
 	//the continent it is contained in
 	vector < vector <Country*> > countriesContainedInContinent(nOfContinents, vector<Country*>());
-	for (int j = 0; j < countries.size(); j++)
+	for (unsigned int j = 0; j < countries.size(); j++)
 	{
 		countriesContainedInContinent[containingContinentID[j]].push_back(countries[j]);
 	}
-	for (int j = 0; j < nOfContinents; j++)
+	for (unsigned int j = 0; j < nOfContinents; j++)
 	{
 		continents[j].setContainedCountries(countriesContainedInContinent[j]);
 	}
@@ -269,7 +269,7 @@ int Map::nbOfCountries() {
 
 vector<Country*> Map::getCountries() {
 	/*vector<Country*> cs;
-	for (int i = 0; i < countries.size(); ++i) {
+	for(unsigned int i = 0; i < countries.size(); ++i) {
 		Country* t = &countries.at(i);
 		cs.push_back(t);
 	}*/

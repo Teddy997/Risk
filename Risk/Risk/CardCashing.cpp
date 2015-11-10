@@ -140,7 +140,7 @@ namespace CardCashing {
 			//ID to cash in will be chosen based on player's input as there are more than one way of cashing.
 			int id_to_cash;
 			while(valid_choice == false) {
-				int choice;
+				unsigned int choice;
 				choice = InputProcedure::get_choice();
 				//If the choice is within a valid range (1-3), take the choice-1 and set the id_to_cash as the choice.
 				if((choice-1 < indices_where_true.size()) && (choice-1 >= 0)) {

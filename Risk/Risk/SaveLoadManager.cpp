@@ -20,8 +20,8 @@ void SaveLoadManager::SaveGame()
 	int hello = 5;
 	char test = 's';
 
-	//GameState gameState;
-	//archive(CEREAL_NVP(gameState), hello, test); 
+	GameState gameState;
+	archive(CEREAL_NVP(gameState), hello, test); 
 	
 	//archive(hello, cereal::make_nvp("This is a char", test));
 }

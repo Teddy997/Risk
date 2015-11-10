@@ -26,19 +26,20 @@ public:
 	void PrintAllContinentNames();
 	void CheckContinentBonus();
 	int test_map_components();
-
+	
 	template<class Archive>
 	void serialize(Archive & archive) {
 		archive(
-			CEREAL_NVP(countries));
+			CEREAL_NVP(replaceThisWithCountries));
 	};
 	int nbOfCountries();
 	std::vector<Country*> getCountries();
 private:
+	std::vector<Country> replaceThisWithCountries; // TODO delete this once cereal works with 'countries' variable
 	std::vector<Country*> countries;
 	std::vector<Continent> continents;
-	int nOfCountries;
-	int nOfContinents;
+	unsigned int nOfCountries;
+	unsigned int nOfContinents;
 
 	//private methods
 	void ReadContinents(string fileName, vector<string>& continentName, vector<int>& continentID, vector<int>& continentBonusValue);

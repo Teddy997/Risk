@@ -224,7 +224,7 @@ void Player::assignArmies(int x) {
 void Player::update_bonus() {
 	int newBonus = 0;
 	if (!continents_owned.empty()) {
-		for (int i = 0; i < continents_owned.size(); i++) {
+		for (unsigned int i = 0; i < continents_owned.size(); i++) {
 			newBonus += continents_owned.at(i)->get_bonus();
 		}
 	}

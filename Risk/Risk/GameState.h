@@ -47,23 +47,24 @@ public:
 	void assignCountries();
 	
 	// This method lets cereal know which data members to serialize	
+	
 	template<class Archive>
 	//Keep it inline for now, it causes a linker problem otherwise
 	
 	void serialize(Archive & archive) { archive(
 		
-		CEREAL_NVP(currentPlayer),
-		CEREAL_NVP(player),
-		CEREAL_NVP(AIPlayers),
+		CEREAL_NVP(*currentPlayer),
+		CEREAL_NVP(*player),
+		CEREAL_NVP(replaceThisWithAIPlayers),
 		CEREAL_NVP(currentPhase),
-		CEREAL_NVP(map));
+		CEREAL_NVP(*map));
 		
 	};
 	
 	
 private:
 	Player* player;
-
+	vector<Player> replaceThisWithAIPlayers; // TODO delete this once cereal works with 'AIPlayers'
 	vector<Player*> AIPlayers;
 	Map* map;
 	Phase currentPhase;

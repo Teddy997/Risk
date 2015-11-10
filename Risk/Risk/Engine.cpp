@@ -105,7 +105,7 @@ void Engine::generateAIPlayers() {
 	cout << "Generating AI players...\n" << endl;
 	vector<string> names = { "AI Michonne", "AI Jon Snow", "AI Heisenberg" };
 	// asking playa for number of players.
-	int opponents = 0;
+	unsigned int opponents = 0;
 	cout << "Choose the number of opponents to play against. For the sake of simplicity and coherence, please only"
 		<< " choose a number between 1 and " << names.size() << endl;
 	bool valid = false;
