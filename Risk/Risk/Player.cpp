@@ -32,13 +32,13 @@ numberOfCountriesOwned(), a simple function returning an int containing the size
 
 Player::Player() {
 	player_name = "Default player";
-	std::cout << get_player_name() + " Player object created." << std::endl;
+	//std::cout << get_player_name() + " Player object created." << std::endl;
 
 }
 
 Player::Player(std::string name) {
 	player_name = name;
-	std::cout << get_player_name() + " Player object created." << std::endl;
+	std::cout << get_player_name() + " player created." << std::endl;
 }
 
 Player::~Player() {

@@ -1,15 +1,18 @@
-#include "stdafx.h"
+//#include "stdafx.h"
 #include "Engine.h"
 
 using namespace std;
 Engine::Engine()
 {
-	
+	cout << "Starting the program..." << endl;
+	cout << "Welcome to Risk!" << endl;
+	cout << "Made with great love by Cynthia, Eric, Robert and Radu\n" << endl;
+
 	cout << "Please enter your name" << endl;
 
 	string name = "";
 	cin >> name;
-	gameState = GameState(name);
+	gameState = GameState(name); // the name of the human player
 	startPhase();
 	
 }
@@ -20,7 +23,6 @@ Engine::~Engine()
 }
 
 void Engine::startPhase() {
-	cout << "Assignment: starting game..." << endl;
 	generateAIPlayers();
 	chooseMap();
 	assignCountries();
@@ -28,7 +30,7 @@ void Engine::startPhase() {
 }
 
 void Engine::gamePlayPhase(){
-	cout << "Assignment: playing the game!" << endl;
+	cout << "Starting the Game!!!" << endl;
 	unsigned int turn = 1;
 	while (victoryConditions()) {
 		cout << "current player's turn: " << gameState.getCurrentPlayer()->get_player_name() << endl;
@@ -47,21 +49,22 @@ void Engine::gamePlayPhase(){
 
 
 void Engine::reinforcementPhase() {
-	cout << "Assignment: Reinforcing..." << endl;
+	cout << "Reinforcing..." << endl;
 	gameState.changeGamePhase(Phase(REINFORCING));
 
+	cout << "done.\n" << endl;
 
 }
 void Engine::attackPhase() {
-	cout << "Assignment: Attacking..." << endl;
+	cout << "Attacking...\n" << endl;
 	gameState.changeGamePhase(Phase(ATTACKING));
 
-
+	cout << "done.\n" << endl;
 }
 void Engine::fortificationPhase() {
-	cout << "Assignment: Fortifying..." << endl;
+	cout << "Fortifying...\n" << endl;
 	gameState.changeGamePhase(Phase(FORTIFYING));
-
+	cout << "done.\n" << endl;
 
 }
 
@@ -71,7 +74,7 @@ void Engine::fortificationPhase() {
 
 bool Engine::victoryConditions() {
 	
-	cout << "Assignment: Checking to see if anybody won " << endl;
+	cout << "Checking to see if the user has won or lost the game" << endl;
 	if (gameState.getCurrentPlayer()->numberOfCountriesOwned() < 1)
 		defeat = true;
 	else {
@@ -99,7 +102,7 @@ bool Engine::victoryConditions() {
 		return true;
 }
 void Engine::generateAIPlayers() {
-	cout << "Assignment: Generating AI players..." << endl;
+	cout << "Generating AI players...\n" << endl;
 	vector<string> names = { "AI Michonne", "AI Jon Snow", "AI Heisenberg" };
 	// asking playa for number of players.
 	int opponents = 0;
@@ -126,22 +129,24 @@ void Engine::generateAIPlayers() {
 		}
 	}
 
-	
+	cout << "done.\n" << endl;
 }
 
 void Engine::chooseMap() {
-	cout << "Assignment: Choosing the map..." << endl;
+	cout << "Choosing the map...\n" << endl;
 	//TODO **********************************************************************************************************************
 	// choose the map to play on
 	// countries will be generated inside the map class
 	string s = "Default_Map";
 	gameState.setMap(s);
+	cout << "done.\n" << endl;
 }
 
 
 void Engine::assignCountries() {
-	cout << "Assignment: assigning countries to players... " << endl;
+	cout << "Assigning countries to players... \n" << endl;
 	gameState.assignCountries();
+	cout << "done.\n" << endl;
 }
 
 
