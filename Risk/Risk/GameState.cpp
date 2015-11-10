@@ -1,5 +1,4 @@
 #pragma once
-#include "stdafx.h"
 #include "GameState.h"
 #include "tinydir.h"
 
@@ -40,10 +39,12 @@ void GameState::changeGamePhase(Phase newPhase) {
 	}
 }
 void GameState::fortifyingPhase() {
-
-	cout << "**********FORTIFYING PHASE*************" << endl;
-	cout << currentPlayer->get_player_name() << " is currently fortifying..." << endl;
+	// this method contains so many lines of code only because we assume that the user may not enter what is required
+	// and handles all or most of those cases
+	cout << "**********FORTIFYING PHASE*************\n" << endl;
+	cout << currentPlayer->get_player_name() << " is currently fortifying...\n" << endl;
 	//updateView();
+	// do this whole chunk of code if it's the user's turn
 	if (currentPlayer == player) {
 		cout << "Here are the countries that you own and their connections( which you also own) :" << endl;
 		vector<Country*> countriesOwned = currentPlayer->getCountries();

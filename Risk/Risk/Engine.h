@@ -18,9 +18,6 @@ private:
 
 	void chooseMap(); // choose a map from the available maps
 
-	// assignCountries() takes portions of countries from the map and assigns them to players. For example, countries
-	// 0 to 9 will be assigned to player,
-	// 10 to 19 to player 2, 20 to 29 to player 3 etc.
 	void assignCountries();
 
 	bool victoryConditions(); // checks after each player's turn if anybody won or if the human player lost
