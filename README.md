@@ -14,22 +14,22 @@
 <td>Verification of map correctness before saving (at least 3 types of incorrect maps)</td><td></td>
 </tr>
 <tr>
-<td>Implementation of a game driver implementing the game phases.</td><td></td>
+<td>Implementation of a game driver implementing the game phases.</td><td><strong>X</strong></td>
 </tr>
 <tr>
 <td>Game starts by user selection of a user-saved map file, then loads the map as a connected graph.</td><td></td>
 </tr>
 <tr>
-<td>User chooses the number of players, all countries are randomly assigned to players.</td><td></td>
+<td>User chooses the number of players, all countries are randomly assigned to players.</td><td><strong>X</strong></td>
 </tr>
 <tr>
 <td>Calculation of correct number of reinforcement armies.</td><td><strong>X</strong></td>
 </tr>
 <tr>
-<td>User-driven placement of reinforcement armies on the map.</td><td></td>
+<td>User-driven placement of reinforcement armies on the map.</td><td><strong>X</strong></td>
 </tr>
 <tr>
-<td>Implementation of a valid fortification move according to the Risk rules. </td><td></td>
+<td>Implementation of a valid fortification move according to the Risk rules. </td><td><strong>X</strong></td>
 </tr>
 </table>
 
