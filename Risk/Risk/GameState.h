@@ -47,9 +47,7 @@ public:
 
 	void displayMapDirectoryContents();
 
-	// assignCountries() takes portions of countries from the map and assigns them to players. For example, countries
-	// 0 to 9 will be assigned to player,
-	// 10 to 19 to player 2, 20 to 29 to player 3 etc.
+	// assignCountries() assigns countries randomly to the player.
 	void assignCountries();
 	
 	// This method lets cereal know which data members to serialize	

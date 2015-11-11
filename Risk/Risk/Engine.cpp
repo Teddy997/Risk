@@ -33,8 +33,11 @@ void Engine::gamePlayPhase(){
 	cout << "Starting the Game!!!" << endl;
 	unsigned int turn = 1;
 	while (victoryConditions()) {
+		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
+		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
 		cout << "current player's turn: " << gameState.getCurrentPlayer()->get_player_name() << endl;
-		
+		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
+		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
 		reinforcementPhase();
 		//attackPhase();
 		fortificationPhase();
@@ -134,9 +137,6 @@ void Engine::generateAIPlayers() {
 
 void Engine::chooseMap() {
 	cout << "Choosing the map...\n" << endl;
-	//TODO **********************************************************************************************************************
-	// choose the map to play on
-	// countries will be generated inside the map class
 	string s = "default";
 	gameState.displayMapDirectoryContents();
 	cout << "Please type the name of the map you want to play." << endl;

@@ -186,9 +186,7 @@ void playerObserverTesting() {
 
 }
 
-void GameLifeTest() {
-	Engine* e = new Engine();
-}
+
 // fuctions used in Demo
 // almost all if not all the returns are going to have to be changed to either return a map or a list of maps 
 //ive done it this way for testing as i go.
@@ -272,7 +270,9 @@ void Demo() {
 	cout << "Welcome to the game of Risk. " << endl << endl;
 	mapCreationPhase();
 }
-
+void GameLifeTest() {
+	Engine* e = new Engine();
+}
 int _tmain(int argc, _TCHAR* argv[])
 {
 	//TODO: uncomment
