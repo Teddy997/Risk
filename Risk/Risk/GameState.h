@@ -86,7 +86,6 @@ public:
 	
 private:
 	Player* player;
-	vector<Player> replaceThisWithAIPlayers; // TODO delete this once cereal works with 'AIPlayers'
 	vector<Player*> AIPlayers;
 	Map* map;
 	Phase currentPhase;

@@ -44,7 +44,6 @@ public:
 	int nbOfCountries();
 	std::vector<Country*> getCountries();
 private:
-	std::vector<Country> replaceThisWithCountries; // TODO delete this once cereal works with 'countries' variable
 	std::vector<Country*> countries;
 	std::vector<Continent> continents;
 	unsigned int nOfCountries;

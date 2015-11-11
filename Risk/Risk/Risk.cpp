@@ -188,7 +188,6 @@ void playerObserverTesting() {
 
 void GameLifeTest() {
 	Engine* e = new Engine();
-	//cout << "wtf is going on" << endl;
 }
 // fuctions used in Demo
 // almost all if not all the returns are going to have to be changed to either return a map or a list of maps 
@@ -370,7 +369,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//std::cout << "\nCOMBAT TESTING" << std::endl;
 	//combat_testing();
 
-	saveLoad_testing();
+	//saveLoad_testing();
 
 	//map_testing();
 	
