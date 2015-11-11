@@ -36,7 +36,7 @@ public:
 	vector<Country*> getCountries() { return countries_owned; }
 	std::string get_player_name();
 	void setStrategy(Strategy* str);
-	void executeStrategy(Player* p1, Player* p2);
+	void executeStrategy(Player* p2);
 	void assign_country(Country& country);
 	void remove_country(Country& country);
 	std::string print_countries_owned();

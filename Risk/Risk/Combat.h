@@ -19,7 +19,7 @@ namespace Combat {
 	std::string analyze_results(int results);
 	std::string combat_results(int num_att, int num_def, Country& att_country, Country& def_country);
 	
-	void combat(Country& att_country, Country& def_country);
-	void move_armies(int dice_rolled, Country& att_country, Country& def_country);
+	void combat(Country& att_country, Country& def_country, bool userCalled, int case1, int case2, int case3);
+	void move_armies(int dice_rolled, Country& att_country, Country& def_country, bool userCalled);
 }
 #endif

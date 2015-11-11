@@ -70,12 +70,14 @@ private:
 	Phase currentPhase;
 	void reinforcingPhase();
 	void fortifyingPhase();
+	void attackingPhase();
 	void updateView();
 	int getIndexOfCountry();
 	int getArmies(int max);
 	Player* currentPlayer;
 	void doAIReinforcement(int armies);
 	void doAIFortification();
+	void doAIAttacking();
 	void setPlayerTurn(Player* p);
 	void manageMap();
 };

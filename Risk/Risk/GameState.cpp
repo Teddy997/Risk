@@ -20,9 +20,9 @@ GameState::~GameState()
 }
 void GameState::manageMap() {
 
-	cout << "Do you want to jump straight in the game by playing the default map or do you want to proceed to the map creator? "
+	cout << "Do you want to jump straight in the game by choosing a map or do you want to proceed to the map creator? "
 		<< "Select the index of choice you want" << endl;
-	cout << "1. I want to jump straight in the game by playing the default map.\t\t2. I want to go to the map editor" << endl;
+	cout << "1. I want to jump straight in the game by choosing a map.\t2. I want to go to the map editor" << endl;
 	int index = 1;
 	bool valid = false;
 
@@ -45,6 +45,8 @@ void GameState::manageMap() {
 }
 void GameState::addPlayer(string name) {
 	Player* p = new Player(name);
+	//TODO uncomment the randomness and comment the unrandomness
+	/*
 	int random = rand() % 3;
 	if (random == 0)
 		p->setStrategy(new AgressiveStrategy());
@@ -52,7 +54,33 @@ void GameState::addPlayer(string name) {
 		p->setStrategy(new DefensiveStrategy());
 	else
 		p->setStrategy(new RandomStrategy());
+		*/
+	p->setStrategy(new AgressiveStrategy());
 	AIPlayers.push_back(p);
+	
+}
+
+void GameState::attackingPhase() {
+	cout << "**********ATTACKING PHASE*************\n" << endl;
+	cout << currentPlayer->get_player_name() << " is currently attacking...\n" << endl;
+	updateView();
+	if (currentPlayer == player) {
+
+	}
+	else {
+		doAIAttacking();
+	}
+	updateView();
+}
+
+void GameState::doAIAttacking() {
+	for (Player* p1 : AIPlayers) {
+		for (Player* p2 : AIPlayers) {
+			if (p1 != p2) {
+				p1->executeStrategy(p2);
+			}
+		}
+	}
 }
 
 void GameState::changeGamePhase(Phase newPhase) {
@@ -62,6 +90,9 @@ void GameState::changeGamePhase(Phase newPhase) {
 	}
 	else if (currentPhase == FORTIFYING) {
 		fortifyingPhase();
+	}
+	else if (currentPhase == ATTACKING) {
+		attackingPhase();
 	}
 }
 void GameState::fortifyingPhase() {

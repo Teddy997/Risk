@@ -17,7 +17,9 @@ void AgressiveStrategy::attack(Player* p1,Player* p2) {
 			bool superiority = c1->get_number_of_armies() > c2->get_number_of_armies();
 			if (c1->getOwner() != c2->getOwner() && superiority) {
 				usedC1 = true;
-				Combat::combat(*c1, *c2);
+				// attacking with all the armies available in the country of the aggressive AI (because he's aggressive)
+				Combat::combat(*c1, *c2, false, 1, 9, 9); // '9' means all the available countries
+
 			}
 			if (usedC1)
 				break;
