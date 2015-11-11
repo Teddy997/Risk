@@ -4,6 +4,9 @@
 #include "Player.h"
 #include "Map.h"
 #include <cereal/archives/xml.hpp>
+#include <cereal/types/vector.hpp>
+#include <cereal/types/memory.hpp>
+#include <cereal/types/polymorphic.hpp>
 #include "AgressiveStrategy.h"
 #include "DefensiveStrategy.h"
 #include "RandomStrategy.h"
@@ -11,6 +14,9 @@
 
 using namespace std;
 
+//Smart pointer types
+typedef shared_ptr<Player> PPointer;
+typedef shared_ptr<Map> MPointer;
 
 enum Phase { // Keeps track of the phase we are currently in.
 
@@ -50,16 +56,33 @@ public:
 	template<class Archive>
 	//Keep it inline for now, it causes a linker problem otherwise
 	
-	void serialize(Archive & archive) { archive(
-		
-		CEREAL_NVP(currentPlayer),
-		CEREAL_NVP(player),
-		CEREAL_NVP(AIPlayers),
-		CEREAL_NVP(currentPhase),
-		CEREAL_NVP(map));
-		
-	};
-	
+	void serialize(Archive & archive) { 
+		PPointer curPl; PPointer pl;
+		//The case where currentPlayer is the human player, special precautions must be made
+		//Both pointers share ownership over the memory chunk, thus when we call
+		//pl = curPl, we increment the internal counter to prevent double deletion, which results in a crash
+		if (currentPlayer == player) {
+			curPl = make_shared<Player>(*currentPlayer);
+			pl = curPl;
+		}
+		else {
+			curPl = make_shared<Player>(*currentPlayer);
+			pl = make_shared<Player>(*player);
+		}
+		vector<PPointer> aiPls;
+		for (int i = 0; i < AIPlayers.size(); i++) {
+			aiPls.push_back(make_shared<Player>(*AIPlayers.at(i)));
+		}
+
+		MPointer mP = make_shared<Map>(*map);
+		archive(
+			CEREAL_NVP(curPl),
+			CEREAL_NVP(pl),
+			CEREAL_NVP(aiPls),
+			CEREAL_NVP(currentPhase),
+			CEREAL_NVP(mP));
+	}
+
 	
 private:
 	Player* player;

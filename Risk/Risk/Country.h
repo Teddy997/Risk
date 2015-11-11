@@ -55,7 +55,7 @@ public:
 		archive(
 			CEREAL_NVP(country_name),
 			CEREAL_NVP(is_owned));
-	};
+	}
 
 	void registerObserver(MapObserverPattern* o);
 	void unregisterObserver(MapObserverPattern* o);

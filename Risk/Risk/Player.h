@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
+#include <cereal/types/polymorphic.hpp>
 #include <cereal/archives/xml.hpp>
 #include <cereal/types/vector.hpp>
 #include "Country.h"
@@ -53,11 +53,11 @@ public:
 	int total_number_of_armies_owned();
 	void incrementBattlesWon();
 	int getBattlesWon();
+
 	template<class Archive>
 	void serialize(Archive & archive) {archive(
 		CEREAL_NVP(player_name));
-	};
-
+	}
 };
 
 #endif

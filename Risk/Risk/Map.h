@@ -1,6 +1,8 @@
 #pragma once
 #include <cereal/archives/xml.hpp>
 #include <cereal/types/vector.hpp>
+#include <cereal/types/memory.hpp>
+#include <cereal/types/polymorphic.hpp>
 #include <vector>
 #include "Country.h"
 #include "Continent.h"
@@ -9,6 +11,8 @@
 
 using std::vector;
 using std::string;
+
+typedef std::shared_ptr<Country> CPointer;
 
 class Map
 {
@@ -29,9 +33,14 @@ public:
 
 	template<class Archive>
 	void serialize(Archive & archive) {
+		vector<CPointer> cP;
+		for (int i = 0; i < countries.size(); i++) {
+			cP.push_back(make_shared<Country>(*countries.at(i)));
+		}
 		archive(
-			CEREAL_NVP(countries));
-	};
+			CEREAL_NVP(cP));
+	}
+
 	int nbOfCountries();
 	std::vector<Country*> getCountries();
 private:

@@ -380,7 +380,7 @@ void MapCreator::Introduction()
 void MapCreator::Choose_existing_map()
 {
 	displayMapDirectoryContents();
-	cout << "PLease type the name of the map you want" << endl;
+	cout << "Please type the name of the map you want" << endl;
 	string name;
 	cin.sync();
 	getline(cin, name);
