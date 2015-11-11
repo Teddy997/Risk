@@ -2,13 +2,13 @@
 <strong>CHECKLIST FOR PD1 (NOV 11 OR NOV 12)</strong>
 <table>
 <tr>
-<td>User-driven creation of map elements, such as country, continent, and connectivity between countries.</td><td></td>
+<td>User-driven creation of map elements, such as country, continent, and connectivity between countries.</td><td><strong>X</strong></td>
 </tr>
 <tr>
-<td>Saving a map to a file exactly as edited.</td><td></td>
+<td>Saving a map to a file exactly as edited.</td><td><strong>X</strong></td>
 </tr>
 <tr>
-<td>Loading a map from an existing file, then editing the map</td><td></td>
+<td>Loading a map from an existing file, then editing the map</td><td><strong>X</strong></td>
 </tr>
 <tr>
 <td>Verification of map correctness before saving (at least 3 types of incorrect maps)</td><td></td>
@@ -17,7 +17,7 @@
 <td>Implementation of a game driver implementing the game phases.</td><td><strong>X</strong></td>
 </tr>
 <tr>
-<td>Game starts by user selection of a user-saved map file, then loads the map as a connected graph.</td><td></td>
+<td>Game starts by user selection of a user-saved map file, then loads the map as a connected graph.</td><td><strong>X</strong></td>
 </tr>
 <tr>
 <td>User chooses the number of players, all countries are randomly assigned to players.</td><td><strong>X</strong></td>

@@ -4,6 +4,7 @@
 #include <sstream>
 #include "tinydir.h"
 #include <direct.h>
+#include "InputProcedure.h"
 
 using std::cout;
 using std::cin;
@@ -32,21 +33,21 @@ void MapCreator::Create_map()
 	string name;
 	do{
 		New_country();
-		cout << "Are you done?" << endl << "1: Yes, I want to save\t2:No, moar countries" << endl;
-		cin >> changes_to_make;
+		cout << "Are you done?" << endl << "1: Yes, I want to save\t2: No, moar countries" << endl;
+		changes_to_make = InputProcedure::get_choice();
 	} while (changes_to_make != 1);
 
 
 	int dontOverwrite = 0;
 	if (mapFrame == FROM_SCRATCH || mapFrame == FROM_DEFAULT) {
 		name = Ask_name("Map");
-		mkdir(("Maps\\" + name).c_str());
+		mkdir(("Maps//" + name).c_str());
 		//TODO: check if name taken
 	}
 	else {
 		do
 		{
-			cout << "Do you want to overwrite your old map?" << endl << "1:yes\t2:no" << endl;
+			cout << "Do you want to overwrite your old map?" << endl << "1: yes\t2: no" << endl;
 			cin >> dontOverwrite;
 		} while (dontOverwrite != 1 && dontOverwrite != 2);
 
@@ -103,13 +104,13 @@ void MapCreator::New_country()
 	cout << "NEW COUNTRY" << endl;
 
 	while (wrongChoice) {
-		cout << "A country need to be inside a continent: " << endl;
+		cout << "A country needs to be inside a continent: " << endl;
 		if (continent_names.empty())
 			cout << "1:New Continent" << endl;		//Can't choose existing if there is none
 		else
 			cout << "1:New Continent \t\t 2:Existing Continent" << endl;
 
-		cin >> existing;
+		existing = InputProcedure::get_choice();
 		if (existing == 2 || existing == 1) {
 			wrongChoice = false;
 		}
@@ -147,7 +148,7 @@ void MapCreator::Add_new(string item, vector<string>* destination)
 	{
 		temp_name = Ask_name(item);
 		if (Search_for_duplicate(temp_name, *destination)) {
-			cout << "That name is already token! ";
+			cout << "That name is already taken! ";
 		}
 		else {
 			wrongName = false;
@@ -162,8 +163,7 @@ string MapCreator::Ask_name(string target)
 	string name;
 	cout << "Please enter a name for your " << target << endl;
 	cin.sync();
-	//getline(cin, name);
-	cin >> name;
+	getline(cin, name);
 	return name;
 }
 
@@ -205,7 +205,7 @@ vector<int> MapCreator::Choose_adjacencies()
 	vector<string> countries_without_last(country_names);
 	countries_without_last.pop_back();
 
-	cout << "A country also need adjacencies" << endl;
+	cout << "A country also needs adjacencies" << endl;
 
 	if (country_names.size() == 1) {
 		cout << "Looks like this it your first country, you will have the chance to add adjacencies from your second country." << endl;
@@ -214,7 +214,7 @@ vector<int> MapCreator::Choose_adjacencies()
 		display_formatted(countries_without_last);
 		do
 		{
-			cout << "please choose a country and press enter" << endl << "If you have no more ajacency to add, enter a negative number" << endl;
+			cout << "please choose a country and press enter" << endl << "If you have no more ajacencies to add, enter a negative number" << endl;
 			cin >> input;
 			if (input < 0) {
 				go_on = false;
@@ -273,11 +273,12 @@ void MapCreator::Update_other_adjacencies(vector<int> to_check)
 
 void MapCreator::Load_existing_map(string mapName)
 {
-	std::ifstream input_country, input_continent;
-	string country_file_path = "Maps\\default\\" + country_file_convention;
-	string continent_file_path = "Maps\\default\\" + continent_file_convention;
-	std::string   line;
 
+	std::ifstream input_country, input_continent;
+	string country_file_path = "Maps\\" + mapName + "\\" + country_file_convention;
+	string continent_file_path = "Maps\\" + mapName + "\\" + continent_file_convention;
+	std::string   line;
+	std::cout << "Loading " + mapName << std::endl;
 	////////////////CONTINENT/////////////////
 	input_continent.open(continent_file_path);
 	input_continent.bad();
@@ -356,7 +357,8 @@ void MapCreator::Introduction()
 	{
 		cout << "Welcome to the map editor, please make your choice : " << endl
 			<< "1: Create new map from scratch\t2: Create new map from default\t 3: Edit existing map" << endl;
-		cin >> choice1;
+		choice1 = InputProcedure::get_choice();
+		if (choice1 < 1 || choice1 > 3) { cout << "Not a valid input." << endl; }
 	} while (choice1 < 1 || choice1 > 3);
 	choice1--;
 
@@ -382,9 +384,20 @@ void MapCreator::Choose_existing_map()
 	displayMapDirectoryContents();
 	cout << "Please type the name of the map you want" << endl;
 	string name;
-	cin.sync();
-	//getline(cin, name);
-	cin >> name;
+	bool valid = false;
+	while (valid == false) {
+		getline(cin, name);
+		//Checking whether the map chosen is correct by seeing if countries opens
+		string dirname = "Maps//" + name + "//countries.txt";
+		std::fstream filestr;
+		//If it does open, then the path is valid, and we can choose this map
+		filestr.open(dirname);
+		if (filestr.is_open()) {
+			filestr.close();
+			valid = true;
+		}
+		else { cout << "This map doesn't exist!" << endl; }
+	}
 	Load_existing_map(name);
 }
 

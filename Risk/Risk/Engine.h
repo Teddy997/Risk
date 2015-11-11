@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include <fstream>
 #include "GameState.h"
 #include "InputProcedure.h"
 

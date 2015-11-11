@@ -140,10 +140,22 @@ void Engine::chooseMap() {
 	string s = "default";
 	gameState.displayMapDirectoryContents();
 	cout << "Please type the name of the map you want to play." << endl;
-	cin >> s;
-	if (s == "user_test_map") {
-		s = "default";
+	
+	bool valid = false;
+	while (valid == false) {
+		getline(cin, s);
+		//Checking whether the map chosen is correct by seeing if countries opens
+		string dirname = "Maps//" + s + "//countries.txt"; 
+		std::fstream filestr;
+		//If it does open, then the path is valid, and we can choose this map
+		filestr.open(dirname);
+		if (filestr.is_open()) {
+			filestr.close();
+			valid = true;
+		}
+		else { cout << "This map doesn't exist!" << endl; }
 	}
+	
 	gameState.setMap(s);
 	cout << "done.\n" << endl;
 }

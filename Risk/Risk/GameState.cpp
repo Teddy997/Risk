@@ -22,7 +22,7 @@ void GameState::manageMap() {
 
 	cout << "Do you want to jump straight in the game by choosing a map or do you want to proceed to the map creator? "
 		<< "Select the index of choice you want" << endl;
-	cout << "1. I want to jump straight in the game by choosing a map.\t2. I want to go to the map editor" << endl;
+	cout << "1. I want to jump straight in the game by choosing a map.  2. I want to go to the map editor" << endl;
 	int index = 1;
 	bool valid = false;
 

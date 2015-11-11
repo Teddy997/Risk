@@ -1,2 +1,0 @@
-rasta,0,0
-basta,1,0
