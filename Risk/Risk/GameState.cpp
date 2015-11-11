@@ -10,15 +10,43 @@ GameState::GameState() {
 GameState::GameState(string name) {
 	player = new Player(name);
 	currentPlayer = player;
+
+	manageMap();
 }
 
 
 GameState::~GameState()
 {
 }
+void GameState::manageMap() {
 
+	cout << "Do you want to jump straight in the game by choosing a map or do you want to proceed to the map creator? "
+		<< "Select the index of choice you want" << endl;
+	cout << "1. I want to jump straight in the game by choosing a map.\t2. I want to go to the map editor" << endl;
+	int index = 1;
+	bool valid = false;
+
+	while (valid == false) {
+
+		index = InputProcedure::get_choice();
+		
+		if (index < 1 || index > 2) {
+			cout << "Not a valid choice." << endl;
+		}
+		else {
+			valid = true;
+		}
+
+	}
+	if (index == 2) {
+		MapCreator mapCreator = MapCreator();
+		mapCreator.Create_map();
+	}
+}
 void GameState::addPlayer(string name) {
 	Player* p = new Player(name);
+	//TODO uncomment the randomness and comment the unrandomness
+	/*
 	int random = rand() % 3;
 	if (random == 0)
 		p->setStrategy(new AgressiveStrategy());
@@ -26,7 +54,33 @@ void GameState::addPlayer(string name) {
 		p->setStrategy(new DefensiveStrategy());
 	else
 		p->setStrategy(new RandomStrategy());
+		*/
+	p->setStrategy(new AgressiveStrategy());
 	AIPlayers.push_back(p);
+	
+}
+
+void GameState::attackingPhase() {
+	cout << "**********ATTACKING PHASE*************\n" << endl;
+	cout << currentPlayer->get_player_name() << " is currently attacking...\n" << endl;
+	updateView();
+	if (currentPlayer == player) {
+
+	}
+	else {
+		doAIAttacking();
+	}
+	updateView();
+}
+
+void GameState::doAIAttacking() {
+	for (Player* p1 : AIPlayers) {
+		for (Player* p2 : AIPlayers) {
+			if (p1 != p2) {
+				p1->executeStrategy(p2);
+			}
+		}
+	}
 }
 
 void GameState::changeGamePhase(Phase newPhase) {
@@ -36,6 +90,9 @@ void GameState::changeGamePhase(Phase newPhase) {
 	}
 	else if (currentPhase == FORTIFYING) {
 		fortifyingPhase();
+	}
+	else if (currentPhase == ATTACKING) {
+		attackingPhase();
 	}
 }
 void GameState::fortifyingPhase() {
@@ -48,13 +105,13 @@ void GameState::fortifyingPhase() {
 	if (currentPlayer == player) {
 		cout << "Here are the countries that you own and their connections( which you also own) :" << endl;
 		vector<Country*> countriesOwned = currentPlayer->getCountries();
-		for (int i = 0; i < countriesOwned.size(); ++i) {
+		for (unsigned int i = 0; i < countriesOwned.size(); ++i) {
 			bool hasAtLeastOne = false;
 			cout << i + 1 << ". Country: " << countriesOwned[i]->get_country_name()
 				<< ", Armies: " << countriesOwned[i]->get_number_of_armies()
 				<< ", friendly connected countries: ";
 			vector<Country*> countriesConnected = countriesOwned[i]->getConnectedCountries();
-			for (int j = 0; j < countriesConnected.size(); ++j) {
+			for (unsigned int j = 0; j < countriesConnected.size(); ++j) {
 
 				if (countriesConnected[j]->getOwner() == player) {
 					cout << " \"" << countriesConnected[j]->get_country_name() << "\"";
@@ -68,11 +125,14 @@ void GameState::fortifyingPhase() {
 		}
 
 
-		cout << "\n****Enter the number of the country you'd like to move armies from." << endl;
+		cout << "\n****Enter the number of the country you'd like to move armies from. If you do not want to fortify"
+			<< ", please enter -1 to stop fortifying." << endl;
 		bool valid = false;
 		while (valid == false) {
 			int index = getIndexOfCountry()-1;
-
+			cout << "DEBUG: user entered " << index + 1 << endl;
+			if (index + 1 == -1) 
+				break;
 			Country* c = currentPlayer->get_country(index);
 			vector<Country*> countriesConnected = c->getConnectedCountries();
 			for (Country* c2 : countriesConnected) {
@@ -208,7 +268,7 @@ Player* GameState::getMainPlayer() {
 vector<Player*> GameState::getAIPlayers() {
 	
 	vector<Player*> copy;
-	for (int i = 0; i < AIPlayers.size(); ++i) {
+	for (unsigned int i = 0; i < AIPlayers.size(); ++i) {
 		Player* p = AIPlayers.at(i);
 		copy.push_back(p);
 	}
@@ -216,7 +276,7 @@ vector<Player*> GameState::getAIPlayers() {
 
 }
 void GameState::setMap(string name) {
-	map = new Map(); // TODO use the file names to load
+	map = new Map(name); // TODO use the file names to load
 }
 
 void GameState::displayMapDirectoryContents() {
@@ -318,13 +378,18 @@ int GameState::getIndexOfCountry() {
 	bool valid_country = false;
 
 	while (valid_country == false) {
+		
 		index = InputProcedure::get_choice();
-		if (index - 1 < 0 || index - 1 > currentPlayer->numberOfCountriesOwned() - 1) {
+		if (index == -1)
+			break;
+		
+		else if (index - 1 < 0 || index - 1 > currentPlayer->numberOfCountriesOwned() - 1) {
 			cout << "Not a valid choice." << endl;
 		}
 		else {
 			valid_country = true;
 		}
+		
 	}
 	return index;
 }

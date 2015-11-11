@@ -11,7 +11,7 @@
 #include "DefensiveStrategy.h"
 #include "RandomStrategy.h"
 #include "InputProcedure.h"
-
+#include "MapCreator.h"
 using namespace std;
 
 //Smart pointer types
@@ -53,6 +53,7 @@ public:
 	void assignCountries();
 	
 	// This method lets cereal know which data members to serialize	
+	
 	template<class Archive>
 	//Keep it inline for now, it causes a linker problem otherwise
 	
@@ -82,22 +83,24 @@ public:
 			CEREAL_NVP(currentPhase),
 			CEREAL_NVP(mP));
 	}
-
 	
 private:
 	Player* player;
-
+	vector<Player> replaceThisWithAIPlayers; // TODO delete this once cereal works with 'AIPlayers'
 	vector<Player*> AIPlayers;
 	Map* map;
 	Phase currentPhase;
 	void reinforcingPhase();
 	void fortifyingPhase();
+	void attackingPhase();
 	void updateView();
 	int getIndexOfCountry();
 	int getArmies(int max);
 	Player* currentPlayer;
 	void doAIReinforcement(int armies);
 	void doAIFortification();
+	void doAIAttacking();
 	void setPlayerTurn(Player* p);
+	void manageMap();
 };
 

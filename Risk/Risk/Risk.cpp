@@ -75,7 +75,7 @@ void combat_testing() {
 	p2.assign_country(c2);
 	c1.increment_armies(40);
 	c2.increment_armies(30);
-	Combat::combat(c1, c2);
+	Combat::combat(c1, c2, true, 0, 0, 0);
 	std::cout << p1.get_player_name() + " currently owns: " + p1.print_countries_owned() << std::endl;
 	std::cout << p2.get_player_name() + " currently owns: " + p2.print_countries_owned() << std::endl;
 	std::cout << c1.get_country_name() + " currently has " << c1.get_number_of_armies() << " armies." << std::endl;
@@ -377,11 +377,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	//game_state_testing();
 	
 	//mapObserverTesting();
-
+	
+	//combat_testing();
+	GameLifeTest();
+	
 	//playerObserverTesting();
 	//Demo();
-
-	//GameLifeTest();
 
 	system("pause");
 

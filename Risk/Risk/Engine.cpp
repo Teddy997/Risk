@@ -23,8 +23,8 @@ Engine::~Engine()
 }
 
 void Engine::startPhase() {
-	generateAIPlayers();
 	chooseMap();
+	generateAIPlayers();
 	assignCountries();
 	gamePlayPhase();
 }
@@ -105,7 +105,7 @@ void Engine::generateAIPlayers() {
 	cout << "Generating AI players...\n" << endl;
 	vector<string> names = { "AI Michonne", "AI Jon Snow", "AI Heisenberg" };
 	// asking playa for number of players.
-	int opponents = 0;
+	unsigned int opponents = 0;
 	cout << "Choose the number of opponents to play against. For the sake of simplicity and coherence, please only"
 		<< " choose a number between 1 and " << names.size() << endl;
 	bool valid = false;
@@ -137,7 +137,13 @@ void Engine::chooseMap() {
 	//TODO **********************************************************************************************************************
 	// choose the map to play on
 	// countries will be generated inside the map class
-	string s = "Default_Map";
+	string s = "default";
+	gameState.displayMapDirectoryContents();
+	cout << "Please type the name of the map you want to play." << endl;
+	cin >> s;
+	if (s == "user_test_map") {
+		s = "default";
+	}
 	gameState.setMap(s);
 	cout << "done.\n" << endl;
 }

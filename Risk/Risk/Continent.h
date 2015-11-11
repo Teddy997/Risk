@@ -14,7 +14,7 @@ public:
 	std::string get_continent_name(){ return continent_name; }
 	int get_bonus(){ return bonusValue; }
 	void setContainedCountries(std::vector<Country*>& contained) { 
-		for (int i = 0; i < contained.size(); i++) {
+		for (unsigned int i = 0; i < contained.size(); i++) {
 			contained.at(i)->set_continent_name(get_continent_name());
 		}
 		containedCountries = contained; 

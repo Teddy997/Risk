@@ -1,0 +1,2 @@
+Continent1,0,5
+Continent2,1,5

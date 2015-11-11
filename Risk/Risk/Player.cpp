@@ -47,7 +47,7 @@ Player::~Player() {
 void Player::setStrategy(Strategy* str) {
 	this->strategy = str;
 }
-void Player::executeStrategy(Player* p1, Player* p2) {
+void Player::executeStrategy(Player* p2) {
 	this->strategy->attack(this, p2);
 }
 std::string Player::get_player_name() {
@@ -230,7 +230,7 @@ void Player::assignArmies(int x) {
 void Player::update_bonus() {
 	int newBonus = 0;
 	if (!continents_owned.empty()) {
-		for (int i = 0; i < continents_owned.size(); i++) {
+		for (unsigned int i = 0; i < continents_owned.size(); i++) {
 			newBonus += continents_owned.at(i)->get_bonus();
 		}
 	}

@@ -111,7 +111,7 @@ namespace Combat {
 		else {
 			result = "ATTACKER: The results of " + int_to_string(att.size()) + " dice rolls are: "; //Formatting
 		}
-		for(int i = 0; i < att.size(); i++) {
+		for(unsigned int i = 0; i < att.size(); i++) {
 			//Store the results of the attacker's dice to be returned.
 			result += int_to_string(att.at(i)) + " ";
 		}
@@ -128,7 +128,7 @@ namespace Combat {
 		else {
 			result = "DEFENDER: The results of " + int_to_string(def.size()) + " dice rolls are: "; //Formatting
 		}
-		for(int i = 0; i < def.size(); i++) {
+		for(unsigned int i = 0; i < def.size(); i++) {
 			//Store the results of the defender's dice to be returned.
 			result += int_to_string(def.at(i)) + " ";
 		}
@@ -149,7 +149,7 @@ namespace Combat {
 		int results = 0;
 		//If the number of dice rolled by attacker is larger than that of defender, we'll only go to the end of the defender's rolls.
 		if(att.size() > def.size()) {
-			for(int i=0; i<def.size(); i++) {
+			for(unsigned int i=0; i<def.size(); i++) {
 				//If the roll for attacker is larger than defender, then increment results.
 				if(att.at(i) > def.at(i)) { results++;}
 				//Else, the roll of attacker must be smaller or equal, therefore decrement results.
@@ -158,7 +158,7 @@ namespace Combat {
 		}
 		//Else if, the number of dice rolled by attacker is smaller than that of defender, we'll only go to the end of the attacker's rolls.
 		else if(att.size() < def.size()) {
-			for(int i=0; i<att.size(); i++) {
+			for(unsigned int i=0; i<att.size(); i++) {
 				//If the roll for attacker is larger than defender, then increment results.
 				if(att.at(i) > def.at(i)) { results++;}
 				//Else, the roll of attacker must be smaller or equal, therefore decrement results.
@@ -167,7 +167,7 @@ namespace Combat {
 		}
 		//Else, the number of dice rolled by attacker is the same as that of the defender, so we can go to the end of either attacker or defender's rolls.
 		else {
-			for(int i=0; i<att.size(); i++) {
+			for(unsigned int i=0; i<att.size(); i++) {
 				//If the roll for attacker is larger than defender, then increment results.
 				if(att.at(i) > def.at(i)) { results++;}
 				//Else, the roll of attacker must be smaller or equal, therefore decrement results.
@@ -230,7 +230,7 @@ namespace Combat {
 	-Conquering a country when def_country has 0 armies should be made into a function.
 	-Functions should be made for attack_with_one_army, attack_with_two_army and attack_with_many_army.
 	*/
-	void combat(Country& att_country, Country& def_country) {
+	void combat(Country& att_country, Country& def_country, bool userCalled, int case1, int case2, int case3) {
 		/*
 		POSSIBLE INPUTS:
 		1,2,3 for the number of armies the attacker wishes to attack with (if only 2 armies within country, can only roll 1 die and the option for 2 or 3 will not be available).
@@ -249,7 +249,8 @@ namespace Combat {
 			//finished_combat will remain false until either the attacking player wishes to stop attacking, or one side of the battle has lost.
 			bool finished_combat = false;
 			//The start of the combat sequence between att_country and def_country
-			std::cout << "Combat commencing. Type 0 at any time to exit combat." << std::endl;
+			if (userCalled)
+				std::cout << "Combat commencing. Type 0 at any time to exit combat." << std::endl;
 			while(finished_combat == false) {
 				//If the number of armies in att_country are equal to 2 or greater, then the the attack can proceed as it is valid.
 				if(att_country.get_number_of_armies() > 1) {
@@ -261,9 +262,14 @@ namespace Combat {
 						std::cout << "ATTACKER: " + att_country.get_owner_name() + " currently has " << att_country.get_number_of_armies() << " armies in " + att_country.get_country_name() << std::endl;
 						std::cout << "DEFENDER: " + def_country.get_owner_name() + " currently has " << def_country.get_number_of_armies() << " armies in " + def_country.get_country_name() << std::endl;
 						while(valid_choice == false) {
-							std::cout << "You can attack with 1 army." << std::endl;
-							std::cout << "Please enter the number of armies you would like to attack with." << std::endl;
-							choice = InputProcedure::get_choice();
+							if (userCalled) {
+								std::cout << "You can attack with 1 army." << std::endl;
+								std::cout << "Please enter the number of armies you would like to attack with." << std::endl;
+
+								choice = InputProcedure::get_choice();
+							}
+							else
+								choice = case1;
 							//If the choice is equal to 1, the attacker has chosen to attack with their 1 army.
 							if(choice == 1) {
 								//Print the results/perform appropriate decrements
@@ -276,7 +282,10 @@ namespace Combat {
 									//Through the Player pointer in att_country, assign the def_country to their countries_owned vector
 									att_country.get_owner()->assign_country(def_country);
 									//Attacker uses move_armies logic to move a number of armies from att_country to def_country
-									Combat::move_armies(choice, att_country, def_country);
+									if (userCalled)
+										Combat::move_armies(choice, att_country, def_country, true);
+									else
+										Combat::move_armies(choice, att_country, def_country, false);
 								}
 								valid_choice = true;
 							}
@@ -299,10 +308,15 @@ namespace Combat {
 						std::cout << "ATTACKER: " + att_country.get_owner_name() + " currently has " << att_country.get_number_of_armies() << " armies in " + att_country.get_country_name() << std::endl;
 						std::cout << "DEFENDER: " + def_country.get_owner_name() + " currently has " << def_country.get_number_of_armies() << " armies in " + def_country.get_country_name() << std::endl;
 						while(valid_choice == false) {
-							std::cout << "You can attack with 1 or 2 armies." << std::endl;
-							std::cout << "Please enter the number of armies you would like to attack with." << std::endl;
-							std::cout << "Or type 9 to go all in (automatically attack until no armies are remaining on one side or the other)" << std::endl;
-							choice = InputProcedure::get_choice();
+							if (userCalled) {
+								std::cout << "You can attack with 1 or 2 armies." << std::endl;
+								std::cout << "Please enter the number of armies you would like to attack with." << std::endl;
+								std::cout << "Or type 9 to go all in (automatically attack until no armies are remaining on one side or the other)" << std::endl;
+
+								choice = InputProcedure::get_choice();
+							}
+							else
+								choice = case2;
 							//If the choice is equal to 1, the attacker has chosen to attack with their 1 army.
 							if(choice == 1) {
 								//Print the results/perform appropriate decrements
@@ -315,7 +329,10 @@ namespace Combat {
 									//Through the Player pointer in att_country, assign the def_country to their countries_owned vector
 									att_country.get_owner()->assign_country(def_country);
 									//Attacker uses move_armies logic to move a number of armies from att_country to def_country
-									Combat::move_armies(choice, att_country, def_country);
+									if (userCalled)
+										Combat::move_armies(choice, att_country, def_country, true);
+									else
+										Combat::move_armies(choice, att_country, def_country, false);
 								}
 								valid_choice = true;
 							}
@@ -331,7 +348,10 @@ namespace Combat {
 									//Through the Player pointer in att_country, assign the def_country to their countries_owned vector
 									att_country.get_owner()->assign_country(def_country);
 									//Attacker uses move_armies logic to move a number of armies from att_country to def_country
-									Combat::move_armies(choice, att_country, def_country);
+									if (userCalled)
+										Combat::move_armies(choice, att_country, def_country, true);
+									else
+										Combat::move_armies(choice, att_country, def_country, false);
 								}
 								valid_choice = true;
 							}
@@ -365,7 +385,10 @@ namespace Combat {
 									//Through the Player pointer in att_country, assign the def_country to their countries_owned vector
 									att_country.get_owner()->assign_country(def_country);
 									//Attacker uses move_armies logic to move a number of armies from att_country to def_country
-									Combat::move_armies(dice_check, att_country, def_country);
+									if (userCalled)
+										Combat::move_armies(choice, att_country, def_country, true);
+									else
+										Combat::move_armies(choice, att_country, def_country, false);
 								}
 								valid_choice = true;
 							} //End of else if(choice == 9)
@@ -388,10 +411,15 @@ namespace Combat {
 						std::cout << "ATTACKER: " + att_country.get_owner_name() + " currently has " << att_country.get_number_of_armies() << " armies in " + att_country.get_country_name() << std::endl;
 						std::cout << "DEFENDER: " + def_country.get_owner_name() + " currently has " << def_country.get_number_of_armies() << " armies in " + def_country.get_country_name() << std::endl;
 						while(valid_choice == false) {
-							std::cout << "You can attack with 1, 2 or 3 armies." << std::endl;
-							std::cout << "Please enter the number of armies you would like to attack with." << std::endl;
-							std::cout << "Or type 9 to go all in (automatically attack until no armies are remaining on one side or the other)" << std::endl;
-							choice = InputProcedure::get_choice();
+							if (userCalled) {
+								std::cout << "You can attack with 1, 2 or 3 armies." << std::endl;
+								std::cout << "Please enter the number of armies you would like to attack with." << std::endl;
+								std::cout << "Or type 9 to go all in (automatically attack until no armies are remaining on one side or the other)" << std::endl;
+
+								choice = InputProcedure::get_choice();
+							}
+							else
+								choice = case3;
 							//If the choice is equal to 1, the attacker has chosen to attack with their 1 army.
 							if(choice == 1) {
 								//Print the results/perform appropriate decrements
@@ -404,7 +432,10 @@ namespace Combat {
 									//Through the Player pointer in att_country, assign the def_country to their countries_owned vector
 									att_country.get_owner()->assign_country(def_country);
 									//Attacker uses move_armies logic to move a number of armies from att_country to def_country
-									Combat::move_armies(choice, att_country, def_country);
+									if (userCalled)
+										Combat::move_armies(choice, att_country, def_country, true);
+									else
+										Combat::move_armies(choice, att_country, def_country, false);
 								}
 								valid_choice = true;
 							}
@@ -420,7 +451,10 @@ namespace Combat {
 									//Through the Player pointer in att_country, assign the def_country to their countries_owned vector
 									att_country.get_owner()->assign_country(def_country);
 									//Attacker uses move_armies logic to move a number of armies from att_country to def_country
-									Combat::move_armies(choice, att_country, def_country);
+									if (userCalled)
+										Combat::move_armies(choice, att_country, def_country, true);
+									else
+										Combat::move_armies(choice, att_country, def_country, false);
 								}
 								valid_choice = true;
 							}
@@ -436,7 +470,10 @@ namespace Combat {
 									//Through the Player pointer in att_country, assign the def_country to their countries_owned vector
 									att_country.get_owner()->assign_country(def_country);
 									//Attacker uses move_armies logic to move a number of armies from att_country to def_country
-									Combat::move_armies(choice, att_country, def_country);
+									if (userCalled)
+										Combat::move_armies(choice, att_country, def_country, true);
+									else
+										Combat::move_armies(choice, att_country, def_country, false);
 								}
 								valid_choice = true;
 							}
@@ -470,7 +507,10 @@ namespace Combat {
 									//Through the Player pointer in att_country, assign the def_country to their countries_owned vector
 									att_country.get_owner()->assign_country(def_country);
 									//Attacker uses move_armies logic to move a number of armies from att_country to def_country
-									Combat::move_armies(dice_check, att_country, def_country);
+									if (userCalled)
+										Combat::move_armies(choice, att_country, def_country, true);
+									else
+										Combat::move_armies(choice, att_country, def_country, false);
 								}
 								valid_choice = true;
 							} //End of else if(choice == 9)
@@ -496,14 +536,25 @@ namespace Combat {
 		} //End of else(att_country.get_owner_name().compare(def_country.get_owner_name()) != 0)
 	}
 
-	void move_armies(int dice_rolled, Country& att_country, Country& def_country) {
+	void move_armies(int dice_rolled, Country& att_country, Country& def_country, bool userCalled) {
 		//moving_army_choice will be valid within the range of dice_rolled and number of armies in att_country minus one (have to leave one army behind).
 		int moving_army_choice;
 		bool valid_moving_army_choice = false;
+		if (userCalled)
 		std::cout << "Congratulations! No defending armies remaining. Please type the number of armies you'd like to move to your new country." << std::endl;
+		else {
+			std::cout << "Congratulations! Attack successful." << endl;
+		}
+
 		while(valid_moving_army_choice == false) {
-			std::cout << "Any value between: " << dice_rolled << "-" << att_country.get_number_of_armies()-1 << std::endl;
-			moving_army_choice = InputProcedure::get_choice();
+			if (userCalled) {
+				std::cout << "Any value between: " << dice_rolled << "-" << att_country.get_number_of_armies() - 1 << std::endl;
+				moving_army_choice = InputProcedure::get_choice();
+			}
+			else {
+				moving_army_choice = rand() % (att_country.get_number_of_armies() - dice_rolled) + dice_rolled;
+				valid_moving_army_choice = true;
+			}
 			//if moving_army choice is within the range, then the appropriate decrements and increments can be performed.
 			if((dice_rolled <= moving_army_choice) && (moving_army_choice <= att_country.get_number_of_armies()-1)) {
 				att_country.decrement_armies(moving_army_choice);

@@ -25,7 +25,6 @@ void SaveLoadManager::SaveGame()
 	string s = "Default_Map"; //testing
 	g.setMap(s); //testing
 	archive(CEREAL_NVP(random), CEREAL_NVP(g)); 
-
 	
 	//archive(hello, cereal::make_nvp("This is a char", test));
 }
