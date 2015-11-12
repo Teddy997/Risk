@@ -11,7 +11,7 @@
 <td>Loading a map from an existing file, then editing the map</td><td><strong>X</strong></td>
 </tr>
 <tr>
-<td>Verification of map correctness before saving (at least 3 types of incorrect maps)</td><td></td>
+<td>Verification of map correctness before saving (at least 3 types of incorrect maps)</td><td><strong>X</strong></td>
 </tr>
 <tr>
 <td>Implementation of a game driver implementing the game phases.</td><td><strong>X</strong></td>
