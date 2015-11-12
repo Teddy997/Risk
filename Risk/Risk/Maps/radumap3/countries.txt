@@ -1,2 +1,0 @@
-Country1,0,0
-Country2,1,1
