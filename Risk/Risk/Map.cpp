@@ -172,7 +172,7 @@ void Map::ReadCountries(string fileName, vector<string>& countryName, vector<int
 						vector < vector <int> >& connectedCountryID)
 {
 	std::ifstream inputFile;
-	inputFile.open("Maps//default//countries.txt");
+	inputFile.open("Maps//" + fileName + "//countries.txt");
 
 	std::string   line;
 	int i = 0;
