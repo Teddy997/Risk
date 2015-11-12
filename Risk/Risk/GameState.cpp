@@ -296,6 +296,7 @@ vector<Player*> GameState::getAIPlayers() {
 }
 void GameState::setMap(string name) {
 	map = new Map(name); // TODO use the file names to load
+	cout << map->nbOfCountries() << endl;
 }
 
 void GameState::displayMapDirectoryContents() {

@@ -1,0 +1,2 @@
+Country1,0,0,1
+Country2,1,0,0
