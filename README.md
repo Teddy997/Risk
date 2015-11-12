@@ -1,5 +1,11 @@
 # COMP345_risk 
-<strong>CHECKLIST FOR PD1 (NOV 11 OR NOV 12)</strong>
+<strong>CURRENT KNOWN BUGS / FEATURES WE NEED</strong>
+<table>
+<tr><td>Need to be able to delete maps</td><td></td></tr>
+<tr><td>Need to have a check for the number of AI players if the map is too small (can't have 3 AI with a map of two countries)</td><td></td></tr>
+</table>
+
+<strike><strong>CHECKLIST FOR PD1 (NOV 11 OR NOV 12)</strong>
 <table>
 <tr>
 <td>User-driven creation of map elements, such as country, continent, and connectivity between countries.</td><td><strong>X</strong></td>
@@ -73,4 +79,4 @@ Main game sequence:</br>
 2. Reinforcement phase (calculates number of countries/3 and then you can distribute it to your countries) XXX </br>
 3. Skip battle phase cause lame XXX </br>
 4. Fortification phase - only once (player can choose a country they own and move armies to another country they own through a path of adjacent countries they own)</br>
-5. Repeat XXX </br>
+5. Repeat XXX </br></strike>
