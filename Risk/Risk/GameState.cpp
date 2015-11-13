@@ -182,7 +182,7 @@ void GameState::fortifyingPhase() {
 
 
 
-
+	
 	updateView();
 }
 void GameState::doAIFortification() {
