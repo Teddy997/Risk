@@ -19,10 +19,10 @@ void SaveLoadManager::SaveGame()
 	cereal::XMLOutputArchive archive(outputFile);
 	int hello = 5;
 	char test = 's';
-	int random = (rand() % 100) + 1; //for some reason it serializes only on changes, this is a work around
+	int random = (rand() % 100) + 1; //for some reason it serializes only on changes; this is a work around
 	GameState g("Jessie"); //testing
 	g.addPlayer("Gus"); //testing
-	string s = "Default_Map"; //testing
+	string s = "default"; //testing
 	g.setMap(s); //testing
 	archive(CEREAL_NVP(random), CEREAL_NVP(g)); 
 	

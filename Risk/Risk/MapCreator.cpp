@@ -34,7 +34,23 @@ void MapCreator::Create_map()
 	do{
 		New_country();
 		cout << "Are you done?" << endl << "1: Yes, I want to save\t2: No, moar countries" << endl;
-		changes_to_make = InputProcedure::get_choice();
+		if (country_names.size() > 1) {
+			bool valid = false;
+			while (valid == false) {
+				changes_to_make = InputProcedure::get_choice();
+				if (changes_to_make == 1 || changes_to_make == 2) { valid = true; }
+				else { cout << "Not a valid input." << endl; }
+			}
+		}
+		else {
+			bool valid = false;
+			while (valid == false) {
+				changes_to_make = InputProcedure::get_choice();
+				if (changes_to_make == 2) { valid = true; }
+				else if (changes_to_make == 1) { cout << "You cannot save the map. Your country needs an adjacency!" << endl; }
+				else { cout << "Not a valid input." << endl; }
+			}
+		}
 	} while (changes_to_make != 1);
 
 
@@ -48,7 +64,7 @@ void MapCreator::Create_map()
 		do
 		{
 			cout << "Do you want to overwrite your old map?" << endl << "1: yes\t2: no" << endl;
-			cin >> dontOverwrite;
+			dontOverwrite = InputProcedure::get_choice();
 		} while (dontOverwrite != 1 && dontOverwrite != 2);
 
 		if (dontOverwrite == 2) {
@@ -105,17 +121,25 @@ void MapCreator::New_country()
 
 	while (wrongChoice) {
 		cout << "A country needs to be inside a continent: " << endl;
-		if (continent_names.empty())
+		if (continent_names.empty()) {
 			cout << "1:New Continent" << endl;		//Can't choose existing if there is none
-		else
-			cout << "1:New Continent \t\t 2:Existing Continent" << endl;
-
-		existing = InputProcedure::get_choice();
-		if (existing == 2 || existing == 1) {
-			wrongChoice = false;
+			existing = InputProcedure::get_choice();
+			if (existing == 1) {
+				wrongChoice = false;
+			}
+			else {
+				cout << "wrong input" << endl;
+			}
 		}
 		else {
-			cout << "wrong input" << endl;
+			cout << "1:New Continent \t\t 2:Existing Continent" << endl;
+			existing = InputProcedure::get_choice();
+			if (existing == 2 || existing == 1) {
+				wrongChoice = false;
+			}
+			else {
+				cout << "wrong input" << endl;
+			}
 		}
 	}
 
@@ -132,7 +156,6 @@ void MapCreator::New_country()
 
 	Add_new("country", &country_names);
 	vector<int> temp_adj = Choose_adjacencies();
-
 	countries_adjacencies.push_back(temp_adj);
 	Update_other_adjacencies(temp_adj);
 	//countries_in_continent.at(continent).push_back(country_names.size()-1);
@@ -191,7 +214,7 @@ int MapCreator::Choose_continent()
 	do
 	{
 		cout << "please choose a continent" << endl;
-		cin >> chosen_one;
+		chosen_one = InputProcedure::get_choice();
 	} while (chosen_one < 0 || chosen_one >= continent_names.size());
 	return chosen_one;
 }
@@ -206,27 +229,34 @@ vector<int> MapCreator::Choose_adjacencies()
 	countries_without_last.pop_back();
 
 	cout << "A country also needs adjacencies" << endl;
-
+	
 	if (country_names.size() == 1) {
 		cout << "Looks like this it your first country, you will have the chance to add adjacencies from your second country." << endl;
+		//New_country();
 	}
 	else {
+		int at_least_one = 0;
 		display_formatted(countries_without_last);
 		do
 		{
 			cout << "please choose a country and press enter" << endl << "If you have no more ajacencies to add, enter a negative number" << endl;
-			cin >> input;
-			if (input < 0) {
+			input = InputProcedure::get_choice();
+			if (input < 0 && at_least_one == 1) {
 				go_on = false;
+			}
+			else if (input < 0 && at_least_one == 0) {
+				cout << "You must add at least one adjacency before moving on!" << endl;
 			}
 			else if (input >= countries_without_last.size()) {
 				cout << "Invalid choice" << endl;
 			}
 			else if (Search_for_duplicate(input, chosen_adj)) {
-				cout << "You have already took this one" << endl;
+				cout << "You have already taken this one" << endl;
 			}
 			else {
+				cout << country_names.at(input) + " has been added as an adjacency!" << endl;
 				chosen_adj.push_back(input);
+				at_least_one++;
 			}
 		} while (go_on);
 	}
@@ -273,7 +303,7 @@ void MapCreator::Update_other_adjacencies(vector<int> to_check)
 
 void MapCreator::Load_existing_map(string mapName)
 {
-
+	old_name = mapName;
 	std::ifstream input_country, input_continent;
 	string country_file_path = "Maps\\" + mapName + "\\" + country_file_convention;
 	string continent_file_path = "Maps\\" + mapName + "\\" + continent_file_convention;
@@ -336,12 +366,16 @@ void MapCreator::Add_bonus()
 	while (wrong)
 	{
 		cout << "Please enter a bonus for your continent" << endl;
-		cin >> bonus_value;
-		if (bonus_value >= 0 || bonus_value <= 100) {
-			wrong = false;
-		}
-		else {
-			cout << "Please enter a number between 0 and 100" << endl;
+		bool valid = false;
+		while (valid == false) {
+			bonus_value = InputProcedure::get_choice();
+			if (bonus_value >= 0 && bonus_value <= 100) {
+				wrong = false;
+				valid = true;
+			}
+			else {
+				cout << "Please enter a number between 0 and 100" << endl;
+			}
 		}
 	}
 	continent_bonus.push_back(bonus_value);

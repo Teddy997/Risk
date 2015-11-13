@@ -144,16 +144,21 @@ void Engine::chooseMap() {
 	bool valid = false;
 	while (valid == false) {
 		getline(cin, s);
-		//Checking whether the map chosen is correct by seeing if countries opens
-		string dirname = "Maps//" + s + "//countries.txt"; 
-		std::fstream filestr;
-		//If it does open, then the path is valid, and we can choose this map
-		filestr.open(dirname);
-		if (filestr.is_open()) {
-			filestr.close();
-			valid = true;
+		if (s.compare("default") == 0 || s.compare("DEFAULT") == 0) {
+			cout << "This map doesn't exist!" << endl;
 		}
-		else { cout << "This map doesn't exist!" << endl; }
+		else {
+			//Checking whether the map chosen is correct by seeing if countries opens
+			string dirname = "Maps//" + s + "//countries.txt";
+			std::fstream filestr;
+			//If it does open, then the path is valid, and we can choose this map
+			filestr.open(dirname);
+			if (filestr.is_open()) {
+				filestr.close();
+				valid = true;
+			}
+			else { cout << "This map doesn't exist!" << endl; }
+		}
 	}
 	
 	gameState.setMap(s);
