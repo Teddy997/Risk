@@ -552,14 +552,24 @@ namespace Combat {
 				moving_army_choice = InputProcedure::get_choice();
 			}
 			else {
-				moving_army_choice = rand() % (att_country.get_number_of_armies() - dice_rolled) + dice_rolled;
+				cout << "dice: " << dice_rolled << endl;
+				if (dice_rolled == 9) {
+					moving_army_choice = rand() % (att_country.get_number_of_armies() - 1) + 1; 
+				} else 
+					moving_army_choice = rand() % (att_country.get_number_of_armies() - dice_rolled) + dice_rolled;
+				cout << "moving armies: " << moving_army_choice << endl;
 				valid_moving_army_choice = true;
+				att_country.decrement_armies(moving_army_choice);
+				def_country.increment_armies(moving_army_choice);
 			}
 			//if moving_army choice is within the range, then the appropriate decrements and increments can be performed.
 			if((dice_rolled <= moving_army_choice) && (moving_army_choice <= att_country.get_number_of_armies()-1)) {
 				att_country.decrement_armies(moving_army_choice);
 				def_country.increment_armies(moving_army_choice);
 				valid_moving_army_choice = true;
+			}
+			else if (!userCalled) {
+
 			}
 		}
 	}

@@ -45,7 +45,6 @@ void GameState::manageMap() {
 }
 void GameState::addPlayer(string name) {
 	Player* p = new Player(name);
-	//TODO uncomment the randomness and comment the unrandomness
 	/*
 	int random = rand() % 3;
 	if (random == 0)
@@ -55,7 +54,10 @@ void GameState::addPlayer(string name) {
 	else
 		p->setStrategy(new RandomStrategy());
 		*/
-	p->setStrategy(new AgressiveStrategy());
+	p->setStrategy(new AgressiveStrategy());			//OK
+	//p->setStrategy(new DefensiveStrategy());			//OK			
+	//p->setStrategy(new RandomStrategy());				//OK
+
 	AIPlayers.push_back(p);
 	
 }
@@ -74,11 +76,12 @@ void GameState::attackingPhase() {
 }
 
 void GameState::doAIAttacking() {
-	for (Player* p1 : AIPlayers) {
-		for (Player* p2 : AIPlayers) {
-			if (p1 != p2) {
-				p1->executeStrategy(p2);
-			}
+	
+	currentPlayer->executeStrategy(player);
+	for (Player* p2 : AIPlayers) {
+		
+		if (currentPlayer != p2) {
+				currentPlayer->executeStrategy(p2);
 		}
 	}
 }
@@ -197,7 +200,7 @@ void GameState::doAIFortification() {
 		int armiestoMove = 0;
 		bool validMove = true;
 		if (c1->get_number_of_armies() > 1)
-			armiestoMove = rand() % c1->get_number_of_armies() + 1;
+			armiestoMove = rand() % (c1->get_number_of_armies() - 1) + 1;
 		else
 			validMove = false;
 		if (validMove) {
@@ -332,6 +335,13 @@ void GameState::displayMapDirectoryContents() {
 	else {
 		cout << display << endl;
 	}
+}
+
+void GameState::removePlayerAtIndex(int i) {
+	currentPlayer = NULL;
+	AIPlayers.erase(AIPlayers.begin() + i);
+
+
 }
 
 void GameState::assignCountries() { 
