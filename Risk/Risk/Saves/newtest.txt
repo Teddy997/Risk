@@ -2,31 +2,35 @@ Eric's
 $
 3
 $
-Eric
-Quebec:18,Venezuala:5,Egypt:3,Great Britain:5,Western Europe:5,Middle East:5,Eastern Australia:3,KOREA:3,pls:3
+eric
+Alaska:8,Alberta:2,Eastern United States:3,Venezuala:4,North Africa:3,Congo:3,Madagascar:2,East Africa:3,Southern Europe:3,Ukraine:3,Afghanistan:1,Yatusk:1,Kamchatka:1,Japan:1,Western Australia:1,pls:1
 0
 NoStrat
-1,2
+
+4
 $
 AI Michonne
-Northwest Territory:4,Greenland:2,Peru:1,Brazil:7,North Africa:4,Scandinavia:3,Southern Europe:4,Ukraine:4,Ural:1,Siberia:4,Mongolia:1,Irkutsk:1,Yatusk:2,Kamchatka:7,Japan:2,Indonesia:1,New Guinea:1,Western Australia:4
+Greenland:3,Ontario:3,Quebec:3,Western United States:4,Central America:4,Egypt:3,Iceland:3,Middle East:4,Siberia:4,Mongolia:1,Irkutsk:1,New Guinea:1,Eastern Australia:1
 0
 Agressive
-0,0,1
+
+4
 $
 AI Jon Snow
-Alaska:2,Alberta:2,Ontario:5,Western United States:4,Eastern United States:4,Central America:8,Argentina:9,Congo:6,South Africa:1,Madagascar:1,East Africa:4,Iceland:3,Northern Europe:1,Afghanistan:1,India:1,China:1,Siam:2
+Northwest Territory:2,Peru:4,Argentina:2,Brazil:4,South Africa:3,Great Britain:3,Western Europe:2,Scandinavia:2,Northern Europe:2,Ural:4,India:3,China:1,Siam:1,Indonesia:1,KOREA:1
 0
 Agressive
-0,0
+
+4
 $
-AI Jon Snow
-Alaska:2,Alberta:2,Ontario:5,Western United States:4,Eastern United States:4,Central America:8,Argentina:9,Congo:6,South Africa:1,Madagascar:1,East Africa:4,Iceland:3,Northern Europe:1,Afghanistan:1,India:1,China:1,Siam:2
+eric
+Alaska:8,Alberta:2,Eastern United States:3,Venezuala:4,North Africa:3,Congo:3,Madagascar:2,East Africa:3,Southern Europe:3,Ukraine:3,Afghanistan:1,Yatusk:1,Kamchatka:1,Japan:1,Western Australia:1,pls:1
 0
-Agressive
-0,0
+NoStrat
+
+4
 $
 REINFORCING
 $
-0,1,2,0,2,2,0,1,2,2,1,2,2,2,1,2,1,1,0,1,0,1,0
+2,0,1,2,2,1,0,0,2,2,0,2,2,2,1,2,0,1,0,0,2,1,0,0,1,1,0,1,1,1
 $

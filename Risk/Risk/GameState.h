@@ -48,7 +48,6 @@ public:
 
 	Deck* const getDeck() { return deck; }
 	void setDeck(Deck* d) { deck = d; }
-
 	void setMap(string str); // initializes the map
 	void setMap(Map* m);
 

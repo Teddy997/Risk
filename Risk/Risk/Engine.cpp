@@ -52,6 +52,7 @@ void Engine::gamePlayPhase(){
 		//if (p != gameState.getMainPlayer()) {
 				if (p == gameState.getMainPlayer()) {
 					p->view_hand();
+					cardCashingPhase();
 				}
 				reinforcementPhase();
 				saveGame();
@@ -120,6 +121,7 @@ void Engine::loadedGamePlayPhase() {
 			//if (p != gameState.getMainPlayer()) {
 			if (p == gameState.getMainPlayer()) {
 				p->view_hand();
+				cardCashingPhase();
 			}
 			reinforcementPhase();
 			saveGame();
@@ -137,6 +139,22 @@ void Engine::loadedGamePlayPhase() {
 		if (turn > gameState.getAIPlayers().size())
 			turn = 0;
 		gameState.updatePlayerTurn(++turn);
+	}
+}
+
+void Engine::cardCashingPhase() {
+	bool valid_choice = false;
+	while (valid_choice == false) {
+		cout << "1. Cash Cards\t 2. Proceed to Reinforcement Phase" << endl;
+		int choice = 0;
+		choice = InputProcedure::get_choice();
+		if (choice == 1) {
+			gameState.getCurrentPlayer()->cash_cards(*gameState.getDeck());
+		}
+		else if (choice == 2) {
+			valid_choice = true;
+		}
+		else { cout << "Not a valid choice." << endl; }
 	}
 }
 

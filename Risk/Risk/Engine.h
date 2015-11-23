@@ -14,6 +14,7 @@ private:
 	bool victory, defeat; 
 
 	void startPhase();
+	void cardCashingPhase();
 	void reinforcementPhase();
 	void attackPhase();
 	void fortificationPhase();

@@ -27,6 +27,7 @@ private:
 
 	/*May possible have to refactor the hand logic to be a vector of pointers, similar to Country*/
 	std::vector<Deck::Card> hand;
+	int cardBonus;
 	bool can_draw;
 
 	class UnBuilder {
@@ -47,6 +48,7 @@ private:
 		int numBattlesWon_tobuild;
 		Strategy* strat;
 		std::vector<Deck::Card> c_hand;
+		int cardBonus;
 		std::vector<std::string> split(std::string s);
 		std::vector<std::string> split(std::string s, char d);
 	public:
@@ -56,6 +58,7 @@ private:
 		void set_numBattlesWon(std::string num);
 		void set_Strategy(std::string stratName);
 		void set_current_hand(std::string currentHand);
+		void set_card_bonus(std::string amt);
 
 		Player* build();
 	};
@@ -76,6 +79,10 @@ public:
 	void set_total_bonus(int bonus) { total_continent_bonus += bonus; }
 	int numberOfCountriesOwned();
 	void assignArmies(int x);
+	void assignCardBonusArmies(int amt);
+	void incrementCardBonus();
+	int const getCardBonus() { return cardBonus; }
+	void setCardBonus(int amt) { cardBonus = amt; }
 	void set_hand(std::vector<Deck::Card> h) { hand = h; }
 	void set_can_draw(bool state) { can_draw = state; }
 	bool const can_player_draw() { return can_draw; }
