@@ -17,7 +17,7 @@ public:
 	Strategy();
 	//Strategy(std::string strat) { stratName = strat; }
 	virtual ~Strategy();
-
+	virtual std::string const getStratName() = 0;
 	virtual void attack(Player* p1, Player* p2) = 0;
 
 	

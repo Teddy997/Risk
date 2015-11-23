@@ -26,6 +26,7 @@ private:
 	bool victoryConditions(); // checks after each player's turn if anybody won or if the human player lost
 
 	void gamePlayPhase();
+	void loadedGamePlayPhase();
 
 	void createSaveFile();
 	void chooseGame();

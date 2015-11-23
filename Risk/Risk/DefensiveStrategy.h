@@ -8,7 +8,7 @@ class DefensiveStrategy : public Strategy
 public:
 	DefensiveStrategy();
 	~DefensiveStrategy();
-	//std::string const getStratName() { return stratName; };
+	std::string const getStratName() { return "Defensive"; };
 
 	void attack(Player* p1,Player* p2);
 };

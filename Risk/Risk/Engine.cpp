@@ -19,7 +19,7 @@ Engine::Engine()
 	}
 	else {
 		chooseGame();
-		gamePlayPhase();
+		loadedGamePlayPhase();
 	}
 }
 
@@ -41,18 +41,29 @@ void Engine::gamePlayPhase(){
 	unsigned int turn = 1;
 	gameState.updatePlayerTurn(turn);
 	while (victoryConditions()) {
-		if (gameState.getCurrentPlayer() != NULL) {
+		Player* p = gameState.getCurrentPlayer();
+		if (p != NULL) {
 		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
 		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
-		cout << "current player's turn: " << gameState.getCurrentPlayer()->get_player_name() << endl;
+		cout << "current player's turn: " << p->get_player_name() << endl;
 		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
 		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
-		//if (gameState.getCurrentPlayer() != gameState.getMainPlayer()) {
-			
+		p->set_can_draw(false);
+		//if (p != gameState.getMainPlayer()) {
+				if (p == gameState.getMainPlayer()) {
+					p->view_hand();
+				}
 				reinforcementPhase();
 				saveGame();
 				//attackPhase();
 				fortificationPhase();
+				//this is currently only here for testing. set_can_draw is triggered when a player conquers a country,
+				//which is the condition on which they may draw a card
+				p->set_can_draw(true); //TODO: REMOVE. 
+				//
+				if (p->can_player_draw() == true) {
+					p->add_to_hand(gameState.getDeck()->draw_card());
+				}
 			//}
 		}
 		if (turn > gameState.getAIPlayers().size())
@@ -62,7 +73,72 @@ void Engine::gamePlayPhase(){
 
 }
 
-
+void Engine::loadedGamePlayPhase() {
+	cout << "Starting the Game!!!" << endl;
+	/*
+	First turn is special when loading.
+	We don't know what state the game is going to be in, so we have to handle all individual cases.
+	*/
+	gameState.getCurrentPlayer()->set_can_draw(false);
+	gameState.changeGamePhase(gameState.getGamePhase());
+	if (gameState.getGamePhase() == REINFORCING) {
+		saveGame();
+		//attackPhase();
+		fortificationPhase();
+	}
+	else if (gameState.getGamePhase() == ATTACKING) {
+		fortificationPhase();
+	}
+	//this is currently only here for testing. set_can_draw is triggered when a player conquers a country,
+	//which is the condition on which they may draw a card
+	gameState.getCurrentPlayer()->set_can_draw(true); //TODO: REMOVE. 
+	//
+	if (gameState.getCurrentPlayer()->can_player_draw() == true) {
+		gameState.getCurrentPlayer()->add_to_hand(gameState.getDeck()->draw_card());
+	}
+	unsigned int turn = 0;
+	if (gameState.getCurrentPlayer() == gameState.getMainPlayer()) {
+		turn = 2;
+	}
+	else {
+		for (int i = 0; i < gameState.getAIPlayers().size(); i++) {
+			if (gameState.getCurrentPlayer() == gameState.getAIPlayers().at(i)) {
+				turn += i;
+			}
+		}
+	}
+	gameState.updatePlayerTurn(turn);
+	while (victoryConditions()) {
+		Player* p = gameState.getCurrentPlayer();
+		if (p != NULL) {
+			cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
+			cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
+			cout << "current player's turn: " << p->get_player_name() << endl;
+			cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
+			cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
+			p->set_can_draw(false);
+			//if (p != gameState.getMainPlayer()) {
+			if (p == gameState.getMainPlayer()) {
+				p->view_hand();
+			}
+			reinforcementPhase();
+			saveGame();
+			//attackPhase();
+			fortificationPhase();
+			//this is currently only here for testing. set_can_draw is triggered when a player conquers a country,
+			//which is the condition on which they may draw a card
+			p->set_can_draw(true); //TODO: REMOVE. 
+			//
+			if (p->can_player_draw() == true) {
+				p->add_to_hand(gameState.getDeck()->draw_card());
+			}
+			//}
+		}
+		if (turn > gameState.getAIPlayers().size())
+			turn = 0;
+		gameState.updatePlayerTurn(++turn);
+	}
+}
 
 void Engine::reinforcementPhase() {
 	cout << "Reinforcing..." << endl;

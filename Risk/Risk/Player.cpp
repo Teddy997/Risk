@@ -50,11 +50,17 @@ Player::Player(const Player &anotherPlayer) {
 	player_name = anotherPlayer.player_name;
 	countries_owned = anotherPlayer.countries_owned;
 	numberBattlesWon = anotherPlayer.numberBattlesWon;
+	hand = anotherPlayer.hand;
 }
 
 void Player::setStrategy(Strategy* str) {
 	this->strategy = str;
 }
+
+Strategy* Player::getStrategy() {
+	return strategy;
+}
+
 void Player::executeStrategy(Player* p2) {
 	this->strategy->attack(this, p2);
 }
@@ -68,6 +74,7 @@ void Player::assign_country(Country& country) {
 		countries_owned.push_back(&country);
 		//Set the country to being owned by this player.
 		country.set_owned(true, *this);
+		set_can_draw(true);
 		Notify();
 		//Check if the player should now own a continent
 		Continent* tempContinent = country.get_containing_continent();
@@ -330,10 +337,23 @@ std::string Player::UnBuilder::unbuild() {
 	}
 	output += "\n";
 	output += std::to_string(pl->numberBattlesWon) + "\n";
+	std::string stratName = pl->strategy->getStratName();
+	if (stratName.compare("Agressive") == 0) {
+		output += "Agressive\n";
+	}
+	else if (stratName.compare("Defensive") == 0) {
+		output += "Defensive\n";
+	}
+	else if (stratName.compare("Random") == 0) {
+		output += "Random\n";
+	}
+	else {
+		output += "NoStrat\n";
+	}
 	for (int i = 0; i < pl->hand.size(); i++) {
 		output += to_string(pl->hand.at(i).get_id());
-		if (i != pl->hand.size()) {
-			output += ", ";
+		if (i != pl->hand.size()-1) {
+			output += ",";
 		}
 	}
 	output += "\n";
@@ -373,16 +393,42 @@ void Player::Builder::set_numBattlesWon(std::string num) {
 	numBattlesWon_tobuild = stoi(num);
 }
 
+void Player::Builder::set_Strategy(std::string stratName) {
+	if (stratName.compare("Agressive") == 0) {
+		strat = new AgressiveStrategy();
+	}
+	else if (stratName.compare("Defensive") == 0) {
+		strat = new DefensiveStrategy();
+	}
+	else if (stratName.compare("Random") == 0) {
+		strat = new RandomStrategy();
+	}
+	else { strat = NULL; }
+}
+
+void Player::Builder::set_current_hand(std::string currentHand) {
+	std::vector<std::string> ch = split(currentHand, ',');
+	for (int i = 0; i < ch.size(); i++) {
+		Deck::Card c;
+		c.card_id = std::stoi(ch.at(i));
+		c_hand.push_back(c);
+	}
+}
+
 Player* Player::Builder::build() {
 	std::vector<std::string> contents = split(blueprint, '\n');
 	set_p_name(contents.at(1));
 	set_cowned(contents.at(2));
 	set_numBattlesWon(contents.at(3));
+	set_Strategy(contents.at(4));
+	set_current_hand(contents.at(5));
 	Player* p = new Player(p_name_tobuild);
 	for (int i = 0; i < c_owned_tobuild.size(); i++) {
 		p->assign_country(*c_owned_tobuild.at(i));
 	}
+	p->setStrategy(strat);
 	p->setBattlesWon(numBattlesWon_tobuild);
+	p->set_hand(c_hand);
 	return p;
 }
 

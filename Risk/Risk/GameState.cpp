@@ -7,11 +7,15 @@
 GameState::GameState() {
 	player = new Player();
 	currentPlayer = player;
+	currentPlayer->setStrategy(new NoStrategy());
+	deck = new Deck;
 }
 
 GameState::GameState(string name) {
 	player = new Player(name);
 	currentPlayer = player;
+	currentPlayer->setStrategy(new NoStrategy());
+	deck = new Deck;
 	manageMap();
 }
 
@@ -59,6 +63,7 @@ void GameState::manageMap() {
 
 void GameState::setPlayer(Player* p) {
 	player = p;
+	player->setStrategy(new NoStrategy());
 }
 
 void GameState::setAIPlayers(std::vector<Player*> ais) {
@@ -79,7 +84,7 @@ void GameState::addPlayer(string name) {
 	else
 		p->setStrategy(new RandomStrategy());
 		*/
-	//p->setStrategy(new AgressiveStrategy());			//OK
+	p->setStrategy(new AgressiveStrategy());			//OK
 	//p->setStrategy(new DefensiveStrategy());			//OK			
 	//p->setStrategy(new RandomStrategy());				//OK
 
@@ -537,7 +542,17 @@ std::string GameState::UnBuilder::unbuild() {
 
 	std::string phase = UnBuilder::gs->phaseToString();
 	unbuilt += phase;
-	unbuilt += "\n$";
+	unbuilt += "\n$\n";
+
+	std::vector<Deck::Card> current_deck = UnBuilder::gs->getDeck()->get_current_deck();
+	for (int i = 0; i < current_deck.size(); i++) {
+		if (i != current_deck.size() - 1) {
+			unbuilt += std::to_string(current_deck.at(i).card_id) + ",";
+		}
+		else {
+			unbuilt += std::to_string(current_deck.at(i).card_id) + "\n$";
+		}
+	}
 
 	return unbuilt;
 }
@@ -589,14 +604,26 @@ void GameState::Builder::setCurrentPlayer_tobuild(std::string line) {
 }
 
 void GameState::Builder::setCurrentPhase_tobuild(std::string line) {
-	
-	if (line.compare("REINFORCING") == 0) {
+	std::vector<std::string> l = split(line, '\n');
+	if (l.at(1).compare("REINFORCING") == 0) {
 		currentPhase_tobuild = REINFORCING;
 	}
-	else if (line.compare("ATTACKING") == 0) {
+	else if (l.at(1).compare("ATTACKING") == 0) {
 		currentPhase_tobuild = ATTACKING;
 	}
 	else { currentPhase_tobuild = FORTIFYING; }
+}
+
+void GameState::Builder::setCurrentDeck_tobuild(std::string line) {
+	std::vector<std::string> l = split(line, ',');
+	std::vector<Deck::Card> d;
+	for (int i = 0; i < l.size(); i++) {
+		Deck::Card c;
+		c.card_id = std::stoi(l.at(i));
+		d.push_back(c);
+	}
+	current_deck_tobuild = new Deck;
+	current_deck_tobuild->set_deck(d);
 }
 
 GameState GameState::Builder::build() {
@@ -608,15 +635,17 @@ GameState GameState::Builder::build() {
 	for (int i = 1; i < num_of_players_tobuild; i++) {
 		setAIPlayers_tobuild(contents.at(2 + i));
 	}
-	setCurrentPlayer_tobuild(contents.at(contents.size()-3));
-	setCurrentPhase_tobuild(contents.at(contents.size()-2));
+	setCurrentPlayer_tobuild(contents.at(contents.size()-4));
+	setCurrentPhase_tobuild(contents.at(contents.size()-3));
+	setCurrentDeck_tobuild(contents.at(contents.size()-2));
 
 	GameState gs;
 	gs.setMap(map_tobuild);
 	gs.setPlayer(player_tobuild);
 	gs.setAIPlayers(ai_players_tobuild);
 	gs.setPlayerTurn(current_player_tobuild);
-	gs.changeGamePhase(currentPhase_tobuild);
+	gs.setGamePhase(currentPhase_tobuild);
+	gs.setDeck(current_deck_tobuild);
 	return gs;
 }
 

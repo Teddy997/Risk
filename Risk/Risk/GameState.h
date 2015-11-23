@@ -3,9 +3,11 @@
 #include <string>
 #include "Player.h"
 #include "Map.h"
+#include "Deck.h"
 #include "AgressiveStrategy.h"
 #include "DefensiveStrategy.h"
 #include "RandomStrategy.h"
+#include "NoStrategy.h"
 #include "InputProcedure.h"
 #include "MapCreator.h"
 using namespace std;
@@ -29,6 +31,8 @@ public:
 	void setPlayer(Player* p);
 	void setAIPlayers(std::vector<Player*> ais);
 	void changeGamePhase(Phase newPhase);
+	void setGamePhase(Phase newPhase) { currentPhase = newPhase; }
+	Phase const getGamePhase() { return currentPhase; }
 	
 	void removePlayerAtIndex(int i);
 
@@ -41,6 +45,9 @@ public:
 	vector<Player*> getAIPlayers(); // returns the AI players
 
 	Map* getMap() { return map; }
+
+	Deck* const getDeck() { return deck; }
+	void setDeck(Deck* d) { deck = d; }
 
 	void setMap(string str); // initializes the map
 	void setMap(Map* m);
@@ -64,6 +71,7 @@ private:
 	Player* player;
 	vector<Player*> AIPlayers;
 	Map* map;
+	Deck* deck;
 	Phase currentPhase;
 	void reinforcingPhase();
 	void fortifyingPhase();
@@ -99,6 +107,7 @@ private:
 		vector<Player*> ai_players_tobuild;
 		Player* current_player_tobuild;
 		Phase currentPhase_tobuild;
+		Deck* current_deck_tobuild;
 		std::vector<std::string> split(std::string s, char d);
 	public:
 		Builder(std::string bp);
@@ -109,6 +118,7 @@ private:
 		void setAIPlayers_tobuild(std::string line);
 		void setCurrentPlayer_tobuild(std::string line);
 		void setCurrentPhase_tobuild(std::string line);
+		void setCurrentDeck_tobuild(std::string line);
 		
 		GameState build();
 	};

@@ -101,6 +101,7 @@
     <ClInclude Include="MapObserverPattern.h" />
     <ClInclude Include="MapSubjectPattern.h" />
     <ClInclude Include="MapTester.h" />
+    <ClInclude Include="NoStrategy.h" />
     <ClInclude Include="Observer.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="playerView.h" />
@@ -128,6 +129,7 @@
     <ClCompile Include="MapManager.cpp" />
     <ClCompile Include="MapObserver.cpp" />
     <ClCompile Include="MapTester.cpp" />
+    <ClCompile Include="NoStrategy.cpp" />
     <ClCompile Include="observercpp.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="playerView.cpp" />
