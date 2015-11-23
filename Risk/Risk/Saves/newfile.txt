@@ -8,17 +8,17 @@ Western United States:12,Eastern United States:4,North Africa:2,Egypt:3,Iceland:
 
 $
 AI Michonne
-Alberta:3,Greenland:2,Quebec:4,Central America:3,Brazil:4,Congo:3,Madagascar:3,Southern Europe:3,Ukraine:3,Yatusk:4,Japan:9,Indonesia:2
+Alberta:4,Greenland:5,Quebec:9,Central America:12,Brazil:7,Congo:5,Madagascar:12,Southern Europe:7,Ukraine:7,Yatusk:7,Japan:12,Indonesia:4
 0
 
 $
 AI Jon Snow
-Alaska:2,Northwest Territory:2,Ontario:3,Venezuala:3,Peru:4,Argentina:3,South Africa:3,East Africa:4,Scandinavia:7,Ural:2,Afghanistan:1,India:1,Siberia:3,Siam:2,Kamchatka:1,Western Australia:3,KOREA:1
+Alaska:6,Northwest Territory:2,Ontario:6,Venezuala:2,Peru:9,Argentina:10,South Africa:2,East Africa:6,Scandinavia:12,Ural:6,Afghanistan:10,India:5,Siberia:8,Siam:5,Kamchatka:1,Western Australia:1,KOREA:9
 0
 
 $
 AI Jon Snow
-Alaska:2,Northwest Territory:2,Ontario:3,Venezuala:3,Peru:4,Argentina:3,South Africa:3,East Africa:4,Scandinavia:7,Ural:2,Afghanistan:1,India:1,Siberia:3,Siam:2,Kamchatka:1,Western Australia:3,KOREA:1
+Alaska:6,Northwest Territory:2,Ontario:6,Venezuala:2,Peru:9,Argentina:10,South Africa:2,East Africa:6,Scandinavia:12,Ural:6,Afghanistan:10,India:5,Siberia:8,Siam:5,Kamchatka:1,Western Australia:1,KOREA:9
 0
 
 $

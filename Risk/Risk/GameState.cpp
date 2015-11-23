@@ -79,7 +79,7 @@ void GameState::addPlayer(string name) {
 	else
 		p->setStrategy(new RandomStrategy());
 		*/
-	p->setStrategy(new AgressiveStrategy());			//OK
+	//p->setStrategy(new AgressiveStrategy());			//OK
 	//p->setStrategy(new DefensiveStrategy());			//OK			
 	//p->setStrategy(new RandomStrategy());				//OK
 

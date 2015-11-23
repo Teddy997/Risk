@@ -47,13 +47,13 @@ void Engine::gamePlayPhase(){
 		cout << "current player's turn: " << gameState.getCurrentPlayer()->get_player_name() << endl;
 		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
 		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
-		if (gameState.getCurrentPlayer() != gameState.getMainPlayer()) {
+		//if (gameState.getCurrentPlayer() != gameState.getMainPlayer()) {
 			
 				reinforcementPhase();
 				saveGame();
-				attackPhase();
+				//attackPhase();
 				fortificationPhase();
-			}
+			//}
 		}
 		if (turn > gameState.getAIPlayers().size())
 			turn = 0;
