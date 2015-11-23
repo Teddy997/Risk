@@ -50,7 +50,7 @@ void Engine::gamePlayPhase(){
 		if (gameState.getCurrentPlayer() != gameState.getMainPlayer()) {
 			
 				reinforcementPhase();
-				saveGsme();
+				saveGame();
 				attackPhase();
 				fortificationPhase();
 			}
