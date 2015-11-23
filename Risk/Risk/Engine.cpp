@@ -41,15 +41,20 @@ void Engine::gamePlayPhase(){
 	unsigned int turn = 1;
 	gameState.updatePlayerTurn(turn);
 	while (victoryConditions()) {
+		if (gameState.getCurrentPlayer() != NULL) {
 		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
 		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
 		cout << "current player's turn: " << gameState.getCurrentPlayer()->get_player_name() << endl;
 		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
 		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
-		reinforcementPhase();
-		saveGame();
-		//attackPhase();
-		fortificationPhase();
+		if (gameState.getCurrentPlayer() != gameState.getMainPlayer()) {
+			
+				reinforcementPhase();
+				saveGsme();
+				attackPhase();
+				fortificationPhase();
+			}
+		}
 		if (turn > gameState.getAIPlayers().size())
 			turn = 0;
 		gameState.updatePlayerTurn(++turn);
@@ -86,7 +91,7 @@ void Engine::fortificationPhase() {
 bool Engine::victoryConditions() {
 	
 	cout << "Checking to see if the user has won or lost the game" << endl;
-	if (gameState.getCurrentPlayer()->numberOfCountriesOwned() < 1)
+	if (gameState.getMainPlayer()->numberOfCountriesOwned() < 1)
 		defeat = true;
 	else {
 		bool d = false;
@@ -94,8 +99,10 @@ bool Engine::victoryConditions() {
 		for (unsigned int i = 0; i < v.size(); ++i) {
 			
 
-			if (v[i]->numberOfCountriesOwned() < 1)
+			if (v[i]->numberOfCountriesOwned() < 1) {
+				gameState.removePlayerAtIndex(i);
 				victory = true;
+			}
 			else {
 				victory = false;
 				d = true;
@@ -106,7 +113,25 @@ bool Engine::victoryConditions() {
 		}
 
 	}
+	/*
+	cout << "countries connected to : ";
+	Country* c = gameState.getMainPlayer()->get_country(0);
+	cout << c->get_country_name() << endl;
+	cout << "are: " << endl;
+	vector<Country*> cs = c->getConnectedCountries();
+	
+	for (int i = 0; i < cs.size(); ++i) {
+		cout << cs[i]->get_country_name() << endl;
+	}
+	*/
+	//delete c;
+	if (defeat) {
+		cout << "Welp, it looks like you lost. Better luck next time" << endl;
 
+	}
+	else if (victory) {
+		cout << "YAYYYYYYYYYYYYYYYYYYyyy you won" << endl;
+	}
 	if (defeat || victory)
 		return false;
 	else

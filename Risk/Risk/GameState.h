@@ -30,6 +30,8 @@ public:
 	void setAIPlayers(std::vector<Player*> ais);
 	void changeGamePhase(Phase newPhase);
 	
+	void removePlayerAtIndex(int i);
+
 	void updatePlayerTurn(int turn); // changes the current player to the player after it
 
 	Player* getMainPlayer(); // returns the human player
@@ -66,6 +68,7 @@ private:
 	void reinforcingPhase();
 	void fortifyingPhase();
 	void attackingPhase();
+	
 	void updateView();
 	int getIndexOfCountry();
 	int getArmies(int max);
