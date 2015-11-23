@@ -85,7 +85,9 @@ void combat_testing() {
 
 void saveLoad_testing() {
 	SaveLoadManager slm;
-	slm.SaveGame();
+	//GameState gs("Eric");
+	//slm.SaveGame(gs);
+	slm.LoadGame("gameSave.xml");
 }
 
 void map_testing() {
@@ -299,8 +301,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	//game_state_testing();
 	
 	//mapObserverTesting();
-	
+
 	//combat_testing();
+	
 	GameLifeTest();
 	
 	//playerObserverTesting();

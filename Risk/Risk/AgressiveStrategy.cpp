@@ -2,9 +2,10 @@
 
 
 
-AgressiveStrategy::AgressiveStrategy()
-{
-}
+//AgressiveStrategy::AgressiveStrategy()
+//{
+//	stratName = "Aggressive Strategy";
+//}
 
 void AgressiveStrategy::attack(Player* p1,Player* p2) {
 	cout << "agressively owning" << endl;

@@ -2,11 +2,14 @@
 #define DECK_H
 
 #include <vector>
+#include <string>
 
 class Deck {
 public:
 	struct Card {
 		int card_id;
+
+		const int get_id() { return card_id; }
 	};
 	
 	Deck();

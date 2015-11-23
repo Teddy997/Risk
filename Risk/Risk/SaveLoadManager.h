@@ -1,15 +1,17 @@
 #pragma once
-#include <cereal/archives/xml.hpp>
-#include <cereal/types/vector.hpp>
-#include <cereal/types/memory.hpp>
+#include <string>
 
 class GameState;
 
 class SaveLoadManager
 {
+private:
+	std::string file;
 public:
 	SaveLoadManager();
 	~SaveLoadManager();
-	void SaveGame();
+	void setFile(std::string filename) { file = filename; }
+	void SaveGame(GameState& currentState);
+	GameState LoadGame(std::string filename);
 };
 

@@ -2,6 +2,10 @@
 #include "SaveLoadManager.h"
 #include <fstream>
 #include "GameState.h"
+#include "Player.h"
+#include <string>
+#include <iostream>
+#include <vector>
 
 SaveLoadManager::SaveLoadManager()
 {
@@ -12,19 +16,36 @@ SaveLoadManager::~SaveLoadManager()
 {
 }
 
-void SaveLoadManager::SaveGame()
+void SaveLoadManager::SaveGame(GameState& currentState)
 {
-	std::srand(unsigned(std::time(0)));
-	std::ofstream outputFile("gameSave.xml");
-	cereal::XMLOutputArchive archive(outputFile);
-	int hello = 5;
-	char test = 's';
-	int random = (rand() % 100) + 1; //for some reason it serializes only on changes; this is a work around
-	GameState g("Jessie"); //testing
-	g.addPlayer("Gus"); //testing
-	string s = "default"; //testing
-	g.setMap(s); //testing
-	archive(CEREAL_NVP(random), CEREAL_NVP(g)); 
+	/*
+	map
+	numPlayers
+	player
+	AIPlayers
+	currentPlayer
+	currentPhase
+	*/
 	
-	//archive(hello, cereal::make_nvp("This is a char", test));
+	std::ofstream saveOut;
+	saveOut.open(file);
+	saveOut << currentState.unbuild();
+	saveOut.close();
+
+}
+
+GameState SaveLoadManager::LoadGame(std::string filename) {
+	std::string file_contents;
+	std::string line;
+	std::ifstream load("Saves//" + filename + ".txt");
+	if (load.is_open()) {
+		while (getline(load, line)) {
+			file_contents += line + "\n";
+		}
+		load.close();
+	}
+	
+	GameState gs(true);
+	GameState gs2(gs.build(file_contents));
+	return gs2;	
 }

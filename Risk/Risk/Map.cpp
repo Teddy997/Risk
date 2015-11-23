@@ -6,6 +6,7 @@
 Map::Map(string name)
 {
 	cout << "Trying to load map with name " << name << endl;
+	mapDirectory = name;
 	string continentFile = "Maps//" + name + "//continents.txt";
 	string countriesFile = "Maps//" + name + "//countries.txt";
 	vector<string> continentName;

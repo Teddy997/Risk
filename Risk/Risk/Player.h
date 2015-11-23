@@ -4,13 +4,11 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <cereal/types/polymorphic.hpp>
-#include <cereal/archives/xml.hpp>
-#include <cereal/types/vector.hpp>
 #include "Country.h"
 #include "Deck.h"
 #include "Strategy.h"
 #include "subject.h"
+#include "Map.h"
 
 class Strategy; // forward declaration
 
@@ -29,6 +27,35 @@ private:
 
 	/*May possible have to refactor the hand logic to be a vector of pointers, similar to Country*/
 	std::vector<Deck::Card> hand;
+
+	class UnBuilder {
+	private:
+		class Player* pl;
+	public:
+		UnBuilder(Player* p);
+		~UnBuilder();
+		std::string unbuild();
+	};
+
+	class Builder {
+	private:
+		Map* map;
+		std::string blueprint;
+		std::string p_name_tobuild;
+		std::vector<Country*> c_owned_tobuild;
+		int numBattlesWon_tobuild;
+		std::vector<std::string> split(std::string s);
+		std::vector<std::string> split(std::string s, char d);
+		//Strategy* strategy;
+	public:
+		Builder(std::string bp, Map* m);
+		void set_p_name(std::string name);
+		void set_cowned(std::string cowned);
+		void set_numBattlesWon(std::string num);
+
+		Player* build();
+	};
+
 public:
 	Player();
 	Player(std::string name);
@@ -52,12 +79,13 @@ public:
 	int numberOfReinforcements();
 	int total_number_of_armies_owned();
 	void incrementBattlesWon();
+	void setBattlesWon(int num);
 	int getBattlesWon();
+	
+	std::string unbuild();
 
-	template<class Archive>
-	void serialize(Archive & archive) {archive(
-		CEREAL_NVP(player_name));
-	}
+	Player(const Player &anotherPlayer);
+	Player* build(std::string line, Map* m);
 };
 
 #endif

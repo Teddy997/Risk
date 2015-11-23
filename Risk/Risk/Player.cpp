@@ -44,6 +44,14 @@ Player::Player(std::string name) {
 Player::~Player() {
 	std::cout << get_player_name() + " Player object destroyed." << std::endl;
 }
+
+Player::Player(const Player &anotherPlayer) {
+	std::cout << "Copy constructor initiated" << std::endl;
+	player_name = anotherPlayer.player_name;
+	countries_owned = anotherPlayer.countries_owned;
+	numberBattlesWon = anotherPlayer.numberBattlesWon;
+}
+
 void Player::setStrategy(Strategy* str) {
 	this->strategy = str;
 }
@@ -293,6 +301,111 @@ void Player::incrementBattlesWon() {
 	numberBattlesWon++;
 	Notify();
 }
+
+void Player::setBattlesWon(int num) {
+	numberBattlesWon = num;
+}
+
 int Player::getBattlesWon() {
 	return numberBattlesWon;
+}
+
+Player::UnBuilder::UnBuilder(Player* p) { 
+	UnBuilder::pl = p; 
+}
+
+Player::UnBuilder::~UnBuilder() {
+}
+
+std::string Player::UnBuilder::unbuild() {
+	std::string output = "";
+	output += pl->player_name + "\n";
+	for (int i = 0; i < pl->countries_owned.size(); i++) {
+		output += pl->countries_owned.at(i)->get_country_name();
+		output += ":";
+		output += std::to_string(pl->countries_owned.at(i)->get_number_of_armies());
+		if (i != pl->countries_owned.size() - 1) {
+			output += ",";
+		}
+	}
+	output += "\n";
+	output += std::to_string(pl->numberBattlesWon) + "\n";
+	for (int i = 0; i < pl->hand.size(); i++) {
+		output += to_string(pl->hand.at(i).get_id());
+		if (i != pl->hand.size()) {
+			output += ", ";
+		}
+	}
+	output += "\n";
+	return output;
+}
+
+std::string Player::unbuild() {
+	Player::UnBuilder ub(this);
+	return ub.unbuild();
+}
+
+Player::Builder::Builder(std::string bp, Map* m) {
+	Builder::blueprint = bp;
+	Builder::map = m;
+}
+
+
+void Player::Builder::set_p_name(std::string name) {
+	Builder::p_name_tobuild = name;
+}
+
+void Player::Builder::set_cowned(std::string cowned) {
+	std::vector<Country*> countries = map->getCountries();
+	std::vector<std::string> countryAndArmy = split(cowned, ',');
+	for (int i = 0; i < countryAndArmy.size(); i++) {
+		std::vector<std::string> theTuple = split(countryAndArmy.at(i), ':');
+		for (int j = 0; j < countries.size(); j++) {
+			if (countries.at(j)->get_country_name().compare(theTuple.at(0)) == 0) {
+				countries.at(j)->increment_armies(stoi(theTuple.at(1)));
+				c_owned_tobuild.push_back(countries.at(j));
+			}
+		}
+	}
+}
+
+void Player::Builder::set_numBattlesWon(std::string num) {
+	numBattlesWon_tobuild = stoi(num);
+}
+
+Player* Player::Builder::build() {
+	std::vector<std::string> contents = split(blueprint, '\n');
+	set_p_name(contents.at(1));
+	set_cowned(contents.at(2));
+	set_numBattlesWon(contents.at(3));
+	Player* p = new Player(p_name_tobuild);
+	for (int i = 0; i < c_owned_tobuild.size(); i++) {
+		p->assign_country(*c_owned_tobuild.at(i));
+	}
+	p->setBattlesWon(numBattlesWon_tobuild);
+	return p;
+}
+
+Player* Player::build(std::string line, Map* m) {
+	Player::Builder b(line, m);
+	return b.build();
+}
+
+//http://stackoverflow.com/questions/5607589/right-way-to-split-an-stdstring-into-a-vectorstring
+std::vector<std::string> Player::Builder::split(std::string s) {
+	std::stringstream ss(s);
+	std::istream_iterator<std::string> begin(ss);
+	std::istream_iterator<std::string> end;
+	std::vector<std::string> vstrings(begin, end);
+	return vstrings;
+}
+
+std::vector<std::string> Player::Builder::split(std::string s, char delim) {
+	std::stringstream ss(s);
+	std::string item;
+	std::vector<string> items;
+	while (std::getline(ss, item, delim)) {
+		items.push_back(item);
+	}
+	return items;
 }

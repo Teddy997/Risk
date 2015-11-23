@@ -13,8 +13,14 @@ Engine::Engine()
 	string name = "";
 	cin >> name;
 	gameState = GameState(name); // the name of the human player
-	startPhase();
-	
+	saveLoadManager = SaveLoadManager();
+	if (gameState.getBrandNewGame() == true) {
+		startPhase();
+	}
+	else {
+		chooseGame();
+		gamePlayPhase();
+	}
 }
 
 
@@ -24,6 +30,7 @@ Engine::~Engine()
 
 void Engine::startPhase() {
 	chooseMap();
+	createSaveFile();
 	generateAIPlayers();
 	assignCountries();
 	gamePlayPhase();
@@ -32,6 +39,7 @@ void Engine::startPhase() {
 void Engine::gamePlayPhase(){
 	cout << "Starting the Game!!!" << endl;
 	unsigned int turn = 1;
+	gameState.updatePlayerTurn(turn);
 	while (victoryConditions()) {
 		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
 		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
@@ -39,12 +47,12 @@ void Engine::gamePlayPhase(){
 		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
 		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
 		reinforcementPhase();
+		saveGame();
 		//attackPhase();
 		fortificationPhase();
 		if (turn > gameState.getAIPlayers().size())
 			turn = 0;
 		gameState.updatePlayerTurn(++turn);
-		
 	}
 
 }
@@ -172,6 +180,55 @@ void Engine::assignCountries() {
 	cout << "done.\n" << endl;
 }
 
+void Engine::createSaveFile() {
+	std::string temp; std::string saveFile;
+	bool valid = false;
+	while (valid == false) {
+		cout << "Please enter a name for your save file." << endl;
+		getline(cin, temp);
+		saveFile = "Saves//" + temp + ".txt";
+		std::fstream filestr;
+		//If it does open, then the path is valid, and we can choose this map
+		filestr.open(saveFile);
+		if (filestr.is_open()) {
+			filestr.close();
+			cout << "This save file name already exists. Do you wish to overwrite it?" << endl;
+			cout << "1. No \t 2. Yes" << endl;
+			int choice = InputProcedure::get_choice();
+			if (choice == 1) { cout << "File will not be overwritten." << endl; }
+			else if (choice == 2) { cout << "File will be overwritten." << endl; valid = true; }
+			else { cout << "Invalid choice." << endl; }
+		}
+		else { valid = true; }
+	}
+	cout << "Save file created." << endl;
+	saveLoadManager.setFile(saveFile);
+}
 
+void Engine::saveGame() {
+	saveLoadManager.SaveGame(gameState);
+}
 
+void Engine::loadGame(string filename) {
+	saveLoadManager.setFile("Saves//"+filename+".txt");
+	gameState = saveLoadManager.LoadGame(filename);
+}
 
+void Engine::chooseGame() {
+	std::string temp; std::string saveFile;
+	bool valid = false;
+	while (valid == false) {
+		getline(cin, temp);
+		saveFile = "Saves//" + temp + ".txt";
+		std::fstream filestr;
+		//If it does open, then the path is valid, and we can choose this game
+		filestr.open(saveFile);
+		if (filestr.is_open()) {
+			filestr.close();
+			valid = true;
+		}
+		else { cout << "Not a valid file name. Please try again!" << endl; }
+	}
+	cout << "Loading " + temp + "..." << endl;
+	loadGame(temp);
+}

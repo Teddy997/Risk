@@ -1,4 +1,6 @@
 #pragma once
+#include <algorithm>
+#include <sstream>
 #include "GameState.h"
 #include "tinydir.h"
 
@@ -10,8 +12,13 @@ GameState::GameState() {
 GameState::GameState(string name) {
 	player = new Player(name);
 	currentPlayer = player;
-
 	manageMap();
+}
+
+GameState::GameState(bool loading) {
+	if (loading == true) {
+		cout << "LOADING" << endl;
+	}
 }
 
 
@@ -22,15 +29,16 @@ void GameState::manageMap() {
 
 	cout << "Do you want to jump straight in the game by choosing a map or do you want to proceed to the map creator? "
 		<< "Select the index of choice you want" << endl;
-	cout << "1. I want to jump straight in the game by choosing a map.  2. I want to go to the map editor" << endl;
+	cout << "1. I want to jump straight in the game by choosing a map.  2. I want to go to the map editor." << endl;
+	cout << "3. I want to load an existing game." << endl;
 	int index = 1;
 	bool valid = false;
-
+	brandNewGame = true;
 	while (valid == false) {
 
 		index = InputProcedure::get_choice();
 		
-		if (index < 1 || index > 2) {
+		if (index < 1 || index > 3) {
 			cout << "Not a valid choice." << endl;
 		}
 		else {
@@ -42,7 +50,24 @@ void GameState::manageMap() {
 		MapCreator mapCreator = MapCreator();
 		mapCreator.Create_map();
 	}
+	if (index == 3) {
+		brandNewGame = false;
+		cout << "Please type the name of the game you wish to load." << endl;
+		displaySaveDirectoryContents();
+	}
 }
+
+void GameState::setPlayer(Player* p) {
+	player = p;
+}
+
+void GameState::setAIPlayers(std::vector<Player*> ais) {
+	AIPlayers.clear();
+	for (int i = 0; i < ais.size(); i++) {
+		AIPlayers.push_back(ais.at(i));
+	}
+}
+
 void GameState::addPlayer(string name) {
 	Player* p = new Player(name);
 	//TODO uncomment the randomness and comment the unrandomness
@@ -55,7 +80,7 @@ void GameState::addPlayer(string name) {
 	else
 		p->setStrategy(new RandomStrategy());
 		*/
-	p->setStrategy(new AgressiveStrategy());
+	//p->setStrategy(new AgressiveStrategy());
 	AIPlayers.push_back(p);
 	
 }
@@ -274,7 +299,7 @@ void GameState::updatePlayerTurn(int turn) {
 		int t = turn - 2;
 		for (unsigned int i = 0; i < AIPlayers.size(); ++i) {
 			if (t == i)
-				currentPlayer = AIPlayers[i];
+				currentPlayer = AIPlayers.at(i);
 		}
 	}
 }
@@ -297,6 +322,50 @@ vector<Player*> GameState::getAIPlayers() {
 void GameState::setMap(string name) {
 	map = new Map(name); // TODO use the file names to load
 	cout << map->nbOfCountries() << endl;
+}
+
+void GameState::setMap(Map* m) {
+	map = m;
+	cout << map->nbOfCountries() << endl;
+}
+
+void GameState::displaySaveDirectoryContents() {
+	string display = "";
+	tinydir_dir dir;
+	tinydir_open(&dir, "Saves");
+
+	while (dir.has_next)
+	{
+		tinydir_file file;
+		tinydir_readfile(&dir, &file);
+		string filename = file.name;
+		if (filename.compare("Thumbs.db") == 0 || filename.compare(".") == 0 || filename.compare("..") == 0) {
+			display += "";
+		}
+		else {
+			if (file.is_dir && (filename.compare("default") != 0))
+			{
+				display += "";
+			}
+			else {
+				for (int i = 0; i < filename.size(); i++) {
+					if (i < filename.size() - 4) {
+						display += filename[i];
+					}
+				}
+				display += "\n";
+			}
+		}
+		tinydir_next(&dir);
+	}
+
+	tinydir_close(&dir);
+	if (display.length() == 0) {
+		cout << "There are currently no existing save files!" << endl;
+	}
+	else {
+		cout << display << endl;
+	}
 }
 
 void GameState::displayMapDirectoryContents() {
@@ -327,7 +396,7 @@ void GameState::displayMapDirectoryContents() {
 
 	tinydir_close(&dir);
 	if (display.length() == 0) {
-		cout << "There are currently no user created maps!" << endl;
+		cout << "There are currently no existing user created maps!" << endl;
 	}
 	else {
 		cout << display << endl;
@@ -413,3 +482,149 @@ int GameState::getIndexOfCountry() {
 //void GameState::serialize(Archive & archive) {
 //	archive(currentPlayerTurn);
 //}
+
+std::string GameState::phaseToString() {
+	std::string phase;
+	switch (currentPhase) {
+	case REINFORCING:
+		phase = "REINFORCING";
+		break;
+	case ATTACKING:
+		phase = "ATTACKING";
+		break;
+	default:
+		phase = "FORTIFYING";
+		break;
+	}
+	return phase;
+}
+
+GameState::UnBuilder::UnBuilder(GameState* g) {
+	UnBuilder::gs = g;
+}
+
+GameState::UnBuilder::~UnBuilder() { }
+
+std::string GameState::UnBuilder::unbuild() {
+	std::string unbuilt;
+	
+	std::string mapDirectoryInfo = UnBuilder::gs->getMap()->getMapDirectory();
+	unbuilt += mapDirectoryInfo + "\n";
+	unbuilt += "$\n";
+
+	unbuilt += to_string(UnBuilder::gs->getAIPlayers().size()+1);
+	unbuilt += "\n$\n";
+
+	std::string mainPlayerInfo = UnBuilder::gs->getMainPlayer()->unbuild();
+	unbuilt += mainPlayerInfo;
+	unbuilt += "$\n";
+
+	for (int i = 0; i < UnBuilder::gs->getAIPlayers().size(); i++) {
+		std::string currentAIPlayerInfo = UnBuilder::gs->getAIPlayers().at(i)->unbuild();
+		unbuilt += currentAIPlayerInfo;
+		unbuilt += "$\n";
+	}
+
+	std::string currentPlayerInfo = UnBuilder::gs->getCurrentPlayer()->unbuild();
+	unbuilt += currentPlayerInfo;
+	unbuilt += "$\n";
+
+	std::string phase = UnBuilder::gs->phaseToString();
+	unbuilt += phase;
+	unbuilt += "\n$";
+
+	return unbuilt;
+}
+
+std::string GameState::unbuild() {
+	GameState::UnBuilder ub(this);
+	return ub.unbuild();
+}
+
+GameState::Builder::Builder(std::string bp) {
+	blueprint = bp;
+}
+
+void GameState::Builder::setMapName_tobuild(std::string line) {
+	line.erase(std::remove(line.begin(), line.end(), '\n'), line.end());
+	map_name_tobuild = line;
+}
+
+void GameState::Builder::setMap_tobuild() {
+	map_tobuild = new Map(map_name_tobuild);
+}
+
+void GameState::Builder::setNumOfPlayers_tobuild(std::string line) {
+	num_of_players_tobuild = stoi(line);
+}
+
+void GameState::Builder::setPlayer_tobuild(std::string line) {
+	Player* temp = new Player();
+	player_tobuild = temp->build(line, map_tobuild);
+}
+
+void GameState::Builder::setAIPlayers_tobuild(std::string line) {
+	Player* temp = new Player();
+	ai_players_tobuild.push_back(temp->build(line, map_tobuild));
+}
+
+void GameState::Builder::setCurrentPlayer_tobuild(std::string line) {
+	std::vector<std::string> l = split(line, '\n');
+	if (l.at(1).compare(player_tobuild->get_player_name()) == 0) {
+		current_player_tobuild = player_tobuild;
+	}
+	else {
+		for (int i = 0; i < ai_players_tobuild.size(); i++) {
+			if (l.at(1).compare(ai_players_tobuild.at(i)->get_player_name()) == 0) {
+				current_player_tobuild = ai_players_tobuild.at(i);
+			}
+		}
+	}
+}
+
+void GameState::Builder::setCurrentPhase_tobuild(std::string line) {
+	
+	if (line.compare("REINFORCING") == 0) {
+		currentPhase_tobuild = REINFORCING;
+	}
+	else if (line.compare("ATTACKING") == 0) {
+		currentPhase_tobuild = ATTACKING;
+	}
+	else { currentPhase_tobuild = FORTIFYING; }
+}
+
+GameState GameState::Builder::build() {
+	std::vector<std::string> contents = split(blueprint, '$');
+	setMapName_tobuild(contents.at(0));
+	setMap_tobuild();
+	setNumOfPlayers_tobuild(contents.at(1));
+	setPlayer_tobuild(contents.at(2));
+	for (int i = 1; i < num_of_players_tobuild; i++) {
+		setAIPlayers_tobuild(contents.at(2 + i));
+	}
+	setCurrentPlayer_tobuild(contents.at(contents.size()-3));
+	setCurrentPhase_tobuild(contents.at(contents.size()-2));
+
+	GameState gs;
+	gs.setMap(map_tobuild);
+	gs.setPlayer(player_tobuild);
+	gs.setAIPlayers(ai_players_tobuild);
+	gs.setPlayerTurn(current_player_tobuild);
+	gs.changeGamePhase(currentPhase_tobuild);
+	return gs;
+}
+
+std::vector<std::string> GameState::Builder::split(std::string s, char delim) {
+	std::stringstream ss(s);
+	std::string item;
+	std::vector<string> items;
+	while (std::getline(ss, item, delim)) {
+		items.push_back(item);
+	}
+	return items;
+}
+
+GameState GameState::build(std::string contents) {
+	GameState::Builder b(contents);
+	return b.build();
+}
