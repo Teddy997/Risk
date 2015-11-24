@@ -32,21 +32,38 @@ numberOfCountriesOwned(), a simple function returning an int containing the size
 
 Player::Player() {
 	player_name = "Default player";
+	cardBonus = 4;
 	//std::cout << get_player_name() + " Player object created." << std::endl;
 
 }
 
 Player::Player(std::string name) {
 	player_name = name;
+	cardBonus = 4;
 	std::cout << get_player_name() + " player created." << std::endl;
 }
 
 Player::~Player() {
 	std::cout << get_player_name() + " Player object destroyed." << std::endl;
 }
+
+Player::Player(const Player &anotherPlayer) {
+	std::cout << "Copy constructor initiated" << std::endl;
+	player_name = anotherPlayer.player_name;
+	countries_owned = anotherPlayer.countries_owned;
+	numberBattlesWon = anotherPlayer.numberBattlesWon;
+	hand = anotherPlayer.hand;
+	cardBonus = anotherPlayer.cardBonus;
+}
+
 void Player::setStrategy(Strategy* str) {
 	this->strategy = str;
 }
+
+Strategy* Player::getStrategy() {
+	return strategy;
+}
+
 void Player::executeStrategy(Player* p2) {
 	this->strategy->attack(this, p2);
 }
@@ -60,6 +77,7 @@ void Player::assign_country(Country& country) {
 		countries_owned.push_back(&country);
 		//Set the country to being owned by this player.
 		country.set_owned(true, *this);
+		set_can_draw(true);
 		Notify();
 		//Check if the player should now own a continent
 		Continent* tempContinent = country.get_containing_continent();
@@ -155,6 +173,13 @@ int Player::numberOfCountriesOwned() {
 	return countries_owned.size();
 }
 
+void Player::incrementCardBonus() {
+	if (cardBonus < 13) {
+		cardBonus += 2;
+	}
+	else { cardBonus += 3; }
+}
+
 /*Utility function, used in add_to_hand in order to sort the contents.*/
 bool comparison_function(Deck::Card c1, Deck::Card c2) { return (c1.card_id < c2.card_id); }
 
@@ -164,6 +189,47 @@ void Player::add_to_hand(Deck::Card card) {
 	std::sort(hand.begin(), hand.end(), comparison_function);
 }
 
+void Player::assignCardBonusArmies(int amt) {
+	int armiesAwarded = amt;
+	cout << endl;
+	cout << get_player_name() << " has " << armiesAwarded << " armies to place." << endl;
+	while (armiesAwarded > 0) {
+		cout << "Enter the number of the country you'd like to reinforce." << endl;
+		int index = 1;
+		bool valid_country = false;
+
+		while (valid_country == false) {
+			index = InputProcedure::get_choice();
+			if (index - 1 < 0 || index - 1 > numberOfCountriesOwned() - 1) {
+				cout << "Not a valid choice." << endl;
+			}
+			else {
+				valid_country = true;
+			}
+
+		}
+		cout << "Enter the number of armies you'd like to reinforce with." << endl;
+	
+		int armies = 0;
+		bool valid_amount = false;
+		while (valid_amount == false) {
+			int armiesDeducted = 0;
+			armies = InputProcedure::get_choice();
+			if (armies > amt || armiesDeducted < 0) {
+				cout << "Not a valid amount" << endl;
+			}
+			else {
+				valid_amount = true;
+			}
+		}
+		get_country(index - 1)->increment_armies(armies);
+
+		armiesAwarded -= armies;
+
+	}
+}
+
+
 void Player::cash_cards(Deck& deck) {
 	std::vector<int> amt_ids = CardCashing::count_ids(hand);
 	std::vector<bool> true_ids = CardCashing::assess_where_true(hand);
@@ -171,16 +237,30 @@ void Player::cash_cards(Deck& deck) {
 	bool condition2 = CardCashing::test_condition2(hand);
 	if((condition1 == true) && (condition2 == false)) {
 		CardCashing::cash_on_condition1(hand, deck);
-		std::cout << get_player_name() + " has received TODO armies by cashing their cards!" << std::endl;
+		assignCardBonusArmies(getCardBonus());
+		std::cout << get_player_name() + " has received " << getCardBonus() << " armies by cashing their cards!" << std::endl;
+		incrementCardBonus();
 	}
 	else if((condition1 == false) && (condition2 == true)) {
 		CardCashing::cash_on_condition2(hand, deck);
-		std::cout << get_player_name() + " has received TODO armies by cashing their cards!" << std::endl;
+		assignCardBonusArmies(getCardBonus());
+		std::cout << get_player_name() + " has received " << getCardBonus() << " armies by cashing their cards!" << std::endl;
+		incrementCardBonus();
 	}
 	else if((condition1 == true) && (condition2 == true)) {
 		int choice = CardCashing::condition_choice();
-		if(choice == 1) { CardCashing::cash_on_condition1(hand, deck); std::cout << get_player_name() + " has received TODO armies by cashing their cards!" << std::endl; }
-		else { CardCashing::cash_on_condition2(hand, deck); std::cout << get_player_name() + " has received TODO armies by cashing their cards!" << std::endl; }
+		if(choice == 1) { 
+			CardCashing::cash_on_condition1(hand, deck);
+			assignCardBonusArmies(getCardBonus());
+			std::cout << get_player_name() + " has received " << getCardBonus() << " armies by cashing their cards!" << std::endl;
+			incrementCardBonus();
+		}
+		else { 
+			CardCashing::cash_on_condition2(hand, deck); 
+			assignCardBonusArmies(getCardBonus());
+			std::cout << get_player_name() + " has received " << getCardBonus() << " armies by cashing their cards!" << std::endl;
+			incrementCardBonus();
+		}
 	}
 	else { std::cout << "Cannot cash cards based on this hand." << std::endl; }
 }
@@ -293,6 +373,157 @@ void Player::incrementBattlesWon() {
 	numberBattlesWon++;
 	Notify();
 }
+
+void Player::setBattlesWon(int num) {
+	numberBattlesWon = num;
+}
+
 int Player::getBattlesWon() {
 	return numberBattlesWon;
+}
+
+Player::UnBuilder::UnBuilder(Player* p) { 
+	UnBuilder::pl = p; 
+}
+
+Player::UnBuilder::~UnBuilder() {
+}
+
+std::string Player::UnBuilder::unbuild() {
+	std::string output = "";
+	output += pl->player_name + "\n";
+	for (int i = 0; i < pl->countries_owned.size(); i++) {
+		output += pl->countries_owned.at(i)->get_country_name();
+		output += ":";
+		output += std::to_string(pl->countries_owned.at(i)->get_number_of_armies());
+		if (i != pl->countries_owned.size() - 1) {
+			output += ",";
+		}
+	}
+	output += "\n";
+	output += std::to_string(pl->numberBattlesWon) + "\n";
+	std::string stratName = pl->strategy->getStratName();
+	if (stratName.compare("Agressive") == 0) {
+		output += "Agressive\n";
+	}
+	else if (stratName.compare("Defensive") == 0) {
+		output += "Defensive\n";
+	}
+	else if (stratName.compare("Random") == 0) {
+		output += "Random\n";
+	}
+	else {
+		output += "NoStrat\n";
+	}
+	for (int i = 0; i < pl->hand.size(); i++) {
+		output += to_string(pl->hand.at(i).get_id());
+		if (i != pl->hand.size()-1) {
+			output += ",";
+		}
+	}
+	output += "\n";
+	output += std::to_string(pl->getCardBonus()) + "\n";
+	return output;
+}
+
+std::string Player::unbuild() {
+	Player::UnBuilder ub(this);
+	return ub.unbuild();
+}
+
+Player::Builder::Builder(std::string bp, Map* m) {
+	Builder::blueprint = bp;
+	Builder::map = m;
+}
+
+
+void Player::Builder::set_p_name(std::string name) {
+	Builder::p_name_tobuild = name;
+}
+
+void Player::Builder::set_cowned(std::string cowned) {
+	std::vector<Country*> countries = map->getCountries();
+	std::vector<std::string> countryAndArmy = split(cowned, ',');
+	for (int i = 0; i < countryAndArmy.size(); i++) {
+		std::vector<std::string> theTuple = split(countryAndArmy.at(i), ':');
+		for (int j = 0; j < countries.size(); j++) {
+			if (countries.at(j)->get_country_name().compare(theTuple.at(0)) == 0) {
+				countries.at(j)->increment_armies(stoi(theTuple.at(1)));
+				c_owned_tobuild.push_back(countries.at(j));
+			}
+		}
+	}
+}
+
+void Player::Builder::set_numBattlesWon(std::string num) {
+	numBattlesWon_tobuild = stoi(num);
+}
+
+void Player::Builder::set_Strategy(std::string stratName) {
+	if (stratName.compare("Agressive") == 0) {
+		strat = new AgressiveStrategy();
+	}
+	else if (stratName.compare("Defensive") == 0) {
+		strat = new DefensiveStrategy();
+	}
+	else if (stratName.compare("Random") == 0) {
+		strat = new RandomStrategy();
+	}
+	else { strat = NULL; }
+}
+
+void Player::Builder::set_current_hand(std::string currentHand) {
+	std::vector<std::string> ch = split(currentHand, ',');
+	for (int i = 0; i < ch.size(); i++) {
+		Deck::Card c;
+		c.card_id = std::stoi(ch.at(i));
+		c_hand.push_back(c);
+	}
+}
+
+void Player::Builder::set_card_bonus(std::string amt) {
+	cardBonus = std::stoi(amt);
+}
+
+Player* Player::Builder::build() {
+	std::vector<std::string> contents = split(blueprint, '\n');
+	set_p_name(contents.at(1));
+	set_cowned(contents.at(2));
+	set_numBattlesWon(contents.at(3));
+	set_Strategy(contents.at(4));
+	set_current_hand(contents.at(5));
+	set_card_bonus(contents.at(6));
+	Player* p = new Player(p_name_tobuild);
+	for (int i = 0; i < c_owned_tobuild.size(); i++) {
+		p->assign_country(*c_owned_tobuild.at(i));
+	}
+	p->setStrategy(strat);
+	p->setBattlesWon(numBattlesWon_tobuild);
+	p->set_hand(c_hand);
+	p->setCardBonus(cardBonus);
+	return p;
+}
+
+Player* Player::build(std::string line, Map* m) {
+	Player::Builder b(line, m);
+	return b.build();
+}
+
+//http://stackoverflow.com/questions/5607589/right-way-to-split-an-stdstring-into-a-vectorstring
+std::vector<std::string> Player::Builder::split(std::string s) {
+	std::stringstream ss(s);
+	std::istream_iterator<std::string> begin(ss);
+	std::istream_iterator<std::string> end;
+	std::vector<std::string> vstrings(begin, end);
+	return vstrings;
+}
+
+std::vector<std::string> Player::Builder::split(std::string s, char delim) {
+	std::stringstream ss(s);
+	std::string item;
+	std::vector<string> items;
+	while (std::getline(ss, item, delim)) {
+		items.push_back(item);
+	}
+	return items;
 }

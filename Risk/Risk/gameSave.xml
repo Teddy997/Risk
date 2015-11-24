@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cereal>
+	<currentState>
+		<CurrentPlayer>
+			<PlayerName>Eric</PlayerName>
+			<CountriesOwned size="dynamic">
+				<value0>
+					<CountryName>Western United States</CountryName>
+					<ContinentName>North America</ContinentName>
+					<Armies>7</Armies>
+				</value0>
+				<value1>
+					<CountryName>Eastern United States</CountryName>
+					<ContinentName>North America</ContinentName>
+					<Armies>4</Armies>
+				</value1>
+				<value2>
+					<CountryName>North Africa</CountryName>
+					<ContinentName>Africa</ContinentName>
+					<Armies>2</Armies>
+				</value2>
+				<value3>
+					<CountryName>Egypt</CountryName>
+					<ContinentName>Africa</ContinentName>
+					<Armies>3</Armies>
+				</value3>
+				<value4>
+					<CountryName>Iceland</CountryName>
+					<ContinentName>Europe</ContinentName>
+					<Armies>4</Armies>
+				</value4>
+				<value5>
+					<CountryName>Great Britain</CountryName>
+					<ContinentName>Europe</ContinentName>
+					<Armies>3</Armies>
+				</value5>
+				<value6>
+					<CountryName>Western Europe</CountryName>
+					<ContinentName>Europe</ContinentName>
+					<Armies>4</Armies>
+				</value6>
+				<value7>
+					<CountryName>Northern Europe</CountryName>
+					<ContinentName>Europe</ContinentName>
+					<Armies>4</Armies>
+				</value7>
+				<value8>
+					<CountryName>Middle East</CountryName>
+					<ContinentName>Asia</ContinentName>
+					<Armies>3</Armies>
+				</value8>
+				<value9>
+					<CountryName>China</CountryName>
+					<ContinentName>Asia</ContinentName>
+					<Armies>1</Armies>
+				</value9>
+				<value10>
+					<CountryName>Mongolia</CountryName>
+					<ContinentName>Asia</ContinentName>
+					<Armies>1</Armies>
+				</value10>
+				<value11>
+					<CountryName>Irkutsk</CountryName>
+					<ContinentName>Asia</ContinentName>
+					<Armies>1</Armies>
+				</value11>
+				<value12>
+					<CountryName>New Guinea</CountryName>
+					<ContinentName>Australia</ContinentName>
+					<Armies>1</Armies>
+				</value12>
+				<value13>
+					<CountryName>Eastern Australia</CountryName>
+					<ContinentName>Australia</ContinentName>
+					<Armies>1</Armies>
+				</value13>
+				<value14>
+					<CountryName>pls</CountryName>
+					<ContinentName>Africa</ContinentName>
+					<Armies>1</Armies>
+				</value14>
+			</CountriesOwned>
+			<BattlesWon>0</BattlesWon>
+		</CurrentPlayer>
+		<HumanPlayer>
+			<PlayerName>Eric</PlayerName>
+			<CountriesOwned size="dynamic">
+				<value0>
+					<CountryName>Western United States</CountryName>
+					<ContinentName>North America</ContinentName>
+					<Armies>7</Armies>
+				</value0>
+				<value1>
+					<CountryName>Eastern United States</CountryName>
+					<ContinentName>North America</ContinentName>
+					<Armies>4</Armies>
+				</value1>
+				<value2>
+					<CountryName>North Africa</CountryName>
+					<ContinentName>Africa</ContinentName>
+					<Armies>2</Armies>
+				</value2>
+				<value3>
+					<CountryName>Egypt</CountryName>
+					<ContinentName>Africa</ContinentName>
+					<Armies>3</Armies>
+				</value3>
+				<value4>
+					<CountryName>Iceland</CountryName>
+					<ContinentName>Europe</ContinentName>
+					<Armies>4</Armies>
+				</value4>
+				<value5>
+					<CountryName>Great Britain</CountryName>
+					<ContinentName>Europe</ContinentName>
+					<Armies>3</Armies>
+				</value5>
+				<value6>
+					<CountryName>Western Europe</CountryName>
+					<ContinentName>Europe</ContinentName>
+					<Armies>4</Armies>
+				</value6>
+				<value7>
+					<CountryName>Northern Europe</CountryName>
+					<ContinentName>Europe</ContinentName>
+					<Armies>4</Armies>
+				</value7>
+				<value8>
+					<CountryName>Middle East</CountryName>
+					<ContinentName>Asia</ContinentName>
+					<Armies>3</Armies>
+				</value8>
+				<value9>
+					<CountryName>China</CountryName>
+					<ContinentName>Asia</ContinentName>
+					<Armies>1</Armies>
+				</value9>
+				<value10>
+					<CountryName>Mongolia</CountryName>
+					<ContinentName>Asia</ContinentName>
+					<Armies>1</Armies>
+				</value10>
+				<value11>
+					<CountryName>Irkutsk</CountryName>
+					<ContinentName>Asia</ContinentName>
+					<Armies>1</Armies>
+				</value11>
+				<value12>
+					<CountryName>New Guinea</CountryName>
+					<ContinentName>Australia</ContinentName>
+					<Armies>1</Armies>
+				</value12>
+				<value13>
+					<CountryName>Eastern Australia</CountryName>
+					<ContinentName>Australia</ContinentName>
+					<Armies>1</Armies>
+				</value13>
+				<value14>
+					<CountryName>pls</CountryName>
+					<ContinentName>Africa</ContinentName>
+					<Armies>1</Armies>
+				</value14>
+			</CountriesOwned>
+			<BattlesWon>0</BattlesWon>
+		</HumanPlayer>
+		<AIs size="dynamic">
+			<value0>
+				<PlayerName>AI Michonne</PlayerName>
+				<CountriesOwned size="dynamic">
+					<value0>
+						<CountryName>Alberta</CountryName>
+						<ContinentName>North America</ContinentName>
+						<Armies>3</Armies>
+					</value0>
+					<value1>
+						<CountryName>Greenland</CountryName>
+						<ContinentName>North America</ContinentName>
+						<Armies>2</Armies>
+					</value1>
+					<value2>
+						<CountryName>Quebec</CountryName>
+						<ContinentName>North America</ContinentName>
+						<Armies>2</Armies>
+					</value2>
+					<value3>
+						<CountryName>Central America</CountryName>
+						<ContinentName>North America</ContinentName>
+						<Armies>3</Armies>
+					</value3>
+					<value4>
+						<CountryName>Brazil</CountryName>
+						<ContinentName>South America</ContinentName>
+						<Armies>4</Armies>
+					</value4>
+					<value5>
+						<CountryName>Congo</CountryName>
+						<ContinentName>Africa</ContinentName>
+						<Armies>2</Armies>
+					</value5>
+					<value6>
+						<CountryName>Madagascar</CountryName>
+						<ContinentName>Africa</ContinentName>
+						<Armies>3</Armies>
+					</value6>
+					<value7>
+						<CountryName>Southern Europe</CountryName>
+						<ContinentName>Europe</ContinentName>
+						<Armies>3</Armies>
+					</value7>
+					<value8>
+						<CountryName>Ukraine</CountryName>
+						<ContinentName>Europe</ContinentName>
+						<Armies>3</Armies>
+					</value8>
+					<value9>
+						<CountryName>Yatusk</CountryName>
+						<ContinentName>Asia</ContinentName>
+						<Armies>4</Armies>
+					</value9>
+					<value10>
+						<CountryName>Japan</CountryName>
+						<ContinentName>Asia</ContinentName>
+						<Armies>4</Armies>
+					</value10>
+					<value11>
+						<CountryName>Indonesia</CountryName>
+						<ContinentName>Australia</ContinentName>
+						<Armies>2</Armies>
+					</value11>
+				</CountriesOwned>
+				<BattlesWon>0</BattlesWon>
+			</value0>
+			<value1>
+				<PlayerName>AI Jon Snow</PlayerName>
+				<CountriesOwned size="dynamic">
+					<value0>
+						<CountryName>Alaska</CountryName>
+						<ContinentName>North America</ContinentName>
+						<Armies>2</Armies>
+					</value0>
+					<value1>
+						<CountryName>Northwest Territory</CountryName>
+						<ContinentName>North America</ContinentName>
+						<Armies>2</Armies>
+					</value1>
+					<value2>
+						<CountryName>Ontario</CountryName>
+						<ContinentName>North America</ContinentName>
+						<Armies>3</Armies>
+					</value2>
+					<value3>
+						<CountryName>Venezuala</CountryName>
+						<ContinentName>South America</ContinentName>
+						<Armies>3</Armies>
+					</value3>
+					<value4>
+						<CountryName>Peru</CountryName>
+						<ContinentName>South America</ContinentName>
+						<Armies>4</Armies>
+					</value4>
+					<value5>
+						<CountryName>Argentina</CountryName>
+						<ContinentName>South America</ContinentName>
+						<Armies>3</Armies>
+					</value5>
+					<value6>
+						<CountryName>South Africa</CountryName>
+						<ContinentName>Africa</ContinentName>
+						<Armies>3</Armies>
+					</value6>
+					<value7>
+						<CountryName>East Africa</CountryName>
+						<ContinentName>Africa</ContinentName>
+						<Armies>4</Armies>
+					</value7>
+					<value8>
+						<CountryName>Scandinavia</CountryName>
+						<ContinentName>Europe</ContinentName>
+						<Armies>3</Armies>
+					</value8>
+					<value9>
+						<CountryName>Ural</CountryName>
+						<ContinentName>Asia</ContinentName>
+						<Armies>1</Armies>
+					</value9>
+					<value10>
+						<CountryName>Afghanistan</CountryName>
+						<ContinentName>Asia</ContinentName>
+						<Armies>1</Armies>
+					</value10>
+					<value11>
+						<CountryName>India</CountryName>
+						<ContinentName>Asia</ContinentName>
+						<Armies>1</Armies>
+					</value11>
+					<value12>
+						<CountryName>Siberia</CountryName>
+						<ContinentName>Asia</ContinentName>
+						<Armies>1</Armies>
+					</value12>
+					<value13>
+						<CountryName>Siam</CountryName>
+						<ContinentName>Asia</ContinentName>
+						<Armies>1</Armies>
+					</value13>
+					<value14>
+						<CountryName>Kamchatka</CountryName>
+						<ContinentName>Asia</ContinentName>
+						<Armies>1</Armies>
+					</value14>
+					<value15>
+						<CountryName>Western Australia</CountryName>
+						<ContinentName>Australia</ContinentName>
+						<Armies>1</Armies>
+					</value15>
+					<value16>
+						<CountryName>KOREA</CountryName>
+						<ContinentName>Asia</ContinentName>
+						<Armies>1</Armies>
+					</value16>
+				</CountriesOwned>
+				<BattlesWon>0</BattlesWon>
+			</value1>
+		</AIs>
+		<CurrentPhase>2</CurrentPhase>
+	</currentState>
+</cereal>
+

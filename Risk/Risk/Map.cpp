@@ -6,6 +6,7 @@
 Map::Map(string name)
 {
 	cout << "Trying to load map with name " << name << endl;
+	mapDirectory = name;
 	string continentFile = "Maps//" + name + "//continents.txt";
 	string countriesFile = "Maps//" + name + "//countries.txt";
 	vector<string> continentName;
@@ -172,7 +173,7 @@ void Map::ReadCountries(string fileName, vector<string>& countryName, vector<int
 						vector < vector <int> >& connectedCountryID)
 {
 	std::ifstream inputFile;
-	inputFile.open("Maps//default//countries.txt");
+	inputFile.open(fileName);
 
 	std::string   line;
 	int i = 0;
@@ -223,7 +224,7 @@ void Map::AssignConnectedCountries(vector < vector <int> >& connectedCountryID)
 		for(unsigned int k = 0; k < connectedCountryID[j].size(); k++)
 		{
 			//ID start at 1 while index start at 0
-			int index = connectedCountryID[j][k] - 1;
+			int index = connectedCountryID[j][k]; //CHANGE ME
 			connected.push_back(countries[index]);
 
 		}

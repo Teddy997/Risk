@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <string>
-#include <cereal/archives/xml.hpp>
 //#include "Continent.h"
 
 #include "MapSubjectPattern.h"
@@ -33,6 +32,8 @@ public:
 	Country(std::string name, Continent& continent) : Country(name) { containing_continent = &continent; };
 	Country(std::string name);
 	~Country();
+	Country(const Country &anotherCountry);
+
 	std::string get_country_name();
 	Player* getOwner() { return owner; }
 	void set_continent_name(std::string c_name);
@@ -50,12 +51,6 @@ public:
 	void decrement_armies(int amt);
 	int get_number_of_armies();
 	void printConnectedCountries();
-	template<class Archive>
-	void serialize(Archive & archive) {
-		archive(
-			CEREAL_NVP(country_name),
-			CEREAL_NVP(is_owned));
-	}
 
 	void registerObserver(MapObserverPattern* o);
 	void unregisterObserver(MapObserverPattern* o);

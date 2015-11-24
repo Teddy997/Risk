@@ -25,7 +25,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -101,6 +101,7 @@
     <ClInclude Include="MapObserverPattern.h" />
     <ClInclude Include="MapSubjectPattern.h" />
     <ClInclude Include="MapTester.h" />
+    <ClInclude Include="NoStrategy.h" />
     <ClInclude Include="Observer.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="playerView.h" />
@@ -128,6 +129,7 @@
     <ClCompile Include="MapManager.cpp" />
     <ClCompile Include="MapObserver.cpp" />
     <ClCompile Include="MapTester.cpp" />
+    <ClCompile Include="NoStrategy.cpp" />
     <ClCompile Include="observercpp.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="playerView.cpp" />

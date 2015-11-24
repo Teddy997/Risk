@@ -1,17 +1,28 @@
 #pragma once
+#include <algorithm>
+#include <sstream>
 #include "GameState.h"
 #include "tinydir.h"
 
 GameState::GameState() {
 	player = new Player();
 	currentPlayer = player;
+	currentPlayer->setStrategy(new NoStrategy());
+	deck = new Deck;
 }
 
 GameState::GameState(string name) {
 	player = new Player(name);
 	currentPlayer = player;
-
+	currentPlayer->setStrategy(new NoStrategy());
+	deck = new Deck;
 	manageMap();
+}
+
+GameState::GameState(bool loading) {
+	if (loading == true) {
+		cout << "LOADING" << endl;
+	}
 }
 
 
@@ -22,15 +33,16 @@ void GameState::manageMap() {
 
 	cout << "Do you want to jump straight in the game by choosing a map or do you want to proceed to the map creator? "
 		<< "Select the index of choice you want" << endl;
-	cout << "1. I want to jump straight in the game by choosing a map.  2. I want to go to the map editor" << endl;
+	cout << "1. I want to jump straight in the game by choosing a map.  2. I want to go to the map editor." << endl;
+	cout << "3. I want to load an existing game." << endl;
 	int index = 1;
 	bool valid = false;
-
+	brandNewGame = true;
 	while (valid == false) {
 
 		index = InputProcedure::get_choice();
 		
-		if (index < 1 || index > 2) {
+		if (index < 1 || index > 3) {
 			cout << "Not a valid choice." << endl;
 		}
 		else {
@@ -42,10 +54,27 @@ void GameState::manageMap() {
 		MapCreator mapCreator = MapCreator();
 		mapCreator.Create_map();
 	}
+	if (index == 3) {
+		brandNewGame = false;
+		cout << "Please type the name of the game you wish to load." << endl;
+		displaySaveDirectoryContents();
+	}
 }
+
+void GameState::setPlayer(Player* p) {
+	player = p;
+	player->setStrategy(new NoStrategy());
+}
+
+void GameState::setAIPlayers(std::vector<Player*> ais) {
+	AIPlayers.clear();
+	for (int i = 0; i < ais.size(); i++) {
+		AIPlayers.push_back(ais.at(i));
+	}
+}
+
 void GameState::addPlayer(string name) {
 	Player* p = new Player(name);
-	//TODO uncomment the randomness and comment the unrandomness
 	/*
 	int random = rand() % 3;
 	if (random == 0)
@@ -55,7 +84,10 @@ void GameState::addPlayer(string name) {
 	else
 		p->setStrategy(new RandomStrategy());
 		*/
-	p->setStrategy(new AgressiveStrategy());
+	p->setStrategy(new AgressiveStrategy());			//OK
+	//p->setStrategy(new DefensiveStrategy());			//OK			
+	//p->setStrategy(new RandomStrategy());				//OK
+
 	AIPlayers.push_back(p);
 	
 }
@@ -65,7 +97,7 @@ void GameState::attackingPhase() {
 	cout << currentPlayer->get_player_name() << " is currently attacking...\n" << endl;
 	updateView();
 	if (currentPlayer == player) {
-
+		doPlayerAttacking();
 	}
 	else {
 		doAIAttacking();
@@ -73,12 +105,118 @@ void GameState::attackingPhase() {
 	updateView();
 }
 
-void GameState::doAIAttacking() {
-	for (Player* p1 : AIPlayers) {
-		for (Player* p2 : AIPlayers) {
-			if (p1 != p2) {
-				p1->executeStrategy(p2);
+void GameState::displayAttackOptions() {
+	cout << "Here are the countries that you own and their connected ennemy countries :" << endl;
+	vector<Country*> countriesOwned = currentPlayer->getCountries();
+	for (unsigned int i = 0; i < countriesOwned.size(); ++i) {
+		bool hasAtLeastOne = false; // at least one connection
+		cout << i + 1 << ". Country: " << countriesOwned[i]->get_country_name()
+			<< ", Armies: " << countriesOwned[i]->get_number_of_armies()
+			<< ", ennemy connected countries: ";
+		vector<Country*> countriesConnected = countriesOwned[i]->getConnectedCountries();
+		for (unsigned int j = 0; j < countriesConnected.size(); ++j) {
+
+			if (countriesConnected[j]->getOwner() != player) {
+				cout << " \"" << countriesConnected[j]->get_country_name() << "\"";
+				hasAtLeastOne = true;
 			}
+		}
+		if (hasAtLeastOne == false)
+			cout << "none.";
+		cout << endl;
+
+	}
+	cout << "\n****Enter the number of the country you'd like to attack from. If you do not want to attack"
+		<< ", please enter -1 to go to the next phase." << endl;
+}
+void GameState::doPlayerAttacking() {
+
+	displayAttackOptions();
+
+	bool valid = false;
+	bool v = false;
+	while (valid == false) {
+		int index = getIndexOfCountry() - 1;
+
+		if (index + 1 == -1)
+			break;
+		Country* c = currentPlayer->get_country(index);
+		vector<Country*> countriesConnected = c->getConnectedCountries();
+		for (Country* c2 : countriesConnected) {
+			if (c2->getOwner() != player) {
+				v = true;
+			}
+		}
+		if (v == false) {
+			cout << "Sorry, you own the country that you selected, but there is no other country to attack that is next to it."
+				<< " Please pick again" << endl;
+		}
+		else {
+			cout << "Now type in the name correctly(lower case and upper case) of the country you want to attack :" << endl;
+			string name;
+			bool valid2 = false;
+			cin >> name;
+			//int index2 = getIndexOfCountry() - 1;
+			Country* connected;
+			//find the country
+			for (Player* p : AIPlayers) {
+				vector<Country*> countriesOfAI = p->getCountries();
+
+				for (Country* cc : countriesOfAI) {
+					if (name == cc->get_country_name()) {
+						valid2 = true;
+						connected = cc;
+					}
+					if (valid2)
+						break;
+				}
+				if (valid2)
+					break;
+			}
+			if (find(countriesConnected.begin(), countriesConnected.end(), connected) != countriesConnected.end() && valid2) {
+				//cout << "COMBATTTTTTTTTTTTTTING" << endl;
+				Combat::combat(*c, *connected, true, 0, 0, 0);
+
+				cout << endl;
+				displayAttackOptions();
+			}
+			// checks if the country he owned is part of the vector of connected countries of the first countries
+
+				/*
+				cout << "Enter how many armies you want to move " << endl;
+				int armies = getArmies(c->get_number_of_armies());
+				if (c->get_number_of_armies() == armies) {
+					valid = false;
+					cout << "Sorry, you cannot move all the armies you have in that country. A country must always have at least 1 army." << endl;
+					cout << "Please enter the number of the country you'd like to move armies from." << endl;
+				}*/
+			/*
+				else {
+
+
+					connected->increment_armies(armies);
+					c->decrement_armies(armies);
+					valid = true;
+				}
+				*/
+			//}
+			else {
+				valid = false;
+				cout << "Invalid choice, please choose a country that is connected to your previous choice." << endl;
+				cout << "Please enter the number of the country you'd like to attack from." << endl;
+			}
+		}
+	}
+
+
+}
+void GameState::doAIAttacking() {
+	
+	currentPlayer->executeStrategy(player);
+	for (Player* p2 : AIPlayers) {
+		
+		if (currentPlayer != p2) {
+				currentPlayer->executeStrategy(p2);
 		}
 	}
 }
@@ -103,78 +241,7 @@ void GameState::fortifyingPhase() {
 	//updateView();
 	// do this whole chunk of code if it's the user's turn
 	if (currentPlayer == player) {
-		cout << "Here are the countries that you own and their connections( which you also own) :" << endl;
-		vector<Country*> countriesOwned = currentPlayer->getCountries();
-		for (unsigned int i = 0; i < countriesOwned.size(); ++i) {
-			bool hasAtLeastOne = false; // at least one connection
-			cout << i + 1 << ". Country: " << countriesOwned[i]->get_country_name()
-				<< ", Armies: " << countriesOwned[i]->get_number_of_armies()
-				<< ", friendly connected countries: ";
-			vector<Country*> countriesConnected = countriesOwned[i]->getConnectedCountries();
-			for (unsigned int j = 0; j < countriesConnected.size(); ++j) {
-
-				if (countriesConnected[j]->getOwner() == player) {
-					cout << " \"" << countriesConnected[j]->get_country_name() << "\"";
-					hasAtLeastOne = true;
-				}
-			}
-			if (hasAtLeastOne == false)
-				cout << "none.";
-			cout << endl;
-			
-		}
-		// so far we've only displayed a message.
-
-		cout << "\n****Enter the number of the country you'd like to move armies from. If you do not want to fortify"
-			<< ", please enter -1 to stop fortifying." << endl;
-		bool valid = false;
-		while (valid == false) {
-			int index = getIndexOfCountry()-1;
-
-			if (index + 1 == -1) 
-				break;
-			Country* c = currentPlayer->get_country(index);
-			vector<Country*> countriesConnected = c->getConnectedCountries();
-			for (Country* c2 : countriesConnected) {
-				if (c2->getOwner() == player) {
-					valid = true;
-				}
-			}
-			if (valid == false) {
-				cout << "Sorry, you own the country that you selected, but there is no other country to fortify that is next to it."
-					<< " Please pick again" << endl;
-			}
-			else {
-				cout << "Now choose the index of the country to which you want to send armies to :" << endl;
-				int index2 = getIndexOfCountry()-1;
-				Country* connected = currentPlayer->get_country(index2);
-				// checks if the country he owned is part of the vector of connected countries of the first countries
-				if (find(countriesConnected.begin(), countriesConnected.end(), connected) != countriesConnected.end()) {
-					cout << "Enter how many armies you want to move " << endl;
-					int armies = getArmies(c->get_number_of_armies());
-					if (c->get_number_of_armies() == armies) {
-						valid = false;
-						cout << "Sorry, you cannot move all the armies you have in that country. A country must always have at least 1 army." << endl;
-						cout << "Please enter the number of the country you'd like to move armies from." << endl;
-					}
-					else {
-						
-
-						connected->increment_armies(armies);
-						c->decrement_armies(armies);
-						valid = true;
-					}
-				
-				}
-				else {
-					valid = false;
-					cout << "Invalid choice, please choose a country that is connected to your previous choice." << endl;
-					cout << "Please enter the number of the country you'd like to move armies from." << endl;
-				}
-			}
-		}
-
-		
+		doPlayerFortification();
 	}
 	else {
 		doAIFortification();
@@ -182,8 +249,83 @@ void GameState::fortifyingPhase() {
 
 
 
-
+	
 	updateView();
+}
+
+void GameState::doPlayerFortification() {
+	cout << "Here are the countries that you own and their connections( which you also own) :" << endl;
+	vector<Country*> countriesOwned = currentPlayer->getCountries();
+	for (unsigned int i = 0; i < countriesOwned.size(); ++i) {
+		bool hasAtLeastOne = false; // at least one connection
+		cout << i + 1 << ". Country: " << countriesOwned[i]->get_country_name()
+			<< ", Armies: " << countriesOwned[i]->get_number_of_armies()
+			<< ", friendly connected countries: ";
+		vector<Country*> countriesConnected = countriesOwned[i]->getConnectedCountries();
+		for (unsigned int j = 0; j < countriesConnected.size(); ++j) {
+
+			if (countriesConnected[j]->getOwner() == player) {
+				cout << " \"" << countriesConnected[j]->get_country_name() << "\"";
+				hasAtLeastOne = true;
+			}
+		}
+		if (hasAtLeastOne == false)
+			cout << "none.";
+		cout << endl;
+
+	}
+	// so far we've only displayed a message.
+
+	cout << "\n****Enter the number of the country you'd like to move armies from. If you do not want to fortify"
+		<< ", please enter -1 to stop fortifying." << endl;
+	bool valid = false;
+	while (valid == false) {
+		int index = getIndexOfCountry() - 1;
+
+		if (index + 1 == -1)
+			break;
+		Country* c = currentPlayer->get_country(index);
+		vector<Country*> countriesConnected = c->getConnectedCountries();
+		for (Country* c2 : countriesConnected) {
+			if (c2->getOwner() == player) {
+				valid = true;
+			}
+		}
+		if (valid == false) {
+			cout << "Sorry, you own the country that you selected, but there is no other country to fortify that is next to it."
+				<< " Please pick again" << endl;
+		}
+		else {
+			cout << "Now choose the index of the country to which you want to send armies to :" << endl;
+			int index2 = getIndexOfCountry() - 1;
+			Country* connected = currentPlayer->get_country(index2);
+			// checks if the country he owned is part of the vector of connected countries of the first countries
+			if (find(countriesConnected.begin(), countriesConnected.end(), connected) != countriesConnected.end()) {
+				cout << "Enter how many armies you want to move " << endl;
+				int armies = getArmies(c->get_number_of_armies());
+				if (c->get_number_of_armies() == armies) {
+					valid = false;
+					cout << "Sorry, you cannot move all the armies you have in that country. A country must always have at least 1 army." << endl;
+					cout << "Please enter the number of the country you'd like to move armies from." << endl;
+				}
+				else {
+
+
+					connected->increment_armies(armies);
+					c->decrement_armies(armies);
+					valid = true;
+				}
+
+			}
+			else {
+				valid = false;
+				cout << "Invalid choice, please choose a country that is connected to your previous choice." << endl;
+				cout << "Please enter the number of the country you'd like to move armies from." << endl;
+			}
+		}
+	}
+
+
 }
 void GameState::doAIFortification() {
 	cout << "The AI algorithm will fortify countries randomly" << endl;
@@ -197,7 +339,7 @@ void GameState::doAIFortification() {
 		int armiestoMove = 0;
 		bool validMove = true;
 		if (c1->get_number_of_armies() > 1)
-			armiestoMove = rand() % c1->get_number_of_armies() + 1;
+			armiestoMove = rand() % (c1->get_number_of_armies() - 1) + 1;
 		else
 			validMove = false;
 		if (validMove) {
@@ -274,7 +416,7 @@ void GameState::updatePlayerTurn(int turn) {
 		int t = turn - 2;
 		for (unsigned int i = 0; i < AIPlayers.size(); ++i) {
 			if (t == i)
-				currentPlayer = AIPlayers[i];
+				currentPlayer = AIPlayers.at(i);
 		}
 	}
 }
@@ -296,6 +438,51 @@ vector<Player*> GameState::getAIPlayers() {
 }
 void GameState::setMap(string name) {
 	map = new Map(name); // TODO use the file names to load
+	cout << map->nbOfCountries() << endl;
+}
+
+void GameState::setMap(Map* m) {
+	map = m;
+	cout << map->nbOfCountries() << endl;
+}
+
+void GameState::displaySaveDirectoryContents() {
+	string display = "";
+	tinydir_dir dir;
+	tinydir_open(&dir, "Saves");
+
+	while (dir.has_next)
+	{
+		tinydir_file file;
+		tinydir_readfile(&dir, &file);
+		string filename = file.name;
+		if (filename.compare("Thumbs.db") == 0 || filename.compare(".") == 0 || filename.compare("..") == 0) {
+			display += "";
+		}
+		else {
+			if (file.is_dir && (filename.compare("default") != 0))
+			{
+				display += "";
+			}
+			else {
+				for (int i = 0; i < filename.size(); i++) {
+					if (i < filename.size() - 4) {
+						display += filename[i];
+					}
+				}
+				display += "\n";
+			}
+		}
+		tinydir_next(&dir);
+	}
+
+	tinydir_close(&dir);
+	if (display.length() == 0) {
+		cout << "There are currently no existing save files!" << endl;
+	}
+	else {
+		cout << display << endl;
+	}
 }
 
 void GameState::displayMapDirectoryContents() {
@@ -326,11 +513,18 @@ void GameState::displayMapDirectoryContents() {
 
 	tinydir_close(&dir);
 	if (display.length() == 0) {
-		cout << "There are currently no user created maps!" << endl;
+		cout << "There are currently no existing user created maps!" << endl;
 	}
 	else {
 		cout << display << endl;
 	}
+}
+
+void GameState::removePlayerAtIndex(int i) {
+	currentPlayer = NULL;
+	AIPlayers.erase(AIPlayers.begin() + i);
+
+
 }
 
 void GameState::assignCountries() { 
@@ -408,7 +602,173 @@ int GameState::getIndexOfCountry() {
 	}
 	return index;
 }
-//template<class Archive>
-//void GameState::serialize(Archive & archive) {
-//	archive(currentPlayerTurn);
-//}
+
+std::string GameState::phaseToString() {
+	std::string phase;
+	switch (currentPhase) {
+	case REINFORCING:
+		phase = "REINFORCING";
+		break;
+	case ATTACKING:
+		phase = "ATTACKING";
+		break;
+	default:
+		phase = "FORTIFYING";
+		break;
+	}
+	return phase;
+}
+
+GameState::UnBuilder::UnBuilder(GameState* g) {
+	UnBuilder::gs = g;
+}
+
+GameState::UnBuilder::~UnBuilder() { }
+
+std::string GameState::UnBuilder::unbuild() {
+	std::string unbuilt;
+	
+	std::string mapDirectoryInfo = UnBuilder::gs->getMap()->getMapDirectory();
+	unbuilt += mapDirectoryInfo + "\n";
+	unbuilt += "$\n";
+
+	unbuilt += to_string(UnBuilder::gs->getAIPlayers().size()+1);
+	unbuilt += "\n$\n";
+
+	std::string mainPlayerInfo = UnBuilder::gs->getMainPlayer()->unbuild();
+	unbuilt += mainPlayerInfo;
+	unbuilt += "$\n";
+
+	for (int i = 0; i < UnBuilder::gs->getAIPlayers().size(); i++) {
+		std::string currentAIPlayerInfo = UnBuilder::gs->getAIPlayers().at(i)->unbuild();
+		unbuilt += currentAIPlayerInfo;
+		unbuilt += "$\n";
+	}
+
+	std::string currentPlayerInfo = UnBuilder::gs->getCurrentPlayer()->unbuild();
+	unbuilt += currentPlayerInfo;
+	unbuilt += "$\n";
+
+	std::string phase = UnBuilder::gs->phaseToString();
+	unbuilt += phase;
+	unbuilt += "\n$\n";
+
+	std::vector<Deck::Card> current_deck = UnBuilder::gs->getDeck()->get_current_deck();
+	for (int i = 0; i < current_deck.size(); i++) {
+		if (i != current_deck.size() - 1) {
+			unbuilt += std::to_string(current_deck.at(i).card_id) + ",";
+		}
+		else {
+			unbuilt += std::to_string(current_deck.at(i).card_id) + "\n$";
+		}
+	}
+
+	return unbuilt;
+}
+
+std::string GameState::unbuild() {
+	GameState::UnBuilder ub(this);
+	return ub.unbuild();
+}
+
+GameState::Builder::Builder(std::string bp) {
+	blueprint = bp;
+}
+
+void GameState::Builder::setMapName_tobuild(std::string line) {
+	line.erase(std::remove(line.begin(), line.end(), '\n'), line.end());
+	map_name_tobuild = line;
+}
+
+void GameState::Builder::setMap_tobuild() {
+	map_tobuild = new Map(map_name_tobuild);
+}
+
+void GameState::Builder::setNumOfPlayers_tobuild(std::string line) {
+	num_of_players_tobuild = stoi(line);
+}
+
+void GameState::Builder::setPlayer_tobuild(std::string line) {
+	Player* temp = new Player();
+	player_tobuild = temp->build(line, map_tobuild);
+}
+
+void GameState::Builder::setAIPlayers_tobuild(std::string line) {
+	Player* temp = new Player();
+	ai_players_tobuild.push_back(temp->build(line, map_tobuild));
+}
+
+void GameState::Builder::setCurrentPlayer_tobuild(std::string line) {
+	std::vector<std::string> l = split(line, '\n');
+	if (l.at(1).compare(player_tobuild->get_player_name()) == 0) {
+		current_player_tobuild = player_tobuild;
+	}
+	else {
+		for (int i = 0; i < ai_players_tobuild.size(); i++) {
+			if (l.at(1).compare(ai_players_tobuild.at(i)->get_player_name()) == 0) {
+				current_player_tobuild = ai_players_tobuild.at(i);
+			}
+		}
+	}
+}
+
+void GameState::Builder::setCurrentPhase_tobuild(std::string line) {
+	std::vector<std::string> l = split(line, '\n');
+	if (l.at(1).compare("REINFORCING") == 0) {
+		currentPhase_tobuild = REINFORCING;
+	}
+	else if (l.at(1).compare("ATTACKING") == 0) {
+		currentPhase_tobuild = ATTACKING;
+	}
+	else { currentPhase_tobuild = FORTIFYING; }
+}
+
+void GameState::Builder::setCurrentDeck_tobuild(std::string line) {
+	std::vector<std::string> l = split(line, ',');
+	std::vector<Deck::Card> d;
+	for (int i = 0; i < l.size(); i++) {
+		Deck::Card c;
+		c.card_id = std::stoi(l.at(i));
+		d.push_back(c);
+	}
+	current_deck_tobuild = new Deck;
+	current_deck_tobuild->set_deck(d);
+}
+
+GameState GameState::Builder::build() {
+	std::vector<std::string> contents = split(blueprint, '$');
+	setMapName_tobuild(contents.at(0));
+	setMap_tobuild();
+	setNumOfPlayers_tobuild(contents.at(1));
+	setPlayer_tobuild(contents.at(2));
+	for (int i = 1; i < num_of_players_tobuild; i++) {
+		setAIPlayers_tobuild(contents.at(2 + i));
+	}
+	setCurrentPlayer_tobuild(contents.at(contents.size()-4));
+	setCurrentPhase_tobuild(contents.at(contents.size()-3));
+	setCurrentDeck_tobuild(contents.at(contents.size()-2));
+
+	GameState gs;
+	gs.setMap(map_tobuild);
+	gs.setPlayer(player_tobuild);
+	gs.setAIPlayers(ai_players_tobuild);
+	gs.setPlayerTurn(current_player_tobuild);
+	gs.setGamePhase(currentPhase_tobuild);
+	gs.setDeck(current_deck_tobuild);
+	return gs;
+}
+
+std::vector<std::string> GameState::Builder::split(std::string s, char delim) {
+	std::stringstream ss(s);
+	std::string item;
+	std::vector<string> items;
+	while (std::getline(ss, item, delim)) {
+		items.push_back(item);
+	}
+	return items;
+}
+
+GameState GameState::build(std::string contents) {
+	GameState::Builder b(contents);
+	return b.build();
+}
