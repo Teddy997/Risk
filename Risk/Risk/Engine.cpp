@@ -13,8 +13,14 @@ Engine::Engine()
 	string name = "";
 	cin >> name;
 	gameState = GameState(name); // the name of the human player
-	startPhase();
-	
+	saveLoadManager = SaveLoadManager();
+	if (gameState.getBrandNewGame() == true) {
+		startPhase();
+	}
+	else {
+		chooseGame();
+		loadedGamePlayPhase();
+	}
 }
 
 
@@ -24,6 +30,7 @@ Engine::~Engine()
 
 void Engine::startPhase() {
 	chooseMap();
+	createSaveFile();
 	generateAIPlayers();
 	assignCountries();
 	gamePlayPhase();
@@ -32,29 +39,126 @@ void Engine::startPhase() {
 void Engine::gamePlayPhase(){
 	cout << "Starting the Game!!!" << endl;
 	unsigned int turn = 1;
+	gameState.updatePlayerTurn(turn);
 	while (victoryConditions()) {
-		if (gameState.getCurrentPlayer() != NULL) {
+		Player* p = gameState.getCurrentPlayer();
+		if (p != NULL) {
 		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
 		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
-		cout << "current player's turn: " << gameState.getCurrentPlayer()->get_player_name() << endl;
+		cout << "current player's turn: " << p->get_player_name() << endl;
 		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
 		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
+
 		//if (gameState.getCurrentPlayer() != gameState.getMainPlayer()) {
-			
+		p->set_can_draw(false);
+		//if (p != gameState.getMainPlayer()) {
+				if (p == gameState.getMainPlayer()) {
+					p->view_hand();
+					cardCashingPhase();
+				}
 				reinforcementPhase();
+				saveGame();
 				attackPhase();
 				fortificationPhase();
+				//this is currently only here for testing. set_can_draw is triggered when a player conquers a country,
+				//which is the condition on which they may draw a card
+				p->set_can_draw(true); //TODO: REMOVE. 
+				//
+				if (p->can_player_draw() == true) {
+					p->add_to_hand(gameState.getDeck()->draw_card());
+				}
 			//}
 		}
 		if (turn > gameState.getAIPlayers().size())
 			turn = 0;
 		gameState.updatePlayerTurn(++turn);
-		
 	}
 
 }
 
+void Engine::loadedGamePlayPhase() {
+	cout << "Starting the Game!!!" << endl;
+	/*
+	First turn is special when loading.
+	We don't know what state the game is going to be in, so we have to handle all individual cases.
+	*/
+	gameState.getCurrentPlayer()->set_can_draw(false);
+	gameState.changeGamePhase(gameState.getGamePhase());
+	if (gameState.getGamePhase() == REINFORCING) {
+		saveGame();
+		//attackPhase();
+		fortificationPhase();
+	}
+	else if (gameState.getGamePhase() == ATTACKING) {
+		fortificationPhase();
+	}
+	//this is currently only here for testing. set_can_draw is triggered when a player conquers a country,
+	//which is the condition on which they may draw a card
+	gameState.getCurrentPlayer()->set_can_draw(true); //TODO: REMOVE. 
+	//
+	if (gameState.getCurrentPlayer()->can_player_draw() == true) {
+		gameState.getCurrentPlayer()->add_to_hand(gameState.getDeck()->draw_card());
+	}
+	unsigned int turn = 0;
+	if (gameState.getCurrentPlayer() == gameState.getMainPlayer()) {
+		turn = 2;
+	}
+	else {
+		for (int i = 0; i < gameState.getAIPlayers().size(); i++) {
+			if (gameState.getCurrentPlayer() == gameState.getAIPlayers().at(i)) {
+				turn += i;
+			}
+		}
+	}
+	gameState.updatePlayerTurn(turn);
+	while (victoryConditions()) {
+		Player* p = gameState.getCurrentPlayer();
+		if (p != NULL) {
+			cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
+			cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
+			cout << "current player's turn: " << p->get_player_name() << endl;
+			cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
+			cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
+			p->set_can_draw(false);
+			//if (p != gameState.getMainPlayer()) {
+			if (p == gameState.getMainPlayer()) {
+				p->view_hand();
+				cardCashingPhase();
+			}
+			reinforcementPhase();
+			saveGame();
+			//attackPhase();
+			fortificationPhase();
+			//this is currently only here for testing. set_can_draw is triggered when a player conquers a country,
+			//which is the condition on which they may draw a card
+			p->set_can_draw(true); //TODO: REMOVE. 
+			//
+			if (p->can_player_draw() == true) {
+				p->add_to_hand(gameState.getDeck()->draw_card());
+			}
+			//}
+		}
+		if (turn > gameState.getAIPlayers().size())
+			turn = 0;
+		gameState.updatePlayerTurn(++turn);
+	}
+}
 
+void Engine::cardCashingPhase() {
+	bool valid_choice = false;
+	while (valid_choice == false) {
+		cout << "1. Cash Cards\t 2. Proceed to Reinforcement Phase" << endl;
+		int choice = 0;
+		choice = InputProcedure::get_choice();
+		if (choice == 1) {
+			gameState.getCurrentPlayer()->cash_cards(*gameState.getDeck());
+		}
+		else if (choice == 2) {
+			valid_choice = true;
+		}
+		else { cout << "Not a valid choice." << endl; }
+	}
+}
 
 void Engine::reinforcementPhase() {
 	cout << "Reinforcing..." << endl;
@@ -197,6 +301,55 @@ void Engine::assignCountries() {
 	cout << "done.\n" << endl;
 }
 
+void Engine::createSaveFile() {
+	std::string temp; std::string saveFile;
+	bool valid = false;
+	while (valid == false) {
+		cout << "Please enter a name for your save file." << endl;
+		getline(cin, temp);
+		saveFile = "Saves//" + temp + ".txt";
+		std::fstream filestr;
+		//If it does open, then the path is valid, and we can choose this map
+		filestr.open(saveFile);
+		if (filestr.is_open()) {
+			filestr.close();
+			cout << "This save file name already exists. Do you wish to overwrite it?" << endl;
+			cout << "1. No \t 2. Yes" << endl;
+			int choice = InputProcedure::get_choice();
+			if (choice == 1) { cout << "File will not be overwritten." << endl; }
+			else if (choice == 2) { cout << "File will be overwritten." << endl; valid = true; }
+			else { cout << "Invalid choice." << endl; }
+		}
+		else { valid = true; }
+	}
+	cout << "Save file created." << endl;
+	saveLoadManager.setFile(saveFile);
+}
 
+void Engine::saveGame() {
+	saveLoadManager.SaveGame(gameState);
+}
 
+void Engine::loadGame(string filename) {
+	saveLoadManager.setFile("Saves//"+filename+".txt");
+	gameState = saveLoadManager.LoadGame(filename);
+}
 
+void Engine::chooseGame() {
+	std::string temp; std::string saveFile;
+	bool valid = false;
+	while (valid == false) {
+		getline(cin, temp);
+		saveFile = "Saves//" + temp + ".txt";
+		std::fstream filestr;
+		//If it does open, then the path is valid, and we can choose this game
+		filestr.open(saveFile);
+		if (filestr.is_open()) {
+			filestr.close();
+			valid = true;
+		}
+		else { cout << "Not a valid file name. Please try again!" << endl; }
+	}
+	cout << "Loading " + temp + "..." << endl;
+	loadGame(temp);
+}

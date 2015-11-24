@@ -281,6 +281,7 @@ namespace Combat {
 									def_country.get_owner()->remove_country(def_country);
 									//Through the Player pointer in att_country, assign the def_country to their countries_owned vector
 									att_country.get_owner()->assign_country(def_country);
+									att_country.get_owner()->incrementBattlesWon();
 									//Attacker uses move_armies logic to move a number of armies from att_country to def_country
 									if (userCalled)
 										Combat::move_armies(choice, att_country, def_country, true);
@@ -328,6 +329,7 @@ namespace Combat {
 									def_country.get_owner()->remove_country(def_country);
 									//Through the Player pointer in att_country, assign the def_country to their countries_owned vector
 									att_country.get_owner()->assign_country(def_country);
+									att_country.get_owner()->incrementBattlesWon();
 									//Attacker uses move_armies logic to move a number of armies from att_country to def_country
 									if (userCalled)
 										Combat::move_armies(choice, att_country, def_country, true);
@@ -347,6 +349,7 @@ namespace Combat {
 									def_country.get_owner()->remove_country(def_country);
 									//Through the Player pointer in att_country, assign the def_country to their countries_owned vector
 									att_country.get_owner()->assign_country(def_country);
+									att_country.get_owner()->incrementBattlesWon();
 									//Attacker uses move_armies logic to move a number of armies from att_country to def_country
 									if (userCalled)
 										Combat::move_armies(choice, att_country, def_country, true);
@@ -384,6 +387,7 @@ namespace Combat {
 									def_country.get_owner()->remove_country(def_country);
 									//Through the Player pointer in att_country, assign the def_country to their countries_owned vector
 									att_country.get_owner()->assign_country(def_country);
+									att_country.get_owner()->incrementBattlesWon();
 									//Attacker uses move_armies logic to move a number of armies from att_country to def_country
 									if (userCalled)
 										Combat::move_armies(choice, att_country, def_country, true);
@@ -431,6 +435,7 @@ namespace Combat {
 									def_country.get_owner()->remove_country(def_country);
 									//Through the Player pointer in att_country, assign the def_country to their countries_owned vector
 									att_country.get_owner()->assign_country(def_country);
+									att_country.get_owner()->incrementBattlesWon();
 									//Attacker uses move_armies logic to move a number of armies from att_country to def_country
 									if (userCalled)
 										Combat::move_armies(choice, att_country, def_country, true);
@@ -450,6 +455,7 @@ namespace Combat {
 									def_country.get_owner()->remove_country(def_country);
 									//Through the Player pointer in att_country, assign the def_country to their countries_owned vector
 									att_country.get_owner()->assign_country(def_country);
+									att_country.get_owner()->incrementBattlesWon();
 									//Attacker uses move_armies logic to move a number of armies from att_country to def_country
 									if (userCalled)
 										Combat::move_armies(choice, att_country, def_country, true);
@@ -469,6 +475,7 @@ namespace Combat {
 									def_country.get_owner()->remove_country(def_country);
 									//Through the Player pointer in att_country, assign the def_country to their countries_owned vector
 									att_country.get_owner()->assign_country(def_country);
+									att_country.get_owner()->incrementBattlesWon();
 									//Attacker uses move_armies logic to move a number of armies from att_country to def_country
 									if (userCalled)
 										Combat::move_armies(choice, att_country, def_country, true);
@@ -506,6 +513,7 @@ namespace Combat {
 									def_country.get_owner()->remove_country(def_country);
 									//Through the Player pointer in att_country, assign the def_country to their countries_owned vector
 									att_country.get_owner()->assign_country(def_country);
+									att_country.get_owner()->incrementBattlesWon();
 									//Attacker uses move_armies logic to move a number of armies from att_country to def_country
 									if (userCalled)
 										Combat::move_armies(choice, att_country, def_country, true);

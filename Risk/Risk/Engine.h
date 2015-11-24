@@ -1,17 +1,20 @@
 #pragma once
 #include <vector>
 #include <fstream>
+#include <string>
 #include "GameState.h"
 #include "InputProcedure.h"
-
+#include "SaveLoadManager.h"
 
 class Engine
 {
 private:
 	GameState gameState; // the state of the game.
+	SaveLoadManager saveLoadManager;
 	bool victory, defeat; 
 
 	void startPhase();
+	void cardCashingPhase();
 	void reinforcementPhase();
 	void attackPhase();
 	void fortificationPhase();
@@ -24,6 +27,12 @@ private:
 	bool victoryConditions(); // checks after each player's turn if anybody won or if the human player lost
 
 	void gamePlayPhase();
+	void loadedGamePlayPhase();
+
+	void createSaveFile();
+	void chooseGame();
+	void saveGame();
+	void loadGame(std::string filename);
 public:
 	Engine();
 	~Engine();

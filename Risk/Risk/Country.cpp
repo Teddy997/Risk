@@ -43,6 +43,15 @@ Country::~Country() {
 	//std::cout << get_country_name() + " Country object destroyed." << std::endl;
 }
 
+Country::Country(const Country &anotherCountry) {
+	country_name = anotherCountry.country_name;
+	continent_name = anotherCountry.continent_name;
+	owner = anotherCountry.owner;
+	containing_continent = anotherCountry.containing_continent;
+	is_owned = anotherCountry.is_owned;
+	number_of_armies = anotherCountry.number_of_armies;
+}
+
 void Country::set_continent_name(std::string c_name) {
 	continent_name = c_name;
 	notifyObservers();
