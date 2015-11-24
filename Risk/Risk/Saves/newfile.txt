@@ -1,0 +1,43 @@
+Eric's
+$
+4
+$
+Eric
+South Africa:9,Middle East:5,Ural:5,India:3,Siberia:2,China:3,Kamchatka:2,KOREA:4
+0
+NoStrat
+
+4
+$
+AI Michonne
+Northwest Territory:5,Ontario:5,Peru:4,Argentina:2,North Africa:2,Congo:2,Great Britain:2,Southern Europe:4,Indonesia:4
+0
+Agressive
+
+4
+$
+AI Jon Snow
+Alaska:2,Alberta:2,Greenland:2,Eastern United States:3,Central America:3,Venezuala:2,East Africa:4,Egypt:4,Western Europe:2,Ukraine:1,Siam:1,Mongolia:1,Irkutsk:1,Japan:1,Western Australia:1
+0
+Agressive
+
+4
+$
+AI Heisenberg
+Quebec:2,Western United States:4,Brazil:4,Madagascar:3,Iceland:2,Scandinavia:2,Northern Europe:4,Afghanistan:3,Yatusk:3,New Guinea:1,Eastern Australia:1,pls:1
+0
+Agressive
+
+4
+$
+Eric
+South Africa:9,Middle East:5,Ural:5,India:3,Siberia:2,China:3,Kamchatka:2,KOREA:4
+0
+NoStrat
+
+4
+$
+REINFORCING
+$
+0,0,2,2,0,2,2,2,2,2,0,1,0,2,0,1,0,1,1,1,1,0,2,1,1,1,0,2,0,1
+$
