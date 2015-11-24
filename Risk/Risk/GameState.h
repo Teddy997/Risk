@@ -100,6 +100,9 @@ private:
 	void doAIReinforcement(int armies);
 	void doAIFortification();
 	void doAIAttacking();
+	void doPlayerAttacking();
+	void doPlayerFortification();
+	void displayAttackOptions();
 	void setPlayerTurn(Player* p);
 	void manageMap();
 };
