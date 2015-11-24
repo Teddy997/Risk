@@ -98,7 +98,7 @@ public:
 	void incrementBattlesWon();
 	void setBattlesWon(int num);
 	int getBattlesWon();
-	
+	int getNumberOfCards();
 	std::string unbuild();
 
 	Player(const Player &anotherPlayer);

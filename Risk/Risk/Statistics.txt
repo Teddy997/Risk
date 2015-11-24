@@ -1,0 +1,165 @@
+===========================================NEW TURN==========================================
+rad's countries: 
+1.  Country: Northwest Territory, Armies: 3
+2.  Country: Greenland, Armies: 3
+3.  Country: Western United States, Armies: 2
+4.  Country: Peru, Armies: 4
+5.  Country: Brazil, Armies: 4
+6.  Country: South Africa, Armies: 2
+7.  Country: Madagascar, Armies: 3
+8.  Country: East Africa, Armies: 3
+9.  Country: Western Europe, Armies: 3
+10. Country: Northern Europe, Armies: 1
+11. Country: Southern Europe, Armies: 1
+12. Country: Middle East, Armies: 1
+13. Country: Ural, Armies: 1
+14. Country: Afghanistan, Armies: 1
+15. Country: China, Armies: 1
+16. Country: Siam, Armies: 1
+17. Country: Irkutsk, Armies: 1
+18. Country: Yatusk, Armies: 1
+19. Country: Kamchatka, Armies: 1
+20. Country: Japan, Armies: 1
+21. Country: Western Australia, Armies: 1
+22. Country: KOREA, Armies: 1
+
+Armies owned: 40
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 4
+2.  Country: Alberta, Armies: 4
+3.  Country: Ontario, Armies: 3
+4.  Country: Quebec, Armies: 4
+5.  Country: Eastern United States, Armies: 3
+6.  Country: Central America, Armies: 4
+7.  Country: Venezuala, Armies: 3
+8.  Country: Argentina, Armies: 1
+9.  Country: North Africa, Armies: 1
+10. Country: Congo, Armies: 1
+11. Country: Egypt, Armies: 1
+12. Country: Iceland, Armies: 1
+13. Country: Great Britain, Armies: 1
+14. Country: Scandinavia, Armies: 1
+15. Country: Ukraine, Armies: 1
+16. Country: India, Armies: 1
+17. Country: Siberia, Armies: 1
+18. Country: Mongolia, Armies: 1
+19. Country: Indonesia, Armies: 1
+20. Country: New Guinea, Armies: 1
+21. Country: Eastern Australia, Armies: 1
+22. Country: pls, Armies: 1
+
+Armies owned: 40
+Number of cards: 0
+
+===========================================NEW TURN==========================================
+rad's countries: 
+1.  Country: Alaska, Armies: 3
+2.  Country: Quebec, Armies: 3
+3.  Country: Western United States, Armies: 4
+4.  Country: Eastern United States, Armies: 4
+5.  Country: Peru, Armies: 4
+6.  Country: Argentina, Armies: 1
+7.  Country: Brazil, Armies: 1
+8.  Country: North Africa, Armies: 1
+9.  Country: South Africa, Armies: 1
+10. Country: Egypt, Armies: 1
+11. Country: Iceland, Armies: 1
+12. Country: Western Europe, Armies: 1
+13. Country: Scandinavia, Armies: 1
+14. Country: Northern Europe, Armies: 1
+15. Country: Ukraine, Armies: 1
+16. Country: Afghanistan, Armies: 1
+17. Country: India, Armies: 1
+18. Country: Siberia, Armies: 1
+19. Country: China, Armies: 1
+20. Country: Siam, Armies: 1
+21. Country: Mongolia, Armies: 1
+22. Country: Japan, Armies: 1
+23. Country: Indonesia, Armies: 1
+24. Country: New Guinea, Armies: 1
+25. Country: Eastern Australia, Armies: 1
+26. Country: KOREA, Armies: 1
+27. Country: pls, Armies: 1
+
+Armies owned: 40
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Northwest Territory, Armies: 2
+2.  Country: Alberta, Armies: 4
+3.  Country: Greenland, Armies: 3
+4.  Country: Ontario, Armies: 3
+5.  Country: Central America, Armies: 4
+6.  Country: Venezuala, Armies: 4
+7.  Country: Congo, Armies: 4
+8.  Country: Madagascar, Armies: 2
+9.  Country: East Africa, Armies: 2
+10. Country: Great Britain, Armies: 4
+11. Country: Southern Europe, Armies: 2
+12. Country: Middle East, Armies: 1
+13. Country: Ural, Armies: 1
+14. Country: Irkutsk, Armies: 1
+15. Country: Yatusk, Armies: 1
+16. Country: Kamchatka, Armies: 1
+17. Country: Western Australia, Armies: 1
+
+Armies owned: 40
+Number of cards: 0
+
+===========================================NEW TURN==========================================
+rad7's countries: 
+1.  Country: Alaska, Armies: 4
+2.  Country: Western United States, Armies: 3
+3.  Country: Venezuala, Armies: 3
+4.  Country: Argentina, Armies: 2
+5.  Country: Brazil, Armies: 2
+6.  Country: North Africa, Armies: 3
+7.  Country: East Africa, Armies: 3
+8.  Country: Egypt, Armies: 4
+9.  Country: Great Britain, Armies: 4
+10. Country: Southern Europe, Armies: 3
+11. Country: Afghanistan, Armies: 1
+12. Country: Siberia, Armies: 1
+13. Country: China, Armies: 1
+14. Country: Siam, Armies: 1
+15. Country: Mongolia, Armies: 1
+16. Country: Irkutsk, Armies: 1
+17. Country: Japan, Armies: 1
+18. Country: KOREA, Armies: 1
+19. Country: pls, Armies: 1
+
+Armies owned: 40
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Northwest Territory, Armies: 2
+2.  Country: Alberta, Armies: 2
+3.  Country: Greenland, Armies: 3
+4.  Country: Ontario, Armies: 4
+5.  Country: Quebec, Armies: 4
+6.  Country: Eastern United States, Armies: 4
+7.  Country: Central America, Armies: 3
+8.  Country: Peru, Armies: 1
+9.  Country: Congo, Armies: 1
+10. Country: South Africa, Armies: 1
+11. Country: Madagascar, Armies: 1
+12. Country: Iceland, Armies: 1
+13. Country: Western Europe, Armies: 1
+14. Country: Scandinavia, Armies: 1
+15. Country: Northern Europe, Armies: 1
+16. Country: Ukraine, Armies: 1
+17. Country: Middle East, Armies: 1
+18. Country: Ural, Armies: 1
+19. Country: India, Armies: 1
+20. Country: Yatusk, Armies: 1
+21. Country: Kamchatka, Armies: 1
+22. Country: Indonesia, Armies: 1
+23. Country: New Guinea, Armies: 1
+24. Country: Western Australia, Armies: 1
+25. Country: Eastern Australia, Armies: 1
+
+Armies owned: 40
+Number of cards: 0
+

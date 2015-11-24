@@ -1,0 +1,43 @@
+default map
+$
+4
+$
+rad
+Quebec:10,Eastern United States:3,Peru:4,Brazil:3,Congo:1,Madagascar:1,Iceland:1,Great Britain:1,Scandinavia:1,Ukraine:1,Ural:1
+0
+NoStrat
+0
+4
+$
+AI Michonne
+Venezuala:3,East Africa:1,Afghanistan:1,Kamchatka:1,New Guinea:2,KOREA:1,North Africa:1,Siam:1,Mongolia:2,Indonesia:1,Eastern Australia:2,Alberta:3,Siberia:2,Western Australia:2,Irkutsk:1
+10
+Agressive
+0
+4
+$
+AI Jon Snow
+Alaska:1,Northwest Territory:3,Greenland:1,Ontario:1,Western United States:2,Northern Europe:1,Middle East:1,Yatusk:1,Central America:3,Western Europe:1,India:1,Japan:2,Southern Europe:1
+5
+Agressive
+1
+4
+$
+AI Heisenberg
+Argentina:5,South Africa:5,Egypt:9,China:6,pls:3
+0
+Agressive
+
+4
+$
+AI Heisenberg
+Argentina:5,South Africa:5,Egypt:9,China:6,pls:3
+0
+Agressive
+
+4
+$
+REINFORCING
+$
+2,2,1,2,1,1,2,2,0,2,2,2,0,1,0,2,0,0,1,0,1,0,1,1,0,2,1
+$
