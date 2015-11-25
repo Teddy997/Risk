@@ -13,9 +13,8 @@ Engine::Engine()
 	string name = "";
 	cin >> name;
 	gameState = new GameState(name); // the name of the human player
-	StatisticsView* v = new StatisticsView(gameState);
-	v = new StatisticsWorld(v);
-	gameState->Attach(v);
+	
+	bool loaded = false;
 	
 	saveLoadManager = SaveLoadManager();
 	if (gameState->getBrandNewGame() == true) {
@@ -23,8 +22,16 @@ Engine::Engine()
 	}
 	else {
 		chooseGame();
-		loadedGamePlayPhase();
+		loaded = true;
+		//loadedGamePlayPhase();
 	}
+	StatisticsView* v = new StatisticsView(gameState);
+	v = new StatisticsWorld(v);
+	gameState->Attach(v);
+	if (loaded)
+		loadedGamePlayPhase();
+	else
+		gamePlayPhase();
 }
 
 
@@ -37,7 +44,7 @@ void Engine::startPhase() {
 	createSaveFile();
 	generateAIPlayers();
 	assignCountries();
-	gamePlayPhase();
+	
 }
 
 void Engine::gamePlayPhase(){
@@ -47,7 +54,6 @@ void Engine::gamePlayPhase(){
 	while (victoryConditions()) {
 		Player* p = gameState->getCurrentPlayer();
 		if (p != NULL) {
-		cout << "should notify next line" << endl;
 		gameState->Notify();
 		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
 		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
@@ -338,8 +344,7 @@ void Engine::saveGame() {
 
 void Engine::loadGame(string filename) {
 	saveLoadManager.setFile("Saves//"+filename+".txt");
-	
-	//gameState = saveLoadManager.LoadGame(filename);
+	gameState = new GameState(saveLoadManager.LoadGame(filename));
 }
 
 void Engine::chooseGame() {

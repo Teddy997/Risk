@@ -12,6 +12,7 @@ public:
 
 		view->Update();
 	}
+	StatisticsDecorator(GameState* g) : StatisticsView(g) {};
 	StatisticsDecorator();
 	~StatisticsDecorator();
 };

@@ -9,6 +9,7 @@ public:
 	StatisticsView(GameState* game);
 	void Update();
 	void display();
+	GameState* getGameState();
 private:
 
 	GameState* gameState;

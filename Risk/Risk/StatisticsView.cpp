@@ -21,8 +21,11 @@ StatisticsView::StatisticsView(GameState* game) {
 void StatisticsView::Update() {
 	display();
 }
-
+GameState* StatisticsView::getGameState() {
+	return gameState;
+}
 void StatisticsView::display() {
+	cout << "called display in statview" << endl;
 	ofstream out;
 	out.open("Statistics.txt", std::ios_base::app);
 	vector<Player*> AIPlayers = gameState->getAIPlayers();
