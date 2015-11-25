@@ -12,15 +12,26 @@ Engine::Engine()
 
 	string name = "";
 	cin >> name;
-	gameState = GameState(name); // the name of the human player
+	gameState = new GameState(name); // the name of the human player
+	
+	bool loaded = false;
+	
 	saveLoadManager = SaveLoadManager();
-	if (gameState.getBrandNewGame() == true) {
+	if (gameState->getBrandNewGame() == true) {
 		startPhase();
 	}
 	else {
 		chooseGame();
-		loadedGamePlayPhase();
+		loaded = true;
+		//loadedGamePlayPhase();
 	}
+	StatisticsView* v = new StatisticsView(gameState);
+	v = new StatisticsWorld(v);
+	gameState->Attach(v);
+	if (loaded)
+		loadedGamePlayPhase();
+	else
+		gamePlayPhase();
 }
 
 
@@ -33,26 +44,27 @@ void Engine::startPhase() {
 	createSaveFile();
 	generateAIPlayers();
 	assignCountries();
-	gamePlayPhase();
+	
 }
 
 void Engine::gamePlayPhase(){
 	cout << "Starting the Game!!!" << endl;
 	unsigned int turn = 1;
-	gameState.updatePlayerTurn(turn);
+	gameState->updatePlayerTurn(turn);
 	while (victoryConditions()) {
-		Player* p = gameState.getCurrentPlayer();
+		Player* p = gameState->getCurrentPlayer();
 		if (p != NULL) {
+		gameState->Notify();
 		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
 		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
 		cout << "current player's turn: " << p->get_player_name() << endl;
 		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
 		cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
 
-		//if (gameState.getCurrentPlayer() != gameState.getMainPlayer()) {
+		//if (gameState->getCurrentPlayer() != gameState->getMainPlayer()) {
 		p->set_can_draw(false);
-		//if (p != gameState.getMainPlayer()) {
-				if (p == gameState.getMainPlayer()) {
+		//if (p != gameState->getMainPlayer()) {
+				if (p == gameState->getMainPlayer()) {
 					p->view_hand();
 					cardCashingPhase();
 				}
@@ -65,13 +77,13 @@ void Engine::gamePlayPhase(){
 				p->set_can_draw(true); //TODO: REMOVE. 
 				//
 				if (p->can_player_draw() == true) {
-					p->add_to_hand(gameState.getDeck()->draw_card());
+					p->add_to_hand(gameState->getDeck()->draw_card());
 				}
 			//}
 		}
-		if (turn > gameState.getAIPlayers().size())
+		if (turn > gameState->getAIPlayers().size())
 			turn = 0;
-		gameState.updatePlayerTurn(++turn);
+		gameState->updatePlayerTurn(++turn);
 	}
 
 }
@@ -82,37 +94,37 @@ void Engine::loadedGamePlayPhase() {
 	First turn is special when loading.
 	We don't know what state the game is going to be in, so we have to handle all individual cases.
 	*/
-	gameState.getCurrentPlayer()->set_can_draw(false);
-	gameState.changeGamePhase(gameState.getGamePhase());
-	if (gameState.getGamePhase() == REINFORCING) {
+	gameState->getCurrentPlayer()->set_can_draw(false);
+	gameState->changeGamePhase(gameState->getGamePhase());
+	if (gameState->getGamePhase() == REINFORCING) {
 		saveGame();
 		//attackPhase();
 		fortificationPhase();
 	}
-	else if (gameState.getGamePhase() == ATTACKING) {
+	else if (gameState->getGamePhase() == ATTACKING) {
 		fortificationPhase();
 	}
 	//this is currently only here for testing. set_can_draw is triggered when a player conquers a country,
 	//which is the condition on which they may draw a card
-	gameState.getCurrentPlayer()->set_can_draw(true); //TODO: REMOVE. 
+	gameState->getCurrentPlayer()->set_can_draw(true); //TODO: REMOVE. 
 	//
-	if (gameState.getCurrentPlayer()->can_player_draw() == true) {
-		gameState.getCurrentPlayer()->add_to_hand(gameState.getDeck()->draw_card());
+	if (gameState->getCurrentPlayer()->can_player_draw() == true) {
+		gameState->getCurrentPlayer()->add_to_hand(gameState->getDeck()->draw_card());
 	}
 	unsigned int turn = 0;
-	if (gameState.getCurrentPlayer() == gameState.getMainPlayer()) {
+	if (gameState->getCurrentPlayer() == gameState->getMainPlayer()) {
 		turn = 2;
 	}
 	else {
-		for (int i = 0; i < gameState.getAIPlayers().size(); i++) {
-			if (gameState.getCurrentPlayer() == gameState.getAIPlayers().at(i)) {
+		for (int i = 0; i < gameState->getAIPlayers().size(); i++) {
+			if (gameState->getCurrentPlayer() == gameState->getAIPlayers().at(i)) {
 				turn += i;
 			}
 		}
 	}
-	gameState.updatePlayerTurn(turn);
+	gameState->updatePlayerTurn(turn);
 	while (victoryConditions()) {
-		Player* p = gameState.getCurrentPlayer();
+		Player* p = gameState->getCurrentPlayer();
 		if (p != NULL) {
 			cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
 			cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
@@ -120,8 +132,8 @@ void Engine::loadedGamePlayPhase() {
 			cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
 			cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
 			p->set_can_draw(false);
-			//if (p != gameState.getMainPlayer()) {
-			if (p == gameState.getMainPlayer()) {
+			//if (p != gameState->getMainPlayer()) {
+			if (p == gameState->getMainPlayer()) {
 				p->view_hand();
 				cardCashingPhase();
 			}
@@ -134,13 +146,13 @@ void Engine::loadedGamePlayPhase() {
 			p->set_can_draw(true); //TODO: REMOVE. 
 			//
 			if (p->can_player_draw() == true) {
-				p->add_to_hand(gameState.getDeck()->draw_card());
+				p->add_to_hand(gameState->getDeck()->draw_card());
 			}
 			//}
 		}
-		if (turn > gameState.getAIPlayers().size())
+		if (turn > gameState->getAIPlayers().size())
 			turn = 0;
-		gameState.updatePlayerTurn(++turn);
+		gameState->updatePlayerTurn(++turn);
 	}
 }
 
@@ -151,7 +163,7 @@ void Engine::cardCashingPhase() {
 		int choice = 0;
 		choice = InputProcedure::get_choice();
 		if (choice == 1) {
-			gameState.getCurrentPlayer()->cash_cards(*gameState.getDeck());
+			gameState->getCurrentPlayer()->cash_cards(*gameState->getDeck());
 		}
 		else if (choice == 2) {
 			valid_choice = true;
@@ -162,20 +174,20 @@ void Engine::cardCashingPhase() {
 
 void Engine::reinforcementPhase() {
 	cout << "Reinforcing..." << endl;
-	gameState.changeGamePhase(Phase(REINFORCING));
+	gameState->changeGamePhase(Phase(REINFORCING));
 
 	cout << "done.\n" << endl;
 
 }
 void Engine::attackPhase() {
 	cout << "Attacking...\n" << endl;
-	gameState.changeGamePhase(Phase(ATTACKING));
+	gameState->changeGamePhase(Phase(ATTACKING));
 
 	cout << "done.\n" << endl;
 }
 void Engine::fortificationPhase() {
 	cout << "Fortifying...\n" << endl;
-	gameState.changeGamePhase(Phase(FORTIFYING));
+	gameState->changeGamePhase(Phase(FORTIFYING));
 	cout << "done.\n" << endl;
 
 }
@@ -187,16 +199,16 @@ void Engine::fortificationPhase() {
 bool Engine::victoryConditions() {
 	
 	cout << "Checking to see if the user has won or lost the game" << endl;
-	if (gameState.getMainPlayer()->numberOfCountriesOwned() < 1)
+	if (gameState->getMainPlayer()->numberOfCountriesOwned() < 1)
 		defeat = true;
 	else {
 		bool d = false;
-		vector<Player*> v = gameState.getAIPlayers();
+		vector<Player*> v = gameState->getAIPlayers();
 		for (unsigned int i = 0; i < v.size(); ++i) {
 			
 
 			if (v[i]->numberOfCountriesOwned() < 1) {
-				gameState.removePlayerAtIndex(i);
+				gameState->removePlayerAtIndex(i);
 				victory = true;
 			}
 			else {
@@ -211,7 +223,7 @@ bool Engine::victoryConditions() {
 	}
 	/*
 	cout << "countries connected to : ";
-	Country* c = gameState.getMainPlayer()->get_country(0);
+	Country* c = gameState->getMainPlayer()->get_country(0);
 	cout << c->get_country_name() << endl;
 	cout << "are: " << endl;
 	vector<Country*> cs = c->getConnectedCountries();
@@ -255,7 +267,7 @@ void Engine::generateAIPlayers() {
 	if (valid) {
 		for (unsigned int i = 0; i < names.size(); ++i) {
 			if (opponents > 0) {
-				gameState.addPlayer(names[i]);
+				gameState->addPlayer(names[i]);
 				--opponents;
 			}
 		}
@@ -267,7 +279,7 @@ void Engine::generateAIPlayers() {
 void Engine::chooseMap() {
 	cout << "Choosing the map...\n" << endl;
 	string s = "default";
-	gameState.displayMapDirectoryContents();
+	gameState->displayMapDirectoryContents();
 	cout << "Please type the name of the map you want to play." << endl;
 	
 	bool valid = false;
@@ -290,14 +302,14 @@ void Engine::chooseMap() {
 		}
 	}
 	
-	gameState.setMap(s);
+	gameState->setMap(s);
 	cout << "done.\n" << endl;
 }
 
 
 void Engine::assignCountries() {
 	cout << "Assigning countries to players... \n" << endl;
-	gameState.assignCountries();
+	gameState->assignCountries();
 	cout << "done.\n" << endl;
 }
 
@@ -327,12 +339,12 @@ void Engine::createSaveFile() {
 }
 
 void Engine::saveGame() {
-	saveLoadManager.SaveGame(gameState);
+	saveLoadManager.SaveGame(*gameState);
 }
 
 void Engine::loadGame(string filename) {
 	saveLoadManager.setFile("Saves//"+filename+".txt");
-	gameState = saveLoadManager.LoadGame(filename);
+	gameState = new GameState(saveLoadManager.LoadGame(filename));
 }
 
 void Engine::chooseGame() {

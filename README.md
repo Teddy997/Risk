@@ -6,7 +6,7 @@
 <tr><td>DEFAULT MAP is the default map we can load. Need to prevent anyone from attempting to edit it</td><td></td></tr>
 </table>
 
-<strike><strong>CHECKLIST FOR PD1 (NOV 11 OR NOV 12)</strong>
+<strong>CHECKLIST FOR FINAL PROJECT (DEC 3 OR DEC 4)</strong>
 <table>
 <tr>
 <td>User-driven creation of map elements, such as country, continent, and connectivity between countries.</td><td><strong>X</strong></td>
@@ -18,66 +18,60 @@
 <td>Loading a map from an existing file, then editing the map</td><td><strong>X</strong></td>
 </tr>
 <tr>
+<td>Use of the Adapter pattern to save/load from two different map file formats (based on assign3)</td><td></td>
+</tr>
+<tr>
 <td>Verification of map correctness before saving (at least 3 types of incorrect maps)</td><td><strong>X</strong></td>
 </tr>
 <tr>
-<td>Implementation of a game driver implementing the game phases.</td><td><strong>X</strong></td>
+<td>Implementation of a round-robin loop for players' turns/phases, identification of a winner and end of game, defeated player is removed from round-robin loop</td><td></td>
 </tr>
 <tr>
-<td>Game starts by user selection of a user-saved map file, then loads the map as a connected graph.</td><td><strong>X</strong></td>
+<td>Save/Load a game in progress using a Builder pattern (based on assign3)</td><td><strong>X</strong></td>
+</tr>
+<tr>
+<td>Player Observer that displays relevant information about a player (based on assign2)</td><td></td>
+</tr>
+<tr>
+<td>Map Observer that displays relevant information about the map (based on assign2)</td><td></td>
+</tr>
+<tr>
+<td>Game statistics Observer/Decorator that displays user-selected game statistics (based on assign3)</td><td></td>
+</tr>
+<tr>
+<td>Game log Observer/Decorator that displays logging of user-selected players/phased (based on assign3)</td><td></td>
+</tr>
+<tr>
+<td>Game log and game statistics Observers are initially set to show user-selected parts (based on assign3) using the Observer and Decorator patterns</td><td></td>
+</tr>
+<tr>
+<td>User selection of a previously user-saved map, then load the map</td><td><strong>X</strong></td>
 </tr>
 <tr>
 <td>User chooses the number of players, all countries are randomly assigned to players.</td><td><strong>X</strong></td>
 </tr>
 <tr>
-<td>Calculation of correct number of reinforcement armies.</td><td><strong>X</strong></td>
+<td>Types of players are initially assigned and implemented using a Strategy pattern (based on assign2). Types of players can be changed at any time during play.</td><td></td>
 </tr>
 <tr>
-<td>User-driven placement of reinforcement armies on the map.</td><td><strong>X</strong></td>
+<td>Calculation of correct number of reinforcement armies and placement of armies on the map.</td><td><strong>X</strong></td>
+</tr>
+<tr>
+<td>Correct implementation of cards and their additional reinforcements.</td><td></td>
+</tr>
+<tr>
+<td>Correct identification of valid attacking/attacked country.</td><td></td>
+</tr>
+<tr>
+<td>Correct implementation of an attack using the Risk battle model/</td><td></td>
+</tr>
+<tr>
+<td>Correct implementation of the post-battle movement after a victory.</td><td></td>
+</tr>
+<tr>
+<td>A victory gives a card, eliminating a player transfers all the defeated player's cards.</td><td></td>
 </tr>
 <tr>
 <td>Implementation of a valid fortification move according to the Risk rules. </td><td><strong>X</strong></td>
 </tr>
 </table>
-
-Demo Sequence:</br>
-1. Run program</br>
-2. Display options: load map, edit map</br>
-
-Load Map:</br>
-1. Play default</br>
-2. Display others</br>
-
-Display Others:</br>
-1. Show list of maps</br>
-2. User chooses map to load</br>
-
-Edit map:</br>
-1. Choose a new map or choose a map to edit</br>
-
-New edit map:</br>
-1. Type name of map</br>
-2. Load default map</br>
-3. Ask for new country name</br>
-4. Create country with name</br>
-5. Ask for continent that it's contained in OR create new continent</br>
-6. Ask for adjacencies</br>
-7. Check for proper map: (1. continent has at least one country. 2. country has at least 1 adjacency. 3. country belongs to one and only one continent)</br>
-
-Edit existing map:</br>
-1. List map files</br>
-2. Choose map</br>
-3. Proceed to new edit map sequence</br>
-
-Play</br>
-1. Ask number of players (2-4) XXX </br>
-2. Assign countries randomly to players XXX </br>
-3. Put 1 army in each country automagically. Then randomly assign rest. Display message: "for demo purposes we have assigned all armies randomly" XXX </br>
-4. Start main game sequence XXX </br>
-
-Main game sequence:</br>
-1. Player plays first XXX </br>
-2. Reinforcement phase (calculates number of countries/3 and then you can distribute it to your countries) XXX </br>
-3. Skip battle phase cause lame XXX </br>
-4. Fortification phase - only once (player can choose a country they own and move armies to another country they own through a path of adjacent countries they own)</br>
-5. Repeat XXX </br></strike>

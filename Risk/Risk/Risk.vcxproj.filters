@@ -31,19 +31,10 @@
     <ClCompile Include="MapManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MapObserver.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="MapTester.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="observercpp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="playerView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Risk.cpp">
@@ -53,9 +44,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="subject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="AgressiveStrategy.cpp">
@@ -75,6 +63,27 @@
     </ClCompile>
     <ClCompile Include="NoStrategy.cpp">
       <Filter>Source Files\AI Strategy</Filter>
+    </ClCompile>
+    <ClCompile Include="observercpp.cpp">
+      <Filter>Source Files\Observers</Filter>
+    </ClCompile>
+    <ClCompile Include="subject.cpp">
+      <Filter>Source Files\Observers</Filter>
+    </ClCompile>
+    <ClCompile Include="MapObserver.cpp">
+      <Filter>Source Files\Observers</Filter>
+    </ClCompile>
+    <ClCompile Include="playerView.cpp">
+      <Filter>Source Files\Observers</Filter>
+    </ClCompile>
+    <ClCompile Include="StatisticsDecorator.cpp">
+      <Filter>Source Files\Decorators</Filter>
+    </ClCompile>
+    <ClCompile Include="StatisticsView.cpp">
+      <Filter>Source Files\Decorators</Filter>
+    </ClCompile>
+    <ClCompile Include="StatisticsWorld.cpp">
+      <Filter>Source Files\Decorators</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -115,9 +124,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="playerView.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SaveLoadManager.h">
@@ -162,6 +168,18 @@
     <ClInclude Include="NoStrategy.h">
       <Filter>Header Files\AIStrategy</Filter>
     </ClInclude>
+    <ClInclude Include="playerView.h">
+      <Filter>Header Files\Observer Pattern</Filter>
+    </ClInclude>
+    <ClInclude Include="StatisticsWorld.h">
+      <Filter>Header Files\Decorators</Filter>
+    </ClInclude>
+    <ClInclude Include="StatisticsView.h">
+      <Filter>Header Files\Decorators</Filter>
+    </ClInclude>
+    <ClInclude Include="StatisticsDecorator.h">
+      <Filter>Header Files\Decorators</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -184,6 +202,15 @@
     </Filter>
     <Filter Include="Source Files\AI Strategy">
       <UniqueIdentifier>{4ad6a2c9-efba-4f6a-9fae-1929ec9f7342}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Observers">
+      <UniqueIdentifier>{b79a12fe-8b31-4652-8c7c-9479c57e08d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Decorators">
+      <UniqueIdentifier>{130fc94d-0d9e-49a8-ac2b-6b0a98921c23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Decorators">
+      <UniqueIdentifier>{187d9fc7-603a-4f32-8ee3-c41b8270f062}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -12,6 +12,7 @@ GameState::GameState() {
 }
 
 GameState::GameState(string name) {
+	
 	player = new Player(name);
 	currentPlayer = player;
 	currentPlayer->setStrategy(new NoStrategy());
@@ -410,6 +411,8 @@ void GameState::doAIReinforcement(int armies) {
 
 
 void GameState::updatePlayerTurn(int turn) {
+
+
 	if (turn == 1)
 		currentPlayer = player;
 	else {

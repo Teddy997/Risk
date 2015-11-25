@@ -1,7 +1,7 @@
 // subject / observable class cpp file
 #include "subject.h"
 #include "observer.h"
-
+#include <iostream>
 Subject::Subject() {
 	_observers = new list<Observer*>;
 };
@@ -17,6 +17,8 @@ void Subject::Detach(Observer* o) {
 
 void Subject::Notify() {
 	list<Observer*>::iterator i = _observers->begin();
-	for (; i != _observers->end(); i++)
+	for (; i != _observers->end(); i++) {
 		(*i)->Update();
+
+	}
 };
