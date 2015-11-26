@@ -3,7 +3,7 @@
 
 class MapTemplate;
 
-class IMapSavableLoadable
+class IMapLoadableSavable
 {
 public:
 	virtual void Save(MapTemplate mapTemplate) = 0;

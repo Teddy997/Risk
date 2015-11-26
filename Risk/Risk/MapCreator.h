@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 #include <vector>
+#include "MapTemplate.h"
+#include "Helper.h"
 
 using std::vector;
 using std::string;
@@ -28,16 +30,17 @@ private:
 		FROM_EXISTING
 	};
 
+	MapTemplate mapTemplate;
 	string old_name;
 	string template_map_name;	//Map from which the user start adding countries
-	vector<string> country_names;
-	vector<string> continent_names;
-	//First index = A country	Second index = its adjacencies
-	vector < vector <int> > countries_adjacencies;
-	vector<int> continent_of_country;
-	vector<int> continent_bonus;
-	//First index = A continent	Second index = the countries it contains
-	vector< vector <int> > countries_in_continent;
+	//vector<string> country_names;
+	//vector<string> continent_names;
+	////First index = A country	Second index = its adjacencies
+	//vector < vector <int> > countries_adjacencies;
+	//vector<int> continent_of_country;
+	//vector<int> continent_bonus;
+	////First index = A continent	Second index = the countries it contains
+	//vector< vector <int> > countries_in_continent;
 	MapFrame mapFrame;
 
 

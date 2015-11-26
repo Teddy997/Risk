@@ -1,12 +1,12 @@
 #pragma once
-#include "IMapSavableLoadable.h"
+#include "IMapLoadableSavable.h"
 #include "MapTemplate.h"
 
 //Class used to save and load conquest maps
 //using the ".map" extension
 
 class ConquestMapLoaderSaver :
-	public IMapSavableLoadable
+	public IMapLoadableSavable
 {
 public:
 	ConquestMapLoaderSaver();

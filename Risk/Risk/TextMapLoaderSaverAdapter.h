@@ -1,12 +1,12 @@
 #pragma once
-#include "IMapSavableLoadable.h"
+#include "IMapLoadableSavable.h"
 #include "MapTemplate.h"
 
 //This is an adapter class
 //It is used to make a bridge between the original TextMapLoaderSaver (adaptee)
-//and the newly created interface IMapSavableLoadable
+//and the newly created interface IMapLoadableSavable
 class TextMapLoaderSaverAdapter :
-	public IMapSavableLoadable
+	public IMapLoadableSavable
 {
 public:
 	TextMapLoaderSaverAdapter();
