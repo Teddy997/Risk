@@ -31,7 +31,7 @@ void MapCreator::Create_map()
 	do{
 		New_country();
 		cout << "Are you done?" << endl << "1: Yes, I want to save\t2: No, moar countries" << endl;
-		if (mapTemplate.Get_country_names()->size() > 1) {
+		if (mapTemplate.country_names.size() > 1) {
 			bool valid = false;
 			while (valid == false) {
 				changes_to_make = InputProcedure::get_choice();
@@ -73,38 +73,22 @@ void MapCreator::Create_map()
 			name = old_name;
 		}
 	}
-	dontOverwrite--;
-	Save_map(name);
+	mapTemplate.map_name = name;
+	Save_map(MapExtension::TXT);
 }
 
-void MapCreator::Save_map(string name)
+void MapCreator::Save_map(MapExtension mapExtension)
 {
-	std::ofstream outputFileContinent;
-	string continent_file = "Maps\\" + name + "\\" + continent_file_convention;
-
-	outputFileContinent.open(continent_file, std::ofstream::out);
-
-	for (unsigned int i = 0; i < continent_names.size(); i++) {
-		outputFileContinent << continent_names.at(i) << "," << i << "," << continent_bonus.at(i) << endl;
+	if (mapExtension = MapExtension::TXT)
+	{
+		TextMapLoaderSaver tmls;
+		tmls.Save(mapTemplate);
 	}
-
-	outputFileContinent.close();
-
-	////////////////Country/////////////////
-
-	std::ofstream outputFileCountry;
-	string country_file = continent_file = "Maps\\" + name + "\\" + country_file_convention;
-
-	outputFileCountry.open(country_file, std::ofstream::out);	//Append
-
-	for (unsigned int i = 0; i < country_names.size(); i++) {
-		outputFileCountry << country_names.at(i) << "," << i << "," << continent_of_country.at(i);
-		for (unsigned int j = 0; j < countries_adjacencies.at(i).size(); j++) {
-			outputFileCountry << "," << countries_adjacencies.at(i).at(j);
-		}
-		outputFileCountry << endl;
+	else if (mapExtension = MapExtension::CONQUEST)
+	{
+		ConquestMapLoaderSaver cmls;
+		cmls.Save(mapTemplate);
 	}
-	outputFileContinent.close();
 }
 
 void MapCreator::New_country()
@@ -118,7 +102,7 @@ void MapCreator::New_country()
 
 	while (wrongChoice) {
 		cout << "A country needs to be inside a continent: " << endl;
-		if (mapTemplate.Get_continent_names()->empty()) {
+		if (mapTemplate.continent_names.empty()) {
 			cout << "1:New Continent" << endl;		//Can't choose existing if there is none
 			existing = InputProcedure::get_choice();
 			if (existing == 1) {
@@ -141,22 +125,21 @@ void MapCreator::New_country()
 	}
 
 	if (existing == 1) {
-		Add_new("continent", mapTemplate.Get_continent_names());
+		Add_new("continent", &mapTemplate.continent_names);
 		Add_bonus();
-		continent = mapTemplate.Get_continent_names()->size() - 1;	//The last added
+		continent = mapTemplate.continent_names.size() - 1;	//The last added
 		vector <int> newRow;
-		mapTemplate.Get_countries_in_continent()->push_back(newRow);
+		mapTemplate.countries_in_continent.push_back(newRow);
 	}
 	else {
 		continent = Choose_continent();
 	}
 
-	Add_new("country", mapTemplate.Get_country_names());
+	Add_new("country", &mapTemplate.country_names);
 	vector<int> temp_adj = Choose_adjacencies();
-	mapTemplate.Get_countries_adjacencies()->push_back(temp_adj);
+	mapTemplate.countries_adjacencies.push_back(temp_adj);
 	Update_other_adjacencies(temp_adj);
-	//countries_in_continent.at(continent).push_back(country_names.size()-1);
-	mapTemplate.Get_continent_of_country.push_back(continent);
+	mapTemplate.continent_of_country.push_back(continent);
 }
 
 void MapCreator::Add_new(string item, vector<string>* destination)
@@ -167,7 +150,7 @@ void MapCreator::Add_new(string item, vector<string>* destination)
 	while (wrongName)
 	{
 		temp_name = Ask_name(item);
-		if (Search_for_duplicate(temp_name, *destination)) {
+		if (Helper::Search_for_duplicate(temp_name, *destination)) {
 			cout << "That name is already taken! ";
 		}
 		else {
@@ -187,32 +170,15 @@ string MapCreator::Ask_name(string target)
 	return name;
 }
 
-template <typename T1>
-int MapCreator::Search_for_duplicate(T1 item, vector<T1> list)
-{
-	int return_value = 0;
-	if (!list.empty())
-	{
-		for (unsigned int i = 0; i < list.size(); i++)
-		{
-			if (list.at(i) == item) {
-				return_value = 1;
-				break;
-			}
-		}
-	}
-	return return_value;
-}
-
 int MapCreator::Choose_continent()
 {
 	unsigned int chosen_one;
-	Helper::Display_formatted(*mapTemplate.Get_continent_names());	//TODO: not sure about this needs verification
+	Helper::Display_formatted(mapTemplate.continent_names);	//TODO: not sure about this needs verification
 	do
 	{
 		cout << "please choose a continent" << endl;
 		chosen_one = InputProcedure::get_choice();
-	} while (chosen_one < 0 || chosen_one >= mapTemplate.Get_continent_names()->size());
+	} while (chosen_one < 0 || chosen_one >= mapTemplate.continent_names.size());
 	return chosen_one;
 }
 
@@ -222,12 +188,12 @@ vector<int> MapCreator::Choose_adjacencies()
 	bool wrong_number = false;
 	int input;
 	vector<int> chosen_adj;
-	vector<string> countries_without_last(*mapTemplate.Get_country_names());	//TODO: not sure about this either, needs verification
+	vector<string> countries_without_last(mapTemplate.country_names);	//TODO: not sure about this either, needs verification
 	countries_without_last.pop_back();
 
 	cout << "A country also needs adjacencies" << endl;
 	
-	if (mapTemplate.Get_country_names()->size() == 1) {
+	if (mapTemplate.country_names.size() == 1) {
 		cout << "Looks like this it your first country, you will have the chance to add adjacencies from your second country." << endl;
 		//New_country();
 	}
@@ -247,11 +213,11 @@ vector<int> MapCreator::Choose_adjacencies()
 			else if (input >= countries_without_last.size()) {
 				cout << "Invalid choice" << endl;
 			}
-			else if (Search_for_duplicate(input, chosen_adj)) {
+			else if (Helper::Search_for_duplicate(input, chosen_adj)) {
 				cout << "You have already taken this one" << endl;
 			}
 			else {
-				cout << mapTemplate.Get_country_names()->at(input) + " has been added as an adjacency!" << endl;
+				cout << mapTemplate.country_names.at(input) + " has been added as an adjacency!" << endl;
 				chosen_adj.push_back(input);
 				at_least_one++;
 			}
@@ -263,32 +229,31 @@ vector<int> MapCreator::Choose_adjacencies()
 
 void MapCreator::Update_other_adjacencies(vector<int> to_check)
 {
-	int current_country = (country_names.size() - 1);
+	int current_country = (mapTemplate.country_names.size() - 1);
 	if (!to_check.empty()) {
 		for (unsigned int i = 0; i < to_check.size(); i++)
 		{
 			int temp_country_id = to_check.at(i);
-			if (!Search_for_duplicate(current_country, countries_adjacencies.at(temp_country_id)))
+			if (!Helper::Search_for_duplicate(current_country, mapTemplate.countries_adjacencies.at(temp_country_id)))
 				//For every new adjacency of last added country, add this last country to their adjacencies
-				countries_adjacencies.at(to_check.at(i)).push_back(country_names.size() - 1);
+				mapTemplate.countries_adjacencies.at(to_check.at(i)).push_back(mapTemplate.country_names.size() - 1);
 		}
 	}
 }
 
-//TODO
-void MapCreator::Load_existing_map(string mapName)
+//Call the right loader depending on the file extension .txt or .map
+void MapCreator::Load_existing_map(string mapName, MapExtension mapExtension)
 {
-	old_name = mapName;
-	std::ifstream input_country, input_continent;
-	string country_file_path = "Maps\\" + mapName + "\\" + country_file_convention;
-	string continent_file_path = "Maps\\" + mapName + "\\" + continent_file_convention;
-
-	//1. Search file inside location with mapName
-	//2. check extension
-	//3. if .txt ...  if .map ...
-
-	//load should take the mapSave directory in parameters
-
+	if (mapExtension = MapExtension::TXT)
+	{
+		TextMapLoaderSaver tmls;
+		tmls.Load(mapName);
+	}
+	else if (mapExtension = MapExtension::CONQUEST)
+	{
+		ConquestMapLoaderSaver cmls;
+		cmls.Load(mapName);
+	}
 }
 
 void MapCreator::Add_bonus()
@@ -311,7 +276,7 @@ void MapCreator::Add_bonus()
 			}
 		}
 	}
-	mapTemplate.Get_continent_bonus()->push_back(bonus_value);
+	mapTemplate.continent_bonus.push_back(bonus_value);
 }
 
 void MapCreator::Introduction()
@@ -336,7 +301,7 @@ void MapCreator::Introduction()
 	case FROM_SCRATCH:
 		break;
 	case FROM_DEFAULT:
-		Load_existing_map("default");
+		Load_existing_map("default", MapExtension::TXT);
 		break;
 	case FROM_EXISTING:
 		Choose_existing_map();
@@ -348,22 +313,32 @@ void MapCreator::Introduction()
 
 void MapCreator::Choose_existing_map()
 {
-	displayMapDirectoryContents();
+	Helper::DisplayMapDirectoryContents();
 	cout << "Please type the name of the map you want" << endl;
 	string name;
 	bool valid = false;
 	while (valid == false) {
 		getline(cin, name);
 		//Checking whether the map chosen is correct by seeing if countries opens
-		string dirname = "Maps//" + name + "//countries.txt";
+		string dirname_txt = Constants::maps_directory + name + "//countries.txt";
+		string dirname_conquest = Constants::maps_directory + name + "//" + name + ".map";
 		std::fstream filestr;
-		//If it does open, then the path is valid, and we can choose this map
-		filestr.open(dirname);
+		//If it does open the .txt, then the path is valid, and we can choose this map
+		filestr.open(dirname_txt);
 		if (filestr.is_open()) {
 			filestr.close();
+			Load_existing_map(name, MapExtension::TXT);
 			valid = true;
 		}
-		else { cout << "This map doesn't exist!" << endl; }
+		//Else, try to open as a conquest map
+		else {
+			filestr.open(dirname_conquest);
+			if (filestr.is_open()) {
+				filestr.close();
+				Load_existing_map(name, MapExtension::CONQUEST);
+				valid = true;
+			}
+			else { cout << "This map doesn't exist!" << endl; }
+		}
 	}
-	Load_existing_map(name);
 }

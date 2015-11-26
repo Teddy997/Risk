@@ -97,3 +97,20 @@ void Helper::DisplayMapDirectoryContents() {
 		cout << display << endl;
 	}
 }
+
+template <typename T1>
+int Helper::Search_for_duplicate(T1 item, vector<T1> list)
+{
+	int return_value = 0;
+	if (!list.empty())
+	{
+		for (unsigned int i = 0; i < list.size(); i++)
+		{
+			if (list.at(i) == item) {
+				return_value = 1;
+				break;
+			}
+		}
+	}
+	return return_value;
+}

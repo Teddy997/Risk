@@ -7,35 +7,51 @@
 using std::cin;
 using std::getline;
 
-const std::string TextMapLoaderSaver::country_file_convention = "countries.txt";
-const std::string TextMapLoaderSaver::continent_file_convention = "continents.txt";
-
 TextMapLoaderSaver::TextMapLoaderSaver()
 {
 }
-
 
 TextMapLoaderSaver::~TextMapLoaderSaver()
 {
 }
 
-void Save(MapTemplate mapTemplate) {
+void TextMapLoaderSaver::Save(MapTemplate mapTemplate) {
+	std::ofstream outputFileContinent;
+	string continent_file = Constants::maps_directory + mapTemplate.map_name + "\\" + Constants::continent_file_convention;
 
+	outputFileContinent.open(continent_file, std::ofstream::out);
+
+	for (unsigned int i = 0; i < mapTemplate.continent_names.size(); i++) {
+		outputFileContinent << mapTemplate.continent_names.at(i) << "," << i << "," << mapTemplate.continent_bonus.at(i) << std::endl;
+	}
+
+	outputFileContinent.close();
+
+	////////////////Country/////////////////
+
+	std::ofstream outputFileCountry;
+	string country_file = continent_file = Constants::maps_directory + mapTemplate.map_name + "\\" + Constants::country_file_convention;
+
+	outputFileCountry.open(country_file, std::ofstream::out);	//Append
+
+	for (unsigned int i = 0; i < mapTemplate.country_names.size(); i++) {
+		outputFileCountry << mapTemplate.country_names.at(i) << "," << i << "," << mapTemplate.continent_of_country.at(i);
+		for (unsigned int j = 0; j < mapTemplate.countries_adjacencies.at(i).size(); j++) {
+			outputFileCountry << "," << mapTemplate.countries_adjacencies.at(i).at(j);
+		}
+		outputFileCountry << std::endl;
+	}
+	outputFileContinent.close();
 }
+
 MapTemplate TextMapLoaderSaver::Load(std::string mapName)
 {
 	MapTemplate mapTemplate;
-	//Local variables to stock value before setting them in mapTemplate
-	vector<string> country_names;
-	vector<string> continent_names;
-	vector < vector <int> > countries_adjacencies;
-	vector<int> continent_of_country;
-	vector<int> continent_bonus;
-	vector< vector <int> > countries_in_continent;
+	mapTemplate.map_name = mapName;
 
 	std::ifstream input_country, input_continent;
-	string country_file_path = "Maps\\" + mapName + "\\" + country_file_convention;
-	string continent_file_path = "Maps\\" + mapName + "\\" + continent_file_convention;
+	string country_file_path = Constants::maps_directory + mapName + "\\" + Constants::country_file_convention;
+	string continent_file_path = Constants::maps_directory + mapName + "\\" + Constants::continent_file_convention;
 	std::string   line;
 	std::cout << "Loading " + mapName << std::endl;
 	////////////////CONTINENT/////////////////
@@ -45,11 +61,9 @@ MapTemplate TextMapLoaderSaver::Load(std::string mapName)
 		vector<string> splittedLine;
 		Helper::Split(line, ',', splittedLine);
 
-		continent_names.push_back(splittedLine[0]);
-		continent_bonus.push_back(atoi(splittedLine[2].c_str()));
+		mapTemplate.continent_names.push_back(splittedLine[0]);
+		mapTemplate.continent_bonus.push_back(atoi(splittedLine[2].c_str()));
 	}
-	mapTemplate.Set_continent_names(continent_names);
-	mapTemplate.Set_continent_bonus(continent_bonus);
 
 	input_continent.close();
 
@@ -61,19 +75,17 @@ MapTemplate TextMapLoaderSaver::Load(std::string mapName)
 		vector<string> splittedLine;
 		Helper::Split(line, ',', splittedLine);
 
-		country_names.push_back(splittedLine[0]);
-		continent_of_country.push_back(atoi(splittedLine[2].c_str()));
+		mapTemplate.country_names.push_back(splittedLine[0]);
+		mapTemplate.continent_of_country.push_back(atoi(splittedLine[2].c_str()));
 
 		vector <int> newRow;
 		for (unsigned int j = 3; j < splittedLine.size(); j++)
 		{
 			newRow.push_back(atoi(splittedLine[j].c_str()));
 		}
-		countries_adjacencies.push_back(newRow);
+		mapTemplate.countries_adjacencies.push_back(newRow);
 	}
-	mapTemplate.Set_country_names(country_names);
-	mapTemplate.Set_continent_of_country(continent_of_country);
-	mapTemplate.Set_countries_adjacencies(countries_adjacencies);
+
 	input_country.close();
 
 	return mapTemplate;

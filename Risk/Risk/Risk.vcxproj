@@ -19,13 +19,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -87,12 +87,16 @@
     <ClInclude Include="AgressiveStrategy.h" />
     <ClInclude Include="CardCashing.h" />
     <ClInclude Include="Combat.h" />
+    <ClInclude Include="ConquestMapLoaderSaver.h" />
+    <ClInclude Include="Constants.h" />
     <ClInclude Include="Continent.h" />
     <ClInclude Include="Country.h" />
     <ClInclude Include="Deck.h" />
     <ClInclude Include="DefensiveStrategy.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="GameState.h" />
+    <ClInclude Include="Helper.h" />
+    <ClInclude Include="IMapLoadableSavable.h" />
     <ClInclude Include="InputProcedure.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="MapCreator.h" />
@@ -100,6 +104,7 @@
     <ClInclude Include="MapObserver.h" />
     <ClInclude Include="MapObserverPattern.h" />
     <ClInclude Include="MapSubjectPattern.h" />
+    <ClInclude Include="MapTemplate.h" />
     <ClInclude Include="MapTester.h" />
     <ClInclude Include="NoStrategy.h" />
     <ClInclude Include="Observer.h" />
@@ -114,18 +119,23 @@
     <ClInclude Include="Strategy.h" />
     <ClInclude Include="Subject.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="TextMapLoaderSaver.h" />
+    <ClInclude Include="TextMapLoaderSaverAdapter.h" />
     <ClInclude Include="tinydir.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AgressiveStrategy.cpp" />
     <ClCompile Include="CardCashing.cpp" />
     <ClCompile Include="Combat.cpp" />
+    <ClCompile Include="ConquestMapLoaderSaver.cpp" />
+    <ClCompile Include="Constants.cpp" />
     <ClCompile Include="Continent.cpp" />
     <ClCompile Include="Country.cpp" />
     <ClCompile Include="Deck.cpp" />
     <ClCompile Include="DefensiveStrategy.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="GameState.cpp" />
+    <ClCompile Include="Helper.cpp" />
     <ClCompile Include="InputProcedure.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="MapCreator.cpp" />
@@ -148,6 +158,11 @@
     </ClCompile>
     <ClCompile Include="Strategy.cpp" />
     <ClCompile Include="subject.cpp" />
+    <ClCompile Include="TextMapLoaderSaver.cpp" />
+    <ClCompile Include="TextMapLoaderSaverAdapter.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
