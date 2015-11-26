@@ -5,6 +5,11 @@
 
 #pragma once
 
+//These two lines to fix an error with the input procedure
+//" not enough actual parameters for macro 'min' " 
+#define NOMINMAX
+#include <windows.h>
+
 #include "targetver.h"
 
 #include <stdio.h>

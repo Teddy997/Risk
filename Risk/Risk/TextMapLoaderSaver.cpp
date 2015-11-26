@@ -1,8 +1,4 @@
 #include "TextMapLoaderSaver.h"
-#include"Helper.h"
-#include <iostream>
-#include <fstream>
-#include <sstream>
 
 using std::cin;
 using std::getline;
