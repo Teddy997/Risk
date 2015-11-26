@@ -5,11 +5,11 @@
 #include "GameState.h"
 #include "InputProcedure.h"
 #include "SaveLoadManager.h"
-
+#include "StatisticsWorld.h"
 class Engine
 {
 private:
-	GameState gameState; // the state of the game.
+	GameState* gameState; // the state of the game.
 	SaveLoadManager saveLoadManager;
 	bool victory, defeat; 
 

@@ -516,9 +516,9 @@ namespace Combat {
 									att_country.get_owner()->incrementBattlesWon();
 									//Attacker uses move_armies logic to move a number of armies from att_country to def_country
 									if (userCalled)
-										Combat::move_armies(choice, att_country, def_country, true);
+										Combat::move_armies(dice_check, att_country, def_country, true);
 									else
-										Combat::move_armies(choice, att_country, def_country, false);
+										Combat::move_armies(dice_check, att_country, def_country, false);
 								}
 								valid_choice = true;
 							} //End of else if(choice == 9)

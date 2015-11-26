@@ -4,6 +4,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <sstream>
+#include <iterator>
 #include "Country.h"
 #include "Deck.h"
 #include "Strategy.h"
@@ -96,7 +98,7 @@ public:
 	void incrementBattlesWon();
 	void setBattlesWon(int num);
 	int getBattlesWon();
-	
+	int getNumberOfCards();
 	std::string unbuild();
 
 	Player(const Player &anotherPlayer);

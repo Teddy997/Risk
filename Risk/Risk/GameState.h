@@ -10,6 +10,7 @@
 #include "NoStrategy.h"
 #include "InputProcedure.h"
 #include "MapCreator.h"
+#include "StatisticsView.h"
 using namespace std;
 
 enum Phase { // Keeps track of the phase we are currently in.
@@ -18,7 +19,7 @@ enum Phase { // Keeps track of the phase we are currently in.
 	ATTACKING,
 	FORTIFYING
 };
-class GameState
+class GameState : public Subject
 {
 public:
 
@@ -83,6 +84,9 @@ private:
 	void doAIReinforcement(int armies);
 	void doAIFortification();
 	void doAIAttacking();
+	void doPlayerAttacking();
+	void doPlayerFortification();
+	void displayAttackOptions();
 	void setPlayerTurn(Player* p);
 	void manageMap();
 	bool brandNewGame;

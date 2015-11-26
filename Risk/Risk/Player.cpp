@@ -162,7 +162,9 @@ std::string Player::print_countries_owned() {
 	}
 	return countries;
 }
-
+int Player::getNumberOfCards() {
+	return hand.size();
+}
 Country* Player::get_country(int index) {
 	//It's up to the user of get_country to assure that the index is within the valid range ( > -1 && < countries_owned.size()-1 )
 	return countries_owned.at(index);

@@ -130,6 +130,7 @@ void playerObserverTesting() {
 	Player *bob= new Player("bob");
 	Player *meg = new Player("megan");
 	//create a playerview that is connected to the player
+	
 	playerView * pvb = new playerView(bob);
 	playerView * pvm = new playerView(meg);
 	// attach playerviews to each other
@@ -159,7 +160,9 @@ void playerObserverTesting() {
 	NorthAmerica.setContainedCountries(NA);
 	Europe.setContainedCountries(EU);
 	// assign countries to players
+	cout << "aefsfg" << endl;
 	bob->assign_country(c4);
+	cout << "lolol" << endl;
 	meg->assign_country(c2);
 
 	cout << endl << " NA will be completed" << endl;
@@ -303,9 +306,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	//mapObserverTesting();
 
 	//combat_testing();
-	
+	//playerObserverTesting();
 	GameLifeTest();
-	
+	//
 	//playerObserverTesting();
 	//Demo();
 

@@ -12,6 +12,7 @@ GameState::GameState() {
 }
 
 GameState::GameState(string name) {
+	
 	player = new Player(name);
 	currentPlayer = player;
 	currentPlayer->setStrategy(new NoStrategy());
@@ -97,7 +98,7 @@ void GameState::attackingPhase() {
 	cout << currentPlayer->get_player_name() << " is currently attacking...\n" << endl;
 	updateView();
 	if (currentPlayer == player) {
-
+		doPlayerAttacking();
 	}
 	else {
 		doAIAttacking();
@@ -105,6 +106,111 @@ void GameState::attackingPhase() {
 	updateView();
 }
 
+void GameState::displayAttackOptions() {
+	cout << "Here are the countries that you own and their connected ennemy countries :" << endl;
+	vector<Country*> countriesOwned = currentPlayer->getCountries();
+	for (unsigned int i = 0; i < countriesOwned.size(); ++i) {
+		bool hasAtLeastOne = false; // at least one connection
+		cout << i + 1 << ". Country: " << countriesOwned[i]->get_country_name()
+			<< ", Armies: " << countriesOwned[i]->get_number_of_armies()
+			<< ", ennemy connected countries: ";
+		vector<Country*> countriesConnected = countriesOwned[i]->getConnectedCountries();
+		for (unsigned int j = 0; j < countriesConnected.size(); ++j) {
+
+			if (countriesConnected[j]->getOwner() != player) {
+				cout << " \"" << countriesConnected[j]->get_country_name() << "\"";
+				hasAtLeastOne = true;
+			}
+		}
+		if (hasAtLeastOne == false)
+			cout << "none.";
+		cout << endl;
+
+	}
+	cout << "\n****Enter the number of the country you'd like to attack from. If you do not want to attack"
+		<< ", please enter -1 to go to the next phase." << endl;
+}
+void GameState::doPlayerAttacking() {
+
+	displayAttackOptions();
+
+	bool valid = false;
+	bool v = false;
+	while (valid == false) {
+		int index = getIndexOfCountry() - 1;
+
+		if (index + 1 == -1)
+			break;
+		Country* c = currentPlayer->get_country(index);
+		vector<Country*> countriesConnected = c->getConnectedCountries();
+		for (Country* c2 : countriesConnected) {
+			if (c2->getOwner() != player) {
+				v = true;
+			}
+		}
+		if (v == false) {
+			cout << "Sorry, you own the country that you selected, but there is no other country to attack that is next to it."
+				<< " Please pick again" << endl;
+		}
+		else {
+			cout << "Now type in the name correctly(lower case and upper case) of the country you want to attack :" << endl;
+			string name;
+			bool valid2 = false;
+			cin >> name;
+			//int index2 = getIndexOfCountry() - 1;
+			Country* connected;
+			//find the country
+			for (Player* p : AIPlayers) {
+				vector<Country*> countriesOfAI = p->getCountries();
+
+				for (Country* cc : countriesOfAI) {
+					if (name == cc->get_country_name()) {
+						valid2 = true;
+						connected = cc;
+					}
+					if (valid2)
+						break;
+				}
+				if (valid2)
+					break;
+			}
+			if (find(countriesConnected.begin(), countriesConnected.end(), connected) != countriesConnected.end() && valid2) {
+				//cout << "COMBATTTTTTTTTTTTTTING" << endl;
+				Combat::combat(*c, *connected, true, 0, 0, 0);
+
+				cout << endl;
+				displayAttackOptions();
+			}
+			// checks if the country he owned is part of the vector of connected countries of the first countries
+
+				/*
+				cout << "Enter how many armies you want to move " << endl;
+				int armies = getArmies(c->get_number_of_armies());
+				if (c->get_number_of_armies() == armies) {
+					valid = false;
+					cout << "Sorry, you cannot move all the armies you have in that country. A country must always have at least 1 army." << endl;
+					cout << "Please enter the number of the country you'd like to move armies from." << endl;
+				}*/
+			/*
+				else {
+
+
+					connected->increment_armies(armies);
+					c->decrement_armies(armies);
+					valid = true;
+				}
+				*/
+			//}
+			else {
+				valid = false;
+				cout << "Invalid choice, please choose a country that is connected to your previous choice." << endl;
+				cout << "Please enter the number of the country you'd like to attack from." << endl;
+			}
+		}
+	}
+
+
+}
 void GameState::doAIAttacking() {
 	
 	currentPlayer->executeStrategy(player);
@@ -136,78 +242,7 @@ void GameState::fortifyingPhase() {
 	//updateView();
 	// do this whole chunk of code if it's the user's turn
 	if (currentPlayer == player) {
-		cout << "Here are the countries that you own and their connections( which you also own) :" << endl;
-		vector<Country*> countriesOwned = currentPlayer->getCountries();
-		for (unsigned int i = 0; i < countriesOwned.size(); ++i) {
-			bool hasAtLeastOne = false; // at least one connection
-			cout << i + 1 << ". Country: " << countriesOwned[i]->get_country_name()
-				<< ", Armies: " << countriesOwned[i]->get_number_of_armies()
-				<< ", friendly connected countries: ";
-			vector<Country*> countriesConnected = countriesOwned[i]->getConnectedCountries();
-			for (unsigned int j = 0; j < countriesConnected.size(); ++j) {
-
-				if (countriesConnected[j]->getOwner() == player) {
-					cout << " \"" << countriesConnected[j]->get_country_name() << "\"";
-					hasAtLeastOne = true;
-				}
-			}
-			if (hasAtLeastOne == false)
-				cout << "none.";
-			cout << endl;
-			
-		}
-		// so far we've only displayed a message.
-
-		cout << "\n****Enter the number of the country you'd like to move armies from. If you do not want to fortify"
-			<< ", please enter -1 to stop fortifying." << endl;
-		bool valid = false;
-		while (valid == false) {
-			int index = getIndexOfCountry()-1;
-
-			if (index + 1 == -1) 
-				break;
-			Country* c = currentPlayer->get_country(index);
-			vector<Country*> countriesConnected = c->getConnectedCountries();
-			for (Country* c2 : countriesConnected) {
-				if (c2->getOwner() == player) {
-					valid = true;
-				}
-			}
-			if (valid == false) {
-				cout << "Sorry, you own the country that you selected, but there is no other country to fortify that is next to it."
-					<< " Please pick again" << endl;
-			}
-			else {
-				cout << "Now choose the index of the country to which you want to send armies to :" << endl;
-				int index2 = getIndexOfCountry()-1;
-				Country* connected = currentPlayer->get_country(index2);
-				// checks if the country he owned is part of the vector of connected countries of the first countries
-				if (find(countriesConnected.begin(), countriesConnected.end(), connected) != countriesConnected.end()) {
-					cout << "Enter how many armies you want to move " << endl;
-					int armies = getArmies(c->get_number_of_armies());
-					if (c->get_number_of_armies() == armies) {
-						valid = false;
-						cout << "Sorry, you cannot move all the armies you have in that country. A country must always have at least 1 army." << endl;
-						cout << "Please enter the number of the country you'd like to move armies from." << endl;
-					}
-					else {
-						
-
-						connected->increment_armies(armies);
-						c->decrement_armies(armies);
-						valid = true;
-					}
-				
-				}
-				else {
-					valid = false;
-					cout << "Invalid choice, please choose a country that is connected to your previous choice." << endl;
-					cout << "Please enter the number of the country you'd like to move armies from." << endl;
-				}
-			}
-		}
-
-		
+		doPlayerFortification();
 	}
 	else {
 		doAIFortification();
@@ -217,6 +252,81 @@ void GameState::fortifyingPhase() {
 
 	
 	updateView();
+}
+
+void GameState::doPlayerFortification() {
+	cout << "Here are the countries that you own and their connections( which you also own) :" << endl;
+	vector<Country*> countriesOwned = currentPlayer->getCountries();
+	for (unsigned int i = 0; i < countriesOwned.size(); ++i) {
+		bool hasAtLeastOne = false; // at least one connection
+		cout << i + 1 << ". Country: " << countriesOwned[i]->get_country_name()
+			<< ", Armies: " << countriesOwned[i]->get_number_of_armies()
+			<< ", friendly connected countries: ";
+		vector<Country*> countriesConnected = countriesOwned[i]->getConnectedCountries();
+		for (unsigned int j = 0; j < countriesConnected.size(); ++j) {
+
+			if (countriesConnected[j]->getOwner() == player) {
+				cout << " \"" << countriesConnected[j]->get_country_name() << "\"";
+				hasAtLeastOne = true;
+			}
+		}
+		if (hasAtLeastOne == false)
+			cout << "none.";
+		cout << endl;
+
+	}
+	// so far we've only displayed a message.
+
+	cout << "\n****Enter the number of the country you'd like to move armies from. If you do not want to fortify"
+		<< ", please enter -1 to stop fortifying." << endl;
+	bool valid = false;
+	while (valid == false) {
+		int index = getIndexOfCountry() - 1;
+
+		if (index + 1 == -1)
+			break;
+		Country* c = currentPlayer->get_country(index);
+		vector<Country*> countriesConnected = c->getConnectedCountries();
+		for (Country* c2 : countriesConnected) {
+			if (c2->getOwner() == player) {
+				valid = true;
+			}
+		}
+		if (valid == false) {
+			cout << "Sorry, you own the country that you selected, but there is no other country to fortify that is next to it."
+				<< " Please pick again" << endl;
+		}
+		else {
+			cout << "Now choose the index of the country to which you want to send armies to :" << endl;
+			int index2 = getIndexOfCountry() - 1;
+			Country* connected = currentPlayer->get_country(index2);
+			// checks if the country he owned is part of the vector of connected countries of the first countries
+			if (find(countriesConnected.begin(), countriesConnected.end(), connected) != countriesConnected.end()) {
+				cout << "Enter how many armies you want to move " << endl;
+				int armies = getArmies(c->get_number_of_armies());
+				if (c->get_number_of_armies() == armies) {
+					valid = false;
+					cout << "Sorry, you cannot move all the armies you have in that country. A country must always have at least 1 army." << endl;
+					cout << "Please enter the number of the country you'd like to move armies from." << endl;
+				}
+				else {
+
+
+					connected->increment_armies(armies);
+					c->decrement_armies(armies);
+					valid = true;
+				}
+
+			}
+			else {
+				valid = false;
+				cout << "Invalid choice, please choose a country that is connected to your previous choice." << endl;
+				cout << "Please enter the number of the country you'd like to move armies from." << endl;
+			}
+		}
+	}
+
+
 }
 void GameState::doAIFortification() {
 	cout << "The AI algorithm will fortify countries randomly" << endl;
@@ -301,6 +411,8 @@ void GameState::doAIReinforcement(int armies) {
 
 
 void GameState::updatePlayerTurn(int turn) {
+
+
 	if (turn == 1)
 		currentPlayer = player;
 	else {
