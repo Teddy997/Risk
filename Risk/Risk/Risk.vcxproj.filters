@@ -180,6 +180,9 @@
     <ClInclude Include="StatisticsDecorator.h">
       <Filter>Header Files\Decorators</Filter>
     </ClInclude>
+    <ClInclude Include="GameLogObserver.h">
+      <Filter>Header Files\Decorators</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />

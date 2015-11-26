@@ -92,6 +92,7 @@
     <ClInclude Include="Deck.h" />
     <ClInclude Include="DefensiveStrategy.h" />
     <ClInclude Include="Engine.h" />
+    <ClInclude Include="GameLogObserver.h" />
     <ClInclude Include="GameState.h" />
     <ClInclude Include="InputProcedure.h" />
     <ClInclude Include="Map.h" />
