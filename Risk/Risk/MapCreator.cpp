@@ -1,9 +1,4 @@
 #include "MapCreator.h"
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <direct.h>
-#include "InputProcedure.h"
 
 using std::cout;
 using std::cin;

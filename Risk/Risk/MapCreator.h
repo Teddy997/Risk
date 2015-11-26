@@ -1,11 +1,16 @@
 #pragma once
 #include <string>
 #include <vector>
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <direct.h>
 #include "MapTemplate.h"
 #include "Helper.h"
 #include "TextMapLoaderSaver.h"
 #include "ConquestMapLoaderSaver.h"
 #include "Constants.h"
+#include "InputProcedure.h"
 
 using std::vector;
 using std::string;
