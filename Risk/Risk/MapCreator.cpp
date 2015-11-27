@@ -45,7 +45,6 @@ void MapCreator::Create_map()
 		}
 	} while (changes_to_make != 1);
 
-
 	int dontOverwrite = 0;
 	if (mapFrame == FROM_SCRATCH || mapFrame == FROM_DEFAULT) {
 		name = Ask_name("Map");
@@ -68,18 +67,29 @@ void MapCreator::Create_map()
 			name = old_name;
 		}
 	}
+	//Select the saving format
+	cout << "In which format would to save your map?\n1: .txt\t2: .map" << endl;
+	int extension = InputProcedure::get_choice();
+	MapExtension chosenMapExtension = MapExtension::TXT;	//Needed to be initialized
+	if (extension == 1) {
+		chosenMapExtension == MapExtension::TXT;
+	}
+	else if (extension == 2) {
+		chosenMapExtension == MapExtension::CONQUEST;
+	}
+
 	mapTemplate.map_name = name;
-	Save_map(MapExtension::TXT);
+	Save_map(chosenMapExtension);
 }
 
 void MapCreator::Save_map(MapExtension mapExtension)
 {
-	if (mapExtension = MapExtension::TXT)
+	if (mapExtension == MapExtension::TXT)
 	{
 		TextMapLoaderSaver tmls;
 		tmls.Save(mapTemplate);
 	}
-	else if (mapExtension = MapExtension::CONQUEST)
+	else if (mapExtension == MapExtension::CONQUEST)
 	{
 		ConquestMapLoaderSaver cmls;
 		cmls.Save(mapTemplate);
@@ -239,15 +249,15 @@ void MapCreator::Update_other_adjacencies(vector<int> to_check)
 //Call the right loader depending on the file extension .txt or .map
 void MapCreator::Load_existing_map(string mapName, MapExtension mapExtension)
 {
-	if (mapExtension = MapExtension::TXT)
+	if (mapExtension == MapExtension::TXT)
 	{
 		TextMapLoaderSaver tmls;
-		tmls.Load(mapName);
+		mapTemplate = tmls.Load(mapName);
 	}
-	else if (mapExtension = MapExtension::CONQUEST)
+	else if (mapExtension == MapExtension::CONQUEST)
 	{
 		ConquestMapLoaderSaver cmls;
-		cmls.Load(mapName);
+		mapTemplate = cmls.Load(mapName);
 	}
 }
 
@@ -315,8 +325,8 @@ void MapCreator::Choose_existing_map()
 	while (valid == false) {
 		getline(cin, name);
 		//Checking whether the map chosen is correct by seeing if countries opens
-		string dirname_txt = Constants::maps_directory + name + "//countries.txt";
-		string dirname_conquest = Constants::maps_directory + name + "//" + name + ".map";
+		string dirname_txt = Constants::maps_directory + name + "\\countries.txt";
+		string dirname_conquest = Constants::maps_directory + name + "\\" + name + ".map";
 		std::fstream filestr;
 		//If it does open the .txt, then the path is valid, and we can choose this map
 		filestr.open(dirname_txt);
