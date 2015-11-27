@@ -195,6 +195,7 @@
     <ClInclude Include="StatisticsDecorator.h">
       <Filter>Header Files\Decorators</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="MapTemplate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -215,6 +216,10 @@
     </ClInclude>
     <ClInclude Include="Constants.h">
       <Filter>Header Files</Filter>
+=======
+    <ClInclude Include="GameLogObserver.h">
+      <Filter>Header Files\Decorators</Filter>
+>>>>>>> master
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
