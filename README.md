@@ -24,7 +24,7 @@
 <td>Verification of map correctness before saving (at least 3 types of incorrect maps)</td><td><strong>X</strong></td>
 </tr>
 <tr>
-<td>Implementation of a round-robin loop for players' turns/phases, identification of a winner and end of game, defeated player is removed from round-robin loop</td><td></td>
+<td>Implementation of a round-robin loop for players' turns/phases, identification of a winner and end of game, defeated player is removed from round-robin loop</td><td><strong>X</strong></td>
 </tr>
 <tr>
 <td>Save/Load a game in progress using a Builder pattern (based on assign3)</td><td><strong>X</strong></td>
