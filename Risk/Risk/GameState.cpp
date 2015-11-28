@@ -156,7 +156,7 @@ void GameState::doPlayerAttacking() {
 			cout << "Now type in the name correctly(lower case and upper case) of the country you want to attack :" << endl;
 			string name;
 			bool valid2 = false;
-			cin >> name;
+			getline(cin, name);
 			//int index2 = getIndexOfCountry() - 1;
 			Country* connected;
 			//find the country

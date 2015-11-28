@@ -194,6 +194,10 @@ void Player::add_to_hand(Deck::Card card) {
 void Player::assignCardBonusArmies(int amt) {
 	int armiesAwarded = amt;
 	cout << endl;
+	for (int i = 0; i<countries_owned.size(); i++) {
+		std::cout << i + 1 << ". Country: " + countries_owned.at(i)->get_country_name() + ", Armies: " << countries_owned.at(i)->get_number_of_armies() << std::endl;
+	}
+	cout << endl;
 	cout << get_player_name() << " has " << armiesAwarded << " armies to place." << endl;
 	while (armiesAwarded > 0) {
 		cout << "Enter the number of the country you'd like to reinforce." << endl;

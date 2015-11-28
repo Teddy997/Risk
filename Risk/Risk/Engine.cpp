@@ -72,10 +72,6 @@ void Engine::gamePlayPhase(){
 				saveGame();
 				attackPhase();
 				fortificationPhase();
-				//this is currently only here for testing. set_can_draw is triggered when a player conquers a country,
-				//which is the condition on which they may draw a card
-				p->set_can_draw(true); //TODO: REMOVE. 
-				//
 				if (p->can_player_draw() == true) {
 					p->add_to_hand(gameState->getDeck()->draw_card());
 				}
@@ -98,16 +94,12 @@ void Engine::loadedGamePlayPhase() {
 	gameState->changeGamePhase(gameState->getGamePhase());
 	if (gameState->getGamePhase() == REINFORCING) {
 		saveGame();
-		//attackPhase();
+		attackPhase();
 		fortificationPhase();
 	}
 	else if (gameState->getGamePhase() == ATTACKING) {
 		fortificationPhase();
 	}
-	//this is currently only here for testing. set_can_draw is triggered when a player conquers a country,
-	//which is the condition on which they may draw a card
-	gameState->getCurrentPlayer()->set_can_draw(true); //TODO: REMOVE. 
-	//
 	if (gameState->getCurrentPlayer()->can_player_draw() == true) {
 		gameState->getCurrentPlayer()->add_to_hand(gameState->getDeck()->draw_card());
 	}
@@ -139,12 +131,9 @@ void Engine::loadedGamePlayPhase() {
 			}
 			reinforcementPhase();
 			saveGame();
-			//attackPhase();
+			attackPhase();
 			fortificationPhase();
-			//this is currently only here for testing. set_can_draw is triggered when a player conquers a country,
-			//which is the condition on which they may draw a card
-			p->set_can_draw(true); //TODO: REMOVE. 
-			//
+
 			if (p->can_player_draw() == true) {
 				p->add_to_hand(gameState->getDeck()->draw_card());
 			}
