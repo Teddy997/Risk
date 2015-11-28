@@ -90,6 +90,7 @@ public:
 	bool const can_player_draw() { return can_draw; }
 	void add_to_hand(Deck::Card);
 	void cash_cards(Deck& deck);
+	std::vector<Deck::Card> getHand() { return hand; }
 	void view_hand();
 	std::string print_CountryList();
 	std::string print_ContinentList();

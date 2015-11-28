@@ -278,8 +278,19 @@ namespace Combat {
 								if(def_country.get_number_of_armies() == 0) {
 									finished_combat = true;
 									//Through the Player pointer in def_country, remove the def_country from their countries_owned vector
+									Player* dp = def_country.getOwner();
 									def_country.get_owner()->remove_country(def_country);
 									//Through the Player pointer in att_country, assign the def_country to their countries_owned vector
+									if (dp->numberOfCountriesOwned() == 0) {
+										std::cout << "This player has been defeated!!!" << std::endl;
+										std::vector<Deck::Card> dp_temp = dp->getHand();
+										std::vector<Deck::Card> ap_temp = att_country.getOwner()->getHand();
+										for (int i = 0; i < dp_temp.size(); i++) {
+											ap_temp.push_back(dp_temp.at(i));
+										}
+										att_country.getOwner()->set_hand(ap_temp);
+										std::cout << "You have acquired their cards!" << std::endl;
+									}
 									att_country.get_owner()->assign_country(def_country);
 									att_country.get_owner()->incrementBattlesWon();
 									//Attacker uses move_armies logic to move a number of armies from att_country to def_country
@@ -326,7 +337,18 @@ namespace Combat {
 								if(def_country.get_number_of_armies() == 0) {
 									finished_combat = true;
 									//Through the Player pointer in def_country, remove the def_country from their countries_owned vector
+									Player* dp = def_country.getOwner();
 									def_country.get_owner()->remove_country(def_country);
+									if (dp->numberOfCountriesOwned() == 0) {
+										std::cout << "This player has been defeated!!!" << std::endl;
+										std::vector<Deck::Card> dp_temp = dp->getHand();
+										std::vector<Deck::Card> ap_temp = att_country.getOwner()->getHand();
+										for (int i = 0; i < dp_temp.size(); i++) {
+											ap_temp.push_back(dp_temp.at(i));
+										}
+										att_country.getOwner()->set_hand(ap_temp);
+										std::cout << "You have acquired their cards!" << std::endl;
+									}
 									//Through the Player pointer in att_country, assign the def_country to their countries_owned vector
 									att_country.get_owner()->assign_country(def_country);
 									att_country.get_owner()->incrementBattlesWon();
@@ -346,7 +368,18 @@ namespace Combat {
 								if(def_country.get_number_of_armies() == 0) {
 									finished_combat = true;
 									//Through the Player pointer in def_country, remove the def_country from their countries_owned vector
+									Player* dp = def_country.getOwner();
 									def_country.get_owner()->remove_country(def_country);
+									if (dp->numberOfCountriesOwned() == 0) {
+										std::cout << "This player has been defeated!!!" << std::endl;
+										std::vector<Deck::Card> dp_temp = dp->getHand();
+										std::vector<Deck::Card> ap_temp = att_country.getOwner()->getHand();
+										for (int i = 0; i < dp_temp.size(); i++) {
+											ap_temp.push_back(dp_temp.at(i));
+										}
+										att_country.getOwner()->set_hand(ap_temp);
+										std::cout << "You have acquired their cards!" << std::endl;
+									}
 									//Through the Player pointer in att_country, assign the def_country to their countries_owned vector
 									att_country.get_owner()->assign_country(def_country);
 									att_country.get_owner()->incrementBattlesWon();
@@ -384,7 +417,18 @@ namespace Combat {
 								if(def_country.get_number_of_armies() == 0) {
 									finished_combat = true;
 									//Through the Player pointer in def_country, remove the def_country from their countries_owned vector
+									Player* dp = def_country.getOwner();
 									def_country.get_owner()->remove_country(def_country);
+									if (dp->numberOfCountriesOwned() == 0) {
+										std::cout << "This player has been defeated!!!" << std::endl;
+										std::vector<Deck::Card> dp_temp = dp->getHand();
+										std::vector<Deck::Card> ap_temp = att_country.getOwner()->getHand();
+										for (int i = 0; i < dp_temp.size(); i++) {
+											ap_temp.push_back(dp_temp.at(i));
+										}
+										att_country.getOwner()->set_hand(ap_temp);
+										std::cout << "You have acquired their cards!" << std::endl;
+									}
 									//Through the Player pointer in att_country, assign the def_country to their countries_owned vector
 									att_country.get_owner()->assign_country(def_country);
 									att_country.get_owner()->incrementBattlesWon();
@@ -432,7 +476,18 @@ namespace Combat {
 								if(def_country.get_number_of_armies() == 0) {
 									finished_combat = true;
 									//Through the Player pointer in def_country, remove the def_country from their countries_owned vector
+									Player* dp = def_country.getOwner();
 									def_country.get_owner()->remove_country(def_country);
+									if (dp->numberOfCountriesOwned() == 0) {
+										std::cout << "This player has been defeated!!!" << std::endl;
+										std::vector<Deck::Card> dp_temp = dp->getHand();
+										std::vector<Deck::Card> ap_temp = att_country.getOwner()->getHand();
+										for (int i = 0; i < dp_temp.size(); i++) {
+											ap_temp.push_back(dp_temp.at(i));
+										}
+										att_country.getOwner()->set_hand(ap_temp);
+										std::cout << "You have acquired their cards!" << std::endl;
+									}
 									//Through the Player pointer in att_country, assign the def_country to their countries_owned vector
 									att_country.get_owner()->assign_country(def_country);
 									att_country.get_owner()->incrementBattlesWon();
@@ -452,7 +507,18 @@ namespace Combat {
 								if(def_country.get_number_of_armies() == 0) {
 									finished_combat = true;
 									//Through the Player pointer in def_country, remove the def_country from their countries_owned vector
+									Player* dp = def_country.getOwner();
 									def_country.get_owner()->remove_country(def_country);
+									if (dp->numberOfCountriesOwned() == 0) {
+										std::cout << "This player has been defeated!!!" << std::endl;
+										std::vector<Deck::Card> dp_temp = dp->getHand();
+										std::vector<Deck::Card> ap_temp = att_country.getOwner()->getHand();
+										for (int i = 0; i < dp_temp.size(); i++) {
+											ap_temp.push_back(dp_temp.at(i));
+										}
+										att_country.getOwner()->set_hand(ap_temp);
+										std::cout << "You have acquired their cards!" << std::endl;
+									}
 									//Through the Player pointer in att_country, assign the def_country to their countries_owned vector
 									att_country.get_owner()->assign_country(def_country);
 									att_country.get_owner()->incrementBattlesWon();
@@ -472,7 +538,18 @@ namespace Combat {
 								if(def_country.get_number_of_armies() == 0) {
 									finished_combat = true;
 									//Through the Player pointer in def_country, remove the def_country from their countries_owned vector
+									Player* dp = def_country.getOwner();
 									def_country.get_owner()->remove_country(def_country);
+									if (dp->numberOfCountriesOwned() == 0) {
+										std::cout << "This player has been defeated!!!" << std::endl;
+										std::vector<Deck::Card> dp_temp = dp->getHand();
+										std::vector<Deck::Card> ap_temp = att_country.getOwner()->getHand();
+										for (int i = 0; i < dp_temp.size(); i++) {
+											ap_temp.push_back(dp_temp.at(i));
+										}
+										att_country.getOwner()->set_hand(ap_temp);
+										std::cout << "You have acquired their cards!" << std::endl;
+									}
 									//Through the Player pointer in att_country, assign the def_country to their countries_owned vector
 									att_country.get_owner()->assign_country(def_country);
 									att_country.get_owner()->incrementBattlesWon();
@@ -510,7 +587,18 @@ namespace Combat {
 								if(def_country.get_number_of_armies() == 0) {
 									finished_combat = true;
 									//Through the Player pointer in def_country, remove the def_country from their countries_owned vector
+									Player* dp = def_country.getOwner();
 									def_country.get_owner()->remove_country(def_country);
+									if (dp->numberOfCountriesOwned() == 0) {
+										std::cout << "This player has been defeated!!!" << std::endl;
+										std::vector<Deck::Card> dp_temp = dp->getHand();
+										std::vector<Deck::Card> ap_temp = att_country.getOwner()->getHand();
+										for (int i = 0; i < dp_temp.size(); i++) {
+											ap_temp.push_back(dp_temp.at(i));
+										}
+										att_country.getOwner()->set_hand(ap_temp);
+										std::cout << "You have acquired their cards!" << std::endl;
+									}
 									//Through the Player pointer in att_country, assign the def_country to their countries_owned vector
 									att_country.get_owner()->assign_country(def_country);
 									att_country.get_owner()->incrementBattlesWon();

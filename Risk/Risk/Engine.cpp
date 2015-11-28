@@ -77,6 +77,9 @@ void Engine::gamePlayPhase(){
 				}
 			//}
 		}
+		std::cout << "aiplayers size: " << gameState->getAIPlayers().size() << std::endl;
+		std::cout << "turn: " << turn << std::endl;
+		victoryConditions();
 		if (turn > gameState->getAIPlayers().size())
 			turn = 0;
 		gameState->updatePlayerTurn(++turn);
@@ -114,6 +117,7 @@ void Engine::loadedGamePlayPhase() {
 			}
 		}
 	}
+	victoryConditions();
 	gameState->updatePlayerTurn(turn);
 	while (victoryConditions()) {
 		Player* p = gameState->getCurrentPlayer();
@@ -139,6 +143,7 @@ void Engine::loadedGamePlayPhase() {
 			}
 			//}
 		}
+		victoryConditions();
 		if (turn > gameState->getAIPlayers().size())
 			turn = 0;
 		gameState->updatePlayerTurn(++turn);
@@ -193,20 +198,25 @@ bool Engine::victoryConditions() {
 	else {
 		bool d = false;
 		vector<Player*> v = gameState->getAIPlayers();
-		for (unsigned int i = 0; i < v.size(); ++i) {
-			
+		if (v.size() > 0) {
 
-			if (v[i]->numberOfCountriesOwned() < 1) {
-				gameState->removePlayerAtIndex(i);
-				victory = true;
-			}
-			else {
-				victory = false;
-				d = true;
-			}
-			if (d)
-				break;
+			for (unsigned int i = 0; i < v.size(); ++i) {
+				if (v[i]->numberOfCountriesOwned() < 1) {
+					cout << v[i]->get_player_name() + " has been defeated as they own no more countries!" << endl;
+					gameState->removePlayerAtIndex(i);
+					//victory = true;
+				}
+				else {
+					victory = false;
+					d = true;
+				}
+				/*if (d)
+					break;*/
 
+			}
+		}
+		else {
+			victory = true;
 		}
 
 	}

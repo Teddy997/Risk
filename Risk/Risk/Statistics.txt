@@ -2564,3 +2564,4097 @@ Number of cards: 0
 This is the percentage of the world owned by: Eric: 31.8182%
 This is the percentage of the world owned by: AI Michonne: 40.9091%
 This is the percentage of the world owned by: AI Jon Snow: 27.2727%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alaska, Armies: 3
+2.  Country: Northwest Territory, Armies: 3
+3.  Country: Western United States, Armies: 3
+4.  Country: Eastern United States, Armies: 4
+5.  Country: Venezuala, Armies: 2
+6.  Country: Peru, Armies: 3
+7.  Country: Argentina, Armies: 3
+8.  Country: Brazil, Armies: 3
+9.  Country: South Africa, Armies: 3
+10. Country: Egypt, Armies: 1
+11. Country: Great Britain, Armies: 1
+12. Country: Northern Europe, Armies: 1
+13. Country: Southern Europe, Armies: 1
+14. Country: China, Armies: 1
+15. Country: Siam, Armies: 1
+16. Country: Yatusk, Armies: 1
+17. Country: KOREA, Armies: 1
+
+Armies owned: 35
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alberta, Armies: 3
+2.  Country: Greenland, Armies: 2
+3.  Country: Ontario, Armies: 3
+4.  Country: North Africa, Armies: 2
+5.  Country: Congo, Armies: 2
+6.  Country: Madagascar, Armies: 2
+7.  Country: East Africa, Armies: 2
+8.  Country: Ukraine, Armies: 2
+9.  Country: Ural, Armies: 3
+10. Country: Afghanistan, Armies: 2
+11. Country: India, Armies: 4
+12. Country: Siberia, Armies: 2
+13. Country: Mongolia, Armies: 1
+14. Country: Irkutsk, Armies: 1
+15. Country: Indonesia, Armies: 1
+16. Country: New Guinea, Armies: 1
+17. Country: Western Australia, Armies: 1
+18. Country: Eastern Australia, Armies: 1
+
+Armies owned: 35
+Number of cards: 0
+
+AI Jon Snow's countries: 
+1.  Country: Quebec, Armies: 4
+2.  Country: Central America, Armies: 6
+3.  Country: Iceland, Armies: 3
+4.  Country: Western Europe, Armies: 4
+5.  Country: Scandinavia, Armies: 4
+6.  Country: Middle East, Armies: 2
+7.  Country: Kamchatka, Armies: 4
+8.  Country: Japan, Armies: 4
+9.  Country: pls, Armies: 4
+
+Armies owned: 35
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 38.6364%
+This is the percentage of the world owned by: AI Michonne: 40.9091%
+This is the percentage of the world owned by: AI Jon Snow: 20.4545%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Northwest Territory, Armies: 3
+2.  Country: Alberta, Armies: 4
+3.  Country: Western United States, Armies: 2
+4.  Country: Eastern United States, Armies: 3
+5.  Country: Venezuala, Armies: 4
+6.  Country: Peru, Armies: 4
+7.  Country: Brazil, Armies: 1
+8.  Country: South Africa, Armies: 1
+9.  Country: Madagascar, Armies: 1
+10. Country: East Africa, Armies: 1
+11. Country: Egypt, Armies: 1
+12. Country: Western Europe, Armies: 1
+13. Country: Middle East, Armies: 1
+14. Country: Ural, Armies: 1
+15. Country: Afghanistan, Armies: 1
+16. Country: Siam, Armies: 1
+17. Country: Yatusk, Armies: 1
+18. Country: Kamchatka, Armies: 1
+19. Country: Japan, Armies: 1
+20. Country: KOREA, Armies: 1
+21. Country: pls, Armies: 1
+
+Armies owned: 35
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Greenland, Armies: 3
+2.  Country: Ontario, Armies: 3
+3.  Country: Quebec, Armies: 4
+4.  Country: Central America, Armies: 4
+5.  Country: Argentina, Armies: 3
+6.  Country: North Africa, Armies: 3
+7.  Country: Congo, Armies: 4
+8.  Country: Iceland, Armies: 1
+9.  Country: Great Britain, Armies: 1
+10. Country: Scandinavia, Armies: 1
+11. Country: Southern Europe, Armies: 1
+12. Country: India, Armies: 1
+13. Country: Siberia, Armies: 1
+14. Country: China, Armies: 1
+15. Country: Irkutsk, Armies: 1
+16. Country: Indonesia, Armies: 1
+17. Country: Western Australia, Armies: 1
+18. Country: Eastern Australia, Armies: 1
+
+Armies owned: 35
+Number of cards: 0
+
+AI Jon Snow's countries: 
+1.  Country: Alaska, Armies: 7
+2.  Country: Northern Europe, Armies: 6
+3.  Country: Ukraine, Armies: 6
+4.  Country: Mongolia, Armies: 9
+5.  Country: New Guinea, Armies: 7
+
+Armies owned: 35
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 47.7273%
+This is the percentage of the world owned by: AI Michonne: 40.9091%
+This is the percentage of the world owned by: AI Jon Snow: 11.3636%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alaska, Armies: 4
+2.  Country: Northwest Territory, Armies: 4
+3.  Country: Greenland, Armies: 2
+4.  Country: Ontario, Armies: 2
+5.  Country: Western United States, Armies: 2
+6.  Country: Eastern United States, Armies: 2
+7.  Country: Argentina, Armies: 4
+8.  Country: Congo, Armies: 2
+9.  Country: Northern Europe, Armies: 3
+10. Country: Southern Europe, Armies: 2
+11. Country: Ural, Armies: 1
+12. Country: India, Armies: 1
+13. Country: Siberia, Armies: 1
+14. Country: China, Armies: 1
+15. Country: Kamchatka, Armies: 1
+16. Country: Japan, Armies: 1
+17. Country: New Guinea, Armies: 1
+18. Country: pls, Armies: 1
+
+Armies owned: 35
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alberta, Armies: 2
+2.  Country: Quebec, Armies: 4
+3.  Country: Central America, Armies: 3
+4.  Country: Venezuala, Armies: 2
+5.  Country: Brazil, Armies: 3
+6.  Country: Madagascar, Armies: 4
+7.  Country: East Africa, Armies: 2
+8.  Country: Egypt, Armies: 3
+9.  Country: Iceland, Armies: 4
+10. Country: Ukraine, Armies: 1
+11. Country: Middle East, Armies: 1
+12. Country: Siam, Armies: 1
+13. Country: Mongolia, Armies: 1
+14. Country: Yatusk, Armies: 1
+15. Country: Indonesia, Armies: 1
+16. Country: Eastern Australia, Armies: 1
+17. Country: KOREA, Armies: 1
+
+Armies owned: 35
+Number of cards: 0
+
+AI Jon Snow's countries: 
+1.  Country: Peru, Armies: 6
+2.  Country: North Africa, Armies: 7
+3.  Country: South Africa, Armies: 3
+4.  Country: Great Britain, Armies: 5
+5.  Country: Western Europe, Armies: 4
+6.  Country: Scandinavia, Armies: 2
+7.  Country: Afghanistan, Armies: 2
+8.  Country: Irkutsk, Armies: 2
+9.  Country: Western Australia, Armies: 4
+
+Armies owned: 35
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 40.9091%
+This is the percentage of the world owned by: AI Michonne: 38.6364%
+This is the percentage of the world owned by: AI Jon Snow: 20.4545%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+
+Armies owned: 42
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 35
+
+Armies owned: 35
+Number of cards: 0
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 35
+
+Armies owned: 35
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+
+Armies owned: 42
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+43. Country: Northwest Territory, Armies: 14
+
+Armies owned: 56
+Number of cards: 1
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+AI Jon Snow's countries: 
+no countries found
+Armies owned: 0
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 97.7273%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 0%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Greenland, Armies: 1
+2.  Country: Ontario, Armies: 1
+3.  Country: Western United States, Armies: 1
+4.  Country: Eastern United States, Armies: 1
+5.  Country: Central America, Armies: 1
+6.  Country: Venezuala, Armies: 1
+7.  Country: Peru, Armies: 1
+8.  Country: Argentina, Armies: 1
+9.  Country: Brazil, Armies: 1
+10. Country: North Africa, Armies: 1
+11. Country: Congo, Armies: 1
+12. Country: South Africa, Armies: 1
+13. Country: Madagascar, Armies: 1
+14. Country: East Africa, Armies: 1
+15. Country: Egypt, Armies: 1
+16. Country: Iceland, Armies: 1
+17. Country: Great Britain, Armies: 1
+18. Country: Western Europe, Armies: 1
+19. Country: Scandinavia, Armies: 1
+20. Country: Northern Europe, Armies: 1
+21. Country: Southern Europe, Armies: 1
+22. Country: Ukraine, Armies: 1
+23. Country: Middle East, Armies: 1
+24. Country: Ural, Armies: 1
+25. Country: Afghanistan, Armies: 1
+26. Country: India, Armies: 1
+27. Country: Siberia, Armies: 1
+28. Country: China, Armies: 1
+29. Country: Siam, Armies: 1
+30. Country: Mongolia, Armies: 1
+31. Country: Irkutsk, Armies: 1
+32. Country: Yatusk, Armies: 1
+33. Country: Kamchatka, Armies: 1
+34. Country: Japan, Armies: 1
+35. Country: Indonesia, Armies: 1
+36. Country: New Guinea, Armies: 1
+37. Country: Western Australia, Armies: 1
+38. Country: Eastern Australia, Armies: 1
+39. Country: KOREA, Armies: 1
+40. Country: pls, Armies: 1
+41. Country: Northwest Territory, Armies: 14
+
+Armies owned: 54
+Number of cards: 1
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+2.  Country: Alberta, Armies: 1
+3.  Country: Quebec, Armies: 1
+
+Armies owned: 3
+Number of cards: 1
+
+AI Jon Snow's countries: 
+no countries found
+Armies owned: 0
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 93.1818%
+This is the percentage of the world owned by: AI Michonne: 6.81818%
+This is the percentage of the world owned by: AI Jon Snow: 0%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+
+Armies owned: 42
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+43. Country: Northwest Territory, Armies: 14
+
+Armies owned: 56
+Number of cards: 1
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+AI Jon Snow's countries: 
+no countries found
+Armies owned: 0
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 97.7273%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 0%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Greenland, Armies: 1
+2.  Country: Ontario, Armies: 1
+3.  Country: Western United States, Armies: 1
+4.  Country: Eastern United States, Armies: 1
+5.  Country: Central America, Armies: 1
+6.  Country: Venezuala, Armies: 1
+7.  Country: Peru, Armies: 1
+8.  Country: Argentina, Armies: 1
+9.  Country: Brazil, Armies: 1
+10. Country: North Africa, Armies: 1
+11. Country: Congo, Armies: 1
+12. Country: South Africa, Armies: 1
+13. Country: Madagascar, Armies: 1
+14. Country: East Africa, Armies: 1
+15. Country: Egypt, Armies: 1
+16. Country: Iceland, Armies: 1
+17. Country: Great Britain, Armies: 1
+18. Country: Western Europe, Armies: 1
+19. Country: Scandinavia, Armies: 1
+20. Country: Northern Europe, Armies: 1
+21. Country: Southern Europe, Armies: 1
+22. Country: Ukraine, Armies: 1
+23. Country: Middle East, Armies: 1
+24. Country: Ural, Armies: 1
+25. Country: Afghanistan, Armies: 1
+26. Country: India, Armies: 1
+27. Country: Siberia, Armies: 1
+28. Country: China, Armies: 1
+29. Country: Siam, Armies: 1
+30. Country: Mongolia, Armies: 1
+31. Country: Irkutsk, Armies: 1
+32. Country: Yatusk, Armies: 1
+33. Country: Kamchatka, Armies: 1
+34. Country: Japan, Armies: 1
+35. Country: Indonesia, Armies: 1
+36. Country: New Guinea, Armies: 1
+37. Country: Western Australia, Armies: 1
+38. Country: Eastern Australia, Armies: 1
+39. Country: KOREA, Armies: 1
+40. Country: pls, Armies: 1
+41. Country: Northwest Territory, Armies: 14
+
+Armies owned: 54
+Number of cards: 1
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+2.  Country: Alberta, Armies: 1
+3.  Country: Quebec, Armies: 1
+
+Armies owned: 3
+Number of cards: 1
+
+AI Jon Snow's countries: 
+no countries found
+Armies owned: 0
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 93.1818%
+This is the percentage of the world owned by: AI Michonne: 6.81818%
+This is the percentage of the world owned by: AI Jon Snow: 0%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+
+Armies owned: 42
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+
+Armies owned: 42
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 15
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+
+Armies owned: 56
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 15
+2.  Country: Ontario, Armies: 1
+3.  Country: Western United States, Armies: 1
+4.  Country: Eastern United States, Armies: 1
+5.  Country: Central America, Armies: 1
+6.  Country: Venezuala, Armies: 1
+7.  Country: Peru, Armies: 1
+8.  Country: Argentina, Armies: 1
+9.  Country: Brazil, Armies: 1
+10. Country: North Africa, Armies: 1
+11. Country: Congo, Armies: 1
+12. Country: South Africa, Armies: 1
+13. Country: Madagascar, Armies: 1
+14. Country: East Africa, Armies: 1
+15. Country: Egypt, Armies: 1
+16. Country: Iceland, Armies: 1
+17. Country: Great Britain, Armies: 1
+18. Country: Western Europe, Armies: 1
+19. Country: Scandinavia, Armies: 1
+20. Country: Northern Europe, Armies: 1
+21. Country: Southern Europe, Armies: 1
+22. Country: Ukraine, Armies: 1
+23. Country: Middle East, Armies: 1
+24. Country: Ural, Armies: 1
+25. Country: Afghanistan, Armies: 1
+26. Country: India, Armies: 1
+27. Country: Siberia, Armies: 1
+28. Country: China, Armies: 1
+29. Country: Siam, Armies: 1
+30. Country: Mongolia, Armies: 1
+31. Country: Irkutsk, Armies: 1
+32. Country: Yatusk, Armies: 1
+33. Country: Kamchatka, Armies: 1
+34. Country: Japan, Armies: 1
+35. Country: Indonesia, Armies: 1
+36. Country: New Guinea, Armies: 1
+37. Country: Western Australia, Armies: 1
+38. Country: Eastern Australia, Armies: 1
+39. Country: KOREA, Armies: 1
+40. Country: pls, Armies: 1
+
+Armies owned: 54
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Quebec, Armies: 2
+
+Armies owned: 4
+Number of cards: 1
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 90.9091%
+This is the percentage of the world owned by: AI Michonne: 6.81818%
+This is the percentage of the world owned by: AI Jon Snow: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 15
+2.  Country: Ontario, Armies: 1
+3.  Country: Western United States, Armies: 1
+4.  Country: Eastern United States, Armies: 1
+5.  Country: Central America, Armies: 1
+6.  Country: Venezuala, Armies: 1
+7.  Country: Peru, Armies: 1
+8.  Country: Argentina, Armies: 1
+9.  Country: Brazil, Armies: 1
+10. Country: North Africa, Armies: 1
+11. Country: Congo, Armies: 1
+12. Country: South Africa, Armies: 1
+13. Country: Madagascar, Armies: 1
+14. Country: East Africa, Armies: 1
+15. Country: Egypt, Armies: 1
+16. Country: Iceland, Armies: 1
+17. Country: Great Britain, Armies: 1
+18. Country: Western Europe, Armies: 1
+19. Country: Scandinavia, Armies: 1
+20. Country: Northern Europe, Armies: 1
+21. Country: Southern Europe, Armies: 1
+22. Country: Ukraine, Armies: 1
+23. Country: Middle East, Armies: 1
+24. Country: Ural, Armies: 1
+25. Country: Afghanistan, Armies: 1
+26. Country: India, Armies: 1
+27. Country: Siberia, Armies: 1
+28. Country: China, Armies: 1
+29. Country: Siam, Armies: 1
+30. Country: Mongolia, Armies: 1
+31. Country: Irkutsk, Armies: 1
+32. Country: Yatusk, Armies: 1
+33. Country: Kamchatka, Armies: 1
+34. Country: Japan, Armies: 1
+35. Country: Indonesia, Armies: 1
+36. Country: New Guinea, Armies: 1
+37. Country: Western Australia, Armies: 1
+38. Country: Eastern Australia, Armies: 1
+39. Country: KOREA, Armies: 1
+40. Country: pls, Armies: 1
+
+Armies owned: 54
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+2.  Country: Quebec, Armies: 2
+
+Armies owned: 3
+Number of cards: 1
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 1
+2.  Country: Greenland, Armies: 1
+
+Armies owned: 2
+Number of cards: 1
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 90.9091%
+This is the percentage of the world owned by: AI Michonne: 4.54545%
+This is the percentage of the world owned by: AI Jon Snow: 4.54545%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+
+Armies owned: 42
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+43. Country: Northwest Territory, Armies: 14
+
+Armies owned: 56
+Number of cards: 1
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+AI Jon Snow's countries: 
+no countries found
+Armies owned: 0
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 97.7273%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 0%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+43. Country: Northwest Territory, Armies: 14
+
+Armies owned: 56
+Number of cards: 1
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+AI Jon Snow's countries: 
+no countries found
+Armies owned: 0
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 97.7273%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 0%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+
+Armies owned: 42
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+43. Country: Northwest Territory, Armies: 13
+
+Armies owned: 55
+Number of cards: 1
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+AI Jon Snow's countries: 
+no countries found
+Armies owned: 0
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 97.7273%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 0%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Greenland, Armies: 1
+2.  Country: Ontario, Armies: 1
+3.  Country: Western United States, Armies: 1
+4.  Country: Eastern United States, Armies: 1
+5.  Country: Central America, Armies: 1
+6.  Country: Venezuala, Armies: 1
+7.  Country: Peru, Armies: 1
+8.  Country: Argentina, Armies: 1
+9.  Country: Brazil, Armies: 1
+10. Country: North Africa, Armies: 1
+11. Country: Congo, Armies: 1
+12. Country: South Africa, Armies: 1
+13. Country: Madagascar, Armies: 1
+14. Country: East Africa, Armies: 1
+15. Country: Egypt, Armies: 1
+16. Country: Iceland, Armies: 1
+17. Country: Great Britain, Armies: 1
+18. Country: Western Europe, Armies: 1
+19. Country: Scandinavia, Armies: 1
+20. Country: Northern Europe, Armies: 1
+21. Country: Southern Europe, Armies: 1
+22. Country: Ukraine, Armies: 1
+23. Country: Middle East, Armies: 1
+24. Country: Ural, Armies: 1
+25. Country: Afghanistan, Armies: 1
+26. Country: India, Armies: 1
+27. Country: Siberia, Armies: 1
+28. Country: China, Armies: 1
+29. Country: Siam, Armies: 1
+30. Country: Mongolia, Armies: 1
+31. Country: Irkutsk, Armies: 1
+32. Country: Yatusk, Armies: 1
+33. Country: Kamchatka, Armies: 1
+34. Country: Japan, Armies: 1
+35. Country: Indonesia, Armies: 1
+36. Country: New Guinea, Armies: 1
+37. Country: Western Australia, Armies: 1
+38. Country: Eastern Australia, Armies: 1
+39. Country: KOREA, Armies: 1
+40. Country: pls, Armies: 1
+41. Country: Northwest Territory, Armies: 13
+
+Armies owned: 53
+Number of cards: 1
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+2.  Country: Alberta, Armies: 1
+3.  Country: Quebec, Armies: 2
+
+Armies owned: 4
+Number of cards: 1
+
+AI Jon Snow's countries: 
+no countries found
+Armies owned: 0
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 93.1818%
+This is the percentage of the world owned by: AI Michonne: 6.81818%
+This is the percentage of the world owned by: AI Jon Snow: 0%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+
+Armies owned: 42
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Ontario, Armies: 4
+2.  Country: Central America, Armies: 4
+3.  Country: Venezuala, Armies: 2
+4.  Country: Argentina, Armies: 3
+5.  Country: Brazil, Armies: 2
+6.  Country: North Africa, Armies: 2
+7.  Country: Congo, Armies: 2
+8.  Country: Madagascar, Armies: 2
+9.  Country: East Africa, Armies: 4
+10. Country: Iceland, Armies: 2
+11. Country: Western Europe, Armies: 1
+12. Country: Southern Europe, Armies: 1
+13. Country: India, Armies: 1
+14. Country: China, Armies: 1
+15. Country: Irkutsk, Armies: 1
+16. Country: Yatusk, Armies: 1
+17. Country: Japan, Armies: 1
+18. Country: KOREA, Armies: 1
+
+Armies owned: 35
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Quebec, Armies: 1
+2.  Country: Eastern United States, Armies: 1
+3.  Country: Peru, Armies: 1
+4.  Country: Egypt, Armies: 1
+5.  Country: Great Britain, Armies: 1
+6.  Country: Northern Europe, Armies: 1
+7.  Country: Ural, Armies: 1
+8.  Country: Afghanistan, Armies: 1
+9.  Country: Siberia, Armies: 1
+10. Country: Mongolia, Armies: 1
+11. Country: Kamchatka, Armies: 1
+12. Country: Indonesia, Armies: 1
+13. Country: pls, Armies: 1
+
+Armies owned: 13
+Number of cards: 0
+
+AI Jon Snow's countries: 
+1.  Country: Alaska, Armies: 1
+2.  Country: Northwest Territory, Armies: 1
+3.  Country: Alberta, Armies: 1
+4.  Country: Greenland, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: South Africa, Armies: 1
+7.  Country: Scandinavia, Armies: 1
+8.  Country: Ukraine, Armies: 1
+9.  Country: Middle East, Armies: 1
+10. Country: Siam, Armies: 1
+11. Country: New Guinea, Armies: 1
+12. Country: Western Australia, Armies: 1
+13. Country: Eastern Australia, Armies: 1
+
+Armies owned: 13
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 40.9091%
+This is the percentage of the world owned by: AI Michonne: 29.5455%
+This is the percentage of the world owned by: AI Jon Snow: 29.5455%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Ontario, Armies: 10
+2.  Country: Central America, Armies: 4
+3.  Country: Venezuala, Armies: 2
+4.  Country: Argentina, Armies: 3
+5.  Country: Brazil, Armies: 2
+6.  Country: North Africa, Armies: 2
+7.  Country: Congo, Armies: 2
+8.  Country: Madagascar, Armies: 2
+9.  Country: East Africa, Armies: 4
+10. Country: Iceland, Armies: 2
+11. Country: Western Europe, Armies: 1
+12. Country: Southern Europe, Armies: 1
+13. Country: India, Armies: 1
+14. Country: China, Armies: 1
+15. Country: Irkutsk, Armies: 1
+16. Country: Yatusk, Armies: 1
+17. Country: Japan, Armies: 1
+18. Country: KOREA, Armies: 1
+
+Armies owned: 41
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Quebec, Armies: 1
+2.  Country: Eastern United States, Armies: 1
+3.  Country: Peru, Armies: 1
+4.  Country: Egypt, Armies: 1
+5.  Country: Great Britain, Armies: 1
+6.  Country: Northern Europe, Armies: 1
+7.  Country: Ural, Armies: 1
+8.  Country: Afghanistan, Armies: 1
+9.  Country: Siberia, Armies: 1
+10. Country: Mongolia, Armies: 1
+11. Country: Kamchatka, Armies: 1
+12. Country: Indonesia, Armies: 1
+13. Country: pls, Armies: 1
+
+Armies owned: 13
+Number of cards: 0
+
+AI Jon Snow's countries: 
+1.  Country: Alaska, Armies: 1
+2.  Country: Northwest Territory, Armies: 1
+3.  Country: Alberta, Armies: 1
+4.  Country: Greenland, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: South Africa, Armies: 1
+7.  Country: Scandinavia, Armies: 1
+8.  Country: Ukraine, Armies: 1
+9.  Country: Middle East, Armies: 1
+10. Country: Siam, Armies: 1
+11. Country: New Guinea, Armies: 1
+12. Country: Western Australia, Armies: 1
+13. Country: Eastern Australia, Armies: 1
+
+Armies owned: 13
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 40.9091%
+This is the percentage of the world owned by: AI Michonne: 29.5455%
+This is the percentage of the world owned by: AI Jon Snow: 29.5455%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Ontario, Armies: 10
+2.  Country: Central America, Armies: 4
+3.  Country: Venezuala, Armies: 2
+4.  Country: Argentina, Armies: 3
+5.  Country: Brazil, Armies: 2
+6.  Country: North Africa, Armies: 2
+7.  Country: Congo, Armies: 2
+8.  Country: Madagascar, Armies: 2
+9.  Country: East Africa, Armies: 4
+10. Country: Iceland, Armies: 2
+11. Country: India, Armies: 1
+12. Country: China, Armies: 1
+13. Country: Irkutsk, Armies: 1
+14. Country: Yatusk, Armies: 1
+15. Country: Japan, Armies: 1
+16. Country: KOREA, Armies: 1
+
+Armies owned: 39
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Quebec, Armies: 1
+2.  Country: Eastern United States, Armies: 1
+3.  Country: Peru, Armies: 1
+4.  Country: Egypt, Armies: 1
+5.  Country: Great Britain, Armies: 1
+6.  Country: Northern Europe, Armies: 1
+7.  Country: Ural, Armies: 1
+8.  Country: Afghanistan, Armies: 1
+9.  Country: Siberia, Armies: 1
+10. Country: Mongolia, Armies: 1
+11. Country: Kamchatka, Armies: 1
+12. Country: Indonesia, Armies: 1
+13. Country: pls, Armies: 1
+14. Country: Western Europe, Armies: 2
+15. Country: Southern Europe, Armies: 1
+
+Armies owned: 16
+Number of cards: 1
+
+AI Jon Snow's countries: 
+1.  Country: Alaska, Armies: 1
+2.  Country: Northwest Territory, Armies: 1
+3.  Country: Alberta, Armies: 1
+4.  Country: Greenland, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: South Africa, Armies: 1
+7.  Country: Scandinavia, Armies: 1
+8.  Country: Ukraine, Armies: 1
+9.  Country: Middle East, Armies: 1
+10. Country: Siam, Armies: 1
+11. Country: New Guinea, Armies: 1
+12. Country: Western Australia, Armies: 1
+13. Country: Eastern Australia, Armies: 1
+
+Armies owned: 13
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 36.3636%
+This is the percentage of the world owned by: AI Michonne: 34.0909%
+This is the percentage of the world owned by: AI Jon Snow: 29.5455%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Ontario, Armies: 10
+2.  Country: Central America, Armies: 4
+3.  Country: Venezuala, Armies: 2
+4.  Country: Argentina, Armies: 3
+5.  Country: Brazil, Armies: 2
+6.  Country: North Africa, Armies: 2
+7.  Country: Congo, Armies: 2
+8.  Country: Madagascar, Armies: 2
+9.  Country: East Africa, Armies: 4
+10. Country: Iceland, Armies: 2
+11. Country: China, Armies: 1
+12. Country: Irkutsk, Armies: 1
+13. Country: Yatusk, Armies: 1
+14. Country: Japan, Armies: 1
+15. Country: KOREA, Armies: 1
+
+Armies owned: 38
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Quebec, Armies: 1
+2.  Country: Eastern United States, Armies: 1
+3.  Country: Peru, Armies: 1
+4.  Country: Egypt, Armies: 1
+5.  Country: Great Britain, Armies: 1
+6.  Country: Northern Europe, Armies: 1
+7.  Country: Ural, Armies: 1
+8.  Country: Afghanistan, Armies: 1
+9.  Country: Siberia, Armies: 1
+10. Country: Kamchatka, Armies: 1
+11. Country: Indonesia, Armies: 1
+12. Country: pls, Armies: 1
+13. Country: Western Europe, Armies: 2
+14. Country: Southern Europe, Armies: 1
+
+Armies owned: 15
+Number of cards: 1
+
+AI Jon Snow's countries: 
+1.  Country: Alaska, Armies: 1
+2.  Country: Northwest Territory, Armies: 1
+3.  Country: Alberta, Armies: 1
+4.  Country: Greenland, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: South Africa, Armies: 1
+7.  Country: Scandinavia, Armies: 1
+8.  Country: Ukraine, Armies: 1
+9.  Country: Middle East, Armies: 1
+10. Country: Siam, Armies: 2
+11. Country: New Guinea, Armies: 1
+12. Country: Western Australia, Armies: 1
+13. Country: Eastern Australia, Armies: 1
+14. Country: India, Armies: 1
+15. Country: Mongolia, Armies: 1
+
+Armies owned: 16
+Number of cards: 1
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 34.0909%
+This is the percentage of the world owned by: AI Michonne: 31.8182%
+This is the percentage of the world owned by: AI Jon Snow: 34.0909%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+
+Armies owned: 42
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+
+Armies owned: 42
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+
+Armies owned: 42
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+43. Country: Northwest Territory, Armies: 14
+
+Armies owned: 56
+Number of cards: 1
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+AI Jon Snow's countries: 
+no countries found
+Armies owned: 0
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 97.7273%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 0%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Greenland, Armies: 1
+2.  Country: Ontario, Armies: 1
+3.  Country: Quebec, Armies: 1
+4.  Country: Western United States, Armies: 1
+5.  Country: Eastern United States, Armies: 1
+6.  Country: Central America, Armies: 1
+7.  Country: Venezuala, Armies: 1
+8.  Country: Peru, Armies: 1
+9.  Country: Argentina, Armies: 1
+10. Country: Brazil, Armies: 1
+11. Country: North Africa, Armies: 1
+12. Country: Congo, Armies: 1
+13. Country: South Africa, Armies: 1
+14. Country: Madagascar, Armies: 1
+15. Country: East Africa, Armies: 1
+16. Country: Egypt, Armies: 1
+17. Country: Iceland, Armies: 1
+18. Country: Great Britain, Armies: 1
+19. Country: Western Europe, Armies: 1
+20. Country: Scandinavia, Armies: 1
+21. Country: Northern Europe, Armies: 1
+22. Country: Southern Europe, Armies: 1
+23. Country: Ukraine, Armies: 1
+24. Country: Middle East, Armies: 1
+25. Country: Ural, Armies: 1
+26. Country: Afghanistan, Armies: 1
+27. Country: India, Armies: 1
+28. Country: Siberia, Armies: 1
+29. Country: China, Armies: 1
+30. Country: Siam, Armies: 1
+31. Country: Mongolia, Armies: 1
+32. Country: Irkutsk, Armies: 1
+33. Country: Yatusk, Armies: 1
+34. Country: Kamchatka, Armies: 1
+35. Country: Japan, Armies: 1
+36. Country: Indonesia, Armies: 1
+37. Country: New Guinea, Armies: 1
+38. Country: Western Australia, Armies: 1
+39. Country: Eastern Australia, Armies: 1
+40. Country: KOREA, Armies: 1
+41. Country: pls, Armies: 1
+42. Country: Northwest Territory, Armies: 14
+
+Armies owned: 55
+Number of cards: 1
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+2.  Country: Alberta, Armies: 1
+
+Armies owned: 2
+Number of cards: 1
+
+AI Jon Snow's countries: 
+no countries found
+Armies owned: 0
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 4.54545%
+This is the percentage of the world owned by: AI Jon Snow: 0%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+
+Armies owned: 42
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 1
+
+Armies owned: 1
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+
+Armies owned: 42
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+43. Country: Northwest Territory, Armies: 14
+
+Armies owned: 56
+Number of cards: 4
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+AI Jon Snow's countries: 
+no countries found
+Armies owned: 0
+Number of cards: 3
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 97.7273%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 0%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Greenland, Armies: 1
+2.  Country: Ontario, Armies: 1
+3.  Country: Western United States, Armies: 1
+4.  Country: Eastern United States, Armies: 1
+5.  Country: Central America, Armies: 1
+6.  Country: Venezuala, Armies: 1
+7.  Country: Peru, Armies: 1
+8.  Country: Argentina, Armies: 1
+9.  Country: Brazil, Armies: 1
+10. Country: North Africa, Armies: 1
+11. Country: Congo, Armies: 1
+12. Country: South Africa, Armies: 1
+13. Country: Madagascar, Armies: 1
+14. Country: East Africa, Armies: 1
+15. Country: Egypt, Armies: 1
+16. Country: Iceland, Armies: 1
+17. Country: Great Britain, Armies: 1
+18. Country: Western Europe, Armies: 1
+19. Country: Scandinavia, Armies: 1
+20. Country: Northern Europe, Armies: 1
+21. Country: Southern Europe, Armies: 1
+22. Country: Ukraine, Armies: 1
+23. Country: Middle East, Armies: 1
+24. Country: Ural, Armies: 1
+25. Country: Afghanistan, Armies: 1
+26. Country: India, Armies: 1
+27. Country: Siberia, Armies: 1
+28. Country: China, Armies: 1
+29. Country: Siam, Armies: 1
+30. Country: Mongolia, Armies: 1
+31. Country: Irkutsk, Armies: 1
+32. Country: Yatusk, Armies: 1
+33. Country: Kamchatka, Armies: 1
+34. Country: Japan, Armies: 1
+35. Country: Indonesia, Armies: 1
+36. Country: New Guinea, Armies: 1
+37. Country: Western Australia, Armies: 1
+38. Country: Eastern Australia, Armies: 1
+39. Country: KOREA, Armies: 1
+40. Country: pls, Armies: 1
+41. Country: Northwest Territory, Armies: 14
+
+Armies owned: 54
+Number of cards: 4
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+2.  Country: Alberta, Armies: 1
+3.  Country: Quebec, Armies: 1
+
+Armies owned: 3
+Number of cards: 4
+
+AI Jon Snow's countries: 
+no countries found
+Armies owned: 0
+Number of cards: 3
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 93.1818%
+This is the percentage of the world owned by: AI Michonne: 6.81818%
+This is the percentage of the world owned by: AI Jon Snow: 0%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+
+Armies owned: 42
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+43. Country: Northwest Territory, Armies: 14
+
+Armies owned: 56
+Number of cards: 4
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+AI Jon Snow's countries: 
+no countries found
+Armies owned: 0
+Number of cards: 3
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 97.7273%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 0%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+43. Country: Northwest Territory, Armies: 14
+
+Armies owned: 56
+Number of cards: 4
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+AI Jon Snow's countries: 
+no countries found
+Armies owned: 0
+Number of cards: 3
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 97.7273%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 0%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+
+Armies owned: 42
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+43. Country: Northwest Territory, Armies: 14
+
+Armies owned: 56
+Number of cards: 4
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+AI Jon Snow's countries: 
+no countries found
+Armies owned: 0
+Number of cards: 3
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 97.7273%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 0%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Greenland, Armies: 1
+2.  Country: Ontario, Armies: 1
+3.  Country: Western United States, Armies: 1
+4.  Country: Eastern United States, Armies: 1
+5.  Country: Central America, Armies: 1
+6.  Country: Venezuala, Armies: 1
+7.  Country: Peru, Armies: 1
+8.  Country: Argentina, Armies: 1
+9.  Country: Brazil, Armies: 1
+10. Country: North Africa, Armies: 1
+11. Country: Congo, Armies: 1
+12. Country: South Africa, Armies: 1
+13. Country: Madagascar, Armies: 1
+14. Country: East Africa, Armies: 1
+15. Country: Egypt, Armies: 1
+16. Country: Iceland, Armies: 1
+17. Country: Great Britain, Armies: 1
+18. Country: Western Europe, Armies: 1
+19. Country: Scandinavia, Armies: 1
+20. Country: Northern Europe, Armies: 1
+21. Country: Southern Europe, Armies: 1
+22. Country: Ukraine, Armies: 1
+23. Country: Middle East, Armies: 1
+24. Country: Ural, Armies: 1
+25. Country: Afghanistan, Armies: 1
+26. Country: India, Armies: 1
+27. Country: Siberia, Armies: 1
+28. Country: China, Armies: 1
+29. Country: Siam, Armies: 1
+30. Country: Mongolia, Armies: 1
+31. Country: Irkutsk, Armies: 1
+32. Country: Yatusk, Armies: 1
+33. Country: Kamchatka, Armies: 1
+34. Country: Japan, Armies: 1
+35. Country: Indonesia, Armies: 1
+36. Country: New Guinea, Armies: 1
+37. Country: Western Australia, Armies: 1
+38. Country: Eastern Australia, Armies: 1
+39. Country: KOREA, Armies: 1
+40. Country: pls, Armies: 1
+41. Country: Northwest Territory, Armies: 14
+
+Armies owned: 54
+Number of cards: 4
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+2.  Country: Alberta, Armies: 1
+3.  Country: Quebec, Armies: 2
+
+Armies owned: 4
+Number of cards: 4
+
+AI Jon Snow's countries: 
+no countries found
+Armies owned: 0
+Number of cards: 3
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 93.1818%
+This is the percentage of the world owned by: AI Michonne: 6.81818%
+This is the percentage of the world owned by: AI Jon Snow: 0%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+
+Armies owned: 42
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+
+Armies owned: 42
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+
+Armies owned: 42
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+
+Armies owned: 42
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+
+Armies owned: 42
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+
+Armies owned: 42
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+43. Country: Northwest Territory, Armies: 14
+
+Armies owned: 56
+Number of cards: 4
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 97.7273%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+
+Armies owned: 42
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+43. Country: Northwest Territory, Armies: 11
+
+Armies owned: 53
+Number of cards: 4
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 97.7273%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+
+Armies owned: 42
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+43. Country: Northwest Territory, Armies: 14
+
+Armies owned: 56
+Number of cards: 4
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 97.7273%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+
+Armies owned: 42
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+43. Country: Northwest Territory, Armies: 14
+
+Armies owned: 56
+Number of cards: 4
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 97.7273%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Greenland, Armies: 1
+2.  Country: Ontario, Armies: 1
+3.  Country: Quebec, Armies: 1
+4.  Country: Western United States, Armies: 1
+5.  Country: Eastern United States, Armies: 1
+6.  Country: Central America, Armies: 1
+7.  Country: Venezuala, Armies: 1
+8.  Country: Peru, Armies: 1
+9.  Country: Argentina, Armies: 1
+10. Country: Brazil, Armies: 1
+11. Country: North Africa, Armies: 1
+12. Country: Congo, Armies: 1
+13. Country: South Africa, Armies: 1
+14. Country: Madagascar, Armies: 1
+15. Country: East Africa, Armies: 1
+16. Country: Egypt, Armies: 1
+17. Country: Iceland, Armies: 1
+18. Country: Great Britain, Armies: 1
+19. Country: Western Europe, Armies: 1
+20. Country: Scandinavia, Armies: 1
+21. Country: Northern Europe, Armies: 1
+22. Country: Southern Europe, Armies: 1
+23. Country: Ukraine, Armies: 1
+24. Country: Middle East, Armies: 1
+25. Country: Ural, Armies: 1
+26. Country: Afghanistan, Armies: 1
+27. Country: India, Armies: 1
+28. Country: Siberia, Armies: 1
+29. Country: China, Armies: 1
+30. Country: Siam, Armies: 1
+31. Country: Mongolia, Armies: 1
+32. Country: Irkutsk, Armies: 1
+33. Country: Yatusk, Armies: 1
+34. Country: Kamchatka, Armies: 1
+35. Country: Japan, Armies: 1
+36. Country: Indonesia, Armies: 1
+37. Country: New Guinea, Armies: 1
+38. Country: Western Australia, Armies: 1
+39. Country: Eastern Australia, Armies: 1
+40. Country: KOREA, Armies: 1
+41. Country: pls, Armies: 1
+42. Country: Northwest Territory, Armies: 14
+
+Armies owned: 55
+Number of cards: 4
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+2.  Country: Alberta, Armies: 1
+
+Armies owned: 2
+Number of cards: 4
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 4.54545%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+
+Armies owned: 42
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+This is the percentage of the world owned by: AI Jon Snow: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alberta, Armies: 1
+2.  Country: Greenland, Armies: 1
+3.  Country: Ontario, Armies: 1
+4.  Country: Quebec, Armies: 1
+5.  Country: Western United States, Armies: 1
+6.  Country: Eastern United States, Armies: 1
+7.  Country: Central America, Armies: 1
+8.  Country: Venezuala, Armies: 1
+9.  Country: Peru, Armies: 1
+10. Country: Argentina, Armies: 1
+11. Country: Brazil, Armies: 1
+12. Country: North Africa, Armies: 1
+13. Country: Congo, Armies: 1
+14. Country: South Africa, Armies: 1
+15. Country: Madagascar, Armies: 1
+16. Country: East Africa, Armies: 1
+17. Country: Egypt, Armies: 1
+18. Country: Iceland, Armies: 1
+19. Country: Great Britain, Armies: 1
+20. Country: Western Europe, Armies: 1
+21. Country: Scandinavia, Armies: 1
+22. Country: Northern Europe, Armies: 1
+23. Country: Southern Europe, Armies: 1
+24. Country: Ukraine, Armies: 1
+25. Country: Middle East, Armies: 1
+26. Country: Ural, Armies: 1
+27. Country: Afghanistan, Armies: 1
+28. Country: India, Armies: 1
+29. Country: Siberia, Armies: 1
+30. Country: China, Armies: 1
+31. Country: Siam, Armies: 1
+32. Country: Mongolia, Armies: 1
+33. Country: Irkutsk, Armies: 1
+34. Country: Yatusk, Armies: 1
+35. Country: Kamchatka, Armies: 1
+36. Country: Japan, Armies: 1
+37. Country: Indonesia, Armies: 1
+38. Country: New Guinea, Armies: 1
+39. Country: Western Australia, Armies: 1
+40. Country: Eastern Australia, Armies: 1
+41. Country: KOREA, Armies: 1
+42. Country: pls, Armies: 1
+43. Country: Northwest Territory, Armies: 14
+
+Armies owned: 56
+Number of cards: 4
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 3
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 97.7273%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Greenland, Armies: 1
+2.  Country: Ontario, Armies: 1
+3.  Country: Quebec, Armies: 1
+4.  Country: Western United States, Armies: 1
+5.  Country: Eastern United States, Armies: 1
+6.  Country: Central America, Armies: 1
+7.  Country: Venezuala, Armies: 1
+8.  Country: Peru, Armies: 1
+9.  Country: Argentina, Armies: 1
+10. Country: Brazil, Armies: 1
+11. Country: North Africa, Armies: 1
+12. Country: Congo, Armies: 1
+13. Country: South Africa, Armies: 1
+14. Country: Madagascar, Armies: 1
+15. Country: East Africa, Armies: 1
+16. Country: Egypt, Armies: 1
+17. Country: Iceland, Armies: 1
+18. Country: Great Britain, Armies: 1
+19. Country: Western Europe, Armies: 1
+20. Country: Scandinavia, Armies: 1
+21. Country: Northern Europe, Armies: 1
+22. Country: Southern Europe, Armies: 1
+23. Country: Ukraine, Armies: 1
+24. Country: Middle East, Armies: 1
+25. Country: Ural, Armies: 1
+26. Country: Afghanistan, Armies: 1
+27. Country: India, Armies: 1
+28. Country: Siberia, Armies: 1
+29. Country: China, Armies: 1
+30. Country: Siam, Armies: 1
+31. Country: Mongolia, Armies: 1
+32. Country: Irkutsk, Armies: 1
+33. Country: Yatusk, Armies: 1
+34. Country: Kamchatka, Armies: 1
+35. Country: Japan, Armies: 1
+36. Country: Indonesia, Armies: 1
+37. Country: New Guinea, Armies: 1
+38. Country: Western Australia, Armies: 1
+39. Country: Eastern Australia, Armies: 1
+40. Country: KOREA, Armies: 1
+41. Country: pls, Armies: 1
+42. Country: Northwest Territory, Armies: 14
+
+Armies owned: 55
+Number of cards: 4
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+2.  Country: Alberta, Armies: 3
+
+Armies owned: 4
+Number of cards: 4
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 4.54545%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Greenland, Armies: 1
+2.  Country: Ontario, Armies: 1
+3.  Country: Quebec, Armies: 1
+4.  Country: Western United States, Armies: 1
+5.  Country: Eastern United States, Armies: 1
+6.  Country: Central America, Armies: 1
+7.  Country: Venezuala, Armies: 1
+8.  Country: Peru, Armies: 1
+9.  Country: Argentina, Armies: 1
+10. Country: Brazil, Armies: 1
+11. Country: North Africa, Armies: 1
+12. Country: Congo, Armies: 1
+13. Country: South Africa, Armies: 1
+14. Country: Madagascar, Armies: 1
+15. Country: East Africa, Armies: 1
+16. Country: Egypt, Armies: 1
+17. Country: Iceland, Armies: 1
+18. Country: Great Britain, Armies: 1
+19. Country: Western Europe, Armies: 1
+20. Country: Scandinavia, Armies: 1
+21. Country: Northern Europe, Armies: 1
+22. Country: Southern Europe, Armies: 1
+23. Country: Ukraine, Armies: 1
+24. Country: Middle East, Armies: 1
+25. Country: Ural, Armies: 1
+26. Country: Afghanistan, Armies: 1
+27. Country: India, Armies: 1
+28. Country: Siberia, Armies: 1
+29. Country: China, Armies: 1
+30. Country: Siam, Armies: 1
+31. Country: Mongolia, Armies: 1
+32. Country: Irkutsk, Armies: 1
+33. Country: Yatusk, Armies: 1
+34. Country: Kamchatka, Armies: 1
+35. Country: Japan, Armies: 1
+36. Country: Indonesia, Armies: 1
+37. Country: New Guinea, Armies: 1
+38. Country: Western Australia, Armies: 1
+39. Country: Eastern Australia, Armies: 1
+40. Country: KOREA, Armies: 1
+41. Country: pls, Armies: 1
+42. Country: Northwest Territory, Armies: 14
+43. Country: Alberta, Armies: 17
+
+Armies owned: 72
+Number of cards: 2
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 4
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 97.7273%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Ontario, Armies: 1
+2.  Country: Quebec, Armies: 1
+3.  Country: Western United States, Armies: 1
+4.  Country: Eastern United States, Armies: 1
+5.  Country: Central America, Armies: 1
+6.  Country: Venezuala, Armies: 1
+7.  Country: Peru, Armies: 1
+8.  Country: Argentina, Armies: 1
+9.  Country: Brazil, Armies: 1
+10. Country: North Africa, Armies: 1
+11. Country: Congo, Armies: 1
+12. Country: South Africa, Armies: 1
+13. Country: Madagascar, Armies: 1
+14. Country: East Africa, Armies: 1
+15. Country: Egypt, Armies: 1
+16. Country: Iceland, Armies: 1
+17. Country: Great Britain, Armies: 1
+18. Country: Western Europe, Armies: 1
+19. Country: Scandinavia, Armies: 1
+20. Country: Northern Europe, Armies: 1
+21. Country: Southern Europe, Armies: 1
+22. Country: Ukraine, Armies: 1
+23. Country: Middle East, Armies: 1
+24. Country: Ural, Armies: 1
+25. Country: Afghanistan, Armies: 1
+26. Country: India, Armies: 1
+27. Country: Siberia, Armies: 1
+28. Country: China, Armies: 1
+29. Country: Siam, Armies: 1
+30. Country: Mongolia, Armies: 1
+31. Country: Irkutsk, Armies: 1
+32. Country: Yatusk, Armies: 1
+33. Country: Kamchatka, Armies: 1
+34. Country: Japan, Armies: 1
+35. Country: Indonesia, Armies: 1
+36. Country: New Guinea, Armies: 1
+37. Country: Western Australia, Armies: 1
+38. Country: Eastern Australia, Armies: 1
+39. Country: KOREA, Armies: 1
+40. Country: pls, Armies: 1
+41. Country: Northwest Territory, Armies: 14
+42. Country: Alberta, Armies: 17
+
+Armies owned: 71
+Number of cards: 2
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+2.  Country: Greenland, Armies: 3
+
+Armies owned: 4
+Number of cards: 5
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 4.54545%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Ontario, Armies: 1
+2.  Country: Quebec, Armies: 1
+3.  Country: Western United States, Armies: 1
+4.  Country: Eastern United States, Armies: 1
+5.  Country: Central America, Armies: 1
+6.  Country: Venezuala, Armies: 1
+7.  Country: Peru, Armies: 1
+8.  Country: Argentina, Armies: 1
+9.  Country: Brazil, Armies: 1
+10. Country: North Africa, Armies: 1
+11. Country: Congo, Armies: 1
+12. Country: South Africa, Armies: 1
+13. Country: Madagascar, Armies: 1
+14. Country: East Africa, Armies: 1
+15. Country: Egypt, Armies: 1
+16. Country: Iceland, Armies: 1
+17. Country: Great Britain, Armies: 1
+18. Country: Western Europe, Armies: 1
+19. Country: Scandinavia, Armies: 1
+20. Country: Northern Europe, Armies: 1
+21. Country: Southern Europe, Armies: 1
+22. Country: Ukraine, Armies: 1
+23. Country: Middle East, Armies: 1
+24. Country: Ural, Armies: 1
+25. Country: Afghanistan, Armies: 1
+26. Country: India, Armies: 1
+27. Country: Siberia, Armies: 1
+28. Country: China, Armies: 1
+29. Country: Siam, Armies: 1
+30. Country: Mongolia, Armies: 1
+31. Country: Irkutsk, Armies: 1
+32. Country: Yatusk, Armies: 1
+33. Country: Kamchatka, Armies: 1
+34. Country: Japan, Armies: 1
+35. Country: Indonesia, Armies: 1
+36. Country: New Guinea, Armies: 1
+37. Country: Western Australia, Armies: 1
+38. Country: Eastern Australia, Armies: 1
+39. Country: KOREA, Armies: 1
+40. Country: pls, Armies: 1
+41. Country: Northwest Territory, Armies: 14
+42. Country: Alberta, Armies: 17
+43. Country: Greenland, Armies: 14
+
+Armies owned: 85
+Number of cards: 3
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+
+Armies owned: 1
+Number of cards: 5
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 97.7273%
+This is the percentage of the world owned by: AI Michonne: 2.27273%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Ontario, Armies: 1
+2.  Country: Quebec, Armies: 1
+3.  Country: Western United States, Armies: 1
+4.  Country: Eastern United States, Armies: 1
+5.  Country: Central America, Armies: 1
+6.  Country: Venezuala, Armies: 1
+7.  Country: Peru, Armies: 1
+8.  Country: Argentina, Armies: 1
+9.  Country: Brazil, Armies: 1
+10. Country: North Africa, Armies: 1
+11. Country: Congo, Armies: 1
+12. Country: South Africa, Armies: 1
+13. Country: Madagascar, Armies: 1
+14. Country: East Africa, Armies: 1
+15. Country: Egypt, Armies: 1
+16. Country: Iceland, Armies: 1
+17. Country: Great Britain, Armies: 1
+18. Country: Western Europe, Armies: 1
+19. Country: Scandinavia, Armies: 1
+20. Country: Northern Europe, Armies: 1
+21. Country: Southern Europe, Armies: 1
+22. Country: Ukraine, Armies: 1
+23. Country: Middle East, Armies: 1
+24. Country: Ural, Armies: 1
+25. Country: Afghanistan, Armies: 1
+26. Country: India, Armies: 1
+27. Country: Siberia, Armies: 1
+28. Country: China, Armies: 1
+29. Country: Siam, Armies: 1
+30. Country: Mongolia, Armies: 1
+31. Country: Irkutsk, Armies: 1
+32. Country: Yatusk, Armies: 1
+33. Country: Kamchatka, Armies: 1
+34. Country: Indonesia, Armies: 1
+35. Country: New Guinea, Armies: 1
+36. Country: Western Australia, Armies: 1
+37. Country: Eastern Australia, Armies: 1
+38. Country: KOREA, Armies: 1
+39. Country: pls, Armies: 1
+40. Country: Northwest Territory, Armies: 14
+41. Country: Alberta, Armies: 17
+42. Country: Greenland, Armies: 14
+
+Armies owned: 84
+Number of cards: 3
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 1
+2.  Country: Japan, Armies: 3
+
+Armies owned: 4
+Number of cards: 6
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 95.4545%
+This is the percentage of the world owned by: AI Michonne: 4.54545%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alaska, Armies: 3
+2.  Country: Northwest Territory, Armies: 2
+3.  Country: Ontario, Armies: 2
+4.  Country: Quebec, Armies: 2
+5.  Country: Great Britain, Armies: 2
+6.  Country: Western Europe, Armies: 3
+7.  Country: Northern Europe, Armies: 4
+8.  Country: Southern Europe, Armies: 4
+9.  Country: Ural, Armies: 4
+10. Country: Afghanistan, Armies: 4
+11. Country: Siberia, Armies: 2
+12. Country: Mongolia, Armies: 1
+13. Country: Irkutsk, Armies: 1
+14. Country: Kamchatka, Armies: 1
+
+Armies owned: 35
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alberta, Armies: 4
+2.  Country: Greenland, Armies: 2
+3.  Country: Western United States, Armies: 4
+4.  Country: Eastern United States, Armies: 3
+5.  Country: Central America, Armies: 4
+6.  Country: Venezuala, Armies: 3
+7.  Country: Peru, Armies: 3
+8.  Country: Argentina, Armies: 2
+9.  Country: North Africa, Armies: 1
+10. Country: South Africa, Armies: 1
+11. Country: Egypt, Armies: 1
+12. Country: Iceland, Armies: 1
+13. Country: Middle East, Armies: 1
+14. Country: India, Armies: 1
+15. Country: China, Armies: 1
+16. Country: Siam, Armies: 1
+17. Country: Indonesia, Armies: 1
+18. Country: Eastern Australia, Armies: 1
+
+Armies owned: 35
+Number of cards: 0
+
+AI Jon Snow's countries: 
+1.  Country: Brazil, Armies: 4
+2.  Country: Congo, Armies: 2
+3.  Country: Madagascar, Armies: 4
+4.  Country: East Africa, Armies: 4
+5.  Country: Scandinavia, Armies: 2
+6.  Country: Ukraine, Armies: 3
+7.  Country: Yatusk, Armies: 3
+8.  Country: Japan, Armies: 4
+9.  Country: New Guinea, Armies: 3
+10. Country: Western Australia, Armies: 2
+11. Country: KOREA, Armies: 2
+12. Country: pls, Armies: 2
+
+Armies owned: 35
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 31.8182%
+This is the percentage of the world owned by: AI Michonne: 40.9091%
+This is the percentage of the world owned by: AI Jon Snow: 27.2727%
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Alaska, Armies: 2
+2.  Country: Northwest Territory, Armies: 3
+3.  Country: Ontario, Armies: 4
+4.  Country: Western United States, Armies: 2
+5.  Country: Central America, Armies: 3
+6.  Country: Venezuala, Armies: 4
+7.  Country: Peru, Armies: 3
+8.  Country: Brazil, Armies: 1
+9.  Country: North Africa, Armies: 1
+10. Country: Great Britain, Armies: 1
+11. Country: Western Europe, Armies: 1
+12. Country: Southern Europe, Armies: 1
+13. Country: Middle East, Armies: 1
+14. Country: Ural, Armies: 1
+15. Country: India, Armies: 1
+16. Country: Siam, Armies: 1
+17. Country: Mongolia, Armies: 1
+18. Country: Yatusk, Armies: 1
+19. Country: Japan, Armies: 1
+20. Country: Western Australia, Armies: 1
+21. Country: Eastern Australia, Armies: 1
+
+Armies owned: 35
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alberta, Armies: 6
+2.  Country: Congo, Armies: 6
+3.  Country: Madagascar, Armies: 2
+4.  Country: Egypt, Armies: 2
+5.  Country: Scandinavia, Armies: 4
+6.  Country: Siberia, Armies: 3
+7.  Country: China, Armies: 3
+8.  Country: Irkutsk, Armies: 2
+9.  Country: New Guinea, Armies: 3
+10. Country: pls, Armies: 4
+
+Armies owned: 35
+Number of cards: 0
+
+AI Jon Snow's countries: 
+1.  Country: Greenland, Armies: 2
+2.  Country: Quebec, Armies: 3
+3.  Country: Eastern United States, Armies: 2
+4.  Country: Argentina, Armies: 3
+5.  Country: South Africa, Armies: 4
+6.  Country: East Africa, Armies: 2
+7.  Country: Iceland, Armies: 3
+8.  Country: Northern Europe, Armies: 4
+9.  Country: Ukraine, Armies: 3
+10. Country: Afghanistan, Armies: 2
+11. Country: Kamchatka, Armies: 4
+12. Country: Indonesia, Armies: 2
+13. Country: KOREA, Armies: 1
+
+Armies owned: 35
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: Eric: 47.7273%
+This is the percentage of the world owned by: AI Michonne: 22.7273%
+This is the percentage of the world owned by: AI Jon Snow: 29.5455%
