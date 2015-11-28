@@ -57,10 +57,10 @@
 <td>Calculation of correct number of reinforcement armies and placement of armies on the map.</td><td><strong>X</strong></td>
 </tr>
 <tr>
-<td>Correct implementation of cards and their additional reinforcements.</td><td></td>
+<td>Correct implementation of cards and their additional reinforcements.</td><td><strong>X</strong></td>
 </tr>
 <tr>
-<td>Correct identification of valid attacking/attacked country.</td><td></td>
+<td>Correct identification of valid attacking/attacked country.</td><td><strong>X</strong></td>
 </tr>
 <tr>
 <td>Correct implementation of an attack using the Risk battle model</td><td><strong>X</strong></td>
@@ -69,7 +69,7 @@
 <td>Correct implementation of the post-battle movement after a victory.</td><td><strong>X</strong></td>
 </tr>
 <tr>
-<td>A victory gives a card, eliminating a player transfers all the defeated player's cards.</td><td></td>
+<td>A victory gives a card, eliminating a player transfers all the defeated player's cards.</td><td><strong>X</strong></td>
 </tr>
 <tr>
 <td>Implementation of a valid fortification move according to the Risk rules. </td><td><strong>X</strong></td>
