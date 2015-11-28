@@ -63,10 +63,10 @@
 <td>Correct identification of valid attacking/attacked country.</td><td></td>
 </tr>
 <tr>
-<td>Correct implementation of an attack using the Risk battle model/</td><td></td>
+<td>Correct implementation of an attack using the Risk battle model</td><td><strong>X</strong></td>
 </tr>
 <tr>
-<td>Correct implementation of the post-battle movement after a victory.</td><td></td>
+<td>Correct implementation of the post-battle movement after a victory.</td><td><strong>X</strong></td>
 </tr>
 <tr>
 <td>A victory gives a card, eliminating a player transfers all the defeated player's cards.</td><td></td>
