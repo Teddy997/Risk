@@ -12,6 +12,6 @@ public:
 	~SaveLoadManager();
 	void setFile(std::string filename) { file = filename; }
 	void SaveGame(GameState& currentState);
-	GameState LoadGame(std::string filename);
+	GameState* LoadGame(std::string filename);
 };
 

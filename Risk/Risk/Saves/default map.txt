@@ -3,7 +3,7 @@ $
 4
 $
 radu
-Greenland:8,Ontario:4,Madagascar:2,Great Britain:3,Southern Europe:4,Siberia:4,Japan:2,New Guinea:3,Western Australia:3
+Greenland:14,Ontario:4,Madagascar:2,Great Britain:3,Southern Europe:4,Siberia:4,Japan:2,New Guinea:3,Western Australia:3
 0
 NoStrat
 
@@ -31,7 +31,7 @@ Agressive
 4
 $
 radu
-Greenland:8,Ontario:4,Madagascar:2,Great Britain:3,Southern Europe:4,Siberia:4,Japan:2,New Guinea:3,Western Australia:3
+Greenland:14,Ontario:4,Madagascar:2,Great Britain:3,Southern Europe:4,Siberia:4,Japan:2,New Guinea:3,Western Australia:3
 0
 NoStrat
 

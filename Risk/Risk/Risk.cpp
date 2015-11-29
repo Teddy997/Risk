@@ -277,6 +277,7 @@ void Demo() {
 }
 void GameLifeTest() {
 	Engine* e = new Engine();
+	e->startGame();
 }
 int _tmain(int argc, _TCHAR* argv[])
 {

@@ -25,7 +25,7 @@ public:
 
 	GameState();
 	GameState(std::string name); // initializes the player with a name
-	GameState(bool loading);
+	GameState(bool loading, string line);
 	~GameState();
 	// adds a player to the game and sets its strategy randomly between aggressive, defensive and random
 	void addPlayer(std::string name); 
@@ -65,7 +65,7 @@ public:
 	
 	std::string unbuild();
 
-	GameState build(std::string line);
+	GameState* build(std::string line);
 	
 private:
 	Player* player;
@@ -123,7 +123,7 @@ private:
 		void setCurrentPhase_tobuild(std::string line);
 		void setCurrentDeck_tobuild(std::string line);
 		
-		GameState build();
+		GameState* build();
 	};
 };
 

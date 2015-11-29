@@ -34,7 +34,7 @@ void SaveLoadManager::SaveGame(GameState& currentState)
 
 }
 
-GameState SaveLoadManager::LoadGame(std::string filename) {
+GameState* SaveLoadManager::LoadGame(std::string filename) {
 	std::string file_contents;
 	std::string line;
 	std::ifstream load("Saves//" + filename + ".txt");
@@ -44,8 +44,7 @@ GameState SaveLoadManager::LoadGame(std::string filename) {
 		}
 		load.close();
 	}
-	
-	GameState gs(true);
-	GameState gs2(gs.build(file_contents));
+	GameState* gs = new GameState();
+	GameState* gs2 = (gs->build(file_contents));
 	return gs2;	
 }

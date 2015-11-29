@@ -10,6 +10,7 @@ class Engine
 {
 private:
 	GameState* gameState; // the state of the game.
+	bool loaded;
 	SaveLoadManager saveLoadManager;
 	bool victory, defeat; 
 
@@ -35,6 +36,7 @@ private:
 	void loadGame(std::string filename);
 public:
 	Engine();
+	void startGame();
 	~Engine();
 	
 

@@ -20,9 +20,10 @@ GameState::GameState(string name) {
 	manageMap();
 }
 
-GameState::GameState(bool loading) {
+GameState::GameState(bool loading, string line) {
 	if (loading == true) {
 		cout << "LOADING" << endl;
+		build(line);
 	}
 }
 
@@ -738,7 +739,7 @@ void GameState::Builder::setCurrentDeck_tobuild(std::string line) {
 	current_deck_tobuild->set_deck(d);
 }
 
-GameState GameState::Builder::build() {
+GameState* GameState::Builder::build() {
 	std::vector<std::string> contents = split(blueprint, '$');
 	setMapName_tobuild(contents.at(0));
 	setMap_tobuild();
@@ -751,13 +752,13 @@ GameState GameState::Builder::build() {
 	setCurrentPhase_tobuild(contents.at(contents.size()-3));
 	setCurrentDeck_tobuild(contents.at(contents.size()-2));
 
-	GameState gs;
-	gs.setMap(map_tobuild);
-	gs.setPlayer(player_tobuild);
-	gs.setAIPlayers(ai_players_tobuild);
-	gs.setPlayerTurn(current_player_tobuild);
-	gs.setGamePhase(currentPhase_tobuild);
-	gs.setDeck(current_deck_tobuild);
+	GameState* gs = new GameState();
+	gs->setMap(map_tobuild);
+	gs->setPlayer(player_tobuild);
+	gs->setAIPlayers(ai_players_tobuild);
+	gs->setPlayerTurn(current_player_tobuild);
+	gs->setGamePhase(currentPhase_tobuild);
+	gs->setDeck(current_deck_tobuild);
 	return gs;
 }
 
@@ -771,7 +772,7 @@ std::vector<std::string> GameState::Builder::split(std::string s, char delim) {
 	return items;
 }
 
-GameState GameState::build(std::string contents) {
+GameState* GameState::build(std::string contents) {
 	GameState::Builder b(contents);
 	return b.build();
 }

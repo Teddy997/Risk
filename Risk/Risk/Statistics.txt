@@ -289,3 +289,74 @@ AI Michonne's countries:
 Armies owned: 40
 Number of cards: 0
 
+===========================================NEW TURN==========================================
+rad's countries: 
+1.  Country: Central America, Armies: 5
+2.  Country: Ural, Armies: 5
+3.  Country: Afghanistan, Armies: 7
+4.  Country: India, Armies: 2
+5.  Country: Siam, Armies: 3
+6.  Country: New Guinea, Armies: 3
+7.  Country: KOREA, Armies: 3
+8.  Country: pls, Armies: 2
+
+Armies owned: 30
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Alaska, Armies: 2
+2.  Country: Western United States, Armies: 3
+3.  Country: Venezuala, Armies: 2
+4.  Country: Brazil, Armies: 2
+5.  Country: Congo, Armies: 4
+6.  Country: South Africa, Armies: 2
+7.  Country: Iceland, Armies: 4
+8.  Country: Western Europe, Armies: 2
+9.  Country: Scandinavia, Armies: 3
+10. Country: Northern Europe, Armies: 3
+11. Country: Southern Europe, Armies: 1
+12. Country: Siberia, Armies: 1
+13. Country: Mongolia, Armies: 1
+
+Armies owned: 30
+Number of cards: 0
+
+AI Jon Snow's countries: 
+1.  Country: Northwest Territory, Armies: 2
+2.  Country: Ontario, Armies: 4
+3.  Country: Argentina, Armies: 3
+4.  Country: North Africa, Armies: 2
+5.  Country: East Africa, Armies: 4
+6.  Country: Egypt, Armies: 3
+7.  Country: Great Britain, Armies: 2
+8.  Country: Middle East, Armies: 3
+9.  Country: Yatusk, Armies: 3
+10. Country: Japan, Armies: 1
+11. Country: Indonesia, Armies: 1
+12. Country: Western Australia, Armies: 1
+13. Country: Eastern Australia, Armies: 1
+
+Armies owned: 30
+Number of cards: 0
+
+AI Heisenberg's countries: 
+1.  Country: Alberta, Armies: 2
+2.  Country: Greenland, Armies: 4
+3.  Country: Quebec, Armies: 3
+4.  Country: Eastern United States, Armies: 4
+5.  Country: Peru, Armies: 3
+6.  Country: Madagascar, Armies: 2
+7.  Country: Ukraine, Armies: 2
+8.  Country: China, Armies: 4
+9.  Country: Irkutsk, Armies: 3
+10. Country: Kamchatka, Armies: 3
+
+Armies owned: 30
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: rad: 18.1818%
+This is the percentage of the world owned by: AI Michonne: 29.5455%
+This is the percentage of the world owned by: AI Jon Snow: 29.5455%
+This is the percentage of the world owned by: AI Heisenberg: 22.7273%

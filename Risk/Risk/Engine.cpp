@@ -14,7 +14,7 @@ Engine::Engine()
 	cin >> name;
 	gameState = new GameState(name); // the name of the human player
 	
-	bool loaded = false;
+	loaded = false;
 	
 	saveLoadManager = SaveLoadManager();
 	if (gameState->getBrandNewGame() == true) {
@@ -26,14 +26,18 @@ Engine::Engine()
 		//loadedGamePlayPhase();
 	}
 	StatisticsView* v = new StatisticsView(gameState);
+	
 	v = new StatisticsWorld(v);
+
 	gameState->Attach(v);
+
+}
+void Engine::startGame() {
 	if (loaded)
 		loadedGamePlayPhase();
 	else
 		gamePlayPhase();
 }
-
 
 Engine::~Engine()
 {
@@ -344,7 +348,9 @@ void Engine::saveGame() {
 
 void Engine::loadGame(string filename) {
 	saveLoadManager.setFile("Saves//"+filename+".txt");
-	gameState = new GameState(saveLoadManager.LoadGame(filename));
+	//GameState g = saveLoadManager.LoadGame(filename);
+	//gameState = &g;
+	gameState = saveLoadManager.LoadGame(filename);
 }
 
 void Engine::chooseGame() {

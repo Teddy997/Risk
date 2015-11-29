@@ -2,42 +2,42 @@ default map
 $
 4
 $
-ra
-Northwest Territory:9,Congo:4,East Africa:4,Western Europe:3,Southern Europe:3,Mongolia:3,Irkutsk:2,pls:4
+rad
+Central America:8,Ural:5,Afghanistan:7,India:2,Siam:3,New Guinea:3,KOREA:3,pls:2
 0
 NoStrat
-0,2
+
 4
 $
 AI Michonne
-Central America:1,Venezuala:1,Great Britain:1,Yatusk:1,Kamchatka:1,Eastern United States:1,Argentina:1,North Africa:1,Ontario:1
-5
+Alaska:2,Western United States:3,Venezuala:2,Brazil:2,Congo:4,South Africa:2,Iceland:4,Western Europe:2,Scandinavia:3,Northern Europe:3,Southern Europe:1,Siberia:1,Mongolia:1
+0
 Agressive
-0,1
+
 4
 $
 AI Jon Snow
-Alaska:1,Western United States:1,Peru:1,South Africa:1,Northern Europe:1,Indonesia:1,KOREA:1,Greenland:1,Brazil:1,Ukraine:1,Alberta:3,Egypt:1,Quebec:1
-9
+Northwest Territory:2,Ontario:4,Argentina:3,North Africa:2,East Africa:4,Egypt:3,Great Britain:2,Middle East:3,Yatusk:3,Japan:1,Indonesia:1,Western Australia:1,Eastern Australia:1
+0
 Agressive
-1,2
+
 4
 $
 AI Heisenberg
-Madagascar:1,Iceland:1,Middle East:1,Ural:1,China:1,Japan:1,New Guinea:7,Eastern Australia:1,Scandinavia:1,India:3,Siam:2,Afghanistan:2,Western Australia:1,Siberia:1
-8
-Agressive
+Alberta:2,Greenland:4,Quebec:3,Eastern United States:4,Peru:3,Madagascar:2,Ukraine:2,China:4,Irkutsk:3,Kamchatka:3
 0
+Agressive
+
 4
 $
-AI Heisenberg
-Madagascar:1,Iceland:1,Middle East:1,Ural:1,China:1,Japan:1,New Guinea:7,Eastern Australia:1,Scandinavia:1,India:3,Siam:2,Afghanistan:2,Western Australia:1,Siberia:1
-8
-Agressive
+rad
+Central America:8,Ural:5,Afghanistan:7,India:2,Siam:3,New Guinea:3,KOREA:3,pls:2
 0
+NoStrat
+
 4
 $
 REINFORCING
 $
-1,0,1,1,0,1,0,1,1,2,0,2,2,2,1,0,1,0,2,2,0,2,2
+2,0,2,1,1,2,2,2,0,1,1,2,0,0,1,2,1,1,0,2,1,0,1,2,0,2,0,0,1,0
 $
