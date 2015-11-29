@@ -3,8 +3,6 @@
 #include "Strategy.h"
 class RandomStrategy : public Strategy
 {
-//private:
-	//std::string stratName;
 public:
 	RandomStrategy();
 	~RandomStrategy();

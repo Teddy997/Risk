@@ -3,7 +3,7 @@
 #include "Strategy.h"
 class NoStrategy : public Strategy
 {
-	//private:
+//private:
 	//std::string stratName;
 public:
 	NoStrategy();

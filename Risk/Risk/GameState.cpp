@@ -77,7 +77,7 @@ void GameState::setAIPlayers(std::vector<Player*> ais) {
 
 void GameState::addPlayer(string name) {
 	Player* p = new Player(name);
-	/*
+	
 	int random = rand() % 3;
 	if (random == 0)
 		p->setStrategy(new AgressiveStrategy());
@@ -85,15 +85,49 @@ void GameState::addPlayer(string name) {
 		p->setStrategy(new DefensiveStrategy());
 	else
 		p->setStrategy(new RandomStrategy());
-		*/
-	p->setStrategy(new AgressiveStrategy());			//OK
+		
+	//p->setStrategy(new AgressiveStrategy());			//OK
 	//p->setStrategy(new DefensiveStrategy());			//OK			
 	//p->setStrategy(new RandomStrategy());				//OK
-
+	cout << p->get_player_name() << " has type of strategy: " << p->getStrategy()->getStratName() << endl;
 	AIPlayers.push_back(p);
 	
 }
-
+void GameState::changeStrategy() {
+	cout << "Do you wish to change any of the player's attack strategy? (y/n)" << endl;
+	string s;
+	cin >> s;
+	if (s == "y") {
+		for (Player* p : AIPlayers) {
+			cout << p->get_player_name() << " has type of strategy: " << p->getStrategy()->getStratName() << endl;
+			cout << "Change their strategy? (y/n)" << endl;
+			string ss;
+			cin >> ss;
+			if (ss == "y") {
+				cout << "Type in the number of any of the following: " << endl;
+				cout << "1. Agressive\n2. Defensive\n3. Random" << endl;
+				bool valid_amount = false;
+				int strat = 0;
+				while (valid_amount == false) {
+					
+					strat = InputProcedure::get_choice();
+					if (strat <= 0 || strat > 3) {
+						cout << "Not a valid amount" << endl;
+					}
+					else {
+						valid_amount = true;
+					}
+				}
+				if (strat == 1)
+					p->setStrategy(new AgressiveStrategy());
+				else if (strat == 2)
+					p->setStrategy(new DefensiveStrategy());
+				else if (strat == 3)
+					p->setStrategy(new RandomStrategy());
+			}
+		}
+	}
+}
 void GameState::attackingPhase() {
 	cout << "**********ATTACKING PHASE*************\n" << endl;
 	cout << currentPlayer->get_player_name() << " is currently attacking...\n" << endl;

@@ -68,6 +68,7 @@ public:
 
 	GameState* build(std::string line);
 	
+	void changeStrategy();
 private:
 	Player* player;
 	vector<Player*> AIPlayers;

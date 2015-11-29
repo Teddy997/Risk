@@ -25,11 +25,28 @@ Engine::Engine()
 		loaded = true;
 		//loadedGamePlayPhase();
 	}
-	StatisticsView* v = new StatisticsView(gameState);
+	chooseStats();
 	
-	v = new StatisticsWorld(v);
+}
+void Engine::chooseStats() {
+	cout << "Throughout the game, various statistics about the game play can be recorded. Do you wish to add basic statistics? (y/n)."
+		<< " Note that if you choose no, then you will not be able to record any statistics at all."<< endl;
+	string s;
+	cin >> s;
+	if (s == "y") {
+		StatisticsView* v = new StatisticsView(gameState);
+		cout << "do you wish to see world statistics? (y/n)" << endl;
+		string ss;
+		cin >> ss;
+		if (ss == "n") {
+			v = new StatisticsWorld(v);
+		}
+		gameState->Attach(v);
 
-	gameState->Attach(v);
+	}
+
+
+
 
 }
 void Engine::startGame() {
@@ -81,6 +98,7 @@ void Engine::gamePlayPhase(){
 				}
 			//}
 		}
+		gameState->changeStrategy();
 		std::cout << "aiplayers size: " << gameState->getAIPlayers().size() << std::endl;
 		std::cout << "turn: " << turn << std::endl;
 		victoryConditions();
@@ -253,13 +271,24 @@ void Engine::generateAIPlayers() {
 	vector<string> names = { "AI Michonne", "AI Jon Snow", "AI Heisenberg" };
 	// asking playa for number of players.
 	unsigned int opponents = 0;
+
+
+	Map* map = gameState->getMap();
+	vector<Country*> c = map->getAllCountries();
+	int nbOfCountries = c.size();
+	int maxAINumber = 3;
+	if (nbOfCountries <= 2)
+		maxAINumber = 1;
+	else if (nbOfCountries == 3)
+		maxAINumber = 2;
+
 	cout << "Choose the number of opponents to play against. For the sake of simplicity and coherence, please only"
-		<< " choose a number between 1 and " << names.size() << endl;
+		<< " choose a number between 1 and " << maxAINumber << endl;
 	bool valid = false;
 
 	while (valid == false) {
 		opponents = InputProcedure::get_choice();
-		if (opponents < 1 || opponents > names.size()) {
+		if (opponents < 1 || opponents > maxAINumber) {
 			cout << "Not a valid choice." << endl;
 		}
 		else {
@@ -268,7 +297,7 @@ void Engine::generateAIPlayers() {
 	}
 
 	if (valid) {
-		for (unsigned int i = 0; i < names.size(); ++i) {
+		for (unsigned int i = 0; i < maxAINumber; ++i) {
 			if (opponents > 0) {
 				gameState->addPlayer(names[i]);
 				--opponents;

@@ -3,41 +3,41 @@ $
 4
 $
 rad
-Central America:8,Ural:5,Afghanistan:7,India:2,Siam:3,New Guinea:3,KOREA:3,pls:2
+Northwest Territory:4,Quebec:6,Western United States:7,Brazil:2,Scandinavia:4,Ural:3,Siberia:3,Japan:4
 0
 NoStrat
 
 4
 $
 AI Michonne
-Alaska:2,Western United States:3,Venezuala:2,Brazil:2,Congo:4,South Africa:2,Iceland:4,Western Europe:2,Scandinavia:3,Northern Europe:3,Southern Europe:1,Siberia:1,Mongolia:1
+Alaska:4,Venezuala:4,Congo:4,South Africa:3,Southern Europe:2,Ukraine:3,Afghanistan:6,Irkutsk:2,Kamchatka:3,Indonesia:1,KOREA:1,pls:1
 0
 Agressive
 
 4
 $
 AI Jon Snow
-Northwest Territory:2,Ontario:4,Argentina:3,North Africa:2,East Africa:4,Egypt:3,Great Britain:2,Middle East:3,Yatusk:3,Japan:1,Indonesia:1,Western Australia:1,Eastern Australia:1
+Alberta:2,Ontario:4,Eastern United States:4,Argentina:2,Madagascar:4,Iceland:4,Great Britain:3,Western Europe:1,Northern Europe:1,Middle East:1,China:1,Yatusk:1,Western Australia:1,Eastern Australia:1
 0
-Agressive
+Random
 
 4
 $
 AI Heisenberg
-Alberta:2,Greenland:4,Quebec:3,Eastern United States:4,Peru:3,Madagascar:2,Ukraine:2,China:4,Irkutsk:3,Kamchatka:3
+Greenland:2,Central America:2,Peru:2,North Africa:3,East Africa:3,Egypt:4,India:4,Siam:4,Mongolia:4,New Guinea:2
 0
-Agressive
+Random
 
 4
 $
-rad
-Central America:8,Ural:5,Afghanistan:7,India:2,Siam:3,New Guinea:3,KOREA:3,pls:2
+AI Michonne
+Alaska:4,Venezuala:4,Congo:4,South Africa:3,Southern Europe:2,Ukraine:3,Afghanistan:6,Irkutsk:2,Kamchatka:3,Indonesia:1,KOREA:1,pls:1
 0
-NoStrat
+Agressive
 
 4
 $
 REINFORCING
 $
-2,0,2,1,1,2,2,2,0,1,1,2,0,0,1,2,1,1,0,2,1,0,1,2,0,2,0,0,1,0
+1,2,2,0,1,0,1,2,0,2,0,2,1,0,2,1,2,0,2,1,2,1,1,1,0,2,0,1,0,0
 $
