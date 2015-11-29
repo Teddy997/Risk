@@ -24,7 +24,7 @@
 <td>Verification of map correctness before saving (at least 3 types of incorrect maps)</td><td><strong>X</strong></td>
 </tr>
 <tr>
-<td>Implementation of a round-robin loop for players' turns/phases, identification of a winner and end of game, defeated player is removed from round-robin loop</td><td></td>
+<td>Implementation of a round-robin loop for players' turns/phases, identification of a winner and end of game, defeated player is removed from round-robin loop</td><td><strong>X</strong></td>
 </tr>
 <tr>
 <td>Save/Load a game in progress using a Builder pattern (based on assign3)</td><td><strong>X</strong></td>
@@ -57,19 +57,19 @@
 <td>Calculation of correct number of reinforcement armies and placement of armies on the map.</td><td><strong>X</strong></td>
 </tr>
 <tr>
-<td>Correct implementation of cards and their additional reinforcements.</td><td></td>
+<td>Correct implementation of cards and their additional reinforcements.</td><td><strong>X</strong></td>
 </tr>
 <tr>
-<td>Correct identification of valid attacking/attacked country.</td><td></td>
+<td>Correct identification of valid attacking/attacked country.</td><td><strong>X</strong></td>
 </tr>
 <tr>
-<td>Correct implementation of an attack using the Risk battle model/</td><td></td>
+<td>Correct implementation of an attack using the Risk battle model</td><td><strong>X</strong></td>
 </tr>
 <tr>
-<td>Correct implementation of the post-battle movement after a victory.</td><td></td>
+<td>Correct implementation of the post-battle movement after a victory.</td><td><strong>X</strong></td>
 </tr>
 <tr>
-<td>A victory gives a card, eliminating a player transfers all the defeated player's cards.</td><td></td>
+<td>A victory gives a card, eliminating a player transfers all the defeated player's cards.</td><td><strong>X</strong></td>
 </tr>
 <tr>
 <td>Implementation of a valid fortification move according to the Risk rules. </td><td><strong>X</strong></td>

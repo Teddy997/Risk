@@ -108,18 +108,18 @@ void GameState::attackingPhase() {
 }
 
 void GameState::displayAttackOptions() {
-	cout << "Here are the countries that you own and their connected ennemy countries :" << endl;
+	cout << "Here are the countries that you own and their connected enemy countries :" << endl;
 	vector<Country*> countriesOwned = currentPlayer->getCountries();
 	for (unsigned int i = 0; i < countriesOwned.size(); ++i) {
 		bool hasAtLeastOne = false; // at least one connection
 		cout << i + 1 << ". Country: " << countriesOwned[i]->get_country_name()
 			<< ", Armies: " << countriesOwned[i]->get_number_of_armies()
-			<< ", ennemy connected countries: ";
+			<< ", enemy connected countries and their army count: ";
 		vector<Country*> countriesConnected = countriesOwned[i]->getConnectedCountries();
 		for (unsigned int j = 0; j < countriesConnected.size(); ++j) {
 
 			if (countriesConnected[j]->getOwner() != player) {
-				cout << " \"" << countriesConnected[j]->get_country_name() << "\"";
+				cout << " \"" << countriesConnected[j]->get_country_name() << ":" << countriesConnected[j]->get_number_of_armies() << "\"";
 				hasAtLeastOne = true;
 			}
 		}
@@ -157,7 +157,7 @@ void GameState::doPlayerAttacking() {
 			cout << "Now type in the name correctly(lower case and upper case) of the country you want to attack :" << endl;
 			string name;
 			bool valid2 = false;
-			cin >> name;
+			getline(cin, name);
 			//int index2 = getIndexOfCountry() - 1;
 			Country* connected;
 			//find the country
@@ -542,7 +542,6 @@ void GameState::assignCountries() {
 	else if (numberOfPlayers == 4)
 		numberOfArmiesPerPlayer = 30;
 	
-
 	// assign countries to players
 	for (Country* c : countries) {
 		int toPlayer = rand() % numberOfPlayers; 
@@ -558,7 +557,6 @@ void GameState::assignCountries() {
 	// assign number of armies to each country 
 	for (Player* p : AIPlayers) {
 		p->assignArmies(numberOfArmiesPerPlayer);
-
 		
 	}
 	

@@ -76,15 +76,14 @@ void Engine::gamePlayPhase(){
 				saveGame();
 				attackPhase();
 				fortificationPhase();
-				//this is currently only here for testing. set_can_draw is triggered when a player conquers a country,
-				//which is the condition on which they may draw a card
-				p->set_can_draw(true); //TODO: REMOVE. 
-				//
 				if (p->can_player_draw() == true) {
 					p->add_to_hand(gameState->getDeck()->draw_card());
 				}
 			//}
 		}
+		std::cout << "aiplayers size: " << gameState->getAIPlayers().size() << std::endl;
+		std::cout << "turn: " << turn << std::endl;
+		victoryConditions();
 		if (turn > gameState->getAIPlayers().size())
 			turn = 0;
 		gameState->updatePlayerTurn(++turn);
@@ -102,16 +101,12 @@ void Engine::loadedGamePlayPhase() {
 	gameState->changeGamePhase(gameState->getGamePhase());
 	if (gameState->getGamePhase() == REINFORCING) {
 		saveGame();
-		//attackPhase();
+		attackPhase();
 		fortificationPhase();
 	}
 	else if (gameState->getGamePhase() == ATTACKING) {
 		fortificationPhase();
 	}
-	//this is currently only here for testing. set_can_draw is triggered when a player conquers a country,
-	//which is the condition on which they may draw a card
-	gameState->getCurrentPlayer()->set_can_draw(true); //TODO: REMOVE. 
-	//
 	if (gameState->getCurrentPlayer()->can_player_draw() == true) {
 		gameState->getCurrentPlayer()->add_to_hand(gameState->getDeck()->draw_card());
 	}
@@ -126,6 +121,7 @@ void Engine::loadedGamePlayPhase() {
 			}
 		}
 	}
+	victoryConditions();
 	gameState->updatePlayerTurn(turn);
 	while (victoryConditions()) {
 		Player* p = gameState->getCurrentPlayer();
@@ -143,17 +139,15 @@ void Engine::loadedGamePlayPhase() {
 			}
 			reinforcementPhase();
 			saveGame();
-			//attackPhase();
+			attackPhase();
 			fortificationPhase();
-			//this is currently only here for testing. set_can_draw is triggered when a player conquers a country,
-			//which is the condition on which they may draw a card
-			p->set_can_draw(true); //TODO: REMOVE. 
-			//
+
 			if (p->can_player_draw() == true) {
 				p->add_to_hand(gameState->getDeck()->draw_card());
 			}
 			//}
 		}
+		victoryConditions();
 		if (turn > gameState->getAIPlayers().size())
 			turn = 0;
 		gameState->updatePlayerTurn(++turn);
@@ -208,20 +202,25 @@ bool Engine::victoryConditions() {
 	else {
 		bool d = false;
 		vector<Player*> v = gameState->getAIPlayers();
-		for (unsigned int i = 0; i < v.size(); ++i) {
-			
+		if (v.size() > 0) {
 
-			if (v[i]->numberOfCountriesOwned() < 1) {
-				gameState->removePlayerAtIndex(i);
-				victory = true;
-			}
-			else {
-				victory = false;
-				d = true;
-			}
-			if (d)
-				break;
+			for (unsigned int i = 0; i < v.size(); ++i) {
+				if (v[i]->numberOfCountriesOwned() < 1) {
+					cout << v[i]->get_player_name() + " has been defeated as they own no more countries!" << endl;
+					gameState->removePlayerAtIndex(i);
+					//victory = true;
+				}
+				else {
+					victory = false;
+					d = true;
+				}
+				/*if (d)
+					break;*/
 
+			}
+		}
+		else {
+			victory = true;
 		}
 
 	}
