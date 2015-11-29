@@ -51,7 +51,7 @@
 <td>User chooses the number of players, all countries are randomly assigned to players.</td><td><strong>X</strong></td>
 </tr>
 <tr>
-<td>Types of players are initially assigned and implemented using a Strategy pattern (based on assign2). Types of players can be changed at any time during play.</td><td></td>
+<td>Types of players are initially assigned and implemented using a Strategy pattern (based on assign2). Types of players can be changed at any time during play.</td><td><strong>X</strong></td>
 </tr>
 <tr>
 <td>Calculation of correct number of reinforcement armies and placement of armies on the map.</td><td><strong>X</strong></td>
