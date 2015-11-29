@@ -42,7 +42,7 @@
 <td>Game log Observer/Decorator that displays logging of user-selected players/phased (based on assign3)</td><td></td>
 </tr>
 <tr>
-<td>Game log and game statistics Observers are initially set to show user-selected parts (based on assign3) using the Observer and Decorator patterns</td><td></td>
+<td>Game log and game statistics Observers are initially set to show user-selected parts (based on assign3) using the Observer and Decorator patterns</td><td><strong>Statistics done</strong></td>
 </tr>
 <tr>
 <td>User selection of a previously user-saved map, then load the map</td><td><strong>X</strong></td>
