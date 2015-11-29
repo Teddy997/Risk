@@ -6730,3 +6730,74 @@ This is the percentage of the world owned by: Eric: 47.7273%
 This is the percentage of the world owned by: AI Michonne: 22.7273%
 This is the percentage of the world owned by: AI Jon Snow: 29.5455%
 >>>>>>> eb561f218e269c86e913c853fa778b17d59a1b5b
+===========================================NEW TURN==========================================
+ra's countries: 
+1.  Country: Alaska, Armies: 2
+2.  Country: Alberta, Armies: 2
+3.  Country: Ontario, Armies: 4
+4.  Country: Quebec, Armies: 4
+5.  Country: Western United States, Armies: 2
+6.  Country: Venezuala, Armies: 3
+7.  Country: Argentina, Armies: 2
+8.  Country: North Africa, Armies: 3
+9.  Country: Congo, Armies: 1
+10. Country: Egypt, Armies: 1
+11. Country: Great Britain, Armies: 1
+12. Country: Ural, Armies: 1
+13. Country: Afghanistan, Armies: 1
+14. Country: Siam, Armies: 1
+15. Country: Mongolia, Armies: 1
+16. Country: Western Australia, Armies: 1
+
+Armies owned: 30
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Northwest Territory, Armies: 3
+2.  Country: Greenland, Armies: 2
+3.  Country: Central America, Armies: 3
+4.  Country: East Africa, Armies: 2
+5.  Country: Western Europe, Armies: 4
+6.  Country: Scandinavia, Armies: 2
+7.  Country: Northern Europe, Armies: 4
+8.  Country: Japan, Armies: 4
+9.  Country: Indonesia, Armies: 4
+10. Country: Eastern Australia, Armies: 1
+11. Country: KOREA, Armies: 1
+
+Armies owned: 30
+Number of cards: 0
+
+AI Jon Snow's countries: 
+1.  Country: Peru, Armies: 4
+2.  Country: Brazil, Armies: 6
+3.  Country: Madagascar, Armies: 4
+4.  Country: Ukraine, Armies: 2
+5.  Country: India, Armies: 4
+6.  Country: Yatusk, Armies: 4
+7.  Country: Kamchatka, Armies: 2
+8.  Country: pls, Armies: 4
+
+Armies owned: 30
+Number of cards: 0
+
+AI Heisenberg's countries: 
+1.  Country: Eastern United States, Armies: 5
+2.  Country: South Africa, Armies: 4
+3.  Country: Iceland, Armies: 2
+4.  Country: Southern Europe, Armies: 3
+5.  Country: Middle East, Armies: 3
+6.  Country: Siberia, Armies: 3
+7.  Country: China, Armies: 3
+8.  Country: Irkutsk, Armies: 3
+9.  Country: New Guinea, Armies: 4
+
+Armies owned: 30
+Number of cards: 0
+
+
+*********World Statistics**********
+This is the percentage of the world owned by: ra: 36.3636%
+This is the percentage of the world owned by: AI Michonne: 25%
+This is the percentage of the world owned by: AI Jon Snow: 18.1818%
+This is the percentage of the world owned by: AI Heisenberg: 20.4545%
