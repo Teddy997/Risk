@@ -2,7 +2,7 @@
 <strong>CURRENT KNOWN BUGS / FEATURES WE NEED</strong>
 <table>
 <tr><td>Need to be able to delete maps</td><td></td></tr>
-<tr><td>Need to have a check for the number of AI players if the map is too small (can't have 3 AI with a map of two countries)</td><td></td></tr>
+<tr><td>**DONE**  Need to have a check for the number of AI players if the map is too small (can't have 3 AI with a map of two countries)</td><td></td></tr>
 <tr><td>DEFAULT MAP is the default map we can load. Need to prevent anyone from attempting to edit it</td><td></td></tr>
 </table>
 
@@ -36,13 +36,13 @@
 <td>Map Observer that displays relevant information about the map (based on assign2)</td><td></td>
 </tr>
 <tr>
-<td>Game statistics Observer/Decorator that displays user-selected game statistics (based on assign3)</td><td></td>
+<td>Game statistics Observer/Decorator that displays user-selected game statistics (based on assign3)</td><td><strong>X</strong></td>
 </tr>
 <tr>
 <td>Game log Observer/Decorator that displays logging of user-selected players/phased (based on assign3)</td><td></td>
 </tr>
 <tr>
-<td>Game log and game statistics Observers are initially set to show user-selected parts (based on assign3) using the Observer and Decorator patterns</td><td></td>
+<td>Game log and game statistics Observers are initially set to show user-selected parts (based on assign3) using the Observer and Decorator patterns</td><td><strong>Statistics done</strong></td>
 </tr>
 <tr>
 <td>User selection of a previously user-saved map, then load the map</td><td><strong>X</strong></td>
@@ -51,7 +51,7 @@
 <td>User chooses the number of players, all countries are randomly assigned to players.</td><td><strong>X</strong></td>
 </tr>
 <tr>
-<td>Types of players are initially assigned and implemented using a Strategy pattern (based on assign2). Types of players can be changed at any time during play.</td><td></td>
+<td>Types of players are initially assigned and implemented using a Strategy pattern (based on assign2). Types of players can be changed at any time during play.</td><td><strong>X</strong></td>
 </tr>
 <tr>
 <td>Calculation of correct number of reinforcement armies and placement of armies on the map.</td><td><strong>X</strong></td>
