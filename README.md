@@ -36,7 +36,7 @@
 <td>Map Observer that displays relevant information about the map (based on assign2)</td><td></td>
 </tr>
 <tr>
-<td>Game statistics Observer/Decorator that displays user-selected game statistics (based on assign3)</td><td></td>
+<td>Game statistics Observer/Decorator that displays user-selected game statistics (based on assign3)</td><td><strong>X</strong></td>
 </tr>
 <tr>
 <td>Game log Observer/Decorator that displays logging of user-selected players/phased (based on assign3)</td><td></td>
