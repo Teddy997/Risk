@@ -34,6 +34,7 @@ private:
 	void chooseGame();
 	void saveGame();
 	void loadGame(std::string filename);
+	void chooseStats();
 public:
 	Engine();
 	void startGame();
