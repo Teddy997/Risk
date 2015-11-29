@@ -2,7 +2,7 @@
 <strong>CURRENT KNOWN BUGS / FEATURES WE NEED</strong>
 <table>
 <tr><td>Need to be able to delete maps</td><td></td></tr>
-<tr><td>Need to have a check for the number of AI players if the map is too small (can't have 3 AI with a map of two countries)</td><td></td></tr>
+<tr><td>**DONE**  Need to have a check for the number of AI players if the map is too small (can't have 3 AI with a map of two countries)</td><td></td></tr>
 <tr><td>DEFAULT MAP is the default map we can load. Need to prevent anyone from attempting to edit it</td><td></td></tr>
 </table>
 
