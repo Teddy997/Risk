@@ -25,6 +25,8 @@ void ConquestMapLoaderSaver::Save(MapTemplate mapTemplate)
 
 	outputFile << std::endl;
 
+	outputFile << "[Territories]" << std::endl;
+
 	for (unsigned int i = 0; i < mapTemplate.country_names.size(); i++) {
 		outputFile << mapTemplate.country_names.at(i) << ",000,000," << mapTemplate.continent_names.at(mapTemplate.continent_of_country.at(i));
 		for (unsigned int j = 0; j < mapTemplate.countries_adjacencies.at(i).size(); j++) {

@@ -47,9 +47,6 @@
     <ClCompile Include="TextMapLoaderSaver.cpp">
       <Filter>Load&amp;Save</Filter>
     </ClCompile>
-    <ClCompile Include="TextMapLoaderSaverAdapter.cpp">
-      <Filter>Load&amp;Save</Filter>
-    </ClCompile>
     <ClCompile Include="SaveLoadManager.cpp">
       <Filter>Load&amp;Save</Filter>
     </ClCompile>
@@ -86,6 +83,7 @@
     <ClCompile Include="Country.cpp">
       <Filter>Map Stuff</Filter>
     </ClCompile>
+    <ClCompile Include="MapLoaderSaverAdapter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CardCashing.h" />
@@ -139,13 +137,7 @@
     <ClInclude Include="ConquestMapLoaderSaver.h">
       <Filter>Load&amp;Save</Filter>
     </ClInclude>
-    <ClInclude Include="IMapLoadableSavable.h">
-      <Filter>Load&amp;Save</Filter>
-    </ClInclude>
     <ClInclude Include="TextMapLoaderSaver.h">
-      <Filter>Load&amp;Save</Filter>
-    </ClInclude>
-    <ClInclude Include="TextMapLoaderSaverAdapter.h">
       <Filter>Load&amp;Save</Filter>
     </ClInclude>
     <ClInclude Include="SaveLoadManager.h">
@@ -193,6 +185,7 @@
     <ClInclude Include="Country.h">
       <Filter>Map Stuff</Filter>
     </ClInclude>
+    <ClInclude Include="MapLoaderSaverAdapter.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

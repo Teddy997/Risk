@@ -4,6 +4,7 @@
 #include "Continent.h"
 #include "Subject.h"
 #include "Observer.h"
+#include "MapTemplate.h"
 
 using std::vector;
 using std::string;
@@ -15,6 +16,7 @@ public:
 	Map();
 	~Map();
 	Map(string name);
+	Map(MapTemplate mapTemplate);
 	vector<Country*> getAllCountries() { return countries; }
 	string getMapDirectory() { return mapDirectory; }
 
@@ -38,6 +40,7 @@ private:
 	//private methods
 	void ReadContinents(string fileName, vector<string>& continentName, vector<int>& continentID, vector<int>& continentBonusValue);
 	void CreateContinents(vector<string>& continentName, vector<int>& continentID, vector<int>& continentBonusValue);
+	void Map::CreateContinents(vector<string>& continentName, vector<int>& continentBonusValue);
 	void ReadCountries(string fileName, vector<string>& countryName, vector<int>& countryID, vector<int>& containingContinentID,
 	vector < vector <int> >& connectedCountryID);
 	void CreateCountries(vector<string>& countryName, vector<int>& containingContinentID);

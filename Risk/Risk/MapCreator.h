@@ -7,10 +7,9 @@
 #include <direct.h>
 #include "MapTemplate.h"
 #include "Helper.h"
-#include "TextMapLoaderSaver.h"
-#include "ConquestMapLoaderSaver.h"
 #include "Constants.h"
 #include "InputProcedure.h"
+#include "MapLoaderSaverAdapter.h"
 
 using std::vector;
 using std::string;
@@ -32,10 +31,6 @@ private:
 		FROM_EXISTING
 	};
 
-	enum MapExtension {
-		TXT = 0,
-		CONQUEST
-	};
 
 	MapTemplate mapTemplate;
 	string old_name;
@@ -50,10 +45,11 @@ private:
 	int Choose_continent();
 	vector<int> Choose_adjacencies();
 	void Update_other_adjacencies(vector<int> to_check);
-	void Save_map(MapExtension mapExtension);
-	void Load_existing_map(string mapName, MapExtension mapExtension);
+	void Save_map(Constants::MapExtension mapExtension);
+	bool Load_existing_map(string mapName);
 	void Add_bonus();
 	void Introduction();
 	void Choose_existing_map();
+	void Remove_country();
 };
 

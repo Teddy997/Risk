@@ -70,30 +70,22 @@ void MapCreator::Create_map()
 	//Select the saving format
 	cout << "In which format would to save your map?\n1: .txt\t2: .map" << endl;
 	int extension = InputProcedure::get_choice();
-	MapExtension chosenMapExtension = MapExtension::TXT;	//Needed to be initialized
+	Constants::MapExtension chosenMapExtension = Constants::MapExtension::TXT;	//Needed to be initialized
 	if (extension == 1) {
-		chosenMapExtension == MapExtension::TXT;
+		chosenMapExtension = Constants::MapExtension::TXT;
 	}
 	else if (extension == 2) {
-		chosenMapExtension == MapExtension::CONQUEST;
+		chosenMapExtension = Constants::MapExtension::CONQUEST;
 	}
 
 	mapTemplate.map_name = name;
 	Save_map(chosenMapExtension);
 }
 
-void MapCreator::Save_map(MapExtension mapExtension)
+void MapCreator::Save_map(Constants::MapExtension mapExtension)
 {
-	if (mapExtension == MapExtension::TXT)
-	{
-		TextMapLoaderSaver tmls;
-		tmls.Save(mapTemplate);
-	}
-	else if (mapExtension == MapExtension::CONQUEST)
-	{
-		ConquestMapLoaderSaver cmls;
-		cmls.Save(mapTemplate);
-	}
+	MapLoaderSaverAdapter mlsa;
+	mlsa.Save(mapTemplate, mapExtension);
 }
 
 void MapCreator::New_country()
@@ -145,6 +137,18 @@ void MapCreator::New_country()
 	mapTemplate.countries_adjacencies.push_back(temp_adj);
 	Update_other_adjacencies(temp_adj);
 	mapTemplate.continent_of_country.push_back(continent);
+}
+
+void MapCreator::Remove_country()
+{
+	cout << "REMOVE COUNTRY" << endl;
+
+	//Check if country <= 0
+	//If So, tell user and go back to add or remove
+	//Display list of countries
+	//Ask for id of country to remove
+
+	//Check if - damn
 }
 
 void MapCreator::Add_new(string item, vector<string>* destination)
@@ -246,19 +250,17 @@ void MapCreator::Update_other_adjacencies(vector<int> to_check)
 	}
 }
 
-//Call the right loader depending on the file extension .txt or .map
-void MapCreator::Load_existing_map(string mapName, MapExtension mapExtension)
+//Return true if it worked and false otherwise
+bool MapCreator::Load_existing_map(string mapName)
 {
-	if (mapExtension == MapExtension::TXT)
+	MapLoaderSaverAdapter mlsa;
+	mapTemplate = mlsa.Load(mapName);
+	//If the mapTemplate's name hasn't been initialized, it means it didn't work
+	if (mapTemplate.map_name == "")
 	{
-		TextMapLoaderSaver tmls;
-		mapTemplate = tmls.Load(mapName);
+		return false;
 	}
-	else if (mapExtension == MapExtension::CONQUEST)
-	{
-		ConquestMapLoaderSaver cmls;
-		mapTemplate = cmls.Load(mapName);
-	}
+	return true;
 }
 
 void MapCreator::Add_bonus()
@@ -306,7 +308,7 @@ void MapCreator::Introduction()
 	case FROM_SCRATCH:
 		break;
 	case FROM_DEFAULT:
-		Load_existing_map("default", MapExtension::TXT);
+		Load_existing_map("default");
 		break;
 	case FROM_EXISTING:
 		Choose_existing_map();
@@ -324,26 +326,6 @@ void MapCreator::Choose_existing_map()
 	bool valid = false;
 	while (valid == false) {
 		getline(cin, name);
-		//Checking whether the map chosen is correct by seeing if countries opens
-		string dirname_txt = Constants::maps_directory + name + "\\countries.txt";
-		string dirname_conquest = Constants::maps_directory + name + "\\" + name + ".map";
-		std::fstream filestr;
-		//If it does open the .txt, then the path is valid, and we can choose this map
-		filestr.open(dirname_txt);
-		if (filestr.is_open()) {
-			filestr.close();
-			Load_existing_map(name, MapExtension::TXT);
-			valid = true;
-		}
-		//Else, try to open as a conquest map
-		else {
-			filestr.open(dirname_conquest);
-			if (filestr.is_open()) {
-				filestr.close();
-				Load_existing_map(name, MapExtension::CONQUEST);
-				valid = true;
-			}
-			else { cout << "This map doesn't exist!" << endl; }
-		}
+		valid = Load_existing_map(name);
 	}
 }

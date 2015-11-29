@@ -3,6 +3,14 @@
 #include <fstream>
 #include <sstream>
 
+Map::Map(MapTemplate mapTemplate)
+{
+	CreateContinents(mapTemplate.continent_names, mapTemplate.continent_bonus);
+	CreateCountries(mapTemplate.country_names, mapTemplate.continent_of_country);
+	AssignConnectedCountries(mapTemplate.countries_adjacencies);
+	AssignContainedCountries(mapTemplate.continent_of_country);
+}
+
 Map::Map(string name)
 {
 	cout << "Trying to load map with name " << name << endl;
@@ -167,6 +175,16 @@ void Map::CreateContinents(vector<string>& continentName, vector<int>& continent
 	set_nOfContinents(continents.size());
 }
 
+//Overloaded method
+void Map::CreateContinents(vector<string>& continentName, vector<int>& continentBonusValue)
+{
+	for (unsigned int j = 0; j < continentName.size(); j++)
+	{
+		continents.push_back(Continent(continentName[j], j, continentBonusValue[j]));
+	}
+	set_nOfContinents(continents.size());
+}
+
 //Must be in the form:
 //	String country Name,int countryID,int ContinentID,int connectedCountry1,int connectedCountry2, ...
 void Map::ReadCountries(string fileName, vector<string>& countryName, vector<int>& countryID, vector<int>& containingContinentID,
@@ -223,8 +241,7 @@ void Map::AssignConnectedCountries(vector < vector <int> >& connectedCountryID)
 		vector<Country*> connected;
 		for(unsigned int k = 0; k < connectedCountryID[j].size(); k++)
 		{
-			//ID start at 1 while index start at 0
-			int index = connectedCountryID[j][k]; //CHANGE ME
+			int index = connectedCountryID[j][k];
 			connected.push_back(countries[index]);
 
 		}
@@ -235,10 +252,6 @@ void Map::AssignConnectedCountries(vector < vector <int> >& connectedCountryID)
 //Use only if countries and continents are instantiated
 void Map::AssignContainedCountries(vector<int>& containingContinentID)
 {
-	//TODO: When we'll have user defined maps, make sure
-	//the continents id fit with the number or continent
-	//in the other file
-
 	//For every country, add a reference in the row corresponding to 
 	//the continent it is contained in
 	vector < vector <Country*> > countriesContainedInContinent(nOfContinents, vector<Country*>());

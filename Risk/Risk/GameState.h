@@ -50,6 +50,7 @@ public:
 	Deck* const getDeck() { return deck; }
 	void setDeck(Deck* d) { deck = d; }
 	void setMap(string str); // initializes the map
+	void setMap(MapTemplate mapTemplate);
 	void setMap(Map* m);
 
 	void displayMapDirectoryContents();

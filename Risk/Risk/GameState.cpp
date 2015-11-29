@@ -445,6 +445,11 @@ void GameState::setMap(string name) {
 	cout << map->nbOfCountries() << endl;
 }
 
+void GameState::setMap(MapTemplate mapTemplate) {
+	map = new Map(mapTemplate);
+	cout << map->nbOfCountries() << endl;
+}
+
 void GameState::setMap(Map* m) {
 	map = m;
 	cout << map->nbOfCountries() << endl;

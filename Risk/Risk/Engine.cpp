@@ -280,32 +280,27 @@ void Engine::generateAIPlayers() {
 }
 
 void Engine::chooseMap() {
+	MapTemplate mapTemplate;
 	cout << "Choosing the map...\n" << endl;
-	string s = "default";
-	gameState->displayMapDirectoryContents();
+	string name = "default";
+	Helper::DisplayMapDirectoryContents();
 	cout << "Please type the name of the map you want to play." << endl;
 	
 	bool valid = false;
 	while (valid == false) {
-		getline(cin, s);
-		if (s.compare("default") == 0 || s.compare("DEFAULT") == 0) {
+		getline(cin, name);
+		if (name.compare("default") == 0 || name.compare("DEFAULT") == 0) {
 			cout << "This map doesn't exist!" << endl;
 		}
 		else {
-			//Checking whether the map chosen is correct by seeing if countries opens
-			string dirname = "Maps//" + s + "//countries.txt";
-			std::fstream filestr;
-			//If it does open, then the path is valid, and we can choose this map
-			filestr.open(dirname);
-			if (filestr.is_open()) {
-				filestr.close();
+			MapLoaderSaverAdapter mlsa;
+			mapTemplate = mlsa.Load(name);
+			//If the mapTemplate's name has been initialized, it means it worked
+			if (mapTemplate.map_name != "")
 				valid = true;
-			}
-			else { cout << "This map doesn't exist!" << endl; }
 		}
 	}
-	
-	gameState->setMap(s);
+	gameState->setMap(mapTemplate);
 	cout << "done.\n" << endl;
 }
 

@@ -1,5 +1,4 @@
 #pragma once
-#include "IMapLoadableSavable.h"
 #include "MapTemplate.h"
 #include "Constants.h"
 #include"Helper.h"
@@ -10,14 +9,13 @@
 //Class used to save and load conquest maps
 //using the ".map" extension
 
-class ConquestMapLoaderSaver :
-	public IMapLoadableSavable
+class ConquestMapLoaderSaver
 {
 public:
 	ConquestMapLoaderSaver();
 	~ConquestMapLoaderSaver();
 
-	virtual void Save(MapTemplate mapTemplate);
-	virtual MapTemplate Load(std::string mapName);
+	void Save(MapTemplate mapTemplate);
+	MapTemplate Load(std::string mapName);
 };
 
