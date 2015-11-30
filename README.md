@@ -18,7 +18,7 @@
 <td>Loading a map from an existing file, then editing the map</td><td><strong>X</strong></td>
 </tr>
 <tr>
-<td>Use of the Adapter pattern to save/load from two different map file formats (based on assign3)</td><td></td>
+<td>Use of the Adapter pattern to save/load from two different map file formats (based on assign3)</td><td><strong>X</strong></td>
 </tr>
 <tr>
 <td>Verification of map correctness before saving (at least 3 types of incorrect maps)</td><td><strong>X</strong></td>
