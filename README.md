@@ -30,10 +30,10 @@
 <td>Save/Load a game in progress using a Builder pattern (based on assign3)</td><td><strong>X</strong></td>
 </tr>
 <tr>
-<td>Player Observer that displays relevant information about a player (based on assign2)</td><td></td>
+<td>Player Observer that displays relevant information about a player (based on assign2)</td><td><strong>X</strong></td>
 </tr>
 <tr>
-<td>Map Observer that displays relevant information about the map (based on assign2)</td><td></td>
+<td>Map Observer that displays relevant information about the map (based on assign2)</td><td><strong>X</strong></td>
 </tr>
 <tr>
 <td>Game statistics Observer/Decorator that displays user-selected game statistics (based on assign3)</td><td><strong>X</strong></td>
