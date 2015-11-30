@@ -12,6 +12,8 @@
 #include "subject.h"
 #include "Map.h"
 
+class playerView;
+
 class Strategy; // forward declaration
 
 class Player : public Subject {
@@ -24,6 +26,7 @@ private:
 	int total_continent_bonus;
 	int numberBattlesWon;
 	Strategy* strategy;
+	std::vector<playerView*> observers;
 
 	void update_bonus();
 
@@ -104,6 +107,8 @@ public:
 
 	Player(const Player &anotherPlayer);
 	Player* build(std::string line, Map* m);
+
+	
 };
 
 #endif

@@ -644,6 +644,14 @@ int GameState::getIndexOfCountry() {
 	return index;
 }
 
+void GameState::setupObservers() {
+	playerView* pView1 = new playerView(player);
+	for (int i = 0; i < AIPlayers.size(); i++) {
+		playerView* pViewOthers = new playerView(AIPlayers.at(i));
+	}
+	cout << "Player observer initiated." << endl;
+}
+
 std::string GameState::phaseToString() {
 	std::string phase;
 	switch (currentPhase) {

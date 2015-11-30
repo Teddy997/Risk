@@ -35,6 +35,8 @@ private:
 	void saveGame();
 	void loadGame(std::string filename);
 	void chooseStats();
+	void chooseMapObs();
+	void choosePlayerObs();
 public:
 	Engine();
 	void startGame();

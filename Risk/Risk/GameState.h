@@ -11,6 +11,7 @@
 #include "InputProcedure.h"
 #include "MapCreator.h"
 #include "StatisticsView.h"
+#include "playerView.h"
 using namespace std;
 
 enum Phase { // Keeps track of the phase we are currently in.
@@ -69,6 +70,8 @@ public:
 	GameState* build(std::string line);
 	
 	void changeStrategy();
+
+	void setupObservers();
 private:
 	Player* player;
 	vector<Player*> AIPlayers;

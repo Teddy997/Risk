@@ -193,3 +193,235 @@ AI Heisenberg's countries:
 Armies owned: 30
 Number of cards: 0
 
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Barron, Armies: 3
+2.  Country: Banyan, Armies: 4
+3.  Country: Bella, Armies: 3
+4.  Country: Martello, Armies: 3
+5.  Country: Menthyl, Armies: 3
+6.  Country: Mylon, Armies: 2
+7.  Country: Marrian, Armies: 2
+8.  Country: Coron, Armies: 3
+9.  Country: Cylac, Armies: 2
+10. Country: Ceed, Armies: 1
+11. Country: Grand Bank, Armies: 1
+12. Country: Gilead, Armies: 1
+13. Country: Quay, Armies: 1
+14. Country: Quandry, Armies: 1
+15. Country: Quail, Armies: 1
+16. Country: Quot, Armies: 1
+17. Country: Queew, Armies: 1
+18. Country: Riviera, Armies: 1
+19. Country: Rand, Armies: 1
+
+Armies owned: 35
+Number of cards: 0
+
+AI Michonne's countries: 
+1.  Country: Bordon, Armies: 3
+2.  Country: Bot, Armies: 5
+3.  Country: Metroville, Armies: 3
+4.  Country: Cill, Armies: 4
+5.  Country: Gray, Armies: 4
+6.  Country: Polaris, Armies: 4
+7.  Country: Queensryche, Armies: 2
+8.  Country: Quell, Armies: 4
+9.  Country: Relish, Armies: 2
+10. Country: Rhone, Armies: 2
+11. Country: Rufus, Armies: 2
+
+Armies owned: 35
+Number of cards: 0
+
+AI Jon Snow's countries: 
+1.  Country: Byland, Armies: 2
+2.  Country: Metron, Armies: 3
+3.  Country: Mastic, Armies: 3
+4.  Country: Moonbay, Armies: 4
+5.  Country: Cyan, Armies: 4
+6.  Country: Cannon, Armies: 4
+7.  Country: Cirius, Armies: 3
+8.  Country: Gras, Armies: 4
+9.  Country: Galyn, Armies: 3
+10. Country: Gorshen, Armies: 3
+11. Country: Quintess, Armies: 1
+12. Country: Quag, Armies: 1
+
+Armies owned: 35
+Number of cards: 0
+
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Barron, Armies: 1
+2.  Country: Banyan, Armies: 4
+3.  Country: Bella, Armies: 3
+4.  Country: Martello, Armies: 3
+5.  Country: Menthyl, Armies: 3
+6.  Country: Mylon, Armies: 2
+7.  Country: Marrian, Armies: 2
+8.  Country: Coron, Armies: 3
+9.  Country: Cylac, Armies: 2
+10. Country: Ceed, Armies: 1
+11. Country: Grand Bank, Armies: 1
+12. Country: Gilead, Armies: 1
+13. Country: Quay, Armies: 1
+14. Country: Quandry, Armies: 1
+15. Country: Quail, Armies: 1
+16. Country: Quot, Armies: 1
+17. Country: Queew, Armies: 1
+18. Country: Riviera, Armies: 1
+19. Country: Rand, Armies: 1
+20. Country: Metroville, Armies: 8
+
+Armies owned: 41
+Number of cards: 1
+
+AI Michonne's countries: 
+1.  Country: Bordon, Armies: 3
+2.  Country: Bot, Armies: 5
+3.  Country: Cill, Armies: 4
+4.  Country: Gray, Armies: 4
+5.  Country: Polaris, Armies: 4
+6.  Country: Queensryche, Armies: 2
+7.  Country: Quell, Armies: 4
+8.  Country: Relish, Armies: 2
+9.  Country: Rhone, Armies: 2
+10. Country: Rufus, Armies: 2
+
+Armies owned: 32
+Number of cards: 0
+
+AI Jon Snow's countries: 
+1.  Country: Byland, Armies: 2
+2.  Country: Metron, Armies: 3
+3.  Country: Mastic, Armies: 3
+4.  Country: Moonbay, Armies: 4
+5.  Country: Cyan, Armies: 4
+6.  Country: Cannon, Armies: 4
+7.  Country: Cirius, Armies: 3
+8.  Country: Gras, Armies: 4
+9.  Country: Galyn, Armies: 3
+10. Country: Gorshen, Armies: 3
+11. Country: Quintess, Armies: 1
+12. Country: Quag, Armies: 1
+
+Armies owned: 35
+Number of cards: 0
+
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Banyan, Armies: 4
+2.  Country: Martello, Armies: 3
+3.  Country: Menthyl, Armies: 3
+4.  Country: Mylon, Armies: 2
+5.  Country: Marrian, Armies: 2
+6.  Country: Ceed, Armies: 1
+7.  Country: Grand Bank, Armies: 1
+8.  Country: Gilead, Armies: 1
+9.  Country: Quay, Armies: 1
+10. Country: Quandry, Armies: 1
+11. Country: Quail, Armies: 1
+12. Country: Quot, Armies: 1
+13. Country: Queew, Armies: 1
+14. Country: Rand, Armies: 1
+15. Country: Metroville, Armies: 8
+
+Armies owned: 31
+Number of cards: 1
+
+AI Michonne's countries: 
+1.  Country: Bordon, Armies: 1
+2.  Country: Bot, Armies: 1
+3.  Country: Cill, Armies: 1
+4.  Country: Gray, Armies: 1
+5.  Country: Polaris, Armies: 1
+6.  Country: Queensryche, Armies: 1
+7.  Country: Quell, Armies: 1
+8.  Country: Relish, Armies: 1
+9.  Country: Rhone, Armies: 1
+10. Country: Rufus, Armies: 1
+11. Country: Bella, Armies: 1
+12. Country: Byland, Armies: 2
+13. Country: Coron, Armies: 1
+14. Country: Cirius, Armies: 2
+15. Country: Riviera, Armies: 1
+16. Country: Barron, Armies: 1
+17. Country: Cylac, Armies: 1
+
+Armies owned: 19
+Number of cards: 1
+
+AI Jon Snow's countries: 
+1.  Country: Metron, Armies: 3
+2.  Country: Mastic, Armies: 3
+3.  Country: Moonbay, Armies: 1
+4.  Country: Cyan, Armies: 2
+5.  Country: Cannon, Armies: 4
+6.  Country: Gras, Armies: 4
+7.  Country: Galyn, Armies: 3
+8.  Country: Gorshen, Armies: 3
+9.  Country: Quintess, Armies: 1
+10. Country: Quag, Armies: 1
+
+Armies owned: 25
+Number of cards: 0
+
+===========================================NEW TURN==========================================
+Eric's countries: 
+1.  Country: Banyan, Armies: 4
+2.  Country: Menthyl, Armies: 3
+3.  Country: Mylon, Armies: 2
+4.  Country: Marrian, Armies: 2
+5.  Country: Grand Bank, Armies: 1
+6.  Country: Quay, Armies: 1
+7.  Country: Quandry, Armies: 1
+8.  Country: Quail, Armies: 1
+9.  Country: Quot, Armies: 1
+10. Country: Rand, Armies: 1
+11. Country: Metroville, Armies: 8
+
+Armies owned: 25
+Number of cards: 1
+
+AI Michonne's countries: 
+1.  Country: Bordon, Armies: 1
+2.  Country: Bot, Armies: 1
+3.  Country: Gray, Armies: 1
+4.  Country: Queensryche, Armies: 1
+5.  Country: Quell, Armies: 1
+6.  Country: Relish, Armies: 1
+7.  Country: Rhone, Armies: 1
+8.  Country: Rufus, Armies: 1
+9.  Country: Bella, Armies: 1
+10. Country: Byland, Armies: 2
+11. Country: Cirius, Armies: 2
+12. Country: Riviera, Armies: 1
+13. Country: Barron, Armies: 1
+14. Country: Cylac, Armies: 1
+
+Armies owned: 16
+Number of cards: 1
+
+AI Jon Snow's countries: 
+1.  Country: Metron, Armies: 2
+2.  Country: Mastic, Armies: 1
+3.  Country: Moonbay, Armies: 1
+4.  Country: Cyan, Armies: 1
+5.  Country: Cannon, Armies: 1
+6.  Country: Gras, Armies: 1
+7.  Country: Galyn, Armies: 6
+8.  Country: Gorshen, Armies: 1
+9.  Country: Quintess, Armies: 1
+10. Country: Quag, Armies: 1
+11. Country: Ceed, Armies: 2
+12. Country: Coron, Armies: 1
+13. Country: Martello, Armies: 1
+14. Country: Gilead, Armies: 1
+15. Country: Polaris, Armies: 1
+16. Country: Cill, Armies: 1
+17. Country: Queew, Armies: 1
+
+Armies owned: 24
+Number of cards: 1
+

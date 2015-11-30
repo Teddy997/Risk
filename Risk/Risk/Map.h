@@ -30,6 +30,8 @@ public:
 	
 	int nbOfCountries();
 	std::vector<Country*> getCountries();
+
+	void setupObservers();
 private:
 	string mapDirectory;
 	std::vector<Country*> countries;

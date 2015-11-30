@@ -293,3 +293,11 @@ vector<Country*> Map::getCountries() {
 	return countries;
 
 }
+
+void Map::setupObservers() {
+	MapObserver* mapObs = new MapObserver();
+	for (int i = 0; i < countries.size(); i++) { 
+		countries.at(i)->registerObserver(mapObs); 
+	}
+	cout << "Map observer initiated." << endl;
+}

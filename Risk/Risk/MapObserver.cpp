@@ -7,7 +7,7 @@
 
 void MapObserver::update(MapSubjectPattern* s) {
 	Country* c = dynamic_cast<Country*>(s);
-	std::cout << "VALUES HAVE BEEN UPDATED" << std::endl;
+	std::cout << "COUNTRY VALUES HAVE BEEN UPDATED" << std::endl;
 	std::cout << "COUNTRY: " + c->get_country_name() << std::endl;
 	std::cout << "CONTINENT: " + c->get_continent_name() << std::endl;
 	std::cout << "OWNER: " + c->get_owner_name() << std::endl;

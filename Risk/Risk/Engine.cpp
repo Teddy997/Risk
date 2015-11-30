@@ -26,11 +26,12 @@ Engine::Engine()
 		//loadedGamePlayPhase();
 	}
 	chooseStats();
-	
+	chooseMapObs();
+	choosePlayerObs();
 }
 void Engine::chooseStats() {
-	cout << "Throughout the game, various statistics about the game play can be recorded. Do you wish to add basic statistics? (y/n)."
-		<< " Note that if you choose no, then you will not be able to record any statistics at all."<< endl;
+	cout << "Throughout the game, various statistics about the game play can be recorded. \nDo you wish to add basic statistics? (y/n)."
+		<< " \nNote that if you choose no, then you will not be able to record any statistics at all."<< endl;
 	string s;
 	cin >> s;
 	if (s == "y") {
@@ -42,13 +43,31 @@ void Engine::chooseStats() {
 			v = new StatisticsWorld(v);
 		}
 		gameState->Attach(v);
-
 	}
-
-
-
-
 }
+
+void Engine::chooseMapObs() {
+	cout << "Throughout the game, many changes will occur involving countries. \n"
+		<< "Would you like to register an observer to each country in order to have any changes explicitly shown?\n"
+		<< "(y/n)" << endl;
+	string s;
+	cin >> s;
+	if (s == "y") {
+		gameState->getMap()->setupObservers(); //map observer
+	}
+}
+
+void Engine::choosePlayerObs() {
+	cout << "Throughout the game, many changes will occur involving players. \n"
+		<< "Would you like to register an observer to each player in order to have any changes explicitly shown?\n"
+		<< "(y/n)" << endl;
+	string s;
+	cin >> s;
+	if (s == "y") {
+		gameState->setupObservers(); //player observer
+	}
+}
+
 void Engine::startGame() {
 	if (loaded)
 		loadedGamePlayPhase();
@@ -99,8 +118,6 @@ void Engine::gamePlayPhase(){
 			//}
 		}
 		gameState->changeStrategy();
-		std::cout << "aiplayers size: " << gameState->getAIPlayers().size() << std::endl;
-		std::cout << "turn: " << turn << std::endl;
 		victoryConditions();
 		if (turn > gameState->getAIPlayers().size())
 			turn = 0;

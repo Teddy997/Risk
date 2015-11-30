@@ -33,6 +33,7 @@ numberOfCountriesOwned(), a simple function returning an int containing the size
 Player::Player() {
 	player_name = "Default player";
 	cardBonus = 4;
+	numberBattlesWon = 0;
 	//std::cout << get_player_name() + " Player object created." << std::endl;
 
 }
@@ -40,6 +41,7 @@ Player::Player() {
 Player::Player(std::string name) {
 	player_name = name;
 	cardBonus = 4;
+	numberBattlesWon = 0;
 	std::cout << get_player_name() + " player created." << std::endl;
 }
 
@@ -78,7 +80,6 @@ void Player::assign_country(Country& country) {
 		//Set the country to being owned by this player.
 		country.set_owned(true, *this);
 		set_can_draw(true);
-		Notify();
 		//Check if the player should now own a continent
 		Continent* tempContinent = country.get_containing_continent();
 		//Normally this should not happen, but just in case
@@ -97,6 +98,7 @@ void Player::assign_country(Country& country) {
 			}
 			update_bonus();
 		}
+		Notify();
 	}
 	//Else, inform the system that the acquisition cannot be completed as the country is still owned.
 	else {
@@ -135,6 +137,7 @@ void Player::remove_country(Country& country) {
 		}
 		update_bonus();
 	}
+	Notify();
 }
 
 //I really need to refactor this to be a void function that prints the countries with cout
