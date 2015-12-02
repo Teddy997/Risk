@@ -347,7 +347,7 @@ std::string Player::print_ContinentList() {
 	int size = continents_owned.size();
 	//If the size of the continents_owned vector is 0, then the player owns no continents.
 	if (size == 0) {
-		continents = "no continents found";
+		continents = "None.";
 	}
 	//Else, for each country the player owns, store the name of that country into the continents string.
 	else {

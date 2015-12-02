@@ -3,28 +3,28 @@ $
 3
 $
 Eric
-Alberta:3,Ontario:4,Central America:8,Brazil:3,Madagascar:3,Iceland:4,Southern Europe:4,Middle East:2,Afghanistan:3,India:1,Irkutsk:1,Indonesia:1,New Guinea:1,Eastern Australia:1
+Northwest Territory:9,Greenland:2,Venezuala:4,Madagascar:3,Iceland:4,Great Britain:3,Northern Europe:4,Middle East:4,Afghanistan:1,China:1,Yatusk:1,Kamchatka:1,New Guinea:1,Western Australia:1,Eastern Australia:1
 0
 NoStrat
 
 4
 $
 AI Michonne
-Northwest Territory:3,Quebec:3,Western United States:3,Peru:4,Argentina:3,South Africa:4,Great Britain:3,Western Europe:4,Northern Europe:4,Ural:2,Siberia:1,pls:1
+Alberta:2,Ontario:2,Quebec:4,Western United States:3,Peru:4,South Africa:2,Western Europe:4,Scandinavia:4,Ukraine:2,Irkutsk:3,Japan:3,Indonesia:1,pls:1
 0
-Random
+Agressive
 
 4
 $
 AI Jon Snow
-Alaska:4,Greenland:3,Eastern United States:3,Venezuala:3,North Africa:4,Congo:3,East Africa:2,Egypt:3,Scandinavia:1,Ukraine:1,China:1,Siam:1,Mongolia:1,Yatusk:1,Kamchatka:1,Japan:1,Western Australia:1,KOREA:1
+Alaska:2,Eastern United States:3,Central America:3,Argentina:4,Brazil:2,North Africa:2,Congo:3,East Africa:2,Egypt:2,Southern Europe:3,Ural:3,India:2,Siberia:1,Siam:1,Mongolia:1,KOREA:1
 0
 Agressive
 
 4
 $
 Eric
-Alberta:3,Ontario:4,Central America:8,Brazil:3,Madagascar:3,Iceland:4,Southern Europe:4,Middle East:2,Afghanistan:3,India:1,Irkutsk:1,Indonesia:1,New Guinea:1,Eastern Australia:1
+Northwest Territory:9,Greenland:2,Venezuala:4,Madagascar:3,Iceland:4,Great Britain:3,Northern Europe:4,Middle East:4,Afghanistan:1,China:1,Yatusk:1,Kamchatka:1,New Guinea:1,Western Australia:1,Eastern Australia:1
 0
 NoStrat
 
@@ -32,5 +32,5 @@ NoStrat
 $
 REINFORCING
 $
-1,1,0,0,2,0,1,2,2,2,0,1,2,1,1,0,0,0,1,0,0,2,2,2,2,0,1,2,1,1
+0,2,0,1,0,2,2,1,1,0,2,2,1,2,2,0,1,2,1,1,2,0,2,1,1,1,0,0,0,0
 $

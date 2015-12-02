@@ -28,7 +28,7 @@ return_card(card), a function which acts as the returning mechanism by taking th
 */
 
 Deck::Deck() {
-	std::cout << "Deck object created" << std::endl;
+	//std::cout << "Deck object created" << std::endl;
 	Deck::initialize_deck();
 	Deck::shuffle_deck();
 }

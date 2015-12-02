@@ -5,6 +5,7 @@
 
 Map::Map(MapTemplate mapTemplate)
 {
+	mapDirectory = mapTemplate.map_name;
 	CreateContinents(mapTemplate.continent_names, mapTemplate.continent_bonus);
 	CreateCountries(mapTemplate.country_names, mapTemplate.continent_of_country);
 	AssignConnectedCountries(mapTemplate.countries_adjacencies);

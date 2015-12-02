@@ -102,8 +102,7 @@ bool Country::owned() {
 void Country::increment_armies(int amt) {
 	number_of_armies += amt;
 	notifyObservers();
-	
-	
+	owner->Notify();
 }
 
 void Country::decrement_armies(int amt) {
