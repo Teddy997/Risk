@@ -24,8 +24,8 @@ void MapCreator::Create_map()
 	int changes_to_make = 0;
 	string name;
 	do{
-		New_country();
-		cout << "Are you done?" << endl << "1: Yes, I want to save\t2: No, moar countries" << endl;
+		Add_or_remove();
+		cout << "Are you done?" << endl << "1: Yes, I want to save\t2: No, moar changes" << endl;
 		if (mapTemplate.country_names.size() > 1) {
 			bool valid = false;
 			while (valid == false) {
@@ -139,16 +139,130 @@ void MapCreator::New_country()
 	mapTemplate.continent_of_country.push_back(continent);
 }
 
+void MapCreator::Add_or_remove()
+{
+	cout << "What would you like to do?" << endl << "0:	Add a country		1:	Remove a country" << endl;
+	int choice = 3;
+	do
+	{
+		choice = InputProcedure::get_choice();
+	} while (choice < 0 || choice > 1);
+	if (choice == 0)
+	{
+		New_country();
+	}
+	else
+	{
+		Remove_country();
+	}
+}
+
 void MapCreator::Remove_country()
 {
 	cout << "REMOVE COUNTRY" << endl;
 
-	//Check if country <= 0
-	//If So, tell user and go back to add or remove
-	//Display list of countries
-	//Ask for id of country to remove
+	if (mapTemplate.continent_names.size() <= 0)
+	{
+		cout << "You can't remove a country, there's NO country" << endl;
+		Add_or_remove();
+	}
+	else
+	{
+		Helper::Display_formatted(mapTemplate.country_names);
+		cout << "which country would you like to remove?" << endl;
+		int countryIndex;
+		do
+		{
+			countryIndex = InputProcedure::get_choice();
+		} while (countryIndex < 0 && countryIndex > mapTemplate.continent_names.size() - 1);
 
-	//Check if - damn
+	
+		int continentIndex = mapTemplate.continent_of_country.at(countryIndex);
+		int countriesinContinent = 0;
+		//If it's the last country of a continent
+		for (int i = 0; i < mapTemplate.continent_of_country.size(); i++)
+		{
+			if (mapTemplate.continent_of_country.at(i) == continentIndex)
+				countriesinContinent++;
+		}
+		if (countriesinContinent <= 1)
+		{
+			Remove_country_from_template(countryIndex);
+			Remove_continent_from_template(continentIndex);
+		}
+		else
+		{
+			Remove_country_from_template(countryIndex);
+		}
+		Add_or_remove();
+	}
+}
+
+
+//Ewww Y__Y
+void MapCreator::Remove_country_from_template(int country_index)
+{
+	//Simply removes the name, conaining continent and ajacencies of the country
+	mapTemplate.country_names.erase(mapTemplate.country_names.begin() + country_index);
+	mapTemplate.continent_of_country.erase(mapTemplate.continent_of_country.begin() + country_index);
+	mapTemplate.countries_adjacencies.erase(mapTemplate.countries_adjacencies.begin() + country_index);
+
+	//Has to go through all countries in continent to erase itself, and shift every other ID/index bigger than itself
+	for (int i = 0; i < mapTemplate.countries_in_continent.size(); i++)
+	{
+		for (int j = 0; j < mapTemplate.countries_in_continent.at(i).size(); j++)
+		{
+			if (mapTemplate.countries_in_continent.at(i).at(j) == country_index)
+			{
+				mapTemplate.countries_in_continent.at(i).erase(mapTemplate.countries_in_continent.at(i).begin() + j);
+				j--; //Since we removed an element, index have been shifted and we need need to reevaluate that index
+				continue;
+			}
+			else if (mapTemplate.countries_in_continent.at(i).at(j) > country_index)
+			{
+				mapTemplate.countries_in_continent.at(i).at(j) -= 1;
+			}
+		}
+	}
+
+	//Has to go through all countries in countries_adjacencies to erase itself, and shift every other ID/index bigger than itself
+	for (int i = 0; i < mapTemplate.countries_adjacencies.size(); i++)
+	{
+		for (int j = 0; j < mapTemplate.countries_adjacencies.at(i).size(); j++)
+		{
+			if (mapTemplate.countries_adjacencies.at(i).at(j) == country_index)
+			{
+				mapTemplate.countries_adjacencies.at(i).erase(mapTemplate.countries_adjacencies.at(i).begin() + j);
+				j--; //Since we removed an element, index have been shifted and we need need to reevaluate that index
+				continue;
+			}
+			else if (mapTemplate.countries_adjacencies.at(i).at(j) > country_index)
+			{
+				mapTemplate.countries_adjacencies.at(i).at(j) -= 1;
+			}
+		}
+	}
+}
+
+void MapCreator::Remove_continent_from_template(int continent_index)
+{
+	//Simply removes the name, of the continent
+	mapTemplate.continent_names.erase(mapTemplate.continent_names.begin() + continent_index);
+	mapTemplate.continent_bonus.erase(mapTemplate.continent_bonus.begin() + continent_index);
+	mapTemplate.countries_in_continent.erase(mapTemplate.countries_in_continent.begin() + continent_index);
+
+	//Has to go through all countries in continent to erase itself, and shift every other ID/index bigger than itself
+	for (int i = 0; i < mapTemplate.continent_of_country.size(); i++)
+	{
+		if (mapTemplate.continent_of_country.at(i) == continent_index)
+		{
+			//This should not happen, every country of a continent should be deleted before the continent
+		}
+		else if (mapTemplate.continent_of_country.at(i) > continent_index)
+		{
+			mapTemplate.continent_of_country.at(i) -= 1;
+		}
+	}
 }
 
 void MapCreator::Add_new(string item, vector<string>* destination)

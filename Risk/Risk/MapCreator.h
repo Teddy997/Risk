@@ -51,5 +51,8 @@ private:
 	void Introduction();
 	void Choose_existing_map();
 	void Remove_country();
+	void Remove_country_from_template(int country_index);
+	void Remove_continent_from_template(int country_index);
+	void Add_or_remove();
 };
 
